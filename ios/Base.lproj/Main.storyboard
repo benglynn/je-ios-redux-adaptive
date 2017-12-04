@@ -18,20 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just Eat Adaptive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSp-iq-4tR">
-                                <rect key="frame" x="97.5" y="320.5" width="181" height="26.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSp-iq-4tR">
+                                <rect key="frame" x="141" y="120" width="94.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fV-Mm-urV">
+                                <rect key="frame" x="0.0" y="247" width="375" height="420"/>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VSp-iq-4tR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GxA-eZ-czj"/>
-                            <constraint firstItem="VSp-iq-4tR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KYy-wc-lyc"/>
+                            <constraint firstItem="3fV-Mm-urV" firstAttribute="top" secondItem="VSp-iq-4tR" secondAttribute="bottom" constant="100" id="Eii-Z6-6Uc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3fV-Mm-urV" secondAttribute="trailing" id="G7i-4F-EEc"/>
+                            <constraint firstItem="VSp-iq-4tR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TsU-q3-2XR"/>
+                            <constraint firstItem="VSp-iq-4tR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="XBd-Gy-ine"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3fV-Mm-urV" secondAttribute="bottom" id="cvG-f2-lnz"/>
+                            <constraint firstItem="3fV-Mm-urV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iI6-Kk-quq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="3fV-Mm-urV" id="e2P-qE-SPH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
