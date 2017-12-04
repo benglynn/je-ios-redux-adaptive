@@ -13,6 +13,7 @@
 		2F55E8A21FD55C2A00BC52F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E8A11FD55C2A00BC52F0 /* Assets.xcassets */; };
 		2F55E8A51FD55C2A00BC52F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E8A31FD55C2A00BC52F0 /* LaunchScreen.storyboard */; };
 		2F55E8B01FD55C2A00BC52F0 /* iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8AF1FD55C2A00BC52F0 /* iosTests.swift */; };
+		2F55E8DD1FD57ACC00BC52F0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F55E8DC1FD57ACC00BC52F0 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		2F55E8AB1FD55C2A00BC52F0 /* iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F55E8AF1FD55C2A00BC52F0 /* iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosTests.swift; sourceTree = "<group>"; };
 		2F55E8B11FD55C2A00BC52F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F55E8DC1FD57ACC00BC52F0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F55E8DD1FD57ACC00BC52F0 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 				2F55E8991FD55C2A00BC52F0 /* ios */,
 				2F55E8AE1FD55C2A00BC52F0 /* iosTests */,
 				2F55E8981FD55C2A00BC52F0 /* Products */,
+				2F55E8DB1FD57ACC00BC52F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +100,14 @@
 			path = iosTests;
 			sourceTree = "<group>";
 		};
+		2F55E8DB1FD57ACC00BC52F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F55E8DC1FD57ACC00BC52F0 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +118,7 @@
 				2F55E8931FD55C2A00BC52F0 /* Sources */,
 				2F55E8941FD55C2A00BC52F0 /* Frameworks */,
 				2F55E8951FD55C2A00BC52F0 /* Resources */,
+				2F55E8DE1FD57AFD00BC52F0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -193,6 +206,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F55E8DE1FD57AFD00BC52F0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F55E8931FD55C2A00BC52F0 /* Sources */ = {
@@ -355,6 +385,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FA87YP34E2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios";
@@ -370,6 +404,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FA87YP34E2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios";

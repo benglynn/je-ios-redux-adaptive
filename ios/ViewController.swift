@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+        
+        _ = Observable.from([1, 2, 3])
+            .subscribe { (int) in
+                print(int)
+            }
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
