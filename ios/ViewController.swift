@@ -17,7 +17,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let stateSubscription = store.state.subscribe(onNext: {
+        let stateSubscription = store.state
+            .delay(RxTimeInterval(5), scheduler: MainScheduler.instance)
+            .subscribe(onNext: {
             let viewController = currentView(forState: $0)
             let rootView = viewController.view!
             rootView.translatesAutoresizingMaskIntoConstraints = false
