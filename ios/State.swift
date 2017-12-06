@@ -17,7 +17,7 @@ struct State {
 
 let initialState = State(
     core: State.Core(
-        url: "/",
+        url: "",
         routes: [
             State.Route(match: "^$", viewName: .HomeView)
         ])

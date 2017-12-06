@@ -13,42 +13,41 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var mask: UIView!
+    @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var progress: UIImageView!
     
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rotateForever(view: progress)
+        fade(view: logo, toAlpha: 0)
+        fade(view: progress, toAlpha: 1)
+        
         let stateSubscription = store.state
-            .delay(RxTimeInterval(5), scheduler: MainScheduler.instance)
+            .delay(RxTimeInterval(1), scheduler: MainScheduler.instance) // TODO temporary simulated delay
             .take(1)
-            .subscribe(onNext: self.onState)
+            .subscribe(onNext: {
+                let viewController = currentView(forState: $0)
+                viewController.modalTransitionStyle = .crossDissolve
+                self.present(viewController, animated: true, completion: nil)
+            })
         stateSubscription.disposed(by: disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func fade(view: UIView, toAlpha: CGFloat, duration: Double = 0.2) {
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
+            view.alpha = toAlpha
+        })
     }
     
-    func onState(state: State) {
-        let viewController = currentView(forState: state)
-        let rootView = viewController.view!
-        rootView.translatesAutoresizingMaskIntoConstraints = false
-        self.addChildViewController(viewController)
-        self.containerView.addSubview(rootView)
-        self.matchAnchors(view1: rootView, view2: self.containerView)
-        viewController.didMove(toParentViewController: viewController)
-        self.mask.isHidden = true
-    }
-    
-    func matchAnchors(view1: UIView, view2: UIView) {
-        NSLayoutConstraint.activate([
-            view1.leadingAnchor.constraint(equalTo: view2.leadingAnchor),
-            view1.trailingAnchor.constraint(equalTo: view2.trailingAnchor),
-            view1.topAnchor.constraint(equalTo: view2.topAnchor),
-            view1.bottomAnchor.constraint(equalTo: view2.bottomAnchor),
-        ])
+    private func rotateForever(view: UIView, duration: Double = 0.4) {
+        UIView.animate(withDuration: duration, delay: 0, options: .curveLinear, animations: {
+            view.transform = view.transform.rotated(by: CGFloat(Double.pi))
+        }, completion: { completed in
+            self.rotateForever(view: view, duration: duration)
+        })
     }
 
 
