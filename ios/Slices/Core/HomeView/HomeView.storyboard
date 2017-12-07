@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="giy-n7-9ak">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="giy-n7-9ak">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="CXa-Ki-s1B">
             <objects>
-                <viewController id="giy-n7-9ak" sceneMemberID="viewController">
+                <viewController id="giy-n7-9ak" customClass="HomeViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uWE-oR-hBB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fo1-Kq-UZg">
-                                <rect key="frame" x="163" y="323" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqs-Rb-VEN" userLabel="Rays" customClass="RaysView" customModule="ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.0" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fo1-Kq-UZg" firstAttribute="centerX" secondItem="uWE-oR-hBB" secondAttribute="centerX" id="Hrk-L4-sn0"/>
-                            <constraint firstItem="fo1-Kq-UZg" firstAttribute="centerY" secondItem="uWE-oR-hBB" secondAttribute="centerY" id="pAb-0D-T2y"/>
+                            <constraint firstItem="qqs-Rb-VEN" firstAttribute="leading" secondItem="uWE-oR-hBB" secondAttribute="leading" id="Ae2-xA-zqD"/>
+                            <constraint firstAttribute="bottom" secondItem="qqs-Rb-VEN" secondAttribute="bottom" id="c53-gd-Kav"/>
+                            <constraint firstItem="qqs-Rb-VEN" firstAttribute="trailing" secondItem="uWE-oR-hBB" secondAttribute="trailing" id="eCu-iV-1c0"/>
+                            <constraint firstItem="qqs-Rb-VEN" firstAttribute="top" secondItem="uWE-oR-hBB" secondAttribute="top" id="phf-Ia-Kjt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q4r-2j-1Tt"/>
                     </view>
+                    <connections>
+                        <outlet property="rays" destination="qqs-Rb-VEN" id="xyp-pI-dj0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9OG-Aj-7P6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

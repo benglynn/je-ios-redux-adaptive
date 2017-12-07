@@ -19,6 +19,8 @@
 		2F55E8F41FD59CBD00BC52F0 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F31FD59CBD00BC52F0 /* Routes.swift */; };
 		2F55E9041FD5A0A000BC52F0 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E9031FD5A0A000BC52F0 /* HomeView.storyboard */; };
 		2F55E9061FD5A46E00BC52F0 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E9051FD5A46E00BC52F0 /* Views.swift */; };
+		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
+		2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBEA811FD83A37006D340C /* RaysView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		2F55E8F31FD59CBD00BC52F0 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		2F55E9031FD5A0A000BC52F0 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		2F55E9051FD5A46E00BC52F0 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2FFBEA811FD83A37006D340C /* RaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaysView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				2F55E9031FD5A0A000BC52F0 /* HomeView.storyboard */,
+				2FD095841FDAC15D0023DF02 /* HomeViewController.swift */,
+				2FFBEA811FD83A37006D340C /* RaysView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -272,6 +278,8 @@
 				2F55E89D1FD55C2A00BC52F0 /* ViewController.swift in Sources */,
 				2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* Views.swift in Sources */,
+				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
+				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
 				2F55E8F41FD59CBD00BC52F0 /* Routes.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
