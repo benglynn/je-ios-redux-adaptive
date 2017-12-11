@@ -6,6 +6,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rays.isFirstViewOfSession = true
+        rays.isFirstViewOfSession = true // TODO: from state, don't animate more than once per session
     }
 }

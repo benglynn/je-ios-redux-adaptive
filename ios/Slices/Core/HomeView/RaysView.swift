@@ -38,7 +38,7 @@ import UIKit
         layer.backgroundColor = UIColor.white.cgColor
         let isAnimating = isFirstViewOfSession && !isInterfaceBuilder
         
-        // MARK: - Underlying layer animation
+        // Underlying layer animation
         
         if(isAnimating) {
             CATransaction.setDisableActions(true)
@@ -54,7 +54,7 @@ import UIKit
             layer.add(anim, forKey: nil)
         }
         
-        // Mark: - Individual rays and ray animation
+        // Individual rays and ray animation
         
         let raysCenter = CGPoint(x: rect.midX, y: rect.midY)
         let rayLength = 2 * CGFloat(max(rect.height, rect.width))
