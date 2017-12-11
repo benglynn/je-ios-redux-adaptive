@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */; };
+		2F54A3A61FDED11F006DA319 /* HindVadodara-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */; };
+		2F54A3A71FDED11F006DA319 /* HindVadodara-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */; };
+		2F54A3A81FDED11F006DA319 /* HindVadodara-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39D1FDED11F006DA319 /* HindVadodara-Regular.ttf */; };
+		2F54A3A91FDED11F006DA319 /* HindVadodara-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39E1FDED11F006DA319 /* HindVadodara-SemiBold.ttf */; };
+		2F54A3AA1FDED11F006DA319 /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39F1FDED11F006DA319 /* Ubuntu-Italic.ttf */; };
+		2F54A3AB1FDED11F006DA319 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A3A01FDED11F006DA319 /* Ubuntu-Light.ttf */; };
+		2F54A3AC1FDED11F006DA319 /* Ubuntu-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A3A11FDED11F006DA319 /* Ubuntu-LightItalic.ttf */; };
+		2F54A3AD1FDED11F006DA319 /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A3A21FDED11F006DA319 /* Ubuntu-Medium.ttf */; };
+		2F54A3AE1FDED11F006DA319 /* Ubuntu-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A3A31FDED11F006DA319 /* Ubuntu-MediumItalic.ttf */; };
+		2F54A3AF1FDED11F006DA319 /* Ubuntu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A3A41FDED11F006DA319 /* Ubuntu.ttf */; };
 		2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E89A1FD55C2A00BC52F0 /* AppDelegate.swift */; };
 		2F55E89D1FD55C2A00BC52F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E89C1FD55C2A00BC52F0 /* ViewController.swift */; };
 		2F55E8A01FD55C2A00BC52F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E89E1FD55C2A00BC52F0 /* Main.storyboard */; };
@@ -34,6 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Bold.ttf"; sourceTree = "<group>"; };
+		2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Light.ttf"; sourceTree = "<group>"; };
+		2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Medium.ttf"; sourceTree = "<group>"; };
+		2F54A39D1FDED11F006DA319 /* HindVadodara-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Regular.ttf"; sourceTree = "<group>"; };
+		2F54A39E1FDED11F006DA319 /* HindVadodara-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-SemiBold.ttf"; sourceTree = "<group>"; };
+		2F54A39F1FDED11F006DA319 /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
+		2F54A3A01FDED11F006DA319 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		2F54A3A11FDED11F006DA319 /* Ubuntu-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LightItalic.ttf"; sourceTree = "<group>"; };
+		2F54A3A21FDED11F006DA319 /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		2F54A3A31FDED11F006DA319 /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2F54A3A41FDED11F006DA319 /* Ubuntu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ubuntu.ttf; sourceTree = "<group>"; };
 		2F55E8971FD55C2A00BC52F0 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F55E89A1FD55C2A00BC52F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F55E89C1FD55C2A00BC52F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +95,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F54A3991FDED11F006DA319 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */,
+				2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */,
+				2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */,
+				2F54A39D1FDED11F006DA319 /* HindVadodara-Regular.ttf */,
+				2F54A39E1FDED11F006DA319 /* HindVadodara-SemiBold.ttf */,
+				2F54A39F1FDED11F006DA319 /* Ubuntu-Italic.ttf */,
+				2F54A3A01FDED11F006DA319 /* Ubuntu-Light.ttf */,
+				2F54A3A11FDED11F006DA319 /* Ubuntu-LightItalic.ttf */,
+				2F54A3A21FDED11F006DA319 /* Ubuntu-Medium.ttf */,
+				2F54A3A31FDED11F006DA319 /* Ubuntu-MediumItalic.ttf */,
+				2F54A3A41FDED11F006DA319 /* Ubuntu.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2F55E88E1FD55C2A00BC52F0 = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +143,10 @@
 				2F55E8F31FD59CBD00BC52F0 /* Routes.swift */,
 				2F55E89E1FD55C2A00BC52F0 /* Main.storyboard */,
 				2F55E8EF1FD58A7F00BC52F0 /* State.swift */,
-				2F55E8A11FD55C2A00BC52F0 /* Assets.xcassets */,
 				2F55E8A31FD55C2A00BC52F0 /* LaunchScreen.storyboard */,
 				2F55E8A61FD55C2A00BC52F0 /* Info.plist */,
+				2F55E8A11FD55C2A00BC52F0 /* Assets.xcassets */,
+				2F54A3991FDED11F006DA319 /* Fonts */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -237,9 +278,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F54A3AF1FDED11F006DA319 /* Ubuntu.ttf in Resources */,
+				2F54A3AE1FDED11F006DA319 /* Ubuntu-MediumItalic.ttf in Resources */,
+				2F54A3A81FDED11F006DA319 /* HindVadodara-Regular.ttf in Resources */,
+				2F54A3A61FDED11F006DA319 /* HindVadodara-Light.ttf in Resources */,
+				2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */,
+				2F54A3AA1FDED11F006DA319 /* Ubuntu-Italic.ttf in Resources */,
+				2F54A3AC1FDED11F006DA319 /* Ubuntu-LightItalic.ttf in Resources */,
+				2F54A3AB1FDED11F006DA319 /* Ubuntu-Light.ttf in Resources */,
+				2F54A3A71FDED11F006DA319 /* HindVadodara-Medium.ttf in Resources */,
 				2F55E8A51FD55C2A00BC52F0 /* LaunchScreen.storyboard in Resources */,
 				2F55E8A21FD55C2A00BC52F0 /* Assets.xcassets in Resources */,
 				2F55E9041FD5A0A000BC52F0 /* HomeView.storyboard in Resources */,
+				2F54A3A91FDED11F006DA319 /* HindVadodara-SemiBold.ttf in Resources */,
+				2F54A3AD1FDED11F006DA319 /* Ubuntu-Medium.ttf in Resources */,
 				2F55E8A01FD55C2A00BC52F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

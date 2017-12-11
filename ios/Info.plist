@@ -41,5 +41,20 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string></string>
+		<string>HindVadodara-Bold.ttf</string>
+		<string>HindVadodara-Light.ttf</string>
+		<string>HindVadodara-Medium.ttf</string>
+		<string>HindVadodara-Regular.ttf</string>
+		<string>HindVadodara-SemiBold.ttf</string>
+		<string>Ubuntu-Italic.ttf</string>
+		<string>Ubuntu-Light.ttf</string>
+		<string>Ubuntu-LightItalic.ttf</string>
+		<string>Ubuntu-Medium.ttf</string>
+		<string>Ubuntu-MediumItalic.ttf</string>
+		<string>Ubuntu.ttf</string>
+	</array>
 </dict>
 </plist>
