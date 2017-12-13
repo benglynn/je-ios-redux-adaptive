@@ -39,7 +39,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivering your night in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZJ-de-PYN">
                                         <rect key="frame" x="7.5" y="45" width="285.5" height="31.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Italic" family="Ubuntu" pointSize="28"/>
-                                        <color key="textColor" red="0.98039215686274506" green="0.0" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.98039215686274506" green="0.0" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
