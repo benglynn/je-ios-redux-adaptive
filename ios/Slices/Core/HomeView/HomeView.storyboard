@@ -10,8 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HindVadodara-Medium.ttf">
+            <string>HindVadodara-Medium</string>
+        </array>
         <array key="Ubuntu-Italic.ttf">
             <string>Ubuntu-Italic</string>
+        </array>
+        <array key="Ubuntu-Medium.ttf">
+            <string>Ubuntu-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -26,38 +32,85 @@
                             <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqs-Rb-VEN" userLabel="Rays" customClass="RaysView" customModule="ios" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eqy-Yr-EY6">
-                                <rect key="frame" x="10" y="80" width="300" height="76.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eqy-Yr-EY6">
+                                <rect key="frame" x="20" y="63" width="280" height="282.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-red" translatesAutoresizingMaskIntoConstraints="NO" id="ljT-AA-V3x">
-                                        <rect key="frame" x="90" y="0.0" width="120" height="25"/>
+                                        <rect key="frame" x="80" y="0.0" width="120" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="Od2-nT-QPs"/>
                                             <constraint firstAttribute="height" constant="25" id="tNv-AS-yRi"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dw8-Bb-GAl" userLabel="Space">
+                                        <rect key="frame" x="135" y="35" width="10" height="10"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="R4m-79-rp1"/>
+                                            <constraint firstAttribute="height" constant="10" id="gib-ls-Ef4"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivering your night in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZJ-de-PYN">
-                                        <rect key="frame" x="7.5" y="45" width="285.5" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="55" width="280" height="33"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Italic" family="Ubuntu" pointSize="28"/>
                                         <color key="textColor" red="0.98039215686274506" green="0.0" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0JM-vi-F9R" userLabel="Space">
+                                        <rect key="frame" x="115" y="98" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="HuV-lX-SpA"/>
+                                            <constraint firstAttribute="width" constant="50" id="lWl-mI-gQd"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by postcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqX-zQ-3I2">
+                                        <rect key="frame" x="30" y="158" width="220" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
+                                        <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your postcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJn-1X-UCd">
+                                        <rect key="frame" x="30" y="184.5" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="U4y-wz-p5H"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmp-e6-9eu">
+                                        <rect key="frame" x="30" y="238.5" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="2rB-q2-eUu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
+                                        <state key="normal" title="Search" backgroundImage="button">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="MJn-1X-UCd" firstAttribute="width" secondItem="eqy-Yr-EY6" secondAttribute="width" constant="-60" id="Gdu-9C-Dci"/>
+                                    <constraint firstItem="vqX-zQ-3I2" firstAttribute="width" secondItem="eqy-Yr-EY6" secondAttribute="width" constant="-60" id="hBp-rd-PxK"/>
+                                    <constraint firstItem="Jmp-e6-9eu" firstAttribute="width" secondItem="eqy-Yr-EY6" secondAttribute="width" constant="-60" id="x6y-ot-t6Z"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.0" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eqy-Yr-EY6" firstAttribute="centerY" secondItem="uWE-oR-hBB" secondAttribute="centerY" constant="-80" id="1Dq-Qa-LQJ"/>
+                            <constraint firstItem="eqy-Yr-EY6" firstAttribute="centerX" secondItem="uWE-oR-hBB" secondAttribute="centerX" id="8ng-Dq-lIx"/>
                             <constraint firstItem="qqs-Rb-VEN" firstAttribute="leading" secondItem="uWE-oR-hBB" secondAttribute="leading" id="Ae2-xA-zqD"/>
-                            <constraint firstItem="q4r-2j-1Tt" firstAttribute="trailing" secondItem="eqy-Yr-EY6" secondAttribute="trailing" constant="10" id="KZs-Sd-Uhv"/>
+                            <constraint firstItem="eqy-Yr-EY6" firstAttribute="width" secondItem="uWE-oR-hBB" secondAttribute="width" constant="-40" id="BN3-Hn-s5o"/>
                             <constraint firstAttribute="bottom" secondItem="qqs-Rb-VEN" secondAttribute="bottom" id="c53-gd-Kav"/>
                             <constraint firstItem="qqs-Rb-VEN" firstAttribute="trailing" secondItem="uWE-oR-hBB" secondAttribute="trailing" id="eCu-iV-1c0"/>
-                            <constraint firstItem="eqy-Yr-EY6" firstAttribute="top" secondItem="q4r-2j-1Tt" secondAttribute="top" constant="60" id="ktt-9d-S2g"/>
-                            <constraint firstItem="eqy-Yr-EY6" firstAttribute="leading" secondItem="q4r-2j-1Tt" secondAttribute="leading" constant="10" id="mJV-fk-VHJ"/>
                             <constraint firstItem="qqs-Rb-VEN" firstAttribute="top" secondItem="uWE-oR-hBB" secondAttribute="top" id="phf-Ia-Kjt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q4r-2j-1Tt"/>
                     </view>
                     <connections>
+                        <outlet property="contents" destination="eqy-Yr-EY6" id="Tya-7R-6ug"/>
                         <outlet property="rays" destination="qqs-Rb-VEN" id="xyp-pI-dj0"/>
                     </connections>
                 </viewController>
@@ -67,6 +120,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button" width="11" height="11"/>
         <image name="logo-red" width="120" height="24"/>
     </resources>
 </document>
