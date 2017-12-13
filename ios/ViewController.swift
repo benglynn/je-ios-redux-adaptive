@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     }
     
     private func fade(view: UIView, toAlpha: CGFloat, completion: (()->Void)? = nil) {
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
             view.alpha = toAlpha
         }, completion: { complete in
             completion?()

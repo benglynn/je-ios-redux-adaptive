@@ -21,14 +21,14 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if(firstRun == true) {
-            UIView.animate(withDuration: 0.5) { [weak self] in
+            UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseOut, animations: {[weak self] in
                 self?.barBottom.constant = 0
-                self?.view.layoutIfNeeded()
-            }
-            UIView.animate(withDuration: 0.5) { [weak self] in
+                self?.view.layoutIfNeeded() }
+            )
+            UIView.animate(withDuration: 0.5, delay: 0.9, options: .curveEaseOut, animations: {[weak self] in
                 self?.contents.alpha = 1.0
                 self?.view.layoutIfNeeded()
-            }
+            })
         }
         firstRun = false
     }
