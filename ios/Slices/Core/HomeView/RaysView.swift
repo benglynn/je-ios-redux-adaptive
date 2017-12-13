@@ -94,7 +94,7 @@ import UIKit
                 anim.toValue = endTransform
                 anim.duration = 0.5
                 anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-                anim.beginTime = CACurrentMediaTime() + 0.2 + (Double(index) * 0.06)
+                anim.beginTime = CACurrentMediaTime() + (Double(index) * 0.06)
                 anim.fillMode = kCAFillModeBackwards
                 rayLayer.transform = endTransform
                 rayLayer.add(anim, forKey: nil)
