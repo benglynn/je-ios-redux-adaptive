@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
                 self?.barBottom.constant = 0
                 self?.view.layoutIfNeeded() }
             )
-            UIView.animate(withDuration: 0.5, delay: 0.9, options: .curveEaseOut, animations: {[weak self] in
+            UIView.animate(withDuration: 0.5, delay: 1.1, options: .curveEaseOut, animations: {[weak self] in
                 self?.contents.alpha = 1.0
                 self?.view.layoutIfNeeded()
             })
