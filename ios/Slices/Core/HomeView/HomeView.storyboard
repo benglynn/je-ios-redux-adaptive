@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eqy-Yr-EY6">
-                                <rect key="frame" x="20" y="63" width="280" height="282.5"/>
+                                <rect key="frame" x="20" y="61.5" width="280" height="285.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-red" translatesAutoresizingMaskIntoConstraints="NO" id="ljT-AA-V3x">
                                         <rect key="frame" x="80" y="0.0" width="120" height="25"/>
@@ -51,13 +51,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivering your night in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZJ-de-PYN">
-                                        <rect key="frame" x="0.0" y="55" width="280" height="33"/>
+                                        <rect key="frame" x="0.0" y="55" width="280" height="31.5"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Italic" family="Ubuntu" pointSize="28"/>
                                         <color key="textColor" red="0.98039215686274506" green="0.0" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0JM-vi-F9R" userLabel="Space">
-                                        <rect key="frame" x="115" y="98" width="50" height="50"/>
+                                        <rect key="frame" x="115" y="96.5" width="50" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HuV-lX-SpA"/>
@@ -65,13 +65,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by postcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqX-zQ-3I2">
-                                        <rect key="frame" x="30" y="158" width="220" height="16.5"/>
+                                        <rect key="frame" x="30" y="156.5" width="220" height="21"/>
                                         <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                         <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your postcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJn-1X-UCd">
-                                        <rect key="frame" x="30" y="184.5" width="220" height="44"/>
+                                        <rect key="frame" x="30" y="187.5" width="220" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="U4y-wz-p5H"/>
                                         </constraints>
@@ -80,7 +80,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmp-e6-9eu">
-                                        <rect key="frame" x="30" y="238.5" width="220" height="44"/>
+                                        <rect key="frame" x="30" y="241.5" width="220" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="2rB-q2-eUu"/>
                                         </constraints>
@@ -96,13 +96,78 @@
                                     <constraint firstItem="Jmp-e6-9eu" firstAttribute="width" secondItem="eqy-Yr-EY6" secondAttribute="width" constant="-60" id="x6y-ot-t6Z"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CV-WW-B0Y" userLabel="Bar">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="KYy-tG-6cq">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="33"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restaurants-selected" translatesAutoresizingMaskIntoConstraints="NO" id="BoK-WD-jwF">
+                                                <rect key="frame" x="0.0" y="5" width="106.5" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="9mr-Kn-xPI"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orders" translatesAutoresizingMaskIntoConstraints="NO" id="9o2-zd-Had">
+                                                <rect key="frame" x="106.5" y="5" width="107" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="x14-YQ-Voa"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="eQe-G7-bce">
+                                                <rect key="frame" x="213.5" y="5" width="106.5" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="yny-9d-rPu"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="AVI-7g-cBq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkq-iE-7hd">
+                                        <rect key="frame" x="22.5" y="30" width="61.5" height="18"/>
+                                        <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="12"/>
+                                        <color key="textColor" red="0.078431372549019607" green="0.31372549019607843" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eJ-nt-Ccb">
+                                        <rect key="frame" x="143" y="30" width="35" height="18"/>
+                                        <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="12"/>
+                                        <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pso-u5-sSW">
+                                        <rect key="frame" x="245" y="30" width="43" height="18"/>
+                                        <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="12"/>
+                                        <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Gkq-iE-7hd" firstAttribute="centerX" secondItem="BoK-WD-jwF" secondAttribute="centerX" id="1oq-CP-PRO"/>
+                                    <constraint firstItem="KYy-tG-6cq" firstAttribute="leading" secondItem="1CV-WW-B0Y" secondAttribute="leading" id="BFW-rO-hYu"/>
+                                    <constraint firstItem="6eJ-nt-Ccb" firstAttribute="centerX" secondItem="9o2-zd-Had" secondAttribute="centerX" id="Fic-rq-Yb5"/>
+                                    <constraint firstAttribute="bottom" secondItem="6eJ-nt-Ccb" secondAttribute="bottom" constant="1" id="KEB-bc-2Mj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pso-u5-sSW" secondAttribute="bottom" constant="1" id="OlH-ep-kwn"/>
+                                    <constraint firstAttribute="height" constant="49" id="WvY-pe-wVw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gkq-iE-7hd" secondAttribute="bottom" constant="1" id="dei-Ne-j9c"/>
+                                    <constraint firstItem="Pso-u5-sSW" firstAttribute="centerX" secondItem="eQe-G7-bce" secondAttribute="centerX" id="hLu-Ze-ooA"/>
+                                    <constraint firstItem="KYy-tG-6cq" firstAttribute="top" secondItem="1CV-WW-B0Y" secondAttribute="top" id="jJT-D3-Fsf"/>
+                                    <constraint firstAttribute="trailing" secondItem="KYy-tG-6cq" secondAttribute="trailing" id="zqK-OH-bml"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.0" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eqy-Yr-EY6" firstAttribute="centerY" secondItem="uWE-oR-hBB" secondAttribute="centerY" constant="-80" id="1Dq-Qa-LQJ"/>
                             <constraint firstItem="eqy-Yr-EY6" firstAttribute="centerX" secondItem="uWE-oR-hBB" secondAttribute="centerX" id="8ng-Dq-lIx"/>
                             <constraint firstItem="qqs-Rb-VEN" firstAttribute="leading" secondItem="uWE-oR-hBB" secondAttribute="leading" id="Ae2-xA-zqD"/>
+                            <constraint firstItem="1CV-WW-B0Y" firstAttribute="leading" secondItem="q4r-2j-1Tt" secondAttribute="leading" id="AwV-iD-O6q"/>
                             <constraint firstItem="eqy-Yr-EY6" firstAttribute="width" secondItem="uWE-oR-hBB" secondAttribute="width" constant="-40" id="BN3-Hn-s5o"/>
+                            <constraint firstItem="1CV-WW-B0Y" firstAttribute="bottom" secondItem="q4r-2j-1Tt" secondAttribute="bottom" id="KUx-wo-nwp"/>
+                            <constraint firstItem="1CV-WW-B0Y" firstAttribute="trailing" secondItem="q4r-2j-1Tt" secondAttribute="trailing" id="Rsj-nE-CTS"/>
                             <constraint firstAttribute="bottom" secondItem="qqs-Rb-VEN" secondAttribute="bottom" id="c53-gd-Kav"/>
                             <constraint firstItem="qqs-Rb-VEN" firstAttribute="trailing" secondItem="uWE-oR-hBB" secondAttribute="trailing" id="eCu-iV-1c0"/>
                             <constraint firstItem="qqs-Rb-VEN" firstAttribute="top" secondItem="uWE-oR-hBB" secondAttribute="top" id="phf-Ia-Kjt"/>
@@ -110,17 +175,22 @@
                         <viewLayoutGuide key="safeArea" id="q4r-2j-1Tt"/>
                     </view>
                     <connections>
+                        <outlet property="bar" destination="1CV-WW-B0Y" id="ro7-pd-bPS"/>
+                        <outlet property="barBottom" destination="KUx-wo-nwp" id="tDe-dz-dJc"/>
                         <outlet property="contents" destination="eqy-Yr-EY6" id="Tya-7R-6ug"/>
                         <outlet property="rays" destination="qqs-Rb-VEN" id="xyp-pI-dj0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9OG-Aj-7P6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45.600000000000001" y="167.76611694152925"/>
+            <point key="canvasLocation" x="-46.875" y="166.90140845070422"/>
         </scene>
     </scenes>
     <resources>
         <image name="button" width="11" height="11"/>
         <image name="logo-red" width="120" height="24"/>
+        <image name="orders" width="28" height="28"/>
+        <image name="restaurants-selected" width="28" height="28"/>
+        <image name="settings" width="28" height="28"/>
     </resources>
 </document>
