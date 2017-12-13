@@ -15,16 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var progress: UIImageView!
     
     let disposeBag = DisposeBag()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         rotateForever(view: progress)
         fade(view: progress, toAlpha: 0.5)
-        
+        let globalScheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
         store.state
-            .delay(RxTimeInterval(0.5), scheduler: MainScheduler.instance) // TODO temporary simulated delay
+            .delay(RxTimeInterval(0.5), scheduler: globalScheduler) // TODO replace with call
             .take(1)
+            .observeOn(MainScheduler.instance)
             .subscribe(onNext: {
                 let viewController = currentView(forState: $0)
                 self.fade(view: self.progress, toAlpha: 0)
