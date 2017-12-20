@@ -4,8 +4,6 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var rays: RaysView!
     @IBOutlet weak var contents: UIStackView!
-    @IBOutlet weak var bar: UIView!
-    @IBOutlet weak var barBottom: NSLayoutConstraint!
     
     var firstRun = true
     
@@ -14,7 +12,6 @@ class HomeViewController: UIViewController {
         if(firstRun == true) {
             rays.isFirstViewOfSession = firstRun
             contents.alpha = 0
-            barBottom.constant = 49
         }
     }
     
@@ -22,7 +19,6 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
         if(firstRun == true) {
             UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseOut, animations: {[weak self] in
-                self?.barBottom.constant = 0
                 self?.view.layoutIfNeeded() }
             )
             UIView.animate(withDuration: 0.5, delay: 1.1, options: .curveEaseOut, animations: {[weak self] in
