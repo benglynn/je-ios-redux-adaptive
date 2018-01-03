@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class ViewController: UIViewController {
+class RootViewController: UIViewController {
     
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var progress: UIImageView!
