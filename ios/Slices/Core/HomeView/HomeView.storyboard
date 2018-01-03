@@ -21,10 +21,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="CXa-Ki-s1B">
             <objects>
-                <viewController id="giy-n7-9ak" customClass="HomeViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="giy-n7-9ak" customClass="HomeViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uWE-oR-hBB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

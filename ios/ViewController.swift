@@ -26,11 +26,13 @@ class ViewController: UIViewController {
             .delay(RxTimeInterval(0.5), scheduler: globalScheduler) // TODO replace with call
             .take(1)
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: {
-                let viewController = currentView(forState: $0)
+            .subscribe(onNext: { state in
                 self.fade(view: self.progress, toAlpha: 0)
                 self.fade(view: self.logo, toAlpha: 0) { [weak self] in
-                    self?.present(viewController, animated: false, completion: nil)
+                    let viewController = currentView(forState: state)
+//                    let tabs = viewControllers[0] as! UITabBarController
+//                    tabs.viewControllers = [viewControllers[1]]
+                    self?.present(viewController[0], animated: false, completion: nil)
                 }
             })
         .disposed(by: disposeBag)

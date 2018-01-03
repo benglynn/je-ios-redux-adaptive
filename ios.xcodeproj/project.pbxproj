@@ -18,6 +18,7 @@
 		2F54A3AD1FDED11F006DA319 /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A3A21FDED11F006DA319 /* Ubuntu-Medium.ttf */; };
 		2F54A3AE1FDED11F006DA319 /* Ubuntu-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A3A31FDED11F006DA319 /* Ubuntu-MediumItalic.ttf */; };
 		2F54A3AF1FDED11F006DA319 /* Ubuntu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A3A41FDED11F006DA319 /* Ubuntu.ttf */; };
+		2F559A481FFBE8E20024F7B1 /* TabsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F559A471FFBE8E20024F7B1 /* TabsView.storyboard */; };
 		2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E89A1FD55C2A00BC52F0 /* AppDelegate.swift */; };
 		2F55E89D1FD55C2A00BC52F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E89C1FD55C2A00BC52F0 /* ViewController.swift */; };
 		2F55E8A01FD55C2A00BC52F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E89E1FD55C2A00BC52F0 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		2F54A3A21FDED11F006DA319 /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
 		2F54A3A31FDED11F006DA319 /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MediumItalic.ttf"; sourceTree = "<group>"; };
 		2F54A3A41FDED11F006DA319 /* Ubuntu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ubuntu.ttf; sourceTree = "<group>"; };
+		2F559A471FFBE8E20024F7B1 /* TabsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabsView.storyboard; sourceTree = "<group>"; };
 		2F55E8971FD55C2A00BC52F0 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F55E89A1FD55C2A00BC52F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F55E89C1FD55C2A00BC52F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 				2F54A3A41FDED11F006DA319 /* Ubuntu.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2F559A461FFBE89F0024F7B1 /* TabsView */ = {
+			isa = PBXGroup;
+			children = (
+				2F559A471FFBE8E20024F7B1 /* TabsView.storyboard */,
+			);
+			path = TabsView;
 			sourceTree = "<group>";
 		};
 		2F55E88E1FD55C2A00BC52F0 = {
@@ -171,6 +181,7 @@
 		2F55E9011FD5A01C00BC52F0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2F559A461FFBE89F0024F7B1 /* TabsView */,
 				2F55E9021FD5A03B00BC52F0 /* HomeView */,
 			);
 			path = Core;
@@ -293,6 +304,7 @@
 				2F54A3A91FDED11F006DA319 /* HindVadodara-SemiBold.ttf in Resources */,
 				2F54A3AD1FDED11F006DA319 /* Ubuntu-Medium.ttf in Resources */,
 				2F55E8A01FD55C2A00BC52F0 /* Main.storyboard in Resources */,
+				2F559A481FFBE8E20024F7B1 /* TabsView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,23 +2,26 @@ import Foundation
 
 struct State {
     
-    struct Route {
-        let match: String
-        let viewName: ViewName
+    struct Config {
+        let routes: [ViewName: Route]
+        let parents: [ViewName: ParentView]
     }
     
-    struct Core {
-        let url: String
-        let routes: [Route]
-    }
+    let config: Config
     
-    let core: Core
 }
 
 let initialState = State(
-    core: State.Core(
-        url: "",
+    config: State.Config(
         routes: [
-            State.Route(match: "^$", viewName: .HomeView)
-        ])
+            .HomeView: Route(pattern: "^$", parent: .RestaurantsView),
+            .OrdersView: Route(pattern: "^orders$", parent: .TabsView),
+            .SettingsView: Route(pattern: "^settings$", parent: .TabsView)
+        ],
+        parents: [
+            .TabsView: ParentView(children: [.RestaurantsView, .OrdersView, .SettingsView]),
+            .RestaurantsView: ParentView(children: [.HomeView])
+        ]
+    )
 )
+
