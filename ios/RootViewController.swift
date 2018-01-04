@@ -14,17 +14,20 @@ class RootViewController: UIViewController {
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var progress: UIImageView!
     
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        (UIApplication.shared.delegate as! AppDelegate).rootViewDidLoad()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         rotateForever(view: progress)
         fade(view: progress, toAlpha: 0.5)
-        let globalScheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
-        store.state
-            .delay(RxTimeInterval(0.5), scheduler: globalScheduler) // TODO replace with call
-            .take(1)
+        store.state$
+            .filter { state in state.config.isAdapted }
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { state in
                 self.fade(view: self.progress, toAlpha: 0)

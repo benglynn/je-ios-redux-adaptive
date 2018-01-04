@@ -3,7 +3,7 @@ import Foundation
 import RxSwift
 
 struct Store {
-    let state: BehaviorSubject<State>
+    let state$: BehaviorSubject<State>
 }
 
-let store = Store(state: BehaviorSubject<State>(value: initialState))
+let store = Store(state$: BehaviorSubject<State>(value: initialState))

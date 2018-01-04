@@ -5,40 +5,31 @@ import RxCocoa
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var window: UIWindow?
+    
     private let bag = DisposeBag()
 
-    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        DispatchQueue.global(qos: .background).async { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.fetchAdaptations()
-        }
         return true
     }
     
     func fetchAdaptations() {
-        let response = Observable.from([AdaptationService.url])
-            .map { urlString -> URL in
-                return URL(string: urlString)!
-            }
-            .map { url -> URLRequest in
-                return URLRequest(url: url)
-            }
-            .flatMap { (request) -> Observable<(response: HTTPURLResponse, data: Data)> in
-                return URLSession.shared.rx.response(request: request)
-            }
-            .share(replay: 1, scope: .whileConnected)
         
-        response
-            .subscribe(onNext: { response, data in
-                // TODO handle error responses
-                let decoder = JSONDecoder()
-                let serviceResponse = try! decoder.decode(AdaptationServiceResponse.self, from: data) // TODO handle failure
+        AdaptationService().actions$ // TODO: Sort dependency injection and retrieve singleton from injector
+            .subscribe(onNext: { serviceResponse in
                 print("Received \(serviceResponse.actions.count) actions")
-                serviceResponse.actions.forEach({ print("\($0.type) is \($0.active ? "active" : "inactive")") })
+                store.state$.onNext(adaptedState) // TODO: once reduce is implemented, dispatch actions to store instead of this
             })
             .disposed(by: bag)
+    }
+    
+    func rootViewDidLoad() {
+        
+        DispatchQueue.global(qos: .background).async { [weak self] in // TODO: subscribeOn instead of this?
+            guard let strongSelf = self else { return }
+            strongSelf.fetchAdaptations()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {}
