@@ -5,7 +5,7 @@ struct State {
     struct Config {
         let isAdapted: Bool
         let routes: [ViewName: Route]
-        let parents: [ViewName: ParentView]
+        let parents: [ViewName: [ViewName]]
     }
     
     let config: Config
@@ -21,8 +21,8 @@ let initialState = State(
             .SettingsView: Route(pattern: "^settings$", parent: .TabsView)
         ],
         parents: [
-            .TabsView: ParentView(children: [.RestaurantsView, .OrdersView, .SettingsView]),
-            .RestaurantsView: ParentView(children: [.HomeView])
+            .TabsView: [.RestaurantsView, .OrdersView, .SettingsView],
+            .RestaurantsView: [.HomeView]
         ]
     )
 )
@@ -37,8 +37,8 @@ let adaptedState = State(
             .SettingsView: Route(pattern: "^settings$", parent: .TabsView)
         ],
         parents: [
-            .TabsView: ParentView(children: [.RestaurantsView, .OrdersView, .SettingsView]),
-            .RestaurantsView: ParentView(children: [.HomeView])
+            .TabsView: [.RestaurantsView, .OrdersView, .SettingsView],
+            .RestaurantsView: [.HomeView]
         ]
     )
 )

@@ -6,28 +6,36 @@ struct Route {
     let parent: ViewName
 }
 
-func currentView(forState state: State) -> [UIViewController] {
-    
-    func findRouteFor(path: String, within routes: [(viewName: ViewName, route: Route)]) -> (viewName: ViewName, route: Route)? {
-        if routes.count == 0 {
-            return nil
-        }
-        let first = routes[0]
-        if let _ = path.range(of: first.1.pattern, options: .regularExpression) {
-            print("\(first.route.pattern) matched \(path)")
-            return routes[0]
-        }
-        print("\(first.route) did not match \(path)")
-        return findRouteFor(path: path, within: Array(routes[1...]))
+typealias NamedRoute = (viewName: ViewName, route: Route)
+typealias ViewStackItem = (view: UIViewController, children: [UIViewController]?)
+
+
+func findNamedRoute(for path: String, within namedRoutes: [NamedRoute]) -> NamedRoute? {
+    if namedRoutes.count == 0 {
+        print("no match for '\(path)' - will default to first route in state")
+        return nil
     }
-    let path = "" // TODO: deep links
-    let defaultRoute = (ViewName.HomeView, state.config.routes[.HomeView]!)
-    let matchedRoute = findRouteFor(path: path, within: state.config.routes.map {(viewName: $0, route: $1)})
-    let resolvedRoute = matchedRoute ?? defaultRoute
+    let first = namedRoutes[0]
+    if let _ = path.range(of: first.1.pattern, options: .regularExpression) {
+        print("\(first.viewName.rawValue) matched '\(path)'")
+        return first
+    }
+    return findNamedRoute(for: path, within: Array(namedRoutes[1...]))
+}
+
+func instantiateView(viewName: ViewName) -> UIViewController {
+    return UIStoryboard(name: viewName.rawValue, bundle: nil).instantiateInitialViewController()!
+}
+
+func compileViewStack(for path: String, with state: State) -> [ViewStackItem] {
     
+    let namedRoutes = state.config.routes.map {(viewName: $0, route: $1)}
+    let resolvedNamedRoute = findNamedRoute(for: path, within: namedRoutes) ?? namedRoutes[0]
     
-    func ancestry(childViewName: ViewName, config: State.Config) {}
-    
-    return [UIStoryboard(name: resolvedRoute.viewName.rawValue, bundle: nil).instantiateInitialViewController()!]
+    // TODO: compile the following from state
+    return [
+        (view: instantiateView(viewName: ViewName.HomeView), children: nil),
+        (view: instantiateView(viewName: ViewName.TabsView), children: [instantiateView(viewName: .HomeView)])
+    ]
 
 }

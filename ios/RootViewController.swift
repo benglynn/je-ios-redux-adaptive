@@ -32,10 +32,9 @@ class RootViewController: UIViewController {
             .subscribe(onNext: { state in
                 self.fade(view: self.progress, toAlpha: 0)
                 self.fade(view: self.logo, toAlpha: 0) { [weak self] in
-                    let viewController = currentView(forState: state)
-//                    let tabs = viewControllers[0] as! UITabBarController
-//                    tabs.viewControllers = [viewControllers[1]]
-                    self?.present(viewController[0], animated: false, completion: nil)
+                    let path = "" // TODO: implement universal links
+                    let viewStack = compileViewStack(for: path, with: state)
+                    self?.present(viewStack[0].view, animated: false, completion: nil)
                 }
             })
         .disposed(by: disposeBag)

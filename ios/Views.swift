@@ -7,7 +7,3 @@ enum ViewName: String {
     case OrdersView
     case SettingsView
 }
-
-struct ParentView {
-    let children: [ViewName]
-}
