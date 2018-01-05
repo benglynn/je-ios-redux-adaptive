@@ -41,24 +41,39 @@ class RootViewController: UIViewController {
     }
     
     private func present(_ viewStack: [ViewStackItem], on parent: UIViewController) {
-        print("Presented view controller: \(String(describing: parent.presentedViewController))")
         let first = viewStack[0]
-        if parent.presentedViewController == nil {
-            self.present(first.view, animated: false, completion: nil)
+        let selectedInParent: Bool = {
+            switch parent {
+            case let tabs as UITabBarController:
+                if tabs.viewControllers?.contains(first.view) == true {
+                    print("Selecting \(first.view) in \(parent)")
+                    tabs.selectedViewController = first.view
+                    return true
+                } else {
+                    return false
+                }
+            // TODO: Check for all types of parent
+            default: return false
+            }
+        }()
+        if selectedInParent == false && parent.presentedViewController != first.view {
+            print("Presenting \(first.view) on \(parent)")
+            self.present(first.view, animated: false, completion: nil) // TODO: animated true for all but first view
             guard let children = first.children else {
                 return
             }
             switch first.view {
             case let tabs as UITabBarController:
                 tabs.viewControllers = children
+            // TODO: Check for all types of parent
             default:
                 fatalError("Unable to add children to an unknown parent type")
             }
-            
         }
-        // TODO: deal with complex view stacks
+        if viewStack.count > 1 {
+            present(Array(viewStack[1...]), on: first.view)
+        }
         // TODO: test coversage validates ancestry?
-        
     }
     
     private func fade(view: UIView, toAlpha: CGFloat, completion: (()->Void)? = nil) {

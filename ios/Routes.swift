@@ -34,13 +34,12 @@ func compileViewStack(for state: State) -> [ViewStackItem] {
     print("Resolved \(resolvedNamedRoute.viewName.rawValue)")
     
     // TODO: compile the following from state
+    let home = instantiateView(viewName: .HomeView)
+    let orders = instantiateView(viewName: .OrdersView)
+    let settings = instantiateView(viewName: .SettingsView)
     return [
-        (view: instantiateView(viewName: ViewName.TabsView), children: [
-            instantiateView(viewName: .HomeView),
-            instantiateView(viewName: .OrdersView),
-            instantiateView(viewName: .SettingsView),
-         ]),
-        (view: instantiateView(viewName: ViewName.HomeView), children: nil)
+        (view: instantiateView(viewName: ViewName.TabsView), children: [home, orders, settings]),
+        (view: home, children: nil)
     ]
 
 }
