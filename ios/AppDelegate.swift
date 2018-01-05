@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func fetchAdaptations() {
         
-        AdaptationService().actions$ // TODO: Sort dependency injection and retrieve singleton from injector
+        AdaptationService().asObservable() // TODO: Sort dependency injection and retrieve singleton from injector
             .subscribe(onNext: { serviceResponse in
                 print("Received \(serviceResponse.actions.count) actions")
                 store.state$.onNext(adaptedState) // TODO: once reduce is implemented, dispatch actions to store instead of this

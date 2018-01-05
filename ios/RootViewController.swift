@@ -28,16 +28,22 @@ class RootViewController: UIViewController {
         fade(view: progress, toAlpha: 0.5)
         store.state$
             .filter { state in state.config.isAdapted }
+            .take(1)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { state in
                 self.fade(view: self.progress, toAlpha: 0)
                 self.fade(view: self.logo, toAlpha: 0) { [weak self] in
-                    let path = "" // TODO: implement universal links
-                    let viewStack = compileViewStack(for: path, with: state)
-                    self?.present(viewStack[0].view, animated: false, completion: nil)
+                    let viewStack = compileViewStack(for: state)
+                    self?.present(viewStack: viewStack)
                 }
             })
         .disposed(by: disposeBag)
+    }
+    
+    private func present(viewStack: [ViewStackItem]) {
+        // TODO: deal with complex view stacks
+        // TODO: test coversage validates ancestry?
+        self.present(viewStack[0].view, animated: false, completion: nil)
     }
     
     private func fade(view: UIView, toAlpha: CGFloat, completion: (()->Void)? = nil) {

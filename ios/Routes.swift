@@ -27,10 +27,11 @@ func instantiateView(viewName: ViewName) -> UIViewController {
     return UIStoryboard(name: viewName.rawValue, bundle: nil).instantiateInitialViewController()!
 }
 
-func compileViewStack(for path: String, with state: State) -> [ViewStackItem] {
+func compileViewStack(for state: State) -> [ViewStackItem] {
     
     let namedRoutes = state.config.routes.map {(viewName: $0, route: $1)}
-    let resolvedNamedRoute = findNamedRoute(for: path, within: namedRoutes) ?? namedRoutes[0]
+    let resolvedNamedRoute = findNamedRoute(for: state.core.path, within: namedRoutes) ?? namedRoutes[0]
+    print("Resolved \(resolvedNamedRoute.viewName.rawValue)")
     
     // TODO: compile the following from state
     return [
