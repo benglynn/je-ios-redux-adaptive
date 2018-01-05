@@ -102,6 +102,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q4r-2j-1Tt"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Restaurants" image="restaurants" selectedImage="restaurants-selected" id="XhL-OC-ZDE"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contents" destination="eqy-Yr-EY6" id="Tya-7R-6ug"/>
                         <outlet property="rays" destination="qqs-Rb-VEN" id="xyp-pI-dj0"/>
@@ -115,5 +117,7 @@
     <resources>
         <image name="button" width="11" height="11"/>
         <image name="logo-red" width="120" height="24"/>
+        <image name="restaurants" width="28" height="28"/>
+        <image name="restaurants-selected" width="28" height="28"/>
     </resources>
 </document>

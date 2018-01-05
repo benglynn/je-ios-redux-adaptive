@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C9098E9859316ED97B8F26B /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C818E78A2285A67717DF621 /* Pods_ios.framework */; };
+		2F1C95381FFFBFD200684F4B /* OrdersView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C95371FFFBFD200684F4B /* OrdersView.storyboard */; };
+		2F1C953B1FFFC34400684F4B /* SettingsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C953A1FFFC34400684F4B /* SettingsView.storyboard */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
 		2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */; };
 		2F54A3A61FDED11F006DA319 /* HindVadodara-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		2C818E78A2285A67717DF621 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F1C95371FFFBFD200684F4B /* OrdersView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrdersView.storyboard; sourceTree = "<group>"; };
+		2F1C953A1FFFC34400684F4B /* SettingsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsView.storyboard; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
 		2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Bold.ttf"; sourceTree = "<group>"; };
 		2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Light.ttf"; sourceTree = "<group>"; };
@@ -102,6 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1C95361FFFBF9A00684F4B /* OrdersView */ = {
+			isa = PBXGroup;
+			children = (
+				2F1C95371FFFBFD200684F4B /* OrdersView.storyboard */,
+			);
+			path = OrdersView;
+			sourceTree = "<group>";
+		};
+		2F1C95391FFFC32800684F4B /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				2F1C953A1FFFC34400684F4B /* SettingsView.storyboard */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
 		2F54A3991FDED11F006DA319 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +209,8 @@
 		2F55E9011FD5A01C00BC52F0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2F1C95391FFFC32800684F4B /* SettingsView */,
+				2F1C95361FFFBF9A00684F4B /* OrdersView */,
 				2F559A461FFBE89F0024F7B1 /* TabsView */,
 				2F55E9021FD5A03B00BC52F0 /* HomeView */,
 			);
@@ -312,11 +334,13 @@
 				2F54A3AE1FDED11F006DA319 /* Ubuntu-MediumItalic.ttf in Resources */,
 				2F54A3A81FDED11F006DA319 /* HindVadodara-Regular.ttf in Resources */,
 				2F54A3A61FDED11F006DA319 /* HindVadodara-Light.ttf in Resources */,
+				2F1C95381FFFBFD200684F4B /* OrdersView.storyboard in Resources */,
 				2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */,
 				2F54A3AA1FDED11F006DA319 /* Ubuntu-Italic.ttf in Resources */,
 				2F54A3AC1FDED11F006DA319 /* Ubuntu-LightItalic.ttf in Resources */,
 				2F54A3AB1FDED11F006DA319 /* Ubuntu-Light.ttf in Resources */,
 				2F54A3A71FDED11F006DA319 /* HindVadodara-Medium.ttf in Resources */,
+				2F1C953B1FFFC34400684F4B /* SettingsView.storyboard in Resources */,
 				2F55E8A51FD55C2A00BC52F0 /* LaunchScreen.storyboard in Resources */,
 				2F55E8A21FD55C2A00BC52F0 /* Assets.xcassets in Resources */,
 				2F55E9041FD5A0A000BC52F0 /* HomeView.storyboard in Resources */,
@@ -564,7 +588,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -581,7 +605,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

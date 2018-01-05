@@ -32,18 +32,33 @@ class RootViewController: UIViewController {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { state in
                 self.fade(view: self.progress, toAlpha: 0)
-                self.fade(view: self.logo, toAlpha: 0) { [weak self] in
+                self.fade(view: self.logo, toAlpha: 0) {
                     let viewStack = compileViewStack(for: state)
-                    self?.present(viewStack: viewStack)
+                    self.present(viewStack, on: self)
                 }
             })
         .disposed(by: disposeBag)
     }
     
-    private func present(viewStack: [ViewStackItem]) {
+    private func present(_ viewStack: [ViewStackItem], on parent: UIViewController) {
+        print("Presented view controller: \(String(describing: parent.presentedViewController))")
+        let first = viewStack[0]
+        if parent.presentedViewController == nil {
+            self.present(first.view, animated: false, completion: nil)
+            guard let children = first.children else {
+                return
+            }
+            switch first.view {
+            case let tabs as UITabBarController:
+                tabs.viewControllers = children
+            default:
+                fatalError("Unable to add children to an unknown parent type")
+            }
+            
+        }
         // TODO: deal with complex view stacks
         // TODO: test coversage validates ancestry?
-        self.present(viewStack[0].view, animated: false, completion: nil)
+        
     }
     
     private func fade(view: UIView, toAlpha: CGFloat, completion: (()->Void)? = nil) {

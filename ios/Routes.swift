@@ -35,8 +35,12 @@ func compileViewStack(for state: State) -> [ViewStackItem] {
     
     // TODO: compile the following from state
     return [
-        (view: instantiateView(viewName: ViewName.HomeView), children: nil),
-        (view: instantiateView(viewName: ViewName.TabsView), children: [instantiateView(viewName: .HomeView)])
+        (view: instantiateView(viewName: ViewName.TabsView), children: [
+            instantiateView(viewName: .HomeView),
+            instantiateView(viewName: .OrdersView),
+            instantiateView(viewName: .SettingsView),
+         ]),
+        (view: instantiateView(viewName: ViewName.HomeView), children: nil)
     ]
 
 }
