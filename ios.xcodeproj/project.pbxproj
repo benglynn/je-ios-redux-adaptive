@@ -31,7 +31,7 @@
 		2F55E8B01FD55C2A00BC52F0 /* iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8AF1FD55C2A00BC52F0 /* iosTests.swift */; };
 		2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8EF1FD58A7F00BC52F0 /* State.swift */; };
 		2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F11FD5925F00BC52F0 /* Store.swift */; };
-		2F55E8F41FD59CBD00BC52F0 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F31FD59CBD00BC52F0 /* Routes.swift */; };
+		2F55E8F41FD59CBD00BC52F0 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F31FD59CBD00BC52F0 /* Route.swift */; };
 		2F55E9041FD5A0A000BC52F0 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E9031FD5A0A000BC52F0 /* HomeView.storyboard */; };
 		2F55E9061FD5A46E00BC52F0 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E9051FD5A46E00BC52F0 /* Views.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
@@ -78,7 +78,7 @@
 		2F55E8DC1FD57ACC00BC52F0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		2F55E8EF1FD58A7F00BC52F0 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		2F55E8F11FD5925F00BC52F0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		2F55E8F31FD59CBD00BC52F0 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		2F55E8F31FD59CBD00BC52F0 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		2F55E9031FD5A0A000BC52F0 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		2F55E9051FD5A46E00BC52F0 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 				2F55E8F11FD5925F00BC52F0 /* Store.swift */,
 				2F55E89C1FD55C2A00BC52F0 /* RootViewController.swift */,
 				2F55E9051FD5A46E00BC52F0 /* Views.swift */,
-				2F55E8F31FD59CBD00BC52F0 /* Routes.swift */,
+				2F55E8F31FD59CBD00BC52F0 /* Route.swift */,
 				2F55E89E1FD55C2A00BC52F0 /* RootView.storyboard */,
 				2F55E8EF1FD58A7F00BC52F0 /* State.swift */,
 				2F55E8A31FD55C2A00BC52F0 /* LaunchScreen.storyboard */,
@@ -428,7 +428,7 @@
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
-				2F55E8F41FD59CBD00BC52F0 /* Routes.swift in Sources */,
+				2F55E8F41FD59CBD00BC52F0 /* Route.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
