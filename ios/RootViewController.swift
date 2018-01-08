@@ -40,38 +40,50 @@ class RootViewController: UIViewController {
         .disposed(by: disposeBag)
     }
     
-    private func present(_ viewStack: [ViewStackItem], on parent: UIViewController) {
-        let first = viewStack[0]
-        let selectedInParent: Bool = {
+    private func present(_ nameStack: [ViewStackItem], on parent: UIViewController) {
+        let first = nameStack[0], firstType = first.name.viewControllerType()
+        
+        let selectedInParent: UIViewController? = {
             switch parent {
             case let tabs as UITabBarController:
-                if tabs.viewControllers?.contains(first.view) == true {
-                    print("Selecting \(first.view) in \(parent)")
-                    tabs.selectedViewController = first.view
-                    return true
-                } else {
-                    return false
-                }
+                if let matchingChild = (tabs.viewControllers?.first { type(of: $0) == firstType }) {
+                    print("Selecting \(first.name) in \(parent)")
+                    tabs.selectedViewController = matchingChild
+                    return matchingChild
+                } else { return nil }
             // TODO: Check for all types of parent
-            default: return false
+            default: return nil
             }
         }()
-        if selectedInParent == false && parent.presentedViewController != first.view {
-            print("Presenting \(first.view) on \(parent)")
-            self.present(first.view, animated: false, completion: nil) // TODO: animated true for all but first view
-            guard let children = first.children else {
-                return
+        
+        let presentedOnParent: UIViewController? = {
+            if selectedInParent != nil {
+                return nil
             }
-            switch first.view {
+            if type(of: parent.presentedViewController) == firstType {
+                print("\(first.name) already presented on \(parent)")
+                return parent.presentedViewController
+            } else {
+                print("Presneting \(first.name) on \(parent)")
+                let viewController = first.name.createViewController()
+                self.present(viewController, animated: false, completion: nil) // TODO: animated true for all but first view
+                return viewController
+            }
+        }()
+        
+        let selectedOrPresnted = selectedInParent != nil ? selectedInParent! : presentedOnParent!
+        
+        if let childNames = first.childNames {
+            switch selectedOrPresnted {
             case let tabs as UITabBarController:
-                tabs.viewControllers = children
+                tabs.viewControllers = childNames.map { $0.createViewController() } // TODO: don't clobber existing children!
             // TODO: Check for all types of parent
             default:
                 fatalError("Unable to add children to an unknown parent type")
             }
         }
-        if viewStack.count > 1 {
-            present(Array(viewStack[1...]), on: first.view)
+        if nameStack.count > 1 {
+            present(Array(nameStack[1...]), on: selectedOrPresnted)
         }
         // TODO: test coversage validates ancestry?
     }

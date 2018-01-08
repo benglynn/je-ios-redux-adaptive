@@ -3,11 +3,11 @@ import UIKit
 
 struct Route {
     let pattern: String
-    let parent: ViewName
+    let parent: StoryboardName
 }
 
-typealias NamedRoute = (viewName: ViewName, route: Route)
-typealias ViewStackItem = (view: UIViewController, children: [UIViewController]?)
+typealias NamedRoute = (viewName: StoryboardName, route: Route)
+typealias ViewStackItem = (name: StoryboardName, childNames: [StoryboardName]?)
 
 
 func findNamedRoute(for path: String, within namedRoutes: [NamedRoute]) -> NamedRoute? {
@@ -23,7 +23,7 @@ func findNamedRoute(for path: String, within namedRoutes: [NamedRoute]) -> Named
     return findNamedRoute(for: path, within: Array(namedRoutes[1...]))
 }
 
-func instantiateView(viewName: ViewName) -> UIViewController {
+func instantiateView(viewName: StoryboardName) -> UIViewController {
     return UIStoryboard(name: viewName.rawValue, bundle: nil).instantiateInitialViewController()!
 }
 
@@ -34,12 +34,9 @@ func compileViewStack(for state: State) -> [ViewStackItem] {
     print("Resolved \(resolvedNamedRoute.viewName.rawValue)")
     
     // TODO: compile the following from state
-    let home = instantiateView(viewName: .HomeView)
-    let orders = instantiateView(viewName: .OrdersView)
-    let settings = instantiateView(viewName: .SettingsView)
     return [
-        (view: instantiateView(viewName: ViewName.TabsView), children: [home, orders, settings]),
-        (view: home, children: nil)
+        (name: .TabsView, childNames: [.HomeView, .OrdersView, .SettingsView]),
+        (name: .HomeView, childNames: nil)
     ]
 
 }

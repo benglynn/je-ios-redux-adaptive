@@ -8,8 +8,8 @@ struct State {
     
     struct Config {
         let isAdapted: Bool
-        let routes: [ViewName: Route]
-        let parents: [ViewName: [ViewName]]
+        let routes: [StoryboardName: Route]
+        let parents: [StoryboardName: [StoryboardName]]
     }
     
     let core: Core
