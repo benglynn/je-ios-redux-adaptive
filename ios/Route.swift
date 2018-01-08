@@ -3,7 +3,7 @@ import UIKit
 
 struct Route {
     let pattern: String
-    let parent: StoryboardName
+    let parents: [StoryboardName: [StoryboardName]]
     
     static func present(_ state: State, on parent: UIViewController) {
         let viewStack = Route.compileViewStack(for: state)

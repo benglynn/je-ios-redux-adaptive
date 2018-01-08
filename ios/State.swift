@@ -9,7 +9,6 @@ struct State {
     struct Config {
         let isAdapted: Bool
         let routes: [StoryboardName: Route]
-        let parents: [StoryboardName: [StoryboardName]]
     }
     
     let core: Core
@@ -24,13 +23,16 @@ let initialState = State(
     config: State.Config(
         isAdapted: false,
         routes: [
-            .HomeView: Route(pattern: "^$", parent: .RestaurantsView),
-            .OrdersView: Route(pattern: "^orders$", parent: .TabsView),
-            .SettingsView: Route(pattern: "^settings$", parent: .TabsView)
-        ],
-        parents: [
-            .TabsView: [.RestaurantsView, .OrdersView, .SettingsView],
-            .RestaurantsView: [.HomeView]
+            .HomeView: Route(pattern: "^$", parents: [
+                .RestaurantsView: [.HomeView],
+                .TabsView: [.RestaurantsView, .OrdersView, .SettingsView]
+                ]),
+            .OrdersView: Route(pattern: "^orders$", parents: [
+                .TabsView: [.RestaurantsView, .OrdersView, .SettingsView]
+                ]),
+            .SettingsView: Route(pattern: "^settings$", parents: [
+                .TabsView: [.RestaurantsView, .OrdersView, .SettingsView]
+                ])
         ]
     )
 )
@@ -43,13 +45,16 @@ let adaptedState = State(
     config: State.Config(
         isAdapted: true,
         routes: [
-            .HomeView: Route(pattern: "^$", parent: .RestaurantsView),
-            .OrdersView: Route(pattern: "^orders$", parent: .TabsView),
-            .SettingsView: Route(pattern: "^settings$", parent: .TabsView)
-        ],
-        parents: [
-            .TabsView: [.RestaurantsView, .OrdersView, .SettingsView],
-            .RestaurantsView: [.HomeView]
+            .HomeView: Route(pattern: "^$", parents: [
+                .RestaurantsView: [.HomeView],
+                .TabsView: [.RestaurantsView, .OrdersView, .SettingsView]
+                ]),
+            .OrdersView: Route(pattern: "^orders$", parents: [
+                .TabsView: [.RestaurantsView, .OrdersView, .SettingsView]
+                ]),
+            .SettingsView: Route(pattern: "^settings$", parents: [
+                .TabsView: [.RestaurantsView, .OrdersView, .SettingsView]
+                ])
         ]
     )
 )
