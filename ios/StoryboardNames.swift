@@ -4,6 +4,7 @@ enum StoryboardName: String {
     case TabsView
     case RestaurantsView
     case HomeView
+    case AreaView
     case OrdersView
     case SettingsView
     
@@ -16,7 +17,7 @@ enum StoryboardName: String {
         return createStoryboard().instantiateInitialViewController()!
     }
     
-    func createStoryboard() -> UIStoryboard {
+    private func createStoryboard() -> UIStoryboard {
         return UIStoryboard.init(name: self.rawValue, bundle: nil)
     }
 }

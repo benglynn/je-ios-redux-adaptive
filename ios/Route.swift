@@ -10,6 +10,9 @@ struct Route {
         Route.present(viewStack, on: parent)
     }
     
+    
+    // MARK: - Types
+    
     private typealias StoryboardNameStack = [StoryboardNameStackItem]
     
     private struct StoryboardNameStackItem {
@@ -18,6 +21,23 @@ struct Route {
     }
     
     private typealias NamedRoute = (name: StoryboardName, route: Route)
+    
+    
+    // MARK: - Compile view stack for state route matching state path
+    
+    private static func compileViewStack(for state: State) -> StoryboardNameStack {
+        
+        let namedRoutes = state.config.routes.map {(name: $0, route: $1)}
+        let resolvedNamedRoute = Route.findNamedRoute(for: state.core.path, within: namedRoutes) ?? namedRoutes[0]
+        print("Resolved \(resolvedNamedRoute.name.rawValue)")
+        
+        // TODO: compile the following from state
+        return [
+            StoryboardNameStackItem(name: .TabsView, childNames: [.RestaurantsView, .OrdersView, .SettingsView]),
+            StoryboardNameStackItem(name: .RestaurantsView, childNames: [.HomeView]),
+            StoryboardNameStackItem(name: .HomeView, childNames: nil)
+        ]
+    }
     
     private static func findNamedRoute(for path: String, within namedRoutes: [NamedRoute]) -> NamedRoute? {
         if namedRoutes.count == 0 {
@@ -32,18 +52,8 @@ struct Route {
         return findNamedRoute(for: path, within: Array(namedRoutes[1...]))
     }
     
-    private static func compileViewStack(for state: State) -> StoryboardNameStack {
-        
-        let namedRoutes = state.config.routes.map {(name: $0, route: $1)}
-        let resolvedNamedRoute = Route.findNamedRoute(for: state.core.path, within: namedRoutes) ?? namedRoutes[0]
-        print("Resolved \(resolvedNamedRoute.name.rawValue)")
-        
-        // TODO: compile the following from state
-        return [
-            StoryboardNameStackItem(name: .TabsView, childNames: [.HomeView, .OrdersView, .SettingsView]),
-            StoryboardNameStackItem(name: .HomeView, childNames: nil)
-        ]
-    }
+    
+    // MARK: - Present compiled view stack on view controller
     
     private  static func present(_ nameStack: Route.StoryboardNameStack, on parent: UIViewController) {
         
@@ -57,6 +67,12 @@ struct Route {
                     tabs.selectedViewController = matchingChild
                     return matchingChild
                 } else { return nil }
+            case let navStack as UINavigationController:
+                if let matchingChild = (navStack.viewControllers.first { type(of: $0) == firstType }) {
+                    // TODO: pop away non matching views
+                    return matchingChild
+                }
+                else { return nil }
             // TODO: Check for all types of parent
             default: return nil
             }
@@ -84,6 +100,9 @@ struct Route {
             case let tabs as UITabBarController:
                 tabs.viewControllers = childNames.map { $0.createViewController() } // TODO: don't clobber existing children!
             // TODO: Check for all types of parent
+            case let navStack as UINavigationController:
+                navStack.setViewControllers(childNames.map {$0.createViewController()}, animated: false) // TODO: animated sometimes
+                
             default:
                 fatalError("Unable to add children to an unknown parent type")
             }

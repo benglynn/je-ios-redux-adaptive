@@ -5,6 +5,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var rays: RaysView!
     @IBOutlet weak var contents: UIStackView!
     
+    @IBAction func tapSearch(_ sender: Any) {
+        // TODO: This is VERY temproary. Testing the nav controller
+        self.navigationController?.pushViewController(StoryboardName.AreaView.createViewController(), animated: true)
+        
+    }
+    
     var firstRun = true
     
     override func viewWillAppear(_ animated: Bool) {

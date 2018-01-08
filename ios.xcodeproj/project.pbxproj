@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C9098E9859316ED97B8F26B /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C818E78A2285A67717DF621 /* Pods_ios.framework */; };
+		2F105E8E2003AFBC0093F2D8 /* RestaurantsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E8D2003AFBC0093F2D8 /* RestaurantsView.storyboard */; };
+		2F105E912003B5800093F2D8 /* AreaView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* AreaView.storyboard */; };
 		2F1C95381FFFBFD200684F4B /* OrdersView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C95371FFFBFD200684F4B /* OrdersView.storyboard */; };
 		2F1C953B1FFFC34400684F4B /* SettingsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C953A1FFFC34400684F4B /* SettingsView.storyboard */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
@@ -33,7 +35,7 @@
 		2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F11FD5925F00BC52F0 /* Store.swift */; };
 		2F55E8F41FD59CBD00BC52F0 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F31FD59CBD00BC52F0 /* Route.swift */; };
 		2F55E9041FD5A0A000BC52F0 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E9031FD5A0A000BC52F0 /* HomeView.storyboard */; };
-		2F55E9061FD5A46E00BC52F0 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E9051FD5A46E00BC52F0 /* Views.swift */; };
+		2F55E9061FD5A46E00BC52F0 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E9051FD5A46E00BC52F0 /* StoryboardNames.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBEA811FD83A37006D340C /* RaysView.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		2C818E78A2285A67717DF621 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F105E8D2003AFBC0093F2D8 /* RestaurantsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantsView.storyboard; sourceTree = "<group>"; };
+		2F105E902003B5800093F2D8 /* AreaView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaView.storyboard; sourceTree = "<group>"; };
 		2F1C95371FFFBFD200684F4B /* OrdersView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrdersView.storyboard; sourceTree = "<group>"; };
 		2F1C953A1FFFC34400684F4B /* SettingsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsView.storyboard; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
@@ -80,7 +84,7 @@
 		2F55E8F11FD5925F00BC52F0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		2F55E8F31FD59CBD00BC52F0 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		2F55E9031FD5A0A000BC52F0 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
-		2F55E9051FD5A46E00BC52F0 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		2F55E9051FD5A46E00BC52F0 /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FFBEA811FD83A37006D340C /* RaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaysView.swift; sourceTree = "<group>"; };
 		90CABB8CBD92D76DFC9F6611 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F105E8C2003AFA50093F2D8 /* RestaurantsView */ = {
+			isa = PBXGroup;
+			children = (
+				2F105E8D2003AFBC0093F2D8 /* RestaurantsView.storyboard */,
+			);
+			path = RestaurantsView;
+			sourceTree = "<group>";
+		};
+		2F105E8F2003B5710093F2D8 /* AreaView */ = {
+			isa = PBXGroup;
+			children = (
+				2F105E902003B5800093F2D8 /* AreaView.storyboard */,
+			);
+			path = AreaView;
+			sourceTree = "<group>";
+		};
 		2F1C95361FFFBF9A00684F4B /* OrdersView */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +196,7 @@
 				2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */,
 				2F55E8F11FD5925F00BC52F0 /* Store.swift */,
 				2F55E89C1FD55C2A00BC52F0 /* RootViewController.swift */,
-				2F55E9051FD5A46E00BC52F0 /* Views.swift */,
+				2F55E9051FD5A46E00BC52F0 /* StoryboardNames.swift */,
 				2F55E8F31FD59CBD00BC52F0 /* Route.swift */,
 				2F55E89E1FD55C2A00BC52F0 /* RootView.storyboard */,
 				2F55E8EF1FD58A7F00BC52F0 /* State.swift */,
@@ -209,6 +229,8 @@
 		2F55E9011FD5A01C00BC52F0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2F105E8F2003B5710093F2D8 /* AreaView */,
+				2F105E8C2003AFA50093F2D8 /* RestaurantsView */,
 				2F1C95391FFFC32800684F4B /* SettingsView */,
 				2F1C95361FFFBF9A00684F4B /* OrdersView */,
 				2F559A461FFBE89F0024F7B1 /* TabsView */,
@@ -344,8 +366,10 @@
 				2F55E8A51FD55C2A00BC52F0 /* LaunchScreen.storyboard in Resources */,
 				2F55E8A21FD55C2A00BC52F0 /* Assets.xcassets in Resources */,
 				2F55E9041FD5A0A000BC52F0 /* HomeView.storyboard in Resources */,
+				2F105E912003B5800093F2D8 /* AreaView.storyboard in Resources */,
 				2F54A3A91FDED11F006DA319 /* HindVadodara-SemiBold.ttf in Resources */,
 				2F54A3AD1FDED11F006DA319 /* Ubuntu-Medium.ttf in Resources */,
+				2F105E8E2003AFBC0093F2D8 /* RestaurantsView.storyboard in Resources */,
 				2F55E8A01FD55C2A00BC52F0 /* RootView.storyboard in Resources */,
 				2F559A481FFBE8E20024F7B1 /* TabsView.storyboard in Resources */,
 			);
@@ -424,7 +448,7 @@
 				2F55E89D1FD55C2A00BC52F0 /* RootViewController.swift in Sources */,
 				2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */,
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
-				2F55E9061FD5A46E00BC52F0 /* Views.swift in Sources */,
+				2F55E9061FD5A46E00BC52F0 /* StoryboardNames.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
