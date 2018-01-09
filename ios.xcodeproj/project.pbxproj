@@ -10,6 +10,7 @@
 		0C9098E9859316ED97B8F26B /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C818E78A2285A67717DF621 /* Pods_ios.framework */; };
 		2F105E8E2003AFBC0093F2D8 /* RestaurantsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E8D2003AFBC0093F2D8 /* RestaurantsScreen.storyboard */; };
 		2F105E912003B5800093F2D8 /* AreaScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* AreaScreen.storyboard */; };
+		2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F105E9220052B960093F2D8 /* OrdersViewController.swift */; };
 		2F1C95381FFFBFD200684F4B /* OrdersScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C95371FFFBFD200684F4B /* OrdersScreen.storyboard */; };
 		2F1C953B1FFFC34400684F4B /* SettingsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C953A1FFFC34400684F4B /* SettingsScreen.storyboard */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
@@ -54,6 +55,7 @@
 		2C818E78A2285A67717DF621 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F105E8D2003AFBC0093F2D8 /* RestaurantsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantsScreen.storyboard; sourceTree = "<group>"; };
 		2F105E902003B5800093F2D8 /* AreaScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaScreen.storyboard; sourceTree = "<group>"; };
+		2F105E9220052B960093F2D8 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		2F1C95371FFFBFD200684F4B /* OrdersScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrdersScreen.storyboard; sourceTree = "<group>"; };
 		2F1C953A1FFFC34400684F4B /* SettingsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsScreen.storyboard; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2F1C95371FFFBFD200684F4B /* OrdersScreen.storyboard */,
+				2F105E9220052B960093F2D8 /* OrdersViewController.swift */,
 			);
 			path = OrdersScreen;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
+				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
 				2F55E8F41FD59CBD00BC52F0 /* Route.swift in Sources */,

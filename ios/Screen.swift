@@ -22,6 +22,11 @@ enum Screen: String {
     }
 }
 
+struct ScreenFamily {
+    let screen: Screen
+    let children: [Screen]?
+}
+
 
 
 

@@ -21,7 +21,7 @@
         <!--Orders-->
         <scene sceneID="lo5-7p-dFo">
             <objects>
-                <viewController title="Orders" id="TiX-xd-Vw4" sceneMemberID="viewController">
+                <viewController title="Orders" id="TiX-xd-Vw4" customClass="OrdersViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wcc-8Q-jcl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
