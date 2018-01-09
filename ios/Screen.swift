@@ -1,12 +1,12 @@
 import UIKit
 
-enum StoryboardName: String {
-    case TabsView
-    case RestaurantsView
-    case HomeView
-    case AreaView
-    case OrdersView
-    case SettingsView
+enum Screen: String {
+    case HomeScreen
+    case AreaScreen
+    case OrdersScreen
+    case SettingsScreen
+    case RestaurantsScreen
+    case TabsScreen
     
     func viewControllerType() -> UIViewController.Type {
         // TODO: do this without wasted instantiation

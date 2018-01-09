@@ -7,7 +7,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func tapSearch(_ sender: Any) {
         // TODO: This is VERY temproary. Testing the nav controller
-        self.navigationController?.pushViewController(StoryboardName.AreaView.createViewController(), animated: true)
+        self.navigationController?.pushViewController(Screen.AreaScreen.createViewController(), animated: true)
         
     }
     

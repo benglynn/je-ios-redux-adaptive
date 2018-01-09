@@ -3,7 +3,7 @@ import UIKit
 
 struct Route {
     let pattern: String
-    let parents: [StoryboardName: [StoryboardName]]
+    let parents: [Screen: [Screen]]
     
     static func present(_ state: State, on parent: UIViewController) {
         let viewStack = Route.compileViewStack(for: state)
@@ -16,11 +16,11 @@ struct Route {
     private typealias StoryboardNameStack = [StoryboardNameStackItem]
     
     private struct StoryboardNameStackItem {
-        let name: StoryboardName
-        let childNames: [StoryboardName]?
+        let name: Screen
+        let childNames: [Screen]?
     }
     
-    private typealias NamedRoute = (name: StoryboardName, route: Route)
+    private typealias NamedRoute = (name: Screen, route: Route)
     
     
     // MARK: - Compile view stack for state route matching state path
@@ -33,9 +33,9 @@ struct Route {
         
         // TODO: compile the following from state
         return [
-            StoryboardNameStackItem(name: .TabsView, childNames: [.RestaurantsView, .OrdersView, .SettingsView]),
-            StoryboardNameStackItem(name: .RestaurantsView, childNames: [.HomeView]),
-            StoryboardNameStackItem(name: .HomeView, childNames: nil)
+            StoryboardNameStackItem(name: .TabsScreen, childNames: [.RestaurantsScreen, .OrdersScreen, .SettingsScreen]),
+            StoryboardNameStackItem(name: .RestaurantsScreen, childNames: [.HomeScreen]),
+            StoryboardNameStackItem(name: .HomeScreen, childNames: nil)
         ]
     }
     
