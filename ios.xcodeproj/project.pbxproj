@@ -37,6 +37,7 @@
 		2F55E8F41FD59CBD00BC52F0 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F31FD59CBD00BC52F0 /* Route.swift */; };
 		2F55E9041FD5A0A000BC52F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E9031FD5A0A000BC52F0 /* Home.storyboard */; };
 		2F55E9061FD5A46E00BC52F0 /* ScreenName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E9051FD5A46E00BC52F0 /* ScreenName.swift */; };
+		2F64373120062F7F006D863F /* StoreDependant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373020062F7F006D863F /* StoreDependant.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBEA811FD83A37006D340C /* RaysView.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		2F55E8F31FD59CBD00BC52F0 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		2F55E9031FD5A0A000BC52F0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2F55E9051FD5A46E00BC52F0 /* ScreenName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenName.swift; sourceTree = "<group>"; };
+		2F64373020062F7F006D863F /* StoreDependant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDependant.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FFBEA811FD83A37006D340C /* RaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaysView.swift; sourceTree = "<group>"; };
 		90CABB8CBD92D76DFC9F6611 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				2F55E9071FD5B56D00BC52F0 /* Slices */,
 				2F55E89A1FD55C2A00BC52F0 /* AppDelegate.swift */,
 				2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */,
+				2F64373020062F7F006D863F /* StoreDependant.swift */,
 				2F55E8F11FD5925F00BC52F0 /* Store.swift */,
 				2F55E89C1FD55C2A00BC52F0 /* RootViewController.swift */,
 				2F55E9051FD5A46E00BC52F0 /* ScreenName.swift */,
@@ -454,6 +457,7 @@
 				2F55E9061FD5A46E00BC52F0 /* ScreenName.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
+				2F64373120062F7F006D863F /* StoreDependant.swift in Sources */,
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
 				2F55E8F41FD59CBD00BC52F0 /* Route.swift in Sources */,

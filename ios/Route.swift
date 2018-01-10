@@ -12,8 +12,8 @@ enum PathPattern: String {
 // TODO: What is this actually called? Where does this essential code live?
 struct Route {
     
-    static func present(_ state: State, on parent: UIViewController) {
-        present(currentScreenFamilyStack(state), on: parent)
+    static func present(_ state: State, on parent: UIViewController, injecting store: Store) {
+        present(currentScreenFamilyStack(state), on: parent, injecting: store)
     }
     
     private static func currentScreenFamilyStack(_ state: State) -> [ScreenFamily] {
@@ -24,7 +24,7 @@ struct Route {
         return match?.screens ?? state.config.routes_[0].screens
     }
     
-    private static func present(_ screenFamilyStack: [ScreenFamily], on parent: UIViewController) {
+    private static func present(_ screenFamilyStack: [ScreenFamily], on parent: UIViewController, injecting store: Store) {
         let family = screenFamilyStack[0], screenType = family.screen.viewControllerType()
         
         let selectedInParent: UIViewController? = {
@@ -54,7 +54,7 @@ struct Route {
                 return parent.presentedViewController
             } else {
                 print("Presenting \(family.screen) on \(parent)")
-                let viewController = family.screen.createViewController()
+                let viewController = family.screen.createViewController(injecting: store)
                 parent.present(viewController, animated: false, completion: nil) // TODO: animate true for all but first
                 return viewController
             }
@@ -65,15 +65,15 @@ struct Route {
         if let childNames = family.children {
             switch selectedOrPresented {
             case let tabs as UITabBarController:
-                tabs.viewControllers = childNames.map { $0.createViewController() } // TODO: don't clobber existing children
+                tabs.viewControllers = childNames.map { $0.createViewController(injecting: store) } // TODO: don't clobber existing children
             case let navStack as UINavigationController:
-                navStack.setViewControllers(childNames.map { $0.createViewController() }, animated: false) // TODO: animated sometimes
+                navStack.setViewControllers(childNames.map { $0.createViewController(injecting: store) }, animated: false) // TODO: animated sometimes
             default:
                 fatalError("Unable to add children to an unknown parent type")
             }
         }
         if screenFamilyStack.count > 1 {
-            present(Array(screenFamilyStack[1...]), on: selectedOrPresented)
+            present(Array(screenFamilyStack[1...]), on: selectedOrPresented, injecting: store)
         }
     }
 }

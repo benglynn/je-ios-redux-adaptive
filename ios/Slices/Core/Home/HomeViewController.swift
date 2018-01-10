@@ -1,13 +1,20 @@
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, StoreDependant {
+    
+    internal var store: Store!
+    
+    func setStore(store: Store) {
+        self.store = store
+    }
 
     @IBOutlet weak var rays: RaysView!
     @IBOutlet weak var contents: UIStackView!
     
     @IBAction func tapSearch(_ sender: Any) {
         // TODO: This is VERY temproary. Testing the nav controller
-        self.navigationController?.pushViewController(ScreenName.Area.createViewController(), animated: true)
+        let viewController = ScreenName.Area.createViewController(injecting: store)
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
     

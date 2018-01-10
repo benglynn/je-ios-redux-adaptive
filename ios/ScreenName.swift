@@ -10,11 +10,17 @@ enum ScreenName: String {
     
     func viewControllerType() -> UIViewController.Type {
         // TODO: do this without wasted instantiation
-        return type(of: createViewController())
+        let viewController = createStoryboard().instantiateInitialViewController()!
+        let typeOf = type(of: viewController)
+        return typeOf
     }
     
-    func createViewController() -> UIViewController {
-        return createStoryboard().instantiateInitialViewController()!
+    func createViewController(injecting store: Store) -> UIViewController {
+        let viewController = createStoryboard().instantiateInitialViewController()!
+        if let storeDependant = viewController as? StoreDependant {
+            storeDependant.setStore(store: store)
+        }
+        return viewController
     }
     
     private func createStoryboard() -> UIStoryboard {

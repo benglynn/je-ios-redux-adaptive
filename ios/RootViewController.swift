@@ -10,6 +10,7 @@ class RootViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         rotateForever(view: progress)
         fade(view: progress, toAlpha: 0.5)
 
@@ -32,7 +33,7 @@ class RootViewController: UIViewController {
             .subscribe(onNext: { state in
                 self.fade(view: self.progress, toAlpha: 0)
                 self.fade(view: self.logo, toAlpha: 0) {
-                    Route.present(state, on: self)
+                    Route.present(state, on: self, injecting: store)
                 }
                 
             })
