@@ -2,8 +2,11 @@ import Foundation
 
 import RxSwift
 
-struct Store {
+class Store {
     let state$: BehaviorSubject<State>
+    
+    init(_ initialState: State) {
+        state$ = BehaviorSubject<State>(value: initialState)
+    }
 }
 
-let store = Store(state$: BehaviorSubject<State>(value: initialState))

@@ -6,18 +6,25 @@ class RootViewController: UIViewController {
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var progress: UIImageView!
     
-    private let disposeBag = DisposeBag()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        (UIApplication.shared.delegate as! AppDelegate).rootViewDidLoad()
-    }
+    private let bag = DisposeBag()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         rotateForever(view: progress)
         fade(view: progress, toAlpha: 0.5)
+
+        let adaptationService = AdaptationService()
+        let store = Store(initialState)
+        
+        DispatchQueue.global(qos: .background).async { [weak self] in // TODO: subscribeOn instead of this?
+            guard let strongSelf = self else { return }
+            adaptationService.asObservable()
+                .subscribe(onNext: { serviceResponse in
+                    print("Received \(serviceResponse.actions.count) actions")
+                    store.state$.onNext(adaptedState) // TODO: once reduce is implemented, dispatch actions to store instead of this
+                }).disposed(by: strongSelf.bag)
+        }
+        
         store.state$
             .filter { state in state.config.isAdapted }
             .take(1)
@@ -29,7 +36,7 @@ class RootViewController: UIViewController {
                 }
                 
             })
-        .disposed(by: disposeBag)
+        .disposed(by: bag)
     }
     
     private func fade(view: UIView, toAlpha: CGFloat, completion: (()->Void)? = nil) {
