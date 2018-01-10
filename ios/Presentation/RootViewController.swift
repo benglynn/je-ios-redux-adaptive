@@ -33,7 +33,7 @@ class RootViewController: UIViewController {
             .subscribe(onNext: { state in
                 self.fade(view: self.progress, toAlpha: 0)
                 self.fade(view: self.logo, toAlpha: 0) {
-                    Route.present(state, on: self, injecting: store)
+                    Presenter.present(state, on: self, injecting: store)
                 }
                 
             })

@@ -1,16 +1,7 @@
 import Foundation
 import UIKit
 
-enum PathPattern: String {
-    case HomePath = "^$"
-    case OrdersPath = "^orders$"
-    case SettingsPath = "^settings$"
-    case AreaPath = "^bs14dj$" // TODO: postcode regex
-}
-
-
-// TODO: What is this actually called? Where does this essential code live?
-struct Route {
+struct Presenter {
     
     static func present(_ state: State, on parent: UIViewController, injecting store: Store) {
         present(currentScreenFamilyStack(state), on: parent, injecting: store)
