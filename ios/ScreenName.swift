@@ -1,12 +1,12 @@
 import UIKit
 
-enum Screen: String {
-    case HomeScreen
-    case AreaScreen
-    case OrdersScreen
-    case SettingsScreen
-    case RestaurantsScreen
-    case TabsScreen
+enum ScreenName: String {
+    case Home
+    case Area
+    case Orders
+    case Settings
+    case Restaurants
+    case Tabs
     
     func viewControllerType() -> UIViewController.Type {
         // TODO: do this without wasted instantiation
@@ -23,8 +23,8 @@ enum Screen: String {
 }
 
 struct ScreenFamily {
-    let screen: Screen
-    let children: [Screen]?
+    let screen: ScreenName
+    let children: [ScreenName]?
 }
 
 

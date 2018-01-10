@@ -25,25 +25,25 @@ let initialState = State(
         routes_: [
             (pathPattern: .HomePath,
              screens: [
-                ScreenFamily(screen: .TabsScreen, children: [.RestaurantsScreen, .OrdersScreen, .SettingsScreen]),
-                ScreenFamily(screen: .RestaurantsScreen, children: [.HomeScreen]),
-                ScreenFamily(screen: .HomeScreen, children: nil),
+                ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
+                ScreenFamily(screen: .Restaurants, children: [.Home]),
+                ScreenFamily(screen: .Home, children: nil),
                 ]),
             ( pathPattern: .AreaPath,
               screens: [
-                ScreenFamily(screen: .TabsScreen, children: [.RestaurantsScreen, .OrdersScreen, .SettingsScreen]),
-                ScreenFamily(screen: .RestaurantsScreen, children: [.HomeScreen, .AreaScreen]),
-                ScreenFamily(screen: .AreaScreen, children: nil),
+                ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
+                ScreenFamily(screen: .Restaurants, children: [.Home, .Area]),
+                ScreenFamily(screen: .Area, children: nil),
                 ]),
             (pathPattern: .OrdersPath,
              screens: [
-                ScreenFamily(screen: .TabsScreen, children: [.RestaurantsScreen, .OrdersScreen, .SettingsScreen]),
-                ScreenFamily(screen: .OrdersScreen, children: nil),
+                ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
+                ScreenFamily(screen: .Orders, children: nil),
                 ]),
             (pathPattern: .SettingsPath,
              screens: [
-                ScreenFamily(screen: .TabsScreen, children: [.RestaurantsScreen, .OrdersScreen, .SettingsScreen]),
-                ScreenFamily(screen: .SettingsScreen, children: nil),
+                ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
+                ScreenFamily(screen: .Settings, children: nil),
                 ])
         ]
     )
@@ -59,25 +59,25 @@ let adaptedState = State(
         routes_: [
             (pathPattern: .HomePath,
              screens: [
-                ScreenFamily(screen: .TabsScreen, children: [.RestaurantsScreen, .OrdersScreen, .SettingsScreen]),
-                ScreenFamily(screen: .RestaurantsScreen, children: [.HomeScreen]),
-                ScreenFamily(screen: .HomeScreen, children: nil),
+                ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
+                ScreenFamily(screen: .Restaurants, children: [.Home]),
+                ScreenFamily(screen: .Home, children: nil),
                 ]),
             ( pathPattern: .AreaPath,
               screens: [
-                ScreenFamily(screen: .TabsScreen, children: [.RestaurantsScreen, .OrdersScreen, .SettingsScreen]),
-                ScreenFamily(screen: .RestaurantsScreen, children: [.HomeScreen, .AreaScreen]),
-                ScreenFamily(screen: .AreaScreen, children: nil),
+                ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
+                ScreenFamily(screen: .Restaurants, children: [.Home, .Area]),
+                ScreenFamily(screen: .Area, children: nil),
                 ]),
             (pathPattern: .OrdersPath,
              screens: [
-                ScreenFamily(screen: .TabsScreen, children: [.RestaurantsScreen, .OrdersScreen, .SettingsScreen]),
-                ScreenFamily(screen: .OrdersScreen, children: nil),
+                ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
+                ScreenFamily(screen: .Orders, children: nil),
                 ]),
             (pathPattern: .SettingsPath,
              screens: [
-                ScreenFamily(screen: .TabsScreen, children: [.RestaurantsScreen, .OrdersScreen, .SettingsScreen]),
-                ScreenFamily(screen: .SettingsScreen, children: nil),
+                ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
+                ScreenFamily(screen: .Settings, children: nil),
                 ])
         ]
     )
