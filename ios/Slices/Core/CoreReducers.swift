@@ -1,10 +1,10 @@
 import Foundation
 
-func pathCoreReducer (action: Actionable, slice: State.Core) -> State.Core {
+func pathCoreReducer (action: Actionable, slice: CoreState) -> CoreState {
     return slice
 }
 
 
-let coreReducers: [String: Reducer<State.Core>] = [
+let coreReducers: [String: Reducer<CoreState>] = [
     "pathCoreReducer": pathCoreReducer
 ]

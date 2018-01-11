@@ -1,5 +1,8 @@
 import UIKit
 
+
+// TODO: enum UIViewController types, not storyboards
+
 enum ScreenName: String {
     case Home
     case Area

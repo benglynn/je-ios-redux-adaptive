@@ -1,3 +1,3 @@
 import Foundation
 
-let configurationReducers: [String: Reducer<State.Configuration>] = [:]
+let configurationReducers: [String: Reducer<ConfigurationState>] = [:]
