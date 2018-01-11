@@ -27,7 +27,7 @@ class RootViewController: UIViewController {
         }
         
         store.state$
-            .filter { state in state.config.isAdapted }
+            .filter { state in state.configuration.isAdapted }
             .take(1)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { state in

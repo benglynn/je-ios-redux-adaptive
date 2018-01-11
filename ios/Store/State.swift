@@ -6,21 +6,31 @@ struct State {
         let path: String
     }
     
-    struct Config {
+    struct Configuration {
         let isAdapted: Bool
         let routes_: [(pathPattern: PathPattern, screens: [ScreenFamily])]
     }
     
     let core: Core
-    let config: Config
+    let configuration: Configuration
     
 }
+
+struct StateReducers {
+    let core: [String: Reducer<State.Core>]
+    let configuration: [String: Reducer<State.Configuration>]
+}
+
+let initialStateReducers = StateReducers(
+    core: coreReducers,
+    configuration: configurationReducers
+)
 
 let initialState = State(
     core: State.Core(
         path: ""
     ),
-    config: State.Config(
+    configuration: State.Configuration(
         isAdapted: false,
         routes_: [
             (pathPattern: .HomePath,
@@ -54,7 +64,7 @@ let adaptedState = State(
     core: State.Core(
         path: ""
     ),
-    config: State.Config(
+    configuration: State.Configuration(
         isAdapted: true,
         routes_: [
             (pathPattern: .HomePath,
