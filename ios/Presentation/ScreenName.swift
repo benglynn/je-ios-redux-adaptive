@@ -17,7 +17,7 @@ enum ScreenName: String {
     
     func createViewController(injecting store: Store) -> UIViewController {
         let viewController = createStoryboard().instantiateInitialViewController()!
-        if let storeDependant = viewController as? StoreDependant {
+        if let storeDependant = viewController as? StoreDepending {
             storeDependant.setStore(store: store)
         }
         return viewController

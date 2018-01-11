@@ -1,6 +1,6 @@
 import UIKit
 
-protocol StoreDependant {
+protocol StoreDepending {
     
     var store: Store! { get set }
     

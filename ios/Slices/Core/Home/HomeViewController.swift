@@ -1,6 +1,6 @@
 import UIKit
 
-class HomeViewController: UIViewController, StoreDependant {
+class HomeViewController: UIViewController, StoreDepending {
     
     internal var store: Store!
     
@@ -12,6 +12,7 @@ class HomeViewController: UIViewController, StoreDependant {
     @IBOutlet weak var contents: UIStackView!
     
     @IBAction func tapSearch(_ sender: Any) {
+        self.store.dispatch(UpdatePath("/bs14dj"))
         // TODO: This is VERY temproary. Testing the nav controller
         let viewController = ScreenName.Area.createViewController(injecting: store)
         self.navigationController?.pushViewController(viewController, animated: true)

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C9098E9859316ED97B8F26B /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C818E78A2285A67717DF621 /* Pods_ios.framework */; };
 		2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */; };
-		2F105E912003B5800093F2D8 /* AreaScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* AreaScreen.storyboard */; };
+		2F105E912003B5800093F2D8 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* Area.storyboard */; };
 		2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F105E9220052B960093F2D8 /* OrdersViewController.swift */; };
 		2F1C95381FFFBFD200684F4B /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C95371FFFBFD200684F4B /* Orders.storyboard */; };
 		2F1C953B1FFFC34400684F4B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C953A1FFFC34400684F4B /* Settings.storyboard */; };
@@ -37,8 +37,11 @@
 		2F55E8F41FD59CBD00BC52F0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F31FD59CBD00BC52F0 /* Presenter.swift */; };
 		2F55E9041FD5A0A000BC52F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E9031FD5A0A000BC52F0 /* Home.storyboard */; };
 		2F55E9061FD5A46E00BC52F0 /* ScreenName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E9051FD5A46E00BC52F0 /* ScreenName.swift */; };
-		2F64373120062F7F006D863F /* StoreDependant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373020062F7F006D863F /* StoreDependant.swift */; };
+		2F64373120062F7F006D863F /* StoreDepending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373020062F7F006D863F /* StoreDepending.swift */; };
 		2F643733200652BE006D863F /* PathPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F643732200652BE006D863F /* PathPattern.swift */; };
+		2F6437372006577D006D863F /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437362006577D006D863F /* Reducer.swift */; };
+		2F64373A2006693C006D863F /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437392006693C006D863F /* Actions.swift */; };
+		2F64373C20076CBB006D863F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373B20076CBB006D863F /* Action.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBEA811FD83A37006D340C /* RaysView.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +59,7 @@
 /* Begin PBXFileReference section */
 		2C818E78A2285A67717DF621 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurants.storyboard; sourceTree = "<group>"; };
-		2F105E902003B5800093F2D8 /* AreaScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaScreen.storyboard; sourceTree = "<group>"; };
+		2F105E902003B5800093F2D8 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2F105E9220052B960093F2D8 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		2F1C95371FFFBFD200684F4B /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
 		2F1C953A1FFFC34400684F4B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -89,8 +92,11 @@
 		2F55E8F31FD59CBD00BC52F0 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		2F55E9031FD5A0A000BC52F0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2F55E9051FD5A46E00BC52F0 /* ScreenName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenName.swift; sourceTree = "<group>"; };
-		2F64373020062F7F006D863F /* StoreDependant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDependant.swift; sourceTree = "<group>"; };
+		2F64373020062F7F006D863F /* StoreDepending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDepending.swift; sourceTree = "<group>"; };
 		2F643732200652BE006D863F /* PathPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathPattern.swift; sourceTree = "<group>"; };
+		2F6437362006577D006D863F /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		2F6437392006693C006D863F /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		2F64373B20076CBB006D863F /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FFBEA811FD83A37006D340C /* RaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaysView.swift; sourceTree = "<group>"; };
 		90CABB8CBD92D76DFC9F6611 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +133,7 @@
 		2F105E8F2003B5710093F2D8 /* Area */ = {
 			isa = PBXGroup;
 			children = (
-				2F105E902003B5800093F2D8 /* AreaScreen.storyboard */,
+				2F105E902003B5800093F2D8 /* Area.storyboard */,
 			);
 			path = Area;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 				2F1C95361FFFBF9A00684F4B /* Orders */,
 				2F559A461FFBE89F0024F7B1 /* Tabs */,
 				2F55E9021FD5A03B00BC52F0 /* Home */,
+				2F6437392006693C006D863F /* Actions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -275,9 +282,11 @@
 			isa = PBXGroup;
 			children = (
 				2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */,
-				2F64373020062F7F006D863F /* StoreDependant.swift */,
+				2F64373020062F7F006D863F /* StoreDepending.swift */,
 				2F55E8F11FD5925F00BC52F0 /* Store.swift */,
 				2F55E8EF1FD58A7F00BC52F0 /* State.swift */,
+				2F6437362006577D006D863F /* Reducer.swift */,
+				2F64373B20076CBB006D863F /* Action.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -391,7 +400,7 @@
 				2F55E8A51FD55C2A00BC52F0 /* LaunchScreen.storyboard in Resources */,
 				2F55E8A21FD55C2A00BC52F0 /* Assets.xcassets in Resources */,
 				2F55E9041FD5A0A000BC52F0 /* Home.storyboard in Resources */,
-				2F105E912003B5800093F2D8 /* AreaScreen.storyboard in Resources */,
+				2F105E912003B5800093F2D8 /* Area.storyboard in Resources */,
 				2F54A3A91FDED11F006DA319 /* HindVadodara-SemiBold.ttf in Resources */,
 				2F54A3AD1FDED11F006DA319 /* Ubuntu-Medium.ttf in Resources */,
 				2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */,
@@ -476,12 +485,15 @@
 				2F55E9061FD5A46E00BC52F0 /* ScreenName.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
-				2F64373120062F7F006D863F /* StoreDependant.swift in Sources */,
+				2F64373120062F7F006D863F /* StoreDepending.swift in Sources */,
 				2F643733200652BE006D863F /* PathPattern.swift in Sources */,
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
+				2F6437372006577D006D863F /* Reducer.swift in Sources */,
 				2F55E8F41FD59CBD00BC52F0 /* Presenter.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
+				2F64373C20076CBB006D863F /* Action.swift in Sources */,
+				2F64373A2006693C006D863F /* Actions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
