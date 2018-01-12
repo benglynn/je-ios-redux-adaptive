@@ -1,6 +1,6 @@
 import Foundation
 
-struct CoreState: Slice {
+struct CoreStateSlice: Slice {
     let path: String
 }
 
@@ -8,6 +8,6 @@ struct CoreConfigurationState {
     
 }
 
-let initialCoreState = CoreState(
+let initialCoreStateSlice = CoreStateSlice(
     path: ""
 )

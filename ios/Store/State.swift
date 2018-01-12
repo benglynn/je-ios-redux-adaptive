@@ -1,8 +1,8 @@
 import Foundation
 
 struct State {
-    let core: CoreState
-    let configuration: ConfigurationState
+    let core: CoreStateSlice
+    let configuration: ConfigStateSlice
     // Adapters add slices here
 }
 
@@ -22,13 +22,13 @@ extension State {
 
 
 let initialState = State(
-    core: initialCoreState,
-    configuration: initialConfigurationState
+    core: initialCoreStateSlice,
+    configuration: initialConfigStateSlice
 )
 
 // TODO: this is a temporary struct, remove it once action/reducers are in place
 let adaptedState = State(
-    core: initialCoreState,
-    configuration: adaptedConfigurationState
+    core: initialCoreStateSlice,
+    configuration: adaptedConfigStateSlice
 )
 
