@@ -12,27 +12,17 @@ class HomeViewController: UIViewController, StoreDepending {
     @IBOutlet weak var contents: UIStackView!
     
     @IBAction func tapSearch(_ sender: Any) {
-        self.store.dispatch(UpdatePathAction("/bs14dj"))
-        // TODO: This is VERY temproary. Testing the nav controller
-        let viewController = ScreenName.Area.createViewController(injecting: store)
-        self.navigationController?.pushViewController(viewController, animated: true)
-        
+        self.store.dispatch(UpdatePathAction("bs14dj"))
     }
     
     var firstRun = true
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
         if(firstRun == true) {
             rays.isFirstViewOfSession = firstRun
             contents.alpha = 0
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {

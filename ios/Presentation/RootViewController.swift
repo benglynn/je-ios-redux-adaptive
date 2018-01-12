@@ -15,8 +15,19 @@ class RootViewController: UIViewController {
         fade(view: progress, toAlpha: 0.5)
 
         let adaptationService = AdaptationService()
+        
         let store = Store(initialState)
         
+        let firstAdaptedState$ = store.state$
+            .filter { state in state.config.isAdapted }
+            .take(1)
+        
+        let pathUpdate$ = store.state$
+            .filter { state in state.config.isAdapted }
+            .skip(1)
+            .map { $0.core.path }
+            .distinctUntilChanged()
+
         DispatchQueue.global(qos: .background).async { [weak self] in // TODO: subscribeOn instead of this?
             guard let strongSelf = self else { return }
             adaptationService.asObservable()
@@ -25,23 +36,26 @@ class RootViewController: UIViewController {
                     store.state$.onNext(adaptedState) // TODO: once reduce is implemented, dispatch actions to store instead of this
                 }).disposed(by: strongSelf.bag)
         }
-        
-        store.state$
-            .filter { state in state.config.isAdapted }
-            .take(1)
+            
+        firstAdaptedState$
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { state in
                 self.fade(view: self.progress, toAlpha: 0)
                 self.fade(view: self.logo, toAlpha: 0) {
                     Presenter.present(state, on: self, injecting: store)
                 }
-                
-            })
-        .disposed(by: bag)
+            }).disposed(by: bag)
+        
+        pathUpdate$
+            .withLatestFrom(store.state$)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { state in
+                Presenter.present(state, on: self, injecting: store)
+            }).disposed(by: bag)
     }
     
     private func fade(view: UIView, toAlpha: CGFloat, completion: (()->Void)? = nil) {
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
             view.alpha = toAlpha
         }, completion: { complete in
             completion?()

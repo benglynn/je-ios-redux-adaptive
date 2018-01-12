@@ -22,18 +22,10 @@ class Store {
             .subscribeOn(globalShchedular)
             .withLatestFrom(state$) { action, state in return (action, state)}
             .subscribe(onNext: { (action, state) in
-                print("Reducing action: \(action)")
                 if let nextState = State.init(current: state, action: action) {
                     self.state$.onNext(nextState)
                 }
             }).disposed(by: bag)
-        
-        state$
-            .subscribeOn(globalShchedular)
-            .map { $0.core.path }
-            .distinctUntilChanged()
-            .subscribe(onNext: { path in print("Path: \(path)") })
-            .disposed(by: bag)
     }
 }
 

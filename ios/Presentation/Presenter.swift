@@ -16,7 +16,9 @@ struct Presenter {
     }
     
     private static func present(_ screenFamilyStack: [ScreenFamily], on parent: UIViewController, injecting store: Store) {
-        let family = screenFamilyStack[0], screenType = family.screen.viewControllerType()
+        let lastScreen = screenFamilyStack.count == 1,
+            family = screenFamilyStack[0],
+            screenType = family.screen.viewControllerType()
         
         let selectedInParent: UIViewController? = {
             switch parent {
@@ -40,13 +42,14 @@ struct Presenter {
             if selectedInParent != nil {
                 return nil
             }
-            if type(of: parent.presentedViewController) == screenType {
+            
+            if parent.presentedViewController != nil && type(of: parent.presentedViewController!) == screenType {
                 print("\(family.screen) already presented on \(parent)")
                 return parent.presentedViewController
             } else {
                 print("Presenting \(family.screen) on \(parent)")
                 let viewController = family.screen.createViewController(injecting: store)
-                parent.present(viewController, animated: false, completion: nil) // TODO: animate true for all but first
+                parent.present(viewController, animated: lastScreen, completion: nil) // TODO: animate true for all but first
                 return viewController
             }
         }()
