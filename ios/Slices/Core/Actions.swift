@@ -1,9 +1,7 @@
 import Foundation
 
-let UPDATE_PATH = "Update path"
-
 class UpdatePath: Actionable {
-    let type = Action.updatePath
+    let type = Action.updatePathAction
     let path: String
     
     init(_ path: String) {

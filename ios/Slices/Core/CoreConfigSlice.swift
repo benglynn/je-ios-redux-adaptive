@@ -2,11 +2,15 @@ import Foundation
 
 struct CoreConfigSlice {
     let isActive: Bool
+    let reducers: [Action: CoreReducer]
     let routes: [Route]
 }
 
 let initialCoreConfigSlice = CoreConfigSlice(
     isActive: true,
+    reducers: [
+        .updatePathAction: .updatePathReducer
+    ],
     routes: [(
         pathPattern: .HomePath,
         screens: [
@@ -43,6 +47,9 @@ let adaptedConfigStateSlice = ConfigStateSlice(
     isAdapted: true,
     core: CoreConfigSlice(
         isActive: true,
+        reducers: [
+            .updatePathAction: .updatePathReducer
+        ],
         routes: [(
             pathPattern: .HomePath,
             screens: [

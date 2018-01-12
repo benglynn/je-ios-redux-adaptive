@@ -2,7 +2,7 @@ import Foundation
 
 enum Action: String {
     case initialAction
-    case updatePath
+    case updatePathAction
     // Adapters add actions here
 }
 
