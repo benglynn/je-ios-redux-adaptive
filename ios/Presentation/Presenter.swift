@@ -8,11 +8,11 @@ struct Presenter {
     }
     
     private static func currentScreenFamilyStack(_ state: State) -> [ScreenFamily] {
-        let match = state.configuration.routes_.first {
+        let match = state.configuration.routes.first {
             state.core.path.range(of: $0.pathPattern.rawValue, options: .regularExpression) != nil
         }
         print(match == nil ? "No path match" : "Path matched: \(match!.pathPattern)")
-        return match?.screens ?? state.configuration.routes_[0].screens
+        return match?.screens ?? state.configuration.routes[0].screens
     }
     
     private static func present(_ screenFamilyStack: [ScreenFamily], on parent: UIViewController, injecting store: Store) {
