@@ -6,3 +6,5 @@ enum PathPattern: String {
     case SettingsPath = "^settings$"
     case AreaPath = "^bs14dj$" // TODO: postcode regex
 }
+
+typealias Route = (pathPattern: PathPattern, screens: [ScreenFamily])

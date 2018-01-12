@@ -16,28 +16,17 @@ class Store {
         
         state$ = BehaviorSubject<State>(value: initialState)
         action$ = BehaviorSubject<Actionable>(value: InitialAction())
+        let globalShchedular = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
         
-        action$
+        action$ // TODO: off main thread!
+            .subscribeOn(globalShchedular)
             .withLatestFrom(state$) { action, state in return (action, state)}
             .subscribe(onNext: { (action, state) in
                 print("Reducing action: \(action)")
-                let _:[Slice] = Mirror(reflecting: state).children.map { child in
-                    switch child.value {
-                    case let coreState as CoreState:
-                        return nextSlice(action: action, slice: coreState)
-                    case let configurationState as ConfigurationState:
-                        return nextSlice(action: action, slice: configurationState)
-                    default:
-                        fatalError("Unknown state slice type")
-                    }
+                if let _ = State.init(old: state, action: action) {
+                    print("Push new state")
                 }
-                
             }).disposed(by: bag)
     }
-}
-
-func nextSlice<T>(action: Actionable, slice: T) -> T {
-    print("Getting next slice for \(type(of: slice))")
-    return slice
 }
 

@@ -44,7 +44,6 @@
 		2F64373C20076CBB006D863F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373B20076CBB006D863F /* Action.swift */; };
 		2F64373E20078787006D863F /* CoreReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373D20078787006D863F /* CoreReducers.swift */; };
 		2F64374120078A34006D863F /* ConfigurationReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64374020078A34006D863F /* ConfigurationReducers.swift */; };
-		2F6437432007978F006D863F /* StateReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437422007978F006D863F /* StateReducers.swift */; };
 		2F6437472007B753006D863F /* ConfigurationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437462007B753006D863F /* ConfigurationState.swift */; };
 		2F6437492007B913006D863F /* CoreState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437482007B913006D863F /* CoreState.swift */; };
 		2F64374B2007B981006D863F /* Slice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64374A2007B981006D863F /* Slice.swift */; };
@@ -105,7 +104,6 @@
 		2F64373B20076CBB006D863F /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		2F64373D20078787006D863F /* CoreReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreReducers.swift; sourceTree = "<group>"; };
 		2F64374020078A34006D863F /* ConfigurationReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationReducers.swift; sourceTree = "<group>"; };
-		2F6437422007978F006D863F /* StateReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateReducers.swift; sourceTree = "<group>"; };
 		2F6437462007B753006D863F /* ConfigurationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationState.swift; sourceTree = "<group>"; };
 		2F6437482007B913006D863F /* CoreState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreState.swift; sourceTree = "<group>"; };
 		2F64374A2007B981006D863F /* Slice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Slice.swift; path = ios/Store/Slice.swift; sourceTree = SOURCE_ROOT; };
@@ -301,7 +299,6 @@
 				2F64373020062F7F006D863F /* StoreDepending.swift */,
 				2F55E8F11FD5925F00BC52F0 /* Store.swift */,
 				2F55E8EF1FD58A7F00BC52F0 /* State.swift */,
-				2F6437422007978F006D863F /* StateReducers.swift */,
 				2F6437362006577D006D863F /* Reducer.swift */,
 				2F64373B20076CBB006D863F /* Action.swift */,
 			);
@@ -514,7 +511,6 @@
 				2F64374B2007B981006D863F /* Slice.swift in Sources */,
 				2F64373E20078787006D863F /* CoreReducers.swift in Sources */,
 				2F64373120062F7F006D863F /* StoreDepending.swift in Sources */,
-				2F6437432007978F006D863F /* StateReducers.swift in Sources */,
 				2F643733200652BE006D863F /* PathPattern.swift in Sources */,
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F6437492007B913006D863F /* CoreState.swift in Sources */,
