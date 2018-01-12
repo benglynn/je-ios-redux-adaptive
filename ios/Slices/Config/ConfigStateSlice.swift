@@ -1,6 +1,6 @@
 import Foundation
 
-struct ConfigStateSlice: Slice {
+struct ConfigStateSlice: StateSlice {
     
     let isAdapted: Bool
     let core: CoreConfigSlice
@@ -8,7 +8,12 @@ struct ConfigStateSlice: Slice {
     var routes: [Route] { get {
         // Adapters add other slices' routes
         return self.core.routes
-        }}
+        }
+    }
+    
+    func reduce(current: State, with action: Actionable) -> ConfigStateSlice {
+        return current.config
+    }
 }
 
 let initialConfigStateSlice = ConfigStateSlice(

@@ -18,15 +18,22 @@ class Store {
         action$ = BehaviorSubject<Actionable>(value: InitialAction())
         let globalShchedular = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
         
-        action$ // TODO: off main thread!
+        action$
             .subscribeOn(globalShchedular)
             .withLatestFrom(state$) { action, state in return (action, state)}
             .subscribe(onNext: { (action, state) in
                 print("Reducing action: \(action)")
-                if let _ = State.init(old: state, action: action) {
-                    print("Push new state")
+                if let nextState = State.init(current: state, action: action) {
+                    self.state$.onNext(nextState)
                 }
             }).disposed(by: bag)
+        
+        state$
+            .subscribeOn(globalShchedular)
+            .map { $0.core.path }
+            .distinctUntilChanged()
+            .subscribe(onNext: { path in print("Path: \(path)") })
+            .disposed(by: bag)
     }
 }
 

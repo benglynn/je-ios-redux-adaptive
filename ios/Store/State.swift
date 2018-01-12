@@ -2,33 +2,27 @@ import Foundation
 
 struct State {
     let core: CoreStateSlice
-    let configuration: ConfigStateSlice
+    let config: ConfigStateSlice
     // Adapters add slices here
 }
 
 extension State {
-    init?(old: State, action: Actionable) {
+    init?(current: State, action: Actionable) {
         print("Creating state with \(action.description) action")
-        let core = old.core
-        let configuration = old.configuration
-        self.init(core: core, configuration: configuration)
-    }
-    
-    func reduceSlice<T>(slice: T, action: Actionable, reducers: [Reducer<T>]) -> T {
-        return slice
+        let core = current.core.reduce(current: current, with: action)
+        let configuration = current.config.reduce(current: current, with: action)
+        self.init(core: core, config: configuration)
     }
 }
 
-
-
 let initialState = State(
     core: initialCoreStateSlice,
-    configuration: initialConfigStateSlice
+    config: initialConfigStateSlice
 )
 
 // TODO: this is a temporary struct, remove it once action/reducers are in place
 let adaptedState = State(
     core: initialCoreStateSlice,
-    configuration: adaptedConfigStateSlice
+    config: adaptedConfigStateSlice
 )
 

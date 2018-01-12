@@ -1,6 +1,6 @@
 import Foundation
 
-class UpdatePath: Actionable {
+class UpdatePathAction: Actionable {
     let type = Action.updatePathAction
     let path: String
     
