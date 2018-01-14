@@ -3,6 +3,7 @@ import Foundation
 enum Action: String {
     case initialAction
     case updatePathAction
+    case updateIsAdaptedAction
     // Adapters add actions here
 }
 

@@ -14,6 +14,8 @@
 		2F1C95381FFFBFD200684F4B /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C95371FFFBFD200684F4B /* Orders.storyboard */; };
 		2F1C953B1FFFC34400684F4B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C953A1FFFC34400684F4B /* Settings.storyboard */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
+		2F4E070A200B36F400F928FF /* ConfigReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E0709200B36F400F928FF /* ConfigReducers.swift */; };
+		2F4E070C200B3A0300F928FF /* ConfigConfigSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070B200B3A0300F928FF /* ConfigConfigSlice.swift */; };
 		2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */; };
 		2F54A3A61FDED11F006DA319 /* HindVadodara-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */; };
 		2F54A3A71FDED11F006DA319 /* HindVadodara-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */; };
@@ -40,7 +42,7 @@
 		2F64373120062F7F006D863F /* StoreDepending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373020062F7F006D863F /* StoreDepending.swift */; };
 		2F643733200652BE006D863F /* PathPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F643732200652BE006D863F /* PathPattern.swift */; };
 		2F6437372006577D006D863F /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437362006577D006D863F /* Reducer.swift */; };
-		2F64373A2006693C006D863F /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437392006693C006D863F /* Actions.swift */; };
+		2F64373A2006693C006D863F /* CoreActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437392006693C006D863F /* CoreActions.swift */; };
 		2F64373C20076CBB006D863F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373B20076CBB006D863F /* Action.swift */; };
 		2F64373E20078787006D863F /* CoreReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373D20078787006D863F /* CoreReducers.swift */; };
 		2F6437472007B753006D863F /* ConfigStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437462007B753006D863F /* ConfigStateSlice.swift */; };
@@ -50,6 +52,7 @@
 		2FD738B42008E8F500F08F57 /* CoreConfigSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B32008E8F500F08F57 /* CoreConfigSlice.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
+		2FD738BA200916EB00F08F57 /* ConfigActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B9200916EB00F08F57 /* ConfigActions.swift */; };
 		2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBEA811FD83A37006D340C /* RaysView.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,8 @@
 		2F1C95371FFFBFD200684F4B /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
 		2F1C953A1FFFC34400684F4B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
+		2F4E0709200B36F400F928FF /* ConfigReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigReducers.swift; sourceTree = "<group>"; };
+		2F4E070B200B3A0300F928FF /* ConfigConfigSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigConfigSlice.swift; sourceTree = "<group>"; };
 		2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Bold.ttf"; sourceTree = "<group>"; };
 		2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Light.ttf"; sourceTree = "<group>"; };
 		2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Medium.ttf"; sourceTree = "<group>"; };
@@ -102,7 +107,7 @@
 		2F64373020062F7F006D863F /* StoreDepending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDepending.swift; sourceTree = "<group>"; };
 		2F643732200652BE006D863F /* PathPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathPattern.swift; sourceTree = "<group>"; };
 		2F6437362006577D006D863F /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
-		2F6437392006693C006D863F /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		2F6437392006693C006D863F /* CoreActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreActions.swift; sourceTree = "<group>"; };
 		2F64373B20076CBB006D863F /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		2F64373D20078787006D863F /* CoreReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreReducers.swift; sourceTree = "<group>"; };
 		2F6437462007B753006D863F /* ConfigStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigStateSlice.swift; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		2FD738B32008E8F500F08F57 /* CoreConfigSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreConfigSlice.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
+		2FD738B9200916EB00F08F57 /* ConfigActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigActions.swift; sourceTree = "<group>"; };
 		2FFBEA811FD83A37006D340C /* RaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaysView.swift; sourceTree = "<group>"; };
 		90CABB8CBD92D76DFC9F6611 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
 		92CAA143045949EFB1DCEB2D /* Pods-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -258,7 +264,7 @@
 				2F1C95361FFFBF9A00684F4B /* Orders */,
 				2F559A461FFBE89F0024F7B1 /* Tabs */,
 				2F55E9021FD5A03B00BC52F0 /* Home */,
-				2F6437392006693C006D863F /* Actions.swift */,
+				2F6437392006693C006D863F /* CoreActions.swift */,
 				2F64373D20078787006D863F /* CoreReducers.swift */,
 				2F6437482007B913006D863F /* CoreStateSlice.swift */,
 				2FD738B32008E8F500F08F57 /* CoreConfigSlice.swift */,
@@ -316,6 +322,9 @@
 			isa = PBXGroup;
 			children = (
 				2F6437462007B753006D863F /* ConfigStateSlice.swift */,
+				2F4E070B200B3A0300F928FF /* ConfigConfigSlice.swift */,
+				2F4E0709200B36F400F928FF /* ConfigReducers.swift */,
+				2FD738B9200916EB00F08F57 /* ConfigActions.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -510,9 +519,11 @@
 			files = (
 				2F55E89D1FD55C2A00BC52F0 /* RootViewController.swift in Sources */,
 				2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */,
+				2F4E070A200B36F400F928FF /* ConfigReducers.swift in Sources */,
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* ScreenName.swift in Sources */,
 				2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */,
+				2FD738BA200916EB00F08F57 /* ConfigActions.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
 				2F64374B2007B981006D863F /* StateSlice.swift in Sources */,
@@ -525,11 +536,12 @@
 				2F6437472007B753006D863F /* ConfigStateSlice.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
 				2F6437372006577D006D863F /* Reducer.swift in Sources */,
+				2F4E070C200B3A0300F928FF /* ConfigConfigSlice.swift in Sources */,
 				2FD738B42008E8F500F08F57 /* CoreConfigSlice.swift in Sources */,
 				2F55E8F41FD59CBD00BC52F0 /* Presenter.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
 				2F64373C20076CBB006D863F /* Action.swift in Sources */,
-				2F64373A2006693C006D863F /* Actions.swift in Sources */,
+				2F64373A2006693C006D863F /* CoreActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,7 +33,7 @@ class RootViewController: UIViewController {
             adaptationService.asObservable()
                 .subscribe(onNext: { serviceResponse in
                     print("Received \(serviceResponse.actions.count) actions")
-                    store.state$.onNext(adaptedState) // TODO: once reduce is implemented, dispatch actions to store instead of this
+                    store.dispatch(UpdateIsAdaptedAction(true))
                 }).disposed(by: strongSelf.bag)
         }
             

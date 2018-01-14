@@ -20,9 +20,3 @@ let initialState = State(
     config: initialConfigStateSlice
 )
 
-// TODO: this is a temporary struct, remove it once action/reducers are in place
-let adaptedState = State(
-    core: initialCoreStateSlice,
-    config: adaptedConfigStateSlice
-)
-
