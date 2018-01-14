@@ -29,9 +29,12 @@
                                 <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35G-OE-tee">
-                                <rect key="frame" x="12" y="21" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35G-OE-tee">
+                                <rect key="frame" x="0.0" y="20" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fcl-pP-qIO"/>
+                                    <constraint firstAttribute="width" constant="100" id="sh8-Uu-P1m"/>
+                                </constraints>
                                 <state key="normal" title="&lt; Home"/>
                                 <connections>
                                     <action selector="tapHome:" destination="MOr-ci-89p" eventType="touchUpInside" id="PZY-sL-GBs"/>
@@ -41,6 +44,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0B4-6Y-dMf" firstAttribute="centerX" secondItem="KKt-Wh-fEa" secondAttribute="centerX" id="EnD-aj-q2h"/>
+                            <constraint firstItem="35G-OE-tee" firstAttribute="leading" secondItem="Jej-0P-ROr" secondAttribute="leading" id="FLJ-pB-1mO"/>
+                            <constraint firstItem="35G-OE-tee" firstAttribute="top" secondItem="Jej-0P-ROr" secondAttribute="top" id="UUf-rQ-9Lt"/>
                             <constraint firstItem="0B4-6Y-dMf" firstAttribute="centerY" secondItem="KKt-Wh-fEa" secondAttribute="centerY" id="Xg7-vP-lHu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jej-0P-ROr"/>
