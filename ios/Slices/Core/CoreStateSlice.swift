@@ -2,6 +2,7 @@ import Foundation
 
 struct CoreStateSlice: StateSlice {
     let path: String
+    let screensInSession: Int
     
     func reduce(current: State, with action: Actionable) -> CoreStateSlice {
         if let reducer = current.config.core.reducers[action.type] {
@@ -12,5 +13,6 @@ struct CoreStateSlice: StateSlice {
 }
 
 let initialCoreStateSlice = CoreStateSlice(
-    path: ""
+    path: "",
+    screensInSession: 0
 )

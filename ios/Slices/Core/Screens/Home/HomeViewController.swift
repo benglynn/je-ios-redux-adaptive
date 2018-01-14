@@ -1,8 +1,10 @@
 import UIKit
+import RxSwift
 
 class HomeViewController: UIViewController, StoreDepending {
     
     internal var store: Store!
+    let bag = DisposeBag()
     
     func setStore(store: Store) {
         self.store = store
@@ -15,27 +17,26 @@ class HomeViewController: UIViewController, StoreDepending {
         self.store.dispatch(UpdatePathAction("bs14dj"))
     }
     
-    var firstRun = true
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if(firstRun == true) {
-            rays.isFirstViewOfSession = firstRun
-            contents.alpha = 0
-        }
+        store.state$.map { $0.core.screensInSession }.filter { $0 == 0 }.take(1)
+            .subscribe(onNext: { _ in
+                self.rays.isFirstViewOfSession = true
+                self.contents.alpha = 0
+            }).disposed(by: bag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if(firstRun == true) {
-            UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseOut, animations: {[weak self] in
-                self?.view.layoutIfNeeded() }
-            )
-            UIView.animate(withDuration: 0.5, delay: 1.1, options: .curveEaseOut, animations: {[weak self] in
-                self?.contents.alpha = 1.0
-                self?.view.layoutIfNeeded()
-            })
-        }
-        firstRun = false
+        store.state$.map { $0.core.screensInSession }.filter { $0 == 0 }.take(1)
+            .subscribe(onNext: { _ in
+                UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseOut, animations: {[weak self] in
+                    self?.view.layoutIfNeeded() }
+                )
+                UIView.animate(withDuration: 0.5, delay: 1.1, options: .curveEaseOut, animations: {[weak self] in
+                    self?.contents.alpha = 1.0
+                    self?.view.layoutIfNeeded()
+                })
+            }).disposed(by: bag)
     }
 }
