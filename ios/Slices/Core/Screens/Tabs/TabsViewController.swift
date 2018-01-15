@@ -1,8 +1,9 @@
 import UIKit
 
-class TabsViewController: UITabBarController, UITabBarControllerDelegate, StoreDepending {
+class TabsViewController: UITabBarController, UITabBarControllerDelegate, Presentable {
     
     var store: Store!
+    static let storyboardName = "Tabs"
     
     func setStore(store: Store) {
         self.store = store

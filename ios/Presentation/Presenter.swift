@@ -18,7 +18,7 @@ struct Presenter {
     private static func present(_ screenFamilyStack: [ScreenFamily], on parent: UIViewController, injecting store: Store) {
         let lastScreen = screenFamilyStack.count == 1,
             family = screenFamilyStack[0],
-            screenType = family.screen.viewControllerType()
+            screenType = family.screen.viewControllerType
         
         let selectedInParent: UIViewController? = {
             switch parent {
@@ -48,7 +48,7 @@ struct Presenter {
                 return parent.presentedViewController
             } else {
                 print("Presenting \(family.screen) on \(parent)")
-                let viewController = family.screen.createViewController(injecting: store)
+                let viewController = family.screen.create(injecting: store)
                 parent.present(viewController, animated: lastScreen, completion: nil) // TODO: animate true for all but first
                 return viewController
             }
@@ -59,9 +59,9 @@ struct Presenter {
         if let childNames = family.children {
             switch selectedOrPresented {
             case let tabs as UITabBarController:
-                tabs.viewControllers = childNames.map { $0.createViewController(injecting: store) } // TODO: don't clobber existing children
+                tabs.viewControllers = childNames.map { $0.create(injecting: store) } // TODO: don't clobber existing children
             case let navStack as UINavigationController:
-                navStack.setViewControllers(childNames.map { $0.createViewController(injecting: store) }, animated: false) // TODO: animated sometimes
+                navStack.setViewControllers(childNames.map { $0.create(injecting: store) }, animated: false) // TODO: animated sometimes
             default:
                 fatalError("Unable to add children to an unknown parent type")
             }

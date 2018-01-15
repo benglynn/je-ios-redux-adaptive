@@ -18,6 +18,7 @@
 		2F4E070C200B3A0300F928FF /* ConfigConfigSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070B200B3A0300F928FF /* ConfigConfigSlice.swift */; };
 		2F4E070E200BF61700F928FF /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070D200BF61700F928FF /* TabsViewController.swift */; };
 		2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070F200BF98900F928FF /* SettingsViewController.swift */; };
+		2F4E0713200CE85700F928FF /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E0712200CE85700F928FF /* Presentable.swift */; };
 		2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */; };
 		2F54A3A61FDED11F006DA319 /* HindVadodara-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */; };
 		2F54A3A71FDED11F006DA319 /* HindVadodara-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */; };
@@ -40,7 +41,7 @@
 		2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F11FD5925F00BC52F0 /* Store.swift */; };
 		2F55E8F41FD59CBD00BC52F0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F31FD59CBD00BC52F0 /* Presenter.swift */; };
 		2F55E9041FD5A0A000BC52F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E9031FD5A0A000BC52F0 /* Home.storyboard */; };
-		2F55E9061FD5A46E00BC52F0 /* ScreenName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E9051FD5A46E00BC52F0 /* ScreenName.swift */; };
+		2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E9051FD5A46E00BC52F0 /* Screen.swift */; };
 		2F64373120062F7F006D863F /* StoreDepending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373020062F7F006D863F /* StoreDepending.swift */; };
 		2F643733200652BE006D863F /* PathPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F643732200652BE006D863F /* PathPattern.swift */; };
 		2F6437372006577D006D863F /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437362006577D006D863F /* Reducer.swift */; };
@@ -80,6 +81,7 @@
 		2F4E070B200B3A0300F928FF /* ConfigConfigSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigConfigSlice.swift; sourceTree = "<group>"; };
 		2F4E070D200BF61700F928FF /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
 		2F4E070F200BF98900F928FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2F4E0712200CE85700F928FF /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Bold.ttf"; sourceTree = "<group>"; };
 		2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Light.ttf"; sourceTree = "<group>"; };
 		2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Medium.ttf"; sourceTree = "<group>"; };
@@ -107,7 +109,7 @@
 		2F55E8F11FD5925F00BC52F0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		2F55E8F31FD59CBD00BC52F0 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		2F55E9031FD5A0A000BC52F0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		2F55E9051FD5A46E00BC52F0 /* ScreenName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenName.swift; sourceTree = "<group>"; };
+		2F55E9051FD5A46E00BC52F0 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		2F64373020062F7F006D863F /* StoreDepending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDepending.swift; sourceTree = "<group>"; };
 		2F643732200652BE006D863F /* PathPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathPattern.swift; sourceTree = "<group>"; };
 		2F6437362006577D006D863F /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
@@ -308,7 +310,8 @@
 		2F6437342006555E006D863F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				2F55E9051FD5A46E00BC52F0 /* ScreenName.swift */,
+				2F55E9051FD5A46E00BC52F0 /* Screen.swift */,
+				2F4E0712200CE85700F928FF /* Presentable.swift */,
 				2F55E8F31FD59CBD00BC52F0 /* Presenter.swift */,
 				2F643732200652BE006D863F /* PathPattern.swift */,
 				2F55E89C1FD55C2A00BC52F0 /* RootViewController.swift */,
@@ -536,7 +539,7 @@
 				2F4E070E200BF61700F928FF /* TabsViewController.swift in Sources */,
 				2F4E070A200B36F400F928FF /* ConfigReducers.swift in Sources */,
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
-				2F55E9061FD5A46E00BC52F0 /* ScreenName.swift in Sources */,
+				2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */,
 				2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */,
 				2FD738BA200916EB00F08F57 /* ConfigActions.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
@@ -544,6 +547,7 @@
 				2F64374B2007B981006D863F /* StateSlice.swift in Sources */,
 				2F64373E20078787006D863F /* CoreReducers.swift in Sources */,
 				2F64373120062F7F006D863F /* StoreDepending.swift in Sources */,
+				2F4E0713200CE85700F928FF /* Presentable.swift in Sources */,
 				2F643733200652BE006D863F /* PathPattern.swift in Sources */,
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F6437492007B913006D863F /* CoreStateSlice.swift in Sources */,

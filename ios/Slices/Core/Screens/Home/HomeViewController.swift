@@ -1,8 +1,9 @@
 import UIKit
 import RxSwift
 
-class HomeViewController: UIViewController, StoreDepending {
+class HomeViewController: UIViewController, Presentable {
     
+    static let storyboardName = "Home"
     internal var store: Store!
     let bag = DisposeBag()
     

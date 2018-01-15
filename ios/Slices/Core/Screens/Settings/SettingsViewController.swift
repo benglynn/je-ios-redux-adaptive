@@ -1,3 +1,6 @@
 import UIKit
 
-class SettingsViewController: UIViewController {}
+class SettingsViewController: UIViewController, Presentable {
+    var store: Store!
+    static let storyboardName = "Settings"
+}
