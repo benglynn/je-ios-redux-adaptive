@@ -20,28 +20,24 @@ struct Presenter {
             family = screenFamilyStack[0],
             screenType = family.screen.viewControllerType
         
-        let selectedInParent: UIViewController? = {
+        let foundInParent: UIViewController? = {
             switch parent {
             case let tabs as UITabBarController:
                 if let matchingChild = (tabs.viewControllers?.first { type(of: $0) == screenType }) {
-                    print("Selecting \(family.screen) in \(parent)")
-                    tabs.selectedViewController = matchingChild
+                    print("Found \(family.screen) in \(parent)")
                     return matchingChild
                 } else { return nil }
             case let navStack as UINavigationController:
                 if let matchingChild = (navStack.viewControllers.first { type(of: $0) == screenType }) {
-                    // TODO: pop non-matching views off the stack
+                    print("Found \(family.screen) in \(parent)")
                     return matchingChild
                 } else { return nil }
-            // TODO: handle other types of parent
             default: return nil
             }
         }()
         
         let presentedOnParent: UIViewController? = {
-            if selectedInParent != nil {
-                return nil
-            }
+            if foundInParent != nil { return nil }
             
             if parent.presentedViewController != nil && type(of: parent.presentedViewController!) == screenType {
                 print("\(family.screen) already presented on \(parent)")
@@ -54,12 +50,16 @@ struct Presenter {
             }
         }()
         
-        let selectedOrPresented = selectedInParent ?? presentedOnParent!
+        let foundOrPresented = foundInParent ?? presentedOnParent!
         
         if let childNames = family.children {
-            switch selectedOrPresented {
+            guard screenFamilyStack.count > 0, childNames.contains(screenFamilyStack[1].screen) else {
+                fatalError("Expected next in stack to be child of \(foundOrPresented)")
+            }
+            switch foundOrPresented {
             case let tabs as UITabBarController:
                 tabs.viewControllers = childNames.map { $0.create(injecting: store) } // TODO: don't clobber existing children
+                tabs.selectedViewController = tabs.viewControllers!.first { type(of: $0) == screenFamilyStack[1].screen.viewControllerType }
             case let navStack as UINavigationController:
                 navStack.setViewControllers(childNames.map { $0.create(injecting: store) }, animated: false) // TODO: animated sometimes
             default:
@@ -67,7 +67,7 @@ struct Presenter {
             }
         }
         if screenFamilyStack.count > 1 {
-            present(Array(screenFamilyStack[1...]), on: selectedOrPresented, injecting: store)
+            present(Array(screenFamilyStack[1...]), on: foundOrPresented, injecting: store)
         }
     }
 }
