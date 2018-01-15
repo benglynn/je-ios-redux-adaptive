@@ -52,16 +52,25 @@ struct Presenter {
         
         let foundOrPresented = foundInParent ?? presentedOnParent!
         
+        func reuseEach(_ incumbents: [UIViewController]?, orCreate screens: [Screen]) -> [UIViewController] {
+            guard incumbents != nil else { return screens.map { $0.create(injecting: store) } }
+            return zip(screens, incumbents!).map { screen, incumbent in
+                screen.viewControllerType == type(of: incumbent) ? incumbent : screen.create(injecting: store) }
+        }
+        
         if let childNames = family.children {
             guard screenFamilyStack.count > 0, childNames.contains(screenFamilyStack[1].screen) else {
                 fatalError("Expected next in stack to be child of \(foundOrPresented)")
             }
             switch foundOrPresented {
             case let tabs as UITabBarController:
-                tabs.viewControllers = childNames.map { $0.create(injecting: store) } // TODO: don't clobber existing children
-                tabs.selectedViewController = tabs.viewControllers!.first { type(of: $0) == screenFamilyStack[1].screen.viewControllerType }
+                tabs.setViewControllers(reuseEach(tabs.viewControllers, orCreate: childNames), animated: true)
+                let selectedChild = screenFamilyStack[1].screen
+                print("Selecting \(selectedChild) in \(parent)")
+                tabs.selectedViewController = tabs.viewControllers!.first { type(of: $0) == selectedChild.viewControllerType }
             case let navStack as UINavigationController:
                 navStack.setViewControllers(childNames.map { $0.create(injecting: store) }, animated: false) // TODO: animated sometimes
+                
             default:
                 fatalError("Unable to add children to an unknown parent type")
             }
