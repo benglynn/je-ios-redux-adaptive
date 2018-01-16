@@ -23,3 +23,6 @@ class InitialAction: Actionable {
     let type = Action.initialAction
 }
 
+struct ActivateAdaptation: Actionable {
+    let type: Action
+}

@@ -32,9 +32,13 @@ class RootViewController: UIViewController {
             guard let strongSelf = self else { return }
             adaptationService.asObservable()
                 .subscribe(onNext: { serviceResponse in
-                    print("Received \(serviceResponse.actions.count) actions")
-//                    store.dispatch(ActivateMenuAdaptation())
-                    store.dispatch(UpdateIsAdaptedAction(true))
+                    let actions: [Actionable] = serviceResponse.actions
+                        .filter { $0.active == true }
+                        .map { Action(rawValue: $0.type) }
+                        .filter { $0 != nil }
+                        .map { ActivateAdaptation(type: $0!) }
+                        + [UpdateIsAdaptedAction(true)]
+                    actions.forEach { store.dispatch($0) }
                 }).disposed(by: strongSelf.bag)
         }
             
