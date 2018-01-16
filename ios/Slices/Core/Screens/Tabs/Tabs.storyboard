@@ -12,8 +12,8 @@
         <!--Tabs View Controller-->
         <scene sceneID="Cpr-6M-V8g">
             <objects>
-                <tabBarController id="oWl-5j-Qxs" customClass="TabsViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="MG3-uY-G6i">
+                <tabBarController extendedLayoutIncludesOpaqueBars="YES" id="oWl-5j-Qxs" customClass="TabsViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MG3-uY-G6i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

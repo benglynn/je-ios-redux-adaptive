@@ -4,6 +4,7 @@ import UIKit
     
     private var isInterfaceBuilder = false
     var isFirstViewOfSession = false
+    let durationMultiplier = 1.0
     
     private struct rayShape {
         let startDeg: CGFloat
@@ -47,7 +48,7 @@ import UIKit
             let startTranslateRotate = CATransform3DRotate(startTranslate, .pi * (-30 / 180), 0.0, 0.0, 1.0)
             let anim = CABasicAnimation(keyPath: #keyPath(CALayer.transform))
             anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-            anim.duration = 1.7
+            anim.duration = 1.7 * durationMultiplier
             anim.fromValue = startTranslateRotate
             anim.toValue = restingTranslateRotate
             anim.fillMode = kCAFillModeBackwards
@@ -92,7 +93,7 @@ import UIKit
                 let anim = CABasicAnimation(keyPath: #keyPath(CALayer.transform))
                 anim.fromValue = startScale
                 anim.toValue = endTransform
-                anim.duration = 0.5
+                anim.duration = 0.5 * durationMultiplier
                 anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
                 anim.beginTime = CACurrentMediaTime() + (Double(index) * 0.06)
                 anim.fillMode = kCAFillModeBackwards
