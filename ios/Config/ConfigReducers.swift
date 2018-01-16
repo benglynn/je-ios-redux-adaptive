@@ -14,12 +14,15 @@ func updateIsAdapted (stateSlice: ConfigStateSlice, action: Actionable) -> Confi
 
 enum ConfigReducer: String {
     case updateIsAdaptedReducer
-    // Adapters add config reducers here
+    // Adapters add config reducers below
+    case activateMenuAdaptationReducer
     
     var reduce: Reducer<ConfigStateSlice> {
         switch self {
         case .updateIsAdaptedReducer:
             return updateIsAdapted
+        case .activateMenuAdaptationReducer:
+            return activateMenuAdaptation
         }
     }
 }

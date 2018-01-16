@@ -5,5 +5,8 @@ struct ConfigConfigSlice {
 }
 
 let initialConfigConfigSlice = ConfigConfigSlice(
-    reducers: [.updateIsAdaptedAction : .updateIsAdaptedReducer]
+    reducers: [
+        .updateIsAdaptedAction : .updateIsAdaptedReducer,
+        .activateMenuAdaptationAction: .activateMenuAdaptationReducer
+    ]
 )

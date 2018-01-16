@@ -33,6 +33,7 @@ class RootViewController: UIViewController {
             adaptationService.asObservable()
                 .subscribe(onNext: { serviceResponse in
                     print("Received \(serviceResponse.actions.count) actions")
+//                    store.dispatch(ActivateMenuAdaptation())
                     store.dispatch(UpdateIsAdaptedAction(true))
                 }).disposed(by: strongSelf.bag)
         }

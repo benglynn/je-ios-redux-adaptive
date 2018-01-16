@@ -4,7 +4,8 @@ enum Action: String {
     case initialAction
     case updatePathAction
     case updateIsAdaptedAction
-    // Adapters add actions here
+    // Adapters add actions below
+    case activateMenuAdaptationAction
 }
 
 protocol Actionable {
