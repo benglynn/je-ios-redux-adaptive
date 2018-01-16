@@ -247,7 +247,8 @@
 		2F55E8991FD55C2A00BC52F0 /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				2F55E9071FD5B56D00BC52F0 /* Slices */,
+				2F55E9011FD5A01C00BC52F0 /* Core */,
+				2F64373F20078A25006D863F /* Config */,
 				2F643735200655ED006D863F /* Store */,
 				2F6437342006555E006D863F /* Presentation */,
 				2F55E89A1FD55C2A00BC52F0 /* AppDelegate.swift */,
@@ -296,15 +297,6 @@
 				2FFBEA811FD83A37006D340C /* RaysView.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		2F55E9071FD5B56D00BC52F0 /* Slices */ = {
-			isa = PBXGroup;
-			children = (
-				2F64373F20078A25006D863F /* Config */,
-				2F55E9011FD5A01C00BC52F0 /* Core */,
-			);
-			path = Slices;
 			sourceTree = "<group>";
 		};
 		2F6437342006555E006D863F /* Presentation */ = {
