@@ -6,6 +6,7 @@ class HomeViewController: UIViewController, Presentable {
     static let storyboardName = "Home"
     internal var store: Store!
     let bag = DisposeBag()
+    var hasAnimated = false
     
     func setStore(store: Store) {
         self.store = store
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController, Presentable {
         super.viewWillAppear(animated)
         store.state$.map { $0.core.screensInSession }.filter { $0 == 0 }.take(1)
             .subscribe(onNext: { _ in
+                guard self.hasAnimated == false else { return }
                 self.rays.isFirstViewOfSession = true
                 self.contents.alpha = 0
             }).disposed(by: bag)
@@ -31,6 +33,7 @@ class HomeViewController: UIViewController, Presentable {
         super.viewDidAppear(animated)
         store.state$.map { $0.core.screensInSession }.filter { $0 == 0 }.take(1)
             .subscribe(onNext: { _ in
+                guard self.hasAnimated == false else { return }
                 UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseOut, animations: {[weak self] in
                     self?.view.layoutIfNeeded() }
                 )
@@ -38,6 +41,7 @@ class HomeViewController: UIViewController, Presentable {
                     self?.contents.alpha = 1.0
                     self?.view.layoutIfNeeded()
                 })
+                self.hasAnimated = true
             }).disposed(by: bag)
     }
 }
