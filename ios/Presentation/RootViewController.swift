@@ -15,7 +15,6 @@ class RootViewController: UIViewController {
         fade(view: progress, toAlpha: 0.5)
 
         let adaptationService = AdaptationService()
-        
         let store = Store(initialState)
         
         let firstAdaptedState$ = store.state$
@@ -30,7 +29,7 @@ class RootViewController: UIViewController {
 
         DispatchQueue.global(qos: .background).async { [weak self] in // TODO: subscribeOn instead of this?
             guard let strongSelf = self else { return }
-            adaptationService.asObservable()
+            adaptationService.asObservable(fake: true)
                 .subscribe(onNext: { serviceResponse in
                     let actions: [Actionable] = serviceResponse.actions
                         .filter { $0.active == true }
