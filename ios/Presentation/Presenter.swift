@@ -83,11 +83,11 @@ struct Presenter {
     }
     
     private static func currentScreenFamilyStack(_ state: State) -> [ScreenFamily] {
-        let match = state.config.routes.first {
+        let match = state._routes.first {
             state.core.path.range(of: $0.pathPattern.rawValue, options: .regularExpression) != nil
         }
         print(match == nil ? "No path match" : "Path matched: \(match!.pathPattern)")
-        return match?.screens ?? state.config.routes[0].screens
+        return match?.screens ?? state._routes[0].screens
     }
 }
 

@@ -2,7 +2,6 @@ import Foundation
 
 struct State {
     let core: CoreStateSlice
-    let config: ConfigStateSlice
     // Adapters add slices here
 }
 
@@ -10,13 +9,18 @@ extension State {
     init?(current: State, action: Actionable) {
         print("Init state with \(action.description)")
         let core = current.core.reduce(with: action)
-        let configuration = current.config.reduce(with: action)
-        self.init(core: core, config: configuration)
+        self.init(core: core)
+    }
+}
+
+extension State {
+    var _routes: [Route] {
+        return core._routes
+        // Adapters add (+) state routes here
     }
 }
 
 let initialState = State(
-    core: initialCoreStateSlice,
-    config: initialConfigStateSlice
+    core: initialCoreStateSlice
 )
 

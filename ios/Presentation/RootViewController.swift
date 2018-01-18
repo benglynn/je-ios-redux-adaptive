@@ -18,11 +18,11 @@ class RootViewController: UIViewController {
         let store = Store(initialState)
         
         let firstAdaptedState$ = store.state$
-            .filter { state in state.config.isAdapted }
+            .filter { state in state.core.isAdapted }
             .take(1)
         
         let pathUpdate$ = store.state$
-            .filter { state in state.config.isAdapted }
+            .filter { state in state.core.isAdapted }
             .skip(1)
             .map { $0.core.path }
             .distinctUntilChanged()
@@ -36,7 +36,7 @@ class RootViewController: UIViewController {
                         .map { Action(rawValue: $0.type) }
                         .filter { $0 != nil }
                         .map { ActivateAdaptation(type: $0!) }
-                        + [UpdateIsAdaptedAction(true)]
+                        + [UpdateIsAdaptedAction(isAdapted: true)]
                     actions.forEach { store.dispatch($0) }
                 }).disposed(by: strongSelf.bag)
         }

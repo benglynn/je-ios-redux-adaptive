@@ -8,3 +8,8 @@ class UpdatePathAction: Actionable {
         self.path = path
     }
 }
+
+struct UpdateIsAdaptedAction: Actionable {
+    let type = Action.updateIsAdaptedAction
+    let isAdapted: Bool
+}
