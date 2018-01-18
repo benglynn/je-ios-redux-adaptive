@@ -6,8 +6,6 @@ func activateMenuAdaptation (stateSlice: ConfigStateSlice, action: Actionable) -
         isAdapted: stateSlice.isAdapted,
         config: stateSlice.config,
         core: CoreConfigSlice(
-            isActive: stateSlice.core.isActive,
-            reducers: stateSlice.core.reducers,
             routes: [(
                 pathPattern: .HomePath,
                 screens: [
@@ -32,7 +30,8 @@ func activateMenuAdaptation (stateSlice: ConfigStateSlice, action: Actionable) -
                         ]
                 )
             ]
-        )
+        ),
+        _reducers: stateSlice._reducers
     )
     return nextStateSlice
 }

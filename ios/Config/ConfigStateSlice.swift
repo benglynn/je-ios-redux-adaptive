@@ -5,6 +5,7 @@ struct ConfigStateSlice: StateSlice {
     let isAdapted: Bool
     let config: ConfigConfigSlice
     let core: CoreConfigSlice
+    let _reducers: [Action: ConfigReducer]
     
     var routes: [Route] { get {
         // Adapters + other slices' routes to returned array
@@ -12,16 +13,20 @@ struct ConfigStateSlice: StateSlice {
         }
     }
     
-    func reduce(current: State, with action: Actionable) -> ConfigStateSlice {
-        if let reducer = current.config.config.reducers[action.type] {
-            return reducer.reduce(current.config, action)
+    func reduce(with action: Actionable) -> ConfigStateSlice {
+        if let reducer = self._reducers[action.type] {
+            return reducer.reduce(self, action)
         }
-        return current.config
+        return self
     }
 }
 
 let initialConfigStateSlice = ConfigStateSlice(
     isAdapted: false,
     config: initialConfigConfigSlice,
-    core: initialCoreConfigSlice
+    core: initialCoreConfigSlice,
+    _reducers: [
+        .updateIsAdaptedAction : .updateIsAdaptedReducer,
+        .activateMenuAdaptationAction: .activateMenuAdaptationReducer
+    ]
 )

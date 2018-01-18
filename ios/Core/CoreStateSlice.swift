@@ -1,18 +1,21 @@
 import Foundation
 
 struct CoreStateSlice: StateSlice {
+    
     let path: String
     let screensInSession: Int
+    let _reducers: [Action: CoreReducer]
     
-    func reduce(current: State, with action: Actionable) -> CoreStateSlice {
-        if let reducer = current.config.core.reducers[action.type] {
-            return reducer.reduce(current.core, action)
+    func reduce(with action: Actionable) -> CoreStateSlice {
+        if let reducer = self._reducers[action.type] {
+            return reducer.reduce(self, action)
         }
-        return current.core
+        return self
     }
 }
 
 let initialCoreStateSlice = CoreStateSlice(
     path: "",
-    screensInSession: 0
+    screensInSession: 0,
+    _reducers: [.updatePathAction: .updatePathReducer]
 )

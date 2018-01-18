@@ -29,7 +29,7 @@ class RootViewController: UIViewController {
 
         DispatchQueue.global(qos: .background).async { [weak self] in // TODO: subscribeOn instead of this?
             guard let strongSelf = self else { return }
-            adaptationService.asObservable(fake: true)
+            adaptationService.asObservable(/*fake: true*/)
                 .subscribe(onNext: { serviceResponse in
                     let actions: [Actionable] = serviceResponse.actions
                         .filter { $0.active == true }

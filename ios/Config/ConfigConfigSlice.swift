@@ -1,12 +1,5 @@
 import Foundation
 
-struct ConfigConfigSlice {
-    let reducers: [Action: ConfigReducer]
-}
+struct ConfigConfigSlice {}
 
-let initialConfigConfigSlice = ConfigConfigSlice(
-    reducers: [
-        .updateIsAdaptedAction : .updateIsAdaptedReducer,
-        .activateMenuAdaptationAction: .activateMenuAdaptationReducer
-    ]
-)
+let initialConfigConfigSlice = ConfigConfigSlice()

@@ -4,7 +4,8 @@ func updatePath (stateSlice: CoreStateSlice, action: Actionable) -> CoreStateSli
     let updatePathAction = action as! UpdatePathAction
     return CoreStateSlice(
         path: updatePathAction.path,
-        screensInSession: stateSlice.screensInSession + 1
+        screensInSession: stateSlice.screensInSession + 1,
+        _reducers: stateSlice._reducers
     )
 }
 

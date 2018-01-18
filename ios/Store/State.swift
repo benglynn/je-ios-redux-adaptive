@@ -9,8 +9,8 @@ struct State {
 extension State {
     init?(current: State, action: Actionable) {
         print("Init state with \(action.description)")
-        let core = current.core.reduce(current: current, with: action)
-        let configuration = current.config.reduce(current: current, with: action)
+        let core = current.core.reduce(with: action)
+        let configuration = current.config.reduce(with: action)
         self.init(core: core, config: configuration)
     }
 }

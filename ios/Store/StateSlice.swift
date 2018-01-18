@@ -1,5 +1,7 @@
 import Foundation
 
 protocol StateSlice {
-    func reduce(current: State, with action: Actionable) -> Self
+    associatedtype SliceReducer
+    var _reducers: [Action: SliceReducer] { get }
+    func reduce(with action: Actionable) -> Self
 }

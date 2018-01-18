@@ -9,7 +9,9 @@ func updateIsAdapted (stateSlice: ConfigStateSlice, action: Actionable) -> Confi
     return ConfigStateSlice(
         isAdapted: updateIsAdaptedAction.isAdapted,
         config: stateSlice.config,
-        core: stateSlice.core)
+        core: stateSlice.core,
+        _reducers: stateSlice._reducers
+    )
 }
 
 enum ConfigReducer: String {
