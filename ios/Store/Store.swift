@@ -24,7 +24,16 @@ class Store {
             .subscribe(onNext: { (action, state) in
                 if let nextState = State.init(current: state, action: action) {
                     self.state$.onNext(nextState)
+                    
+                    // TODO: temporary until effects are implemented!!!!!!!!!!
+                    if action.type == Action.updatePathAction {
+                        if let rootView = UIApplication.shared.keyWindow?.rootViewController as? RootViewController {
+                            Presenter.present(nextState, on: rootView, injecting: self)
+                        }
+                    }
+                    // !!!!!!!!!!!!
                 }
+                
             }).disposed(by: bag)
     }
 }

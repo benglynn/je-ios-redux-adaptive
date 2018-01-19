@@ -10,56 +10,20 @@ class RootViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         rotateForever(view: progress)
         fade(view: progress, toAlpha: 0.5)
-
-        let adaptationService = AdaptationService()
-        let store = Store(initialState)
-        
-        let firstAdaptedState$ = store.state$
-            .filter { state in state.core.isAdapted }
-            .take(1)
-        
-        let pathUpdate$ = store.state$
-            .filter { state in state.core.isAdapted }
-            .skip(1)
-            .map { $0.core.path }
-            .distinctUntilChanged()
-
-        DispatchQueue.global(qos: .background).async { [weak self] in // TODO: subscribeOn instead of this?
-            guard let strongSelf = self else { return }
-            adaptationService.asObservable(/*fake: true*/)
-                .subscribe(onNext: { serviceResponse in
-                    let actions: [Actionable] = serviceResponse.actions
-                        .filter { $0.active == true }
-                        .map { Action(rawValue: $0.type) }
-                        .filter { $0 != nil }
-                        .map { ActivateAdaptation(type: $0!) }
-                        + [UpdateIsAdaptedAction(isAdapted: true)]
-                    actions.forEach { store.dispatch($0) }
-                }).disposed(by: strongSelf.bag)
+        (UIApplication.shared.delegate as! AppDelegate).readyToPresent(on: self)
+    }
+    
+    func prepareToPresent(_ callback: @escaping ()->Void) {
+        self.fade(view: self.progress, toAlpha: 0)
+        self.fade(view: self.logo, toAlpha: 0) {
+            callback()
         }
-            
-        firstAdaptedState$
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { state in
-                self.fade(view: self.progress, toAlpha: 0)
-                self.fade(view: self.logo, toAlpha: 0) {
-                    Presenter.present(state, on: self, injecting: store)
-                }
-            }).disposed(by: bag)
-        
-        pathUpdate$
-            .withLatestFrom(store.state$)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { state in
-                Presenter.present(state, on: self, injecting: store)
-            }).disposed(by: bag)
     }
     
     private func fade(view: UIView, toAlpha: CGFloat, completion: (()->Void)? = nil) {
-        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.15, delay: 0, options: .curveEaseIn, animations: {
             view.alpha = toAlpha
         }, completion: { complete in
             completion?()

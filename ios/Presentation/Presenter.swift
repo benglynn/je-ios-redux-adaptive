@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
 
-struct Presenter {
+struct Presenter { // TODO: as effect
     
     static func present(_ state: State, on parent: UIViewController, injecting store: Store) {
-        present(currentScreenFamilyStack(state), on: parent, isChild: false, injecting: store)
+        present(state.core.screenFamilyStack, on: parent, isChild: false, injecting: store)
     }
     
     private static func present(_ screenFamilyStack: [ScreenFamily], on parent: UIViewController, isChild: Bool, injecting store: Store) {
@@ -82,14 +82,6 @@ struct Presenter {
         if screenFamilyStack.count > 1 && !(nextIsLast && nextIsChild) {
             present(Array(screenFamilyStack[1...]), on: foundOrPresented, isChild: nextIsChild, injecting: store)
         }
-    }
-    
-    private static func currentScreenFamilyStack(_ state: State) -> [ScreenFamily] {
-        let match = state.core.routes.first {
-            state.core.path.range(of: $0.pathPattern.rawValue, options: .regularExpression) != nil
-        }
-        print(match == nil ? "No path match" : "Path matched: \(match!.pathPattern)")
-        return match?.screens ?? state.core.routes[0].screens
     }
 }
 

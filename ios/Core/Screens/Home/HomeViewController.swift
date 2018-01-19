@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, Presentable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        store.state$.map { $0.core.screensInSession }.filter { $0 == 0 }.take(1)
+        store.state$.map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
             .subscribe(onNext: { _ in
                 guard self.hasAnimated == false else { return }
                 self.rays.isFirstViewOfSession = true
@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, Presentable {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        store.state$.map { $0.core.screensInSession }.filter { $0 == 0 }.take(1)
+        store.state$.map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
             .subscribe(onNext: { _ in
                 guard self.hasAnimated == false else { return }
                 UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseOut, animations: {[weak self] in
