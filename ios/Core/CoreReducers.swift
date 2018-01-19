@@ -27,8 +27,8 @@ func updateIsAdapted(stateSlice: CoreStateSlice, action: Actionable) -> CoreStat
         isAdapted: updateIsAdaptedAction.isAdapted,
         path: stateSlice.path,
         screensInSession: stateSlice.screensInSession,
-        _reducers: stateSlice._reducers,
-        _routes: stateSlice._routes
+        reducers: stateSlice.reducers,
+        routes: stateSlice.routes
     )
 }
 
@@ -39,8 +39,8 @@ func updatePath(stateSlice: CoreStateSlice, action: Actionable) -> CoreStateSlic
         isAdapted: stateSlice.isAdapted,
         path: updatePathAction.path,
         screensInSession: stateSlice.screensInSession + 1,
-        _reducers: stateSlice._reducers,
-        _routes: stateSlice._routes
+        reducers: stateSlice.reducers,
+        routes: stateSlice.routes
     )
 }
 

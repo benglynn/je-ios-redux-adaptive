@@ -15,7 +15,7 @@ extension State {
 
 extension State {
     var _routes: [Route] {
-        return core._routes
+        return core.routes
         // Adapters add (+) state routes here
     }
 }
