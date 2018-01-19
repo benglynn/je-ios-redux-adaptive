@@ -6,6 +6,7 @@ func activateMenuAdaptation(stateSlice: CoreStateSlice, action: Actionable) -> C
         path: stateSlice.path,
         screensInSession: stateSlice.screensInSession,
         reducers: stateSlice.reducers,
+        screenFamilyStack: stateSlice.screenFamilyStack,
         routes: [(
             pathPattern: .HomePath,
             screens: [

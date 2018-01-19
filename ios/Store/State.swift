@@ -13,13 +13,6 @@ extension State {
     }
 }
 
-extension State {
-    var _routes: [Route] {
-        return core.routes
-        // Adapters add (+) state routes here
-    }
-}
-
 let initialState = State(
     core: initialCoreStateSlice
 )

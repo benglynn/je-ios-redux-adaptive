@@ -5,6 +5,7 @@ struct CoreStateSlice: StateSlice {
     let path: String
     let screensInSession: Int
     let reducers: [Action: CoreReducer]
+    let screenFamilyStack: [ScreenFamily]?
     let routes: [Route]
     
     func reduce(with action: Actionable) -> CoreStateSlice {
@@ -24,6 +25,7 @@ let initialCoreStateSlice = CoreStateSlice(
         .updatePathAction: .updatePathReducer,
         .activateMenuAdaptationAction: 	.activateMenuAdaptationReducer
     ],
+    screenFamilyStack: nil,
     routes: [(
         pathPattern: .HomePath,
         screens: [

@@ -26,20 +26,38 @@ func updateIsAdapted(stateSlice: CoreStateSlice, action: Actionable) -> CoreStat
     return CoreStateSlice(
         isAdapted: updateIsAdaptedAction.isAdapted,
         path: stateSlice.path,
-        screensInSession: stateSlice.screensInSession,
-        reducers: stateSlice.reducers,
+        screensInSession: stateSlice.screensInSession, reducers: stateSlice.reducers,
+        screenFamilyStack: stateSlice.screenFamilyStack,
         routes: stateSlice.routes
     )
 }
 
+func matchingStack(forPath path: String, inRoutes routes: [Route]) -> [ScreenFamily]? {
+    let match = routes.first {
+        path.range(of: $0.pathPattern.rawValue, options: .regularExpression) != nil
+    }
+    if let matchingScreens = match?.screens { return matchingScreens }
+    print("No match for \(path)")
+    return nil
+}
 
 func updatePath(stateSlice: CoreStateSlice, action: Actionable) -> CoreStateSlice {
     let updatePathAction = action as! UpdatePathAction
+    
+    let pathAndStack: (path: String, stack: [ScreenFamily]) = {
+        if let stack = matchingStack(forPath: updatePathAction.path, inRoutes: stateSlice.routes) {
+            return (path: updatePathAction.path, stack: stack)
+        } else {
+            print("Defaulting to empty path")
+            return (path: "", stack: matchingStack(forPath: "", inRoutes: stateSlice.routes)!)
+        }
+    }()
     return CoreStateSlice(
         isAdapted: stateSlice.isAdapted,
-        path: updatePathAction.path,
+        path: pathAndStack.path,
         screensInSession: stateSlice.screensInSession + 1,
         reducers: stateSlice.reducers,
+        screenFamilyStack: pathAndStack.stack,
         routes: stateSlice.routes
     )
 }
