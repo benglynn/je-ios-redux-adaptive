@@ -20,7 +20,7 @@ enum Screen: String {
         }
     }
     
-    func create(injecting store: Store) -> UIViewController {
+    func create(injecting store: Store) -> UIViewController & Presentable {
         switch self {
         case .Area: return AreaViewController.create(injecting: store)
         case .Home: return HomeViewController.create(injecting: store)
