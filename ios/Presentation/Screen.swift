@@ -8,18 +8,9 @@ enum Screen: String {
     case Settings
     case Tabs
     // Adaptors add screens here
-    
-    var viewControllerType: UIViewController.Type {
-        switch self {
-        case .Area: return AreaViewController.self
-        case .Home: return HomeViewController.self
-        case .Orders: return OrdersViewController.self
-        case .Restaurants: return RestaurantsViewController.self
-        case .Settings: return SettingsViewController.self
-        case .Tabs: return TabsViewController.self
-        }
-    }
-    
+}
+
+extension Screen {
     func create(injecting store: Store) -> UIViewController & Presentable {
         switch self {
         case .Area: return AreaViewController.create(injecting: store)
