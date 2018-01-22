@@ -14,25 +14,10 @@ func presentMenu(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> 
     )
 }
 
-func dismissMenu(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
-    guard currentSlice.screenFamilyStack.last?.screen == Screen.Menu else {
-        return currentSlice
-    }
-    return CoreStateSlice(
-        isAdapted: currentSlice.isAdapted,
-        path: currentSlice.path,
-        screensInSession: currentSlice.screensInSession,
-        reducers: currentSlice.reducers,
-        screenFamilyStack: Array(currentSlice.screenFamilyStack.dropLast()),
-        routes: currentSlice.routes
-    )
-}
-
 func activateMenuAdaptation(stateSlice: CoreStateSlice, action: Actionable) -> CoreStateSlice {
     
     var adaptedReducers = stateSlice.reducers
     adaptedReducers[.presentMenu] = .presentMenuReducer
-    adaptedReducers[.dismissMenu] = .dismissMenuReducer
     
     let adaptedRoutes: [Route] = [(
         pathPattern: .HomePath,
@@ -51,7 +36,7 @@ func activateMenuAdaptation(stateSlice: CoreStateSlice, action: Actionable) -> C
             screens: [
                 ScreenFamily(screen: .Restaurants, children: [.MenuHome]),
                 ScreenFamily(screen: .MenuHome, children: nil),
-                ScreenFamily(screen: .Orders, children: nil),
+                ScreenFamily(screen: .MenuOrders, children: nil),
                 ]
         ),(
             pathPattern: .SettingsPath,

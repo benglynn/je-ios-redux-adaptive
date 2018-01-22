@@ -12,8 +12,8 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     }
     let bag = DisposeBag()
     
-    func closeMenu() {
-        store.dispatch(DismissMenuAction())
+    func dismissLast() {
+        store.dispatch(DismissLastAction())
     }
     
     
@@ -60,7 +60,8 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     // MARK: - IB
     
     @IBAction func tapOrders(_ sender: Any) {
-        print("Orders")
+        dismissLast()
+        store.dispatch(UpdatePathAction(path: "orders"))
     }
     
     @IBAction func tapSettings(_ sender: Any) {
@@ -68,13 +69,13 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     }
     
     @IBAction func tapHamburger(_ sender: Any) {
-        closeMenu()
+        dismissLast()
     }
     
     @IBAction func swipeLeft(_ sender: Any) {
-        closeMenu()
+        dismissLast()
     }
     @IBAction func tapTransparent(_ sender: Any) {
-        closeMenu()
+        dismissLast()
     }
 }

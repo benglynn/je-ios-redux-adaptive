@@ -55,6 +55,8 @@
 		2F9A05EF20160BBF00D1B4D6 /* MenuHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05EE20160BBF00D1B4D6 /* MenuHomeViewController.swift */; };
 		2F9A05F1201612C700D1B4D6 /* MenuAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05F0201612C700D1B4D6 /* MenuAssets.xcassets */; };
 		2F9A05F32016171500D1B4D6 /* MenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05F22016171500D1B4D6 /* MenuActions.swift */; };
+		2F9A05F720163FDE00D1B4D6 /* MenuOrders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05F620163FDE00D1B4D6 /* MenuOrders.storyboard */; };
+		2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
@@ -125,6 +127,8 @@
 		2F9A05EE20160BBF00D1B4D6 /* MenuHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHomeViewController.swift; sourceTree = "<group>"; };
 		2F9A05F0201612C700D1B4D6 /* MenuAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MenuAssets.xcassets; sourceTree = "<group>"; };
 		2F9A05F22016171500D1B4D6 /* MenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuActions.swift; sourceTree = "<group>"; };
+		2F9A05F620163FDE00D1B4D6 /* MenuOrders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuOrders.storyboard; sourceTree = "<group>"; };
+		2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrdersViewController.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 				2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */,
 				2F9A05EE20160BBF00D1B4D6 /* MenuHomeViewController.swift */,
 				2F9A05F0201612C700D1B4D6 /* MenuAssets.xcassets */,
+				2F9A05F620163FDE00D1B4D6 /* MenuOrders.storyboard */,
+				2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				2F1C95381FFFBFD200684F4B /* Orders.storyboard in Resources */,
 				2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */,
 				2F54A3AA1FDED11F006DA319 /* Ubuntu-Italic.ttf in Resources */,
+				2F9A05F720163FDE00D1B4D6 /* MenuOrders.storyboard in Resources */,
 				2F54A3AC1FDED11F006DA319 /* Ubuntu-LightItalic.ttf in Resources */,
 				2F54A3AB1FDED11F006DA319 /* Ubuntu-Light.ttf in Resources */,
 				2F54A3A71FDED11F006DA319 /* HindVadodara-Medium.ttf in Resources */,
@@ -551,6 +558,7 @@
 				2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2F9A05F32016171500D1B4D6 /* MenuActions.swift in Sources */,
+				2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */,
 				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
 				2F64374B2007B981006D863F /* StateSlice.swift in Sources */,
 				2F64373E20078787006D863F /* CoreReducers.swift in Sources */,

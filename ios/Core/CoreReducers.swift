@@ -4,10 +4,10 @@ import Foundation
 enum CoreReducer: String {
     case updateIsAdaptedReducer
     case updatePathReducer
+    case dismissLastReducer
     // Adapters add core reducers below
     case activateMenuAdaptationReducer
     case presentMenuReducer
-    case dismissMenuReducer
 }
 
 extension CoreReducer {
@@ -21,10 +21,25 @@ extension CoreReducer {
             return activateMenuAdaptation
         case .presentMenuReducer:
             return presentMenu
-        case .dismissMenuReducer:
-            return dismissMenu
+        case .dismissLastReducer:
+            return dismissLast
         }
     }
+}
+
+
+func dismissLast(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
+    guard currentSlice.screenFamilyStack.count > 1 else {
+        return currentSlice
+    }
+    return CoreStateSlice(
+        isAdapted: currentSlice.isAdapted,
+        path: currentSlice.path,
+        screensInSession: currentSlice.screensInSession,
+        reducers: currentSlice.reducers,
+        screenFamilyStack: Array(currentSlice.screenFamilyStack.dropLast()),
+        routes: currentSlice.routes
+    )
 }
 
 func updateIsAdapted(stateSlice: CoreStateSlice, action: Actionable) -> CoreStateSlice {

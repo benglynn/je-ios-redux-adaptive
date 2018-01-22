@@ -4,10 +4,10 @@ enum Action: String {
     case initialAction
     case updatePathAction
     case updateIsAdaptedAction
+    case dismissLast
     // Adapters add actions below
     case activateMenuAdaptationAction
     case presentMenu
-    case dismissMenu
 }
 
 protocol Actionable {
@@ -27,4 +27,8 @@ struct InitialAction: Actionable {
 
 struct ActivateAdaptation: Actionable {
     let type: Action
+}
+
+struct DismissLastAction: Actionable {
+    let type: Action = .dismissLast
 }
