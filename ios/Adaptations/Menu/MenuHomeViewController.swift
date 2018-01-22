@@ -1,9 +1,9 @@
 import UIKit
 import RxSwift
 
-class HomeViewController: UIViewController, Presentable {
+class MenuHomeViewController: UIViewController, Presentable {
     
-    static let storyboardName = "Home"
+    static let storyboardName = "MenuHome"
     internal var store: Store!
     let bag = DisposeBag()
     var hasAnimated = false
@@ -11,12 +11,26 @@ class HomeViewController: UIViewController, Presentable {
     func setStore(store: Store) {
         self.store = store
     }
-
+    
     @IBOutlet weak var rays: RaysView!
     @IBOutlet weak var contents: UIStackView!
     
     @IBAction func tapSearch(_ sender: Any) {
         self.store.dispatch(UpdatePathAction("bs14dj"))
+    }
+    
+    @IBAction func tapTemp(_ sender: Any) {
+        // Temporary trigger until screenStack reducer implemented
+        let screen = UIStoryboard(name: "Menu", bundle: nil).instantiateInitialViewController()!
+        if let delegate = screen as? UIViewControllerTransitioningDelegate {
+            screen.transitioningDelegate = delegate
+        }
+        let tabsOrRestaurants = UIApplication.shared.keyWindow!.rootViewController!.presentedViewController!
+        tabsOrRestaurants.present(screen, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+            
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,3 +59,4 @@ class HomeViewController: UIViewController, Presentable {
             }).disposed(by: bag)
     }
 }
+

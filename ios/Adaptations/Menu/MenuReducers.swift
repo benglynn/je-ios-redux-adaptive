@@ -10,13 +10,13 @@ func activateMenuAdaptation(stateSlice: CoreStateSlice, action: Actionable) -> C
         routes: [(
             pathPattern: .HomePath,
             screens: [
-                ScreenFamily(screen: .Restaurants, children: [.Home]),
-                ScreenFamily(screen: .Home, children: nil),
+                ScreenFamily(screen: .Restaurants, children: [.MenuHome]),
+                ScreenFamily(screen: .MenuHome, children: nil),
                 ]
             ),(
                 pathPattern: .AreaPath,
                 screens: [
-                    ScreenFamily(screen: .Restaurants, children: [.Home, .Area]),
+                    ScreenFamily(screen: .Restaurants, children: [.MenuHome, .Area]),
                     ScreenFamily(screen: .Area, children: nil),
                     ]
             ),(

@@ -8,6 +8,7 @@ enum Screen: String {
     case Settings
     case Tabs
     // Adaptors add screens here
+    case MenuHome
 }
 
 extension Screen {
@@ -19,6 +20,7 @@ extension Screen {
         case .Restaurants: return RestaurantsViewController.create(injecting: store)
         case .Settings: return SettingsViewController.create(injecting: store)
         case .Tabs: return TabsViewController.create(injecting: store)
+        case .MenuHome: return MenuHomeViewController.create(injecting: store)
         }
     }
 }

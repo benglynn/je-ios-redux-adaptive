@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9XU-GC-yhq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HindVadodara-Medium.ttf">
+            <string>HindVadodara-Medium</string>
+        </array>
+        <array key="Ubuntu-Italic.ttf">
+            <string>Ubuntu-Italic</string>
+        </array>
+        <array key="Ubuntu-Medium.ttf">
+            <string>Ubuntu-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Menu Home View Controller-->
+        <scene sceneID="niN-at-oqM">
+            <objects>
+                <viewController id="9XU-GC-yhq" customClass="MenuHomeViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rbv-3M-bRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tw-pJ-3Va" userLabel="Rays" customClass="RaysView" customModule="ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WLd-mJ-R4l">
+                                <rect key="frame" x="12.5" y="170.5" width="350" height="266"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-red" translatesAutoresizingMaskIntoConstraints="NO" id="hZt-O7-qdS">
+                                        <rect key="frame" x="115" y="0.0" width="120" height="25.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="AWX-0e-k2j"/>
+                                            <constraint firstAttribute="height" constant="25" id="Nf5-iv-nzi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivering your night in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wER-6W-G5A">
+                                        <rect key="frame" x="32.5" y="35.5" width="285.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Italic" family="Ubuntu" pointSize="28"/>
+                                        <color key="textColor" red="0.98039215690000003" green="0.0" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sej-jy-Ho6" userLabel="Space">
+                                        <rect key="frame" x="170" y="77" width="10" height="10"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="0o0-w7-vLk"/>
+                                            <constraint firstAttribute="width" constant="10" id="nFH-r2-54p"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by postcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF6-v3-vsa">
+                                        <rect key="frame" x="30" y="97" width="290" height="21"/>
+                                        <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
+                                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your postcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ODV-Go-8d2">
+                                        <rect key="frame" x="30" y="128" width="290" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Gyj-iA-7QV"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipz-QB-aMb">
+                                        <rect key="frame" x="30" y="182" width="290" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="bzZ-6k-ZOw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
+                                        <state key="normal" title="Search" backgroundImage="button">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapSearch:" destination="9XU-GC-yhq" eventType="touchUpInside" id="8B3-S2-2ou"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j53-mR-i2Y">
+                                        <rect key="frame" x="157" y="236" width="36" height="30"/>
+                                        <state key="normal" title="temp"/>
+                                        <connections>
+                                            <action selector="tapTemp:" destination="9XU-GC-yhq" eventType="touchUpInside" id="Qwo-1i-fXb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xF6-v3-vsa" firstAttribute="width" secondItem="WLd-mJ-R4l" secondAttribute="width" constant="-60" id="WBL-H7-Rup"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="oMl-bW-AAY"/>
+                                    <constraint firstItem="ODV-Go-8d2" firstAttribute="width" secondItem="WLd-mJ-R4l" secondAttribute="width" constant="-60" id="q0w-ZO-7qX"/>
+                                    <constraint firstItem="Ipz-QB-aMb" firstAttribute="width" secondItem="WLd-mJ-R4l" secondAttribute="width" constant="-60" id="vBu-X8-3M3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.0" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WLd-mJ-R4l" firstAttribute="width" secondItem="Rbv-3M-bRQ" secondAttribute="width" priority="750" constant="-20" id="4dE-US-TMK"/>
+                            <constraint firstItem="1Tw-pJ-3Va" firstAttribute="top" secondItem="Rbv-3M-bRQ" secondAttribute="top" id="6dV-be-rHK"/>
+                            <constraint firstItem="1Tw-pJ-3Va" firstAttribute="trailing" secondItem="Rbv-3M-bRQ" secondAttribute="trailing" id="GmA-6c-xG8"/>
+                            <constraint firstItem="WLd-mJ-R4l" firstAttribute="centerX" secondItem="Rbv-3M-bRQ" secondAttribute="centerX" id="UVt-KE-ovI"/>
+                            <constraint firstItem="1Tw-pJ-3Va" firstAttribute="leading" secondItem="Rbv-3M-bRQ" secondAttribute="leading" id="bWY-1E-Sas"/>
+                            <constraint firstItem="WLd-mJ-R4l" firstAttribute="centerY" secondItem="Rbv-3M-bRQ" secondAttribute="centerY" constant="-30" id="uEg-gi-Xkn"/>
+                            <constraint firstAttribute="bottom" secondItem="1Tw-pJ-3Va" secondAttribute="bottom" id="yuj-fZ-09c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X8T-8D-MLH"/>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="contents" destination="WLd-mJ-R4l" id="3Sz-vj-qaf"/>
+                        <outlet property="rays" destination="1Tw-pJ-3Va" id="g1h-Tr-UGh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOq-E8-NE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button" width="11" height="11"/>
+        <image name="logo-red" width="120" height="24"/>
+    </resources>
+</document>
