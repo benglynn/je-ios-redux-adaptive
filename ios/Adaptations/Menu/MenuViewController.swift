@@ -13,7 +13,6 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     let bag = DisposeBag()
     
     func closeMenu() {
-        dismiss(animated: true, completion: nil)
         store.dispatch(DismissMenuAction())
     }
     

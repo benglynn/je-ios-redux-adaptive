@@ -15,7 +15,17 @@ func presentMenu(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> 
 }
 
 func dismissMenu(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
-    return currentSlice
+    guard currentSlice.screenFamilyStack.last?.screen == Screen.Menu else {
+        return currentSlice
+    }
+    return CoreStateSlice(
+        isAdapted: currentSlice.isAdapted,
+        path: currentSlice.path,
+        screensInSession: currentSlice.screensInSession,
+        reducers: currentSlice.reducers,
+        screenFamilyStack: Array(currentSlice.screenFamilyStack.dropLast()),
+        routes: currentSlice.routes
+    )
 }
 
 func activateMenuAdaptation(stateSlice: CoreStateSlice, action: Actionable) -> CoreStateSlice {

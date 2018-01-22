@@ -86,6 +86,8 @@ struct Presenter { // TODO: as effect
         }
         if screenFamilyStack.count > 1 && !(nextIsLast && nextIsChild) {
             present(Array(screenFamilyStack[1...]), on: foundOrPresented, isChild: nextIsChild, injecting: store)
+        } else if foundOrPresented.presentedViewController != nil {
+            foundOrPresented.presentedViewController?.dismiss(animated: true, completion: nil)
         }
     }
 }
