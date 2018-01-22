@@ -57,6 +57,8 @@
 		2F9A05F32016171500D1B4D6 /* MenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05F22016171500D1B4D6 /* MenuActions.swift */; };
 		2F9A05F720163FDE00D1B4D6 /* MenuOrders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05F620163FDE00D1B4D6 /* MenuOrders.storyboard */; };
 		2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */; };
+		2F9A05FB201645ED00D1B4D6 /* MenuSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05FA201645ED00D1B4D6 /* MenuSettings.storyboard */; };
+		2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
@@ -129,6 +131,8 @@
 		2F9A05F22016171500D1B4D6 /* MenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuActions.swift; sourceTree = "<group>"; };
 		2F9A05F620163FDE00D1B4D6 /* MenuOrders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuOrders.storyboard; sourceTree = "<group>"; };
 		2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrdersViewController.swift; sourceTree = "<group>"; };
+		2F9A05FA201645ED00D1B4D6 /* MenuSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSettings.storyboard; sourceTree = "<group>"; };
+		2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSettingsViewController.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 				2F9A05EE20160BBF00D1B4D6 /* MenuHomeViewController.swift */,
 				2F9A05F0201612C700D1B4D6 /* MenuAssets.xcassets */,
 				2F9A05F620163FDE00D1B4D6 /* MenuOrders.storyboard */,
+				2F9A05FA201645ED00D1B4D6 /* MenuSettings.storyboard */,
+				2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */,
 				2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */,
 			);
 			path = Menu;
@@ -473,6 +479,7 @@
 				2F105E912003B5800093F2D8 /* Area.storyboard in Resources */,
 				2F54A3A91FDED11F006DA319 /* HindVadodara-SemiBold.ttf in Resources */,
 				2F54A3AD1FDED11F006DA319 /* Ubuntu-Medium.ttf in Resources */,
+				2F9A05FB201645ED00D1B4D6 /* MenuSettings.storyboard in Resources */,
 				2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */,
 				2F55E8A01FD55C2A00BC52F0 /* RootView.storyboard in Resources */,
 				2F9A05E720125A7700D1B4D6 /* Menu.storyboard in Resources */,
@@ -556,6 +563,7 @@
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */,
 				2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */,
+				2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2F9A05F32016171500D1B4D6 /* MenuActions.swift in Sources */,
 				2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */,

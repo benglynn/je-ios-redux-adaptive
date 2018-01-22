@@ -65,7 +65,8 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     }
     
     @IBAction func tapSettings(_ sender: Any) {
-        print("Settings")
+        dismissLast()
+        store.dispatch(UpdatePathAction(path: "settings"))
     }
     
     @IBAction func tapHamburger(_ sender: Any) {

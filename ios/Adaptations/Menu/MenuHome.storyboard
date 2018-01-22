@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsU-4W-JGb" userLabel="hamburger">
-                                <rect key="frame" x="0.0" y="20" width="48" height="48"/>
+                                <rect key="frame" x="0.0" y="35" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="QAg-W9-qM5"/>
                                     <constraint firstAttribute="height" constant="48" id="eTw-vb-dt9"/>
@@ -112,7 +112,7 @@
                             <constraint firstItem="WLd-mJ-R4l" firstAttribute="centerX" secondItem="Rbv-3M-bRQ" secondAttribute="centerX" id="UVt-KE-ovI"/>
                             <constraint firstItem="1Tw-pJ-3Va" firstAttribute="leading" secondItem="Rbv-3M-bRQ" secondAttribute="leading" id="bWY-1E-Sas"/>
                             <constraint firstItem="wsU-4W-JGb" firstAttribute="leading" secondItem="X8T-8D-MLH" secondAttribute="leading" id="dgA-Eh-Dwm"/>
-                            <constraint firstItem="wsU-4W-JGb" firstAttribute="top" secondItem="X8T-8D-MLH" secondAttribute="top" id="hfl-iu-7Sa"/>
+                            <constraint firstItem="wsU-4W-JGb" firstAttribute="top" secondItem="X8T-8D-MLH" secondAttribute="top" constant="15" id="hfl-iu-7Sa"/>
                             <constraint firstItem="WLd-mJ-R4l" firstAttribute="centerY" secondItem="Rbv-3M-bRQ" secondAttribute="centerY" constant="-30" id="uEg-gi-Xkn"/>
                             <constraint firstAttribute="bottom" secondItem="1Tw-pJ-3Va" secondAttribute="bottom" id="yuj-fZ-09c"/>
                         </constraints>

@@ -11,6 +11,7 @@ enum Screen: String {
     case Menu
     case MenuHome
     case MenuOrders
+    case MenuSettings
 }
 
 extension Screen {
@@ -25,6 +26,7 @@ extension Screen {
         case .Menu: return MenuViewController.create(injecting: store)
         case .MenuHome: return MenuHomeViewController.create(injecting: store)
         case .MenuOrders: return MenuOrdersViewController.create(injecting: store)
+        case .MenuSettings: return MenuSettingsViewController.create(injecting: store)
         }
     }
 }

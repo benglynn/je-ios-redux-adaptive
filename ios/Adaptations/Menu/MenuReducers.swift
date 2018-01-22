@@ -43,7 +43,7 @@ func activateMenuAdaptation(stateSlice: CoreStateSlice, action: Actionable) -> C
             screens: [
                 ScreenFamily(screen: .Restaurants, children: [.MenuHome]),
                 ScreenFamily(screen: .MenuHome, children: nil),
-                ScreenFamily(screen: .Settings, children: nil),
+                ScreenFamily(screen: .MenuSettings, children: nil),
                 ]
         )
     ]
