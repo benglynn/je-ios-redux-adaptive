@@ -4,7 +4,9 @@ enum Action: String {
     case initialAction
     case updatePathAction
     case updateIsAdaptedAction
-    case dismissLast
+    case dismissLastAction
+    case resetAction
+    case initState
     // Adapters add actions below
     case activateMenuAdaptationAction
     case presentMenu
@@ -19,16 +21,4 @@ extension Actionable {
     var description: String {
         get { return type.rawValue }
     }
-}
-
-struct InitialAction: Actionable {
-    let type: Action = Action.initialAction
-}
-
-struct ActivateAdaptation: Actionable {
-    let type: Action
-}
-
-struct DismissLastAction: Actionable {
-    let type: Action = .dismissLast
 }

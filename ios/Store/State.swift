@@ -7,9 +7,13 @@ struct State {
 
 extension State {
     init?(current: State, action: Actionable) {
-        print("Init state with \(action.description)")
-        let core = current.core.reduce(with: action)
-        self.init(core: core)
+//        print("Reduce state with \(action.description)")
+        if action.type == Action.initState {
+            self.init(core: initialCoreStateSlice)
+        } else {
+            let core = current.core.reduce(with: action)
+            self.init(core: core)
+        }
     }
 }
 

@@ -1,6 +1,15 @@
 import UIKit
 
 class SettingsViewController: UIViewController, Presentable {
-    var store: Store!
+    
+    // MARK: - Presentable
+    
     static let storyboardName = "Settings"
+    var store: Store!
+    
+    // MARK: IB
+    
+    @IBAction func tapReset(_ sender: Any) {
+        store.dispatch(ResetAction())
+    }
 }

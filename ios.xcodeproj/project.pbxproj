@@ -59,6 +59,8 @@
 		2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */; };
 		2F9A05FB201645ED00D1B4D6 /* MenuSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05FA201645ED00D1B4D6 /* MenuSettings.storyboard */; };
 		2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */; };
+		2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05FF20164AC000D1B4D6 /* ResetViewController.swift */; };
+		2F9A060220164AEA00D1B4D6 /* Reset.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A060120164AEA00D1B4D6 /* Reset.storyboard */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
@@ -133,6 +135,8 @@
 		2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOrdersViewController.swift; sourceTree = "<group>"; };
 		2F9A05FA201645ED00D1B4D6 /* MenuSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSettings.storyboard; sourceTree = "<group>"; };
 		2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSettingsViewController.swift; sourceTree = "<group>"; };
+		2F9A05FF20164AC000D1B4D6 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		2F9A060120164AEA00D1B4D6 /* Reset.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reset.storyboard; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		2F4E0711200BFFCA00F928FF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2F9A05FE20164AAC00D1B4D6 /* Reset */,
 				2F105E8F2003B5710093F2D8 /* Area */,
 				2F105E8C2003AFA50093F2D8 /* Restaurants */,
 				2F1C95391FFFC32800684F4B /* Settings */,
@@ -364,6 +369,15 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		2F9A05FE20164AAC00D1B4D6 /* Reset */ = {
+			isa = PBXGroup;
+			children = (
+				2F9A05FF20164AC000D1B4D6 /* ResetViewController.swift */,
+				2F9A060120164AEA00D1B4D6 /* Reset.storyboard */,
+			);
+			path = Reset;
+			sourceTree = "<group>";
+		};
 		3E2933641101283F0CA746EE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +495,7 @@
 				2F54A3AD1FDED11F006DA319 /* Ubuntu-Medium.ttf in Resources */,
 				2F9A05FB201645ED00D1B4D6 /* MenuSettings.storyboard in Resources */,
 				2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */,
+				2F9A060220164AEA00D1B4D6 /* Reset.storyboard in Resources */,
 				2F55E8A01FD55C2A00BC52F0 /* RootView.storyboard in Resources */,
 				2F9A05E720125A7700D1B4D6 /* Menu.storyboard in Resources */,
 				2F559A481FFBE8E20024F7B1 /* Tabs.storyboard in Resources */,
@@ -561,6 +576,7 @@
 				2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */,
 				2F4E070E200BF61700F928FF /* TabsViewController.swift in Sources */,
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
+				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */,
 				2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */,
 				2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */,

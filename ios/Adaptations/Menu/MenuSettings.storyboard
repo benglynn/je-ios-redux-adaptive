@@ -23,12 +23,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omt-nP-X1W">
-                                <rect key="frame" x="162" y="323" width="50" height="21"/>
-                                <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
-                                <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-Lu-Xs0">
+                                <rect key="frame" x="162" y="293" width="50" height="81"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omt-nP-X1W">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
+                                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMU-k3-4mX">
+                                        <rect key="frame" x="0.0" y="51" width="50" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="tapReset:" destination="940-e8-5te" eventType="touchUpInside" id="kM6-29-Mbz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-XA-Iz8">
                                 <rect key="frame" x="20" y="25" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
@@ -39,10 +51,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0WB-Lu-Xs0" firstAttribute="centerY" secondItem="oeK-Fg-R8G" secondAttribute="centerY" id="5WV-H1-Dr5"/>
                             <constraint firstItem="ofa-XA-Iz8" firstAttribute="top" secondItem="Of8-8r-hiz" secondAttribute="top" constant="5" id="72H-Im-ExD"/>
+                            <constraint firstItem="0WB-Lu-Xs0" firstAttribute="centerX" secondItem="oeK-Fg-R8G" secondAttribute="centerX" id="JdS-ao-z9S"/>
                             <constraint firstItem="ofa-XA-Iz8" firstAttribute="leading" secondItem="Of8-8r-hiz" secondAttribute="leading" constant="20" id="Owh-Yv-UbZ"/>
-                            <constraint firstItem="omt-nP-X1W" firstAttribute="centerX" secondItem="oeK-Fg-R8G" secondAttribute="centerX" id="Zj6-kW-XPP"/>
-                            <constraint firstItem="omt-nP-X1W" firstAttribute="centerY" secondItem="oeK-Fg-R8G" secondAttribute="centerY" id="jid-lR-sMY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Of8-8r-hiz"/>
                     </view>

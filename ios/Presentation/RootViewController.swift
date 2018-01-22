@@ -8,9 +8,14 @@ class RootViewController: UIViewController {
     
     private let bag = DisposeBag()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        rotateForever(view: progress)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        rotateForever(view: progress)
+        fade(view: logo, toAlpha: 1.0)
         fade(view: progress, toAlpha: 0.5)
         (UIApplication.shared.delegate as! AppDelegate).readyToPresent(on: self)
     }

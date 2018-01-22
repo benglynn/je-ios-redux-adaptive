@@ -22,8 +22,9 @@ let initialCoreStateSlice = CoreStateSlice(
     screensInSession: 0,
     reducers: [
         .updateIsAdaptedAction: .updateIsAdaptedReducer,
+        .resetAction: .resetReducer,
         .updatePathAction: .updatePathReducer,
-        .dismissLast: .dismissLastReducer,
+        .dismissLastAction: .dismissLastReducer,
         .activateMenuAdaptationAction: 	.activateMenuAdaptationReducer
     ],
     screenFamilyStack: [],

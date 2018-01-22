@@ -26,10 +26,15 @@ class Store {
                     self.state$.onNext(nextState)
                     
                     // TODO: temporary until effects are implemented!!!!!!!!!!
-                    if action.type == Action.updatePathAction || action.type == Action.presentMenu || action.type == Action.dismissLast {
+                    if  action.type == Action.updatePathAction ||
+                        action.type == Action.presentMenu ||
+                        action.type == Action.dismissLastAction ||
+                        action.type == Action.resetAction {
                         if let rootView = UIApplication.shared.keyWindow?.rootViewController as? RootViewController {
                             Presenter.present(nextState, on: rootView, injecting: self)
                         }
+                    } else if action.type == Action.initState {
+                        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: false, completion: nil)
                     }
                     // !!!!!!!!!!!!
                 }

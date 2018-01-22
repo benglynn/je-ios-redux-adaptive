@@ -11,5 +11,9 @@ class MenuSettingsViewController: UIViewController, Presentable {
     @IBAction func tapClose(_ sender: Any) {
         store.dispatch(DismissLastAction())
     }
+    
+    @IBAction func tapReset(_ sender: Any) {
+        store.dispatch(ResetAction())
+    }
 }
 

@@ -23,17 +23,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hh6-L5-OOW">
-                                <rect key="frame" x="162" y="323" width="50" height="21"/>
-                                <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
-                                <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="irk-PN-4Jy">
+                                <rect key="frame" x="162" y="293" width="50" height="81"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nK5-OT-PSs">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
+                                        <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
+                                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZG-Az-MUU">
+                                        <rect key="frame" x="0.0" y="51" width="50" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="tapReset:" destination="6eM-WG-i6f" eventType="touchUpInside" id="VhX-aL-Mup"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Hh6-L5-OOW" firstAttribute="centerY" secondItem="tZx-Bg-r2y" secondAttribute="centerY" id="UO8-eA-Fgj"/>
-                            <constraint firstItem="Hh6-L5-OOW" firstAttribute="centerX" secondItem="tZx-Bg-r2y" secondAttribute="centerX" id="cGh-W7-FLU"/>
+                            <constraint firstItem="irk-PN-4Jy" firstAttribute="centerX" secondItem="tZx-Bg-r2y" secondAttribute="centerX" id="Z7Q-IW-WwP"/>
+                            <constraint firstItem="irk-PN-4Jy" firstAttribute="centerY" secondItem="tZx-Bg-r2y" secondAttribute="centerY" id="m8P-qs-zrN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dcb-lM-EmE"/>
                     </view>

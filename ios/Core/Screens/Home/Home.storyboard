@@ -31,6 +31,7 @@
                         <subviews>
                             <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqs-Rb-VEN" userLabel="Rays" customClass="RaysView" customModule="ios" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.89951711893081665" green="0.19511294364929199" blue="0.20927979052066803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eqy-Yr-EY6">
                                 <rect key="frame" x="10" y="141" width="300" height="226"/>

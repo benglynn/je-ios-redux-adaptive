@@ -3,6 +3,7 @@ import Foundation
 
 enum CoreReducer: String {
     case updateIsAdaptedReducer
+    case resetReducer
     case updatePathReducer
     case dismissLastReducer
     // Adapters add core reducers below
@@ -13,20 +14,15 @@ enum CoreReducer: String {
 extension CoreReducer {
     var reduce: Reducer<CoreStateSlice> {
         switch self {
-        case .updateIsAdaptedReducer:
-            return updateIsAdapted
-        case .updatePathReducer:
-            return updatePath
-        case .activateMenuAdaptationReducer:
-            return activateMenuAdaptation
-        case .presentMenuReducer:
-            return presentMenu
-        case .dismissLastReducer:
-            return dismissLast
+        case .updateIsAdaptedReducer: return updateIsAdapted
+        case .resetReducer: return reset
+        case .updatePathReducer: return updatePath
+        case .activateMenuAdaptationReducer: return activateMenuAdaptation
+        case .presentMenuReducer: return presentMenu
+        case .dismissLastReducer: return dismissLast
         }
     }
 }
-
 
 func dismissLast(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
     guard currentSlice.screenFamilyStack.count > 1 else {
@@ -38,6 +34,20 @@ func dismissLast(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> 
         screensInSession: currentSlice.screensInSession,
         reducers: currentSlice.reducers,
         screenFamilyStack: Array(currentSlice.screenFamilyStack.dropLast()),
+        routes: currentSlice.routes
+    )
+}
+
+func reset(currentSlice: CoreStateSlice, dispatechedAction: Actionable) -> CoreStateSlice {
+    guard currentSlice.screenFamilyStack.last?.screen != .Reset else {
+        return currentSlice
+    }
+    return CoreStateSlice(
+        isAdapted: currentSlice.isAdapted,
+        path: currentSlice.path,
+        screensInSession: currentSlice.screensInSession,
+        reducers: currentSlice.reducers,
+        screenFamilyStack: currentSlice.screenFamilyStack + [ScreenFamily(screen: .Reset, children: nil)],
         routes: currentSlice.routes
     )
 }
