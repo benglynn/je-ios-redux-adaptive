@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="75Y-tb-QeD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu.ttf">
+            <string>Ubuntu</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="kk2-Tz-b2b">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="75Y-tb-QeD" customClass="MenuViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pl2-JF-V3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWv-NB-OBi">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R65-aH-e3z">
+                                        <rect key="frame" x="130" y="318.5" width="40" height="30"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapClose:" destination="75Y-tb-QeD" eventType="touchUpInside" id="Y94-PA-dZn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.73895012842465757" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="57H-rn-qA5"/>
+                                    <constraint firstItem="R65-aH-e3z" firstAttribute="centerX" secondItem="hWv-NB-OBi" secondAttribute="centerX" id="Aio-yA-Cfb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="bx7-9A-LFT"/>
+                                    <constraint firstItem="R65-aH-e3z" firstAttribute="centerY" secondItem="hWv-NB-OBi" secondAttribute="centerY" id="y0T-yy-PE5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hWv-NB-OBi" firstAttribute="leading" secondItem="pl2-JF-V3Y" secondAttribute="leading" id="HRt-ta-Atl"/>
+                            <constraint firstAttribute="bottom" secondItem="hWv-NB-OBi" secondAttribute="bottom" id="ZHZ-CL-Etf"/>
+                            <constraint firstItem="hWv-NB-OBi" firstAttribute="top" secondItem="pl2-JF-V3Y" secondAttribute="top" id="dOa-h0-fRX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zof-TJ-Lvs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3D-vX-sj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-345" y="100"/>
+        </scene>
+    </scenes>
+</document>

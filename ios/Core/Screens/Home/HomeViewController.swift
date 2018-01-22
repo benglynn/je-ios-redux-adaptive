@@ -19,6 +19,14 @@ class HomeViewController: UIViewController, Presentable {
         self.store.dispatch(UpdatePathAction("bs14dj"))
     }
     
+    @IBAction func tapTemp(_ sender: Any) {
+        // Temporary trigger until screenStack reducer implemented
+        let temp = UIStoryboard(name: "Menu", bundle: nil).instantiateInitialViewController()!
+        let tabsOrHome = UIApplication.shared.keyWindow!.rootViewController!.presentedViewController!
+        tabsOrHome.present(temp, animated: true, completion: nil)
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.state$.map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
