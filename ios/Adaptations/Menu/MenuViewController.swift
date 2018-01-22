@@ -14,7 +14,7 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
+        return self
     }
     
     // MARK: - UIViewControllerAnimatedTransitioning
@@ -25,18 +25,20 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let container = transitionContext.containerView
-        let menu = transitionContext.view(forKey: UITransitionContextViewKey.to)!
-        let offScreenRight = CGAffineTransform(translationX: -container.frame.width, y: 0)
-        menu.transform = offScreenRight
+        let to = transitionContext.view(forKey: UITransitionContextViewKey.to)
+        let from = transitionContext.view(forKey: UITransitionContextViewKey.from)
+        let presenting = to != nil
+        let menu = presenting ? to! : from!
+        let offScreen = CGAffineTransform(translationX: -container.frame.width, y: 0)
+        menu.transform = presenting ? offScreen : CGAffineTransform.identity
         container.addSubview(menu)
         let duration = self.transitionDuration(using: transitionContext)
         UIView.animate(withDuration: duration, delay: 0.0, options: [.curveEaseOut], animations: {
-            menu.transform = CGAffineTransform.identity
+            menu.transform = presenting ? CGAffineTransform.identity : offScreen
         }, completion: { finished in
             transitionContext.completeTransition(true)
         })
     }
-
     
     // MARK: - IB
     
