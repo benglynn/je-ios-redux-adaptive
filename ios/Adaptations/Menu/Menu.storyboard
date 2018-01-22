@@ -23,60 +23,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWv-NB-OBi">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BK8-JJ-M66" userLabel="Menu">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="667"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R65-aH-e3z">
-                                        <rect key="frame" x="195" y="15" width="40" height="30"/>
-                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
-                                        <state key="normal" title="Close">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tapClose:" destination="75Y-tb-QeD" eventType="touchUpInside" id="Y94-PA-dZn"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LZ-iU-tgt">
-                                        <rect key="frame" x="74" y="318.5" width="102" height="30"/>
-                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
-                                        <state key="normal" title="Do something">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tapDoSomething:" destination="75Y-tb-QeD" eventType="touchUpInside" id="gh5-06-PnV"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.73895012842465757" colorSpace="calibratedRGB"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GCe-ot-u2d">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RVZ-mH-Ji2">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="120.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R65-aH-e3z">
+                                                    <rect key="frame" x="105" y="0.0" width="40" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
+                                                    <state key="normal" title="Close">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="tapClose:" destination="75Y-tb-QeD" eventType="touchUpInside" id="Y94-PA-dZn"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LZ-iU-tgt">
+                                                    <rect key="frame" x="74" y="50" width="102" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
+                                                    <state key="normal" title="Do something">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="tapDoSomething:" destination="75Y-tb-QeD" eventType="touchUpInside" id="gh5-06-PnV"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3E-kP-rmC">
+                                                    <rect key="frame" x="104" y="100" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="RVZ-mH-Ji2" secondAttribute="trailing" id="3Na-qL-xj5"/>
+                                        <constraint firstItem="RVZ-mH-Ji2" firstAttribute="leading" secondItem="GCe-ot-u2d" secondAttribute="leading" id="UrK-40-zcv"/>
+                                        <constraint firstItem="RVZ-mH-Ji2" firstAttribute="top" secondItem="GCe-ot-u2d" secondAttribute="top" id="ziY-xI-5ob"/>
+                                    </constraints>
+                                </view>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="R65-aH-e3z" secondAttribute="trailing" constant="15" id="2sp-jy-d1k"/>
-                                    <constraint firstAttribute="width" constant="250" id="57H-rn-qA5"/>
-                                    <constraint firstItem="9LZ-iU-tgt" firstAttribute="centerY" secondItem="hWv-NB-OBi" secondAttribute="centerY" id="BDR-sP-Gga"/>
-                                    <constraint firstItem="R65-aH-e3z" firstAttribute="top" secondItem="hWv-NB-OBi" secondAttribute="top" constant="15" id="ivy-eX-qnY"/>
-                                    <constraint firstItem="9LZ-iU-tgt" firstAttribute="centerX" secondItem="hWv-NB-OBi" secondAttribute="centerX" id="m9E-DP-ey3"/>
+                                    <constraint firstAttribute="width" constant="250" id="2mk-AF-boF"/>
                                 </constraints>
+                                <blurEffect style="dark"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Pwu-qY-gs0" appends="YES" id="tPS-9f-tnA"/>
+                                    <outletCollection property="gestureRecognizers" destination="Pwu-qY-gs0" appends="YES" id="26Y-lA-h7e"/>
                                 </connections>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqj-SW-ORY">
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqj-SW-ORY" userLabel="Transparent">
                                 <rect key="frame" x="250" y="0.0" width="125" height="667"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="f2Q-al-0Uf" appends="YES" id="wCY-bQ-I0N"/>
+                                    <outletCollection property="gestureRecognizers" destination="f2Q-al-0Uf" appends="YES" id="dOf-q8-4U3"/>
                                 </connections>
                             </view>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="eqj-SW-ORY" secondAttribute="bottom" id="9ka-gV-ocz"/>
-                            <constraint firstAttribute="trailing" secondItem="eqj-SW-ORY" secondAttribute="trailing" id="EVF-m7-MVK"/>
-                            <constraint firstItem="eqj-SW-ORY" firstAttribute="leading" secondItem="hWv-NB-OBi" secondAttribute="trailing" id="H72-kG-XYi"/>
-                            <constraint firstItem="hWv-NB-OBi" firstAttribute="leading" secondItem="pl2-JF-V3Y" secondAttribute="leading" id="HRt-ta-Atl"/>
-                            <constraint firstAttribute="bottom" secondItem="hWv-NB-OBi" secondAttribute="bottom" id="ZHZ-CL-Etf"/>
-                            <constraint firstItem="hWv-NB-OBi" firstAttribute="top" secondItem="pl2-JF-V3Y" secondAttribute="top" id="dOa-h0-fRX"/>
-                            <constraint firstItem="eqj-SW-ORY" firstAttribute="top" secondItem="pl2-JF-V3Y" secondAttribute="top" id="p2T-tz-knu"/>
+                            <constraint firstAttribute="bottom" secondItem="BK8-JJ-M66" secondAttribute="bottom" id="BOe-0b-dEz"/>
+                            <constraint firstItem="BK8-JJ-M66" firstAttribute="leading" secondItem="pl2-JF-V3Y" secondAttribute="leading" id="PsZ-6g-Wro"/>
+                            <constraint firstItem="eqj-SW-ORY" firstAttribute="top" secondItem="pl2-JF-V3Y" secondAttribute="top" id="RLr-IH-B2o"/>
+                            <constraint firstItem="eqj-SW-ORY" firstAttribute="trailing" secondItem="zof-TJ-Lvs" secondAttribute="trailing" id="TUU-oF-1ov"/>
+                            <constraint firstItem="eqj-SW-ORY" firstAttribute="bottom" secondItem="zof-TJ-Lvs" secondAttribute="bottom" id="cXd-p8-IzM"/>
+                            <constraint firstItem="eqj-SW-ORY" firstAttribute="leading" secondItem="BK8-JJ-M66" secondAttribute="trailing" id="eeF-OV-WzK"/>
+                            <constraint firstItem="BK8-JJ-M66" firstAttribute="top" secondItem="pl2-JF-V3Y" secondAttribute="top" id="ghp-ot-i64"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zof-TJ-Lvs"/>
                     </view>
