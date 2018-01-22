@@ -12,6 +12,10 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     }
     let bag = DisposeBag()
     
+    func closeMenu() {
+        dismiss(animated: true, completion: nil)
+        store.dispatch(DismissMenuAction())
+    }
     
     
     // MARK: - Lifecylcle
@@ -56,14 +60,22 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     
     // MARK: - IB
     
-    @IBAction func tapDoSomething(_ sender: Any) {
-        print("Do something")
+    @IBAction func tapOrders(_ sender: Any) {
+        print("Orders")
+    }
+    
+    @IBAction func tapSettings(_ sender: Any) {
+        print("Settings")
+    }
+    
+    @IBAction func tapHamburger(_ sender: Any) {
+        closeMenu()
     }
     
     @IBAction func swipeLeft(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        closeMenu()
     }
-    @IBAction func tapClose(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func tapTransparent(_ sender: Any) {
+        closeMenu()
     }
 }
