@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-XA-Iz8">
-                                <rect key="frame" x="20" y="35" width="39" height="30"/>
+                                <rect key="frame" x="20" y="25" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="tapClose:" destination="940-e8-5te" eventType="touchUpInside" id="Qip-lb-rsW"/>
@@ -39,7 +39,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ofa-XA-Iz8" firstAttribute="top" secondItem="Of8-8r-hiz" secondAttribute="top" constant="15" id="72H-Im-ExD"/>
+                            <constraint firstItem="ofa-XA-Iz8" firstAttribute="top" secondItem="Of8-8r-hiz" secondAttribute="top" constant="5" id="72H-Im-ExD"/>
                             <constraint firstItem="ofa-XA-Iz8" firstAttribute="leading" secondItem="Of8-8r-hiz" secondAttribute="leading" constant="20" id="Owh-Yv-UbZ"/>
                             <constraint firstItem="omt-nP-X1W" firstAttribute="centerX" secondItem="oeK-Fg-R8G" secondAttribute="centerX" id="Zj6-kW-XPP"/>
                             <constraint firstItem="omt-nP-X1W" firstAttribute="centerY" secondItem="oeK-Fg-R8G" secondAttribute="centerY" id="jid-lR-sMY"/>
