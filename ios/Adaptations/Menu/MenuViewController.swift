@@ -42,6 +42,13 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     
     // MARK: - IB
     
+    @IBAction func tapDoSomething(_ sender: Any) {
+        print("Do something")
+    }
+    
+    @IBAction func swipeLeft(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func tapClose(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
