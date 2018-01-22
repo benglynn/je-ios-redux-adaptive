@@ -16,7 +16,7 @@ class HomeViewController: UIViewController, Presentable {
     @IBOutlet weak var contents: UIStackView!
     
     @IBAction func tapSearch(_ sender: Any) {
-        self.store.dispatch(UpdatePathAction("bs14dj"))
+        self.store.dispatch(UpdatePathAction(path: "bs14dj"))
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { _ in
                 rootView.prepareToPresent {
-                    store.dispatch(UpdatePathAction("")) // TODO: universal link or default to home
+                    store.dispatch(UpdatePathAction(path: "")) // TODO: universal link or default to home
                 }
             }).disposed(by: bag)
             

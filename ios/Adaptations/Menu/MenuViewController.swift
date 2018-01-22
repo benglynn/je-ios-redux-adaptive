@@ -1,6 +1,20 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
-class MenuViewController: UIViewController, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
+class MenuViewController: UIViewController, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate, Presentable {
+    
+    // MARK: - Presentable
+    static let storyboardName = "Menu"
+    var store: Store!
+    func setStore(store: Store) {
+        self.store = store
+    }
+    let bag = DisposeBag()
+    
+    
+    
+    // MARK: - Lifecylcle
     
     override func viewDidLoad() {
         self.modalPresentationStyle = .custom

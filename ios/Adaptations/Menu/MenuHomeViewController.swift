@@ -22,21 +22,11 @@ class MenuHomeViewController: UIViewController, Presentable {
     @IBOutlet weak var hamburger: UIButton!
     
     @IBAction func tapSearch(_ sender: Any) {
-        self.store.dispatch(UpdatePathAction("bs14dj"))
+        store.dispatch(UpdatePathAction(path: "bs14dj"))
     }
     
     @IBAction func tapHamburger(_ sender: Any) {
-        
-    }
-    
-    @IBAction func tapTemp(_ sender: Any) {
-        // Temporary trigger until screenStack reducer implemented
-        let screen = UIStoryboard(name: "Menu", bundle: nil).instantiateInitialViewController()!
-        if let delegate = screen as? UIViewControllerTransitioningDelegate {
-            screen.transitioningDelegate = delegate
-        }
-        let tabsOrRestaurants = UIApplication.shared.keyWindow!.rootViewController!.presentedViewController!
-        tabsOrRestaurants.present(screen, animated: true, completion: nil)
+        store.dispatch(PresentMenuAction())
     }
     
     // MARK: - Lifecycle

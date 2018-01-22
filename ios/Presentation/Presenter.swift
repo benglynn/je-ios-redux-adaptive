@@ -8,13 +8,15 @@ struct Presenter { // TODO: as effect
     }
     
     private static func present(_ screenFamilyStack: [ScreenFamily], on parent: UIViewController, isChild: Bool, injecting store: Store) {
-        let family = screenFamilyStack[0],
-            viewController = family.screen.create(injecting: store),
-            viewControllerType = type(of: viewController),
-            nextIsChild = family.children != nil,
-            nextIsLast = screenFamilyStack.count == 2,
-            thisIsLast = screenFamilyStack.count == 0,
-            isAnimated = (nextIsChild && nextIsLast) || thisIsLast
+        let family = screenFamilyStack[0]
+        let viewController = family.screen.create(injecting: store)
+        let viewControllerType = type(of: viewController)
+        let nextIsChild = family.children != nil
+        let nextIsLast = screenFamilyStack.count == 2
+        let thisIsLast = screenFamilyStack.count == 1
+        let isAnimated = (nextIsChild && nextIsLast) || thisIsLast
+        
+        
         
         let foundInParent: UIViewController? = {
             switch parent {
@@ -41,7 +43,10 @@ struct Presenter { // TODO: as effect
             } else {
 //                print("Presenting \(family.screen) on \(parent)")
                 let viewController = family.screen.create(injecting: store)
-                parent.present(viewController, animated: isAnimated, completion: nil) // TODO: animate true for all but first
+                if let delegate = viewController as? UIViewControllerTransitioningDelegate {
+                    viewController.transitioningDelegate = delegate
+                }
+                parent.present(viewController, animated: isAnimated, completion: nil)
                 return viewController
             }
         }()

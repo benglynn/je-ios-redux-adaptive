@@ -6,6 +6,8 @@ enum Action: String {
     case updateIsAdaptedAction
     // Adapters add actions below
     case activateMenuAdaptationAction
+    case presentMenu
+    case dismissMenu
 }
 
 protocol Actionable {
@@ -19,8 +21,8 @@ extension Actionable {
     }
 }
 
-class InitialAction: Actionable {
-    let type = Action.initialAction
+struct InitialAction: Actionable {
+    let type: Action = Action.initialAction
 }
 
 struct ActivateAdaptation: Actionable {

@@ -6,6 +6,8 @@ enum CoreReducer: String {
     case updatePathReducer
     // Adapters add core reducers below
     case activateMenuAdaptationReducer
+    case presentMenuReducer
+    case dismissMenuReducer
 }
 
 extension CoreReducer {
@@ -17,6 +19,10 @@ extension CoreReducer {
             return updatePath
         case .activateMenuAdaptationReducer:
             return activateMenuAdaptation
+        case .presentMenuReducer:
+            return presentMenu
+        case .dismissMenuReducer:
+            return dismissMenu
         }
     }
 }

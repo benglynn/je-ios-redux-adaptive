@@ -1,12 +1,8 @@
 import Foundation
 
-class UpdatePathAction: Actionable {
-    let type = Action.updatePathAction
+struct UpdatePathAction: Actionable {
+    let type: Action = Action.updatePathAction
     let path: String
-    
-    init(_ path: String) {
-        self.path = path
-    }
 }
 
 struct UpdateIsAdaptedAction: Actionable {

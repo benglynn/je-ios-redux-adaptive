@@ -26,11 +26,11 @@ class TabsViewController: UITabBarController, UITabBarControllerDelegate, Presen
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         switch viewController {
         case _ as RestaurantsViewController:
-            self.store.dispatch(UpdatePathAction(""))
+            self.store.dispatch(UpdatePathAction(path: ""))
         case _ as OrdersViewController:
-            self.store.dispatch(UpdatePathAction("orders"))
+            self.store.dispatch(UpdatePathAction(path: "orders"))
         case _ as SettingsViewController:
-            self.store.dispatch(UpdatePathAction("settings"))
+            self.store.dispatch(UpdatePathAction(path: "settings"))
         default:
             fatalError("Unknown tab")
         }

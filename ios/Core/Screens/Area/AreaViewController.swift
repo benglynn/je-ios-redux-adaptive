@@ -6,7 +6,7 @@ class AreaViewController: UIViewController, Presentable {
     internal var store: Store!
     
     @IBAction func tapHome(_ sender: Any) {
-        store.dispatch(UpdatePathAction(""))
+        store.dispatch(UpdatePathAction(path: ""))
     }
     
     

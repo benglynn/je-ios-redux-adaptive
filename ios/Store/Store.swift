@@ -26,7 +26,7 @@ class Store {
                     self.state$.onNext(nextState)
                     
                     // TODO: temporary until effects are implemented!!!!!!!!!!
-                    if action.type == Action.updatePathAction {
+                    if action.type == Action.updatePathAction || action.type == Action.presentMenu {
                         if let rootView = UIApplication.shared.keyWindow?.rootViewController as? RootViewController {
                             Presenter.present(nextState, on: rootView, injecting: self)
                         }
