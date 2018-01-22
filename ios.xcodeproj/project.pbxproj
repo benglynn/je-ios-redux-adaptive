@@ -53,6 +53,7 @@
 		2F9A05E92015D8D100D1B4D6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */; };
 		2F9A05ED20160AF100D1B4D6 /* MenuHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */; };
 		2F9A05EF20160BBF00D1B4D6 /* MenuHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05EE20160BBF00D1B4D6 /* MenuHomeViewController.swift */; };
+		2F9A05F1201612C700D1B4D6 /* MenuAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05F0201612C700D1B4D6 /* MenuAssets.xcassets */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
@@ -121,6 +122,7 @@
 		2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuHome.storyboard; sourceTree = "<group>"; };
 		2F9A05EE20160BBF00D1B4D6 /* MenuHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHomeViewController.swift; sourceTree = "<group>"; };
+		2F9A05F0201612C700D1B4D6 /* MenuAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MenuAssets.xcassets; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */,
 				2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */,
 				2F9A05EE20160BBF00D1B4D6 /* MenuHomeViewController.swift */,
+				2F9A05F0201612C700D1B4D6 /* MenuAssets.xcassets */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				2F54A3AC1FDED11F006DA319 /* Ubuntu-LightItalic.ttf in Resources */,
 				2F54A3AB1FDED11F006DA319 /* Ubuntu-Light.ttf in Resources */,
 				2F54A3A71FDED11F006DA319 /* HindVadodara-Medium.ttf in Resources */,
+				2F9A05F1201612C700D1B4D6 /* MenuAssets.xcassets in Resources */,
 				2F1C953B1FFFC34400684F4B /* Settings.storyboard in Resources */,
 				2F55E8A51FD55C2A00BC52F0 /* LaunchScreen.storyboard in Resources */,
 				2F55E8A21FD55C2A00BC52F0 /* Assets.xcassets in Resources */,

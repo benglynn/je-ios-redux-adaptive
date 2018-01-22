@@ -32,8 +32,19 @@
                             <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tw-pJ-3Va" userLabel="Rays" customClass="RaysView" customModule="ios" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsU-4W-JGb" userLabel="hamburger">
+                                <rect key="frame" x="0.0" y="20" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="QAg-W9-qM5"/>
+                                    <constraint firstAttribute="height" constant="48" id="eTw-vb-dt9"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="hamburger"/>
+                                <connections>
+                                    <action selector="tapHamburger:" destination="9XU-GC-yhq" eventType="touchUpInside" id="oiA-q1-7vt"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WLd-mJ-R4l">
-                                <rect key="frame" x="12.5" y="170.5" width="350" height="266"/>
+                                <rect key="frame" x="12.5" y="172" width="350" height="263"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-red" translatesAutoresizingMaskIntoConstraints="NO" id="hZt-O7-qdS">
                                         <rect key="frame" x="115" y="0.0" width="120" height="25.5"/>
@@ -43,13 +54,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivering your night in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wER-6W-G5A">
-                                        <rect key="frame" x="32.5" y="35.5" width="285.5" height="31.5"/>
+                                        <rect key="frame" x="32" y="35.5" width="286" height="33"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Italic" family="Ubuntu" pointSize="28"/>
                                         <color key="textColor" red="0.98039215690000003" green="0.0" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sej-jy-Ho6" userLabel="Space">
-                                        <rect key="frame" x="170" y="77" width="10" height="10"/>
+                                        <rect key="frame" x="170" y="78.5" width="10" height="10"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="0o0-w7-vLk"/>
@@ -57,13 +68,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by postcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF6-v3-vsa">
-                                        <rect key="frame" x="30" y="97" width="290" height="21"/>
+                                        <rect key="frame" x="30" y="98.5" width="290" height="16.5"/>
                                         <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                         <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your postcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ODV-Go-8d2">
-                                        <rect key="frame" x="30" y="128" width="290" height="44"/>
+                                        <rect key="frame" x="30" y="125" width="290" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Gyj-iA-7QV"/>
                                         </constraints>
@@ -72,7 +83,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipz-QB-aMb">
-                                        <rect key="frame" x="30" y="182" width="290" height="44"/>
+                                        <rect key="frame" x="30" y="179" width="290" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="bzZ-6k-ZOw"/>
                                         </constraints>
@@ -85,7 +96,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j53-mR-i2Y">
-                                        <rect key="frame" x="157" y="236" width="36" height="30"/>
+                                        <rect key="frame" x="157" y="233" width="36" height="30"/>
                                         <state key="normal" title="temp"/>
                                         <connections>
                                             <action selector="tapTemp:" destination="9XU-GC-yhq" eventType="touchUpInside" id="Qwo-1i-fXb"/>
@@ -107,6 +118,8 @@
                             <constraint firstItem="1Tw-pJ-3Va" firstAttribute="trailing" secondItem="Rbv-3M-bRQ" secondAttribute="trailing" id="GmA-6c-xG8"/>
                             <constraint firstItem="WLd-mJ-R4l" firstAttribute="centerX" secondItem="Rbv-3M-bRQ" secondAttribute="centerX" id="UVt-KE-ovI"/>
                             <constraint firstItem="1Tw-pJ-3Va" firstAttribute="leading" secondItem="Rbv-3M-bRQ" secondAttribute="leading" id="bWY-1E-Sas"/>
+                            <constraint firstItem="wsU-4W-JGb" firstAttribute="leading" secondItem="X8T-8D-MLH" secondAttribute="leading" id="dgA-Eh-Dwm"/>
+                            <constraint firstItem="wsU-4W-JGb" firstAttribute="top" secondItem="X8T-8D-MLH" secondAttribute="top" id="hfl-iu-7Sa"/>
                             <constraint firstItem="WLd-mJ-R4l" firstAttribute="centerY" secondItem="Rbv-3M-bRQ" secondAttribute="centerY" constant="-30" id="uEg-gi-Xkn"/>
                             <constraint firstAttribute="bottom" secondItem="1Tw-pJ-3Va" secondAttribute="bottom" id="yuj-fZ-09c"/>
                         </constraints>
@@ -115,6 +128,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="contents" destination="WLd-mJ-R4l" id="3Sz-vj-qaf"/>
+                        <outlet property="hamburger" destination="wsU-4W-JGb" id="YxZ-js-o81"/>
                         <outlet property="rays" destination="1Tw-pJ-3Va" id="g1h-Tr-UGh"/>
                     </connections>
                 </viewController>
@@ -125,6 +139,7 @@
     </scenes>
     <resources>
         <image name="button" width="11" height="11"/>
+        <image name="hamburger" width="48" height="48"/>
         <image name="logo-red" width="120" height="24"/>
     </resources>
 </document>
