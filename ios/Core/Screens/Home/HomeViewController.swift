@@ -21,11 +21,15 @@ class HomeViewController: UIViewController, Presentable {
     
     @IBAction func tapTemp(_ sender: Any) {
         // Temporary trigger until screenStack reducer implemented
-        let menu = UIStoryboard(name: "Menu", bundle: nil).instantiateInitialViewController()!
+        let screen = UIStoryboard(name: "Menu", bundle: nil).instantiateInitialViewController()!
+        if let delegate = screen as? UIViewControllerTransitioningDelegate {
+                screen.transitioningDelegate = delegate
+        }
         let tabsOrRestaurants = UIApplication.shared.keyWindow!.rootViewController!.presentedViewController!
-        let manager = MenuTransitionManager()
-        menu.transitioningDelegate = manager
-        tabsOrRestaurants.present(menu, animated: true, completion: nil)
+        tabsOrRestaurants.present(screen, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+            
+        }
         
     }
     
