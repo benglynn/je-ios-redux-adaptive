@@ -1,6 +1,6 @@
 import Foundation
 
-struct CoreStateSlice: StateSlice {
+struct CoreStateSlice: StateSlice /* TODO: Codable */ {
     let isAdapted: Bool
     let path: String
     let screensInSession: Int
@@ -13,6 +13,24 @@ struct CoreStateSlice: StateSlice {
             return reducer.reduce(self, action)
         }
         return self
+    }
+    
+    func cloneWithOverrides(
+        isAdapted: Bool? = nil,
+        path: String? = nil,
+        screensInSession: Int? = nil,
+        reducers: [Action: CoreReducer]? = nil,
+        screenFamilyStack: [ScreenFamily]? = nil,
+        routes: [Route]? = nil
+        ) -> CoreStateSlice {
+        return CoreStateSlice(
+            isAdapted: isAdapted ?? self.isAdapted,
+            path: path ?? self.path,
+            screensInSession: screensInSession ?? self.screensInSession,
+            reducers: reducers ?? self.reducers,
+            screenFamilyStack: screenFamilyStack ?? self.screenFamilyStack,
+            routes: routes ?? self.routes
+        )
     }
 }
 

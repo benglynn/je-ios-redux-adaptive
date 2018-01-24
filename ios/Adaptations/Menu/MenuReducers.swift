@@ -4,19 +4,14 @@ func presentMenu(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> 
     guard currentSlice.screenFamilyStack.last?.screen != Screen.Menu else {
         return currentSlice
     }
-    return CoreStateSlice(
-        isAdapted: currentSlice.isAdapted,
-        path: currentSlice.path,
-        screensInSession: currentSlice.screensInSession,
-        reducers: currentSlice.reducers,
-        screenFamilyStack: currentSlice.screenFamilyStack + [ScreenFamily(screen: .Menu, children: nil)],
-        routes: currentSlice.routes
+    return currentSlice.cloneWithOverrides(
+        screenFamilyStack: currentSlice.screenFamilyStack + [ScreenFamily(screen: .Menu, children: nil)]
     )
 }
 
-func activateMenuAdaptation(stateSlice: CoreStateSlice, action: Actionable) -> CoreStateSlice {
+func activateMenuAdaptation(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
     
-    var adaptedReducers = stateSlice.reducers
+    var adaptedReducers = currentSlice.reducers
     adaptedReducers[.presentMenu] = .presentMenuReducer
     
     let adaptedRoutes: [Route] = [(
@@ -48,12 +43,5 @@ func activateMenuAdaptation(stateSlice: CoreStateSlice, action: Actionable) -> C
         )
     ]
     
-    return CoreStateSlice(
-        isAdapted: stateSlice.isAdapted,
-        path: stateSlice.path,
-        screensInSession: stateSlice.screensInSession,
-        reducers: adaptedReducers,
-        screenFamilyStack: stateSlice.screenFamilyStack,
-        routes: adaptedRoutes
-    )
+    return currentSlice.cloneWithOverrides(reducers: adaptedReducers, routes: adaptedRoutes)
 }

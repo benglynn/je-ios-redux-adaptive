@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let store = Store(initialState)
         let globalShchedular = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
         
-        adaptationService.asObservable(/*fake: true*/)
+        adaptationService.asObservable(/* fake: true */)
             .subscribeOn(globalShchedular)
             .subscribe(onNext: { serviceResponse in
                 let actions: [Actionable] = serviceResponse.actions
