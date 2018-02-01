@@ -1,6 +1,6 @@
 import Foundation
 
-func presentMenu(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
+func presentMenuReducer(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
     guard currentSlice.screenFamilyStack.last?.screen != Screen.Menu else {
         return currentSlice
     }
@@ -9,7 +9,7 @@ func presentMenu(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> 
     )
 }
 
-func activateMenuAdaptation(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
+func activateMenuAdaptationReducer(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
     
     var adaptedReducers = currentSlice.reducers
     adaptedReducers[.presentMenu] = .presentMenuReducer
