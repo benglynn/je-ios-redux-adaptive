@@ -13,7 +13,7 @@ class MenuViewController: UIViewController, UIViewControllerAnimatedTransitionin
     let bag = DisposeBag()
     
     func dismissLast() {
-        store.dispatch(DismissLastAction())
+        store.dispatch(DismissLastScreenFamilyAction())
     }
     
     

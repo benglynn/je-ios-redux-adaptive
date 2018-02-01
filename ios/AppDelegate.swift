@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let actions: [Actionable] = serviceResponse.actions
                     .filter { $0.active == true }
                     .map { Action(rawValue: $0.type) }.filter { $0 != nil }
-                    .map { ActivateAdaptation(type: $0!) } + [UpdateIsAdaptedAction(isAdapted: true)]
+                    .map { ActivateAdaptationAction(type: $0!) } + [UpdateIsAdaptedAction(isAdapted: true)]
                 actions.forEach { store.dispatch($0) }
             }).disposed(by: self.bag)
         

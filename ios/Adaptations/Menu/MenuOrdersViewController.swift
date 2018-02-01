@@ -9,6 +9,6 @@ class MenuOrdersViewController: UIViewController, Presentable {
     // MARK: - IB
     
     @IBAction func tapClose(_ sender: Any) {
-        store.dispatch(DismissLastAction())
+        store.dispatch(DismissLastScreenFamilyAction())
     }
 }

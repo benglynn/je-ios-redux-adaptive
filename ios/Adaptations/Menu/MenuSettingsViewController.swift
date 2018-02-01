@@ -9,11 +9,11 @@ class MenuSettingsViewController: UIViewController, Presentable {
     // MARK: - IB
     
     @IBAction func tapClose(_ sender: Any) {
-        store.dispatch(DismissLastAction())
+        store.dispatch(DismissLastScreenFamilyAction())
     }
     
     @IBAction func tapReset(_ sender: Any) {
-        store.dispatch(ResetAction())
+        store.dispatch(PresentResetScreenAction())
     }
 }
 

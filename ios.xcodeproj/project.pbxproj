@@ -44,7 +44,7 @@
 		2F64373120062F7F006D863F /* StoreDepending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373020062F7F006D863F /* StoreDepending.swift */; };
 		2F643733200652BE006D863F /* PathPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F643732200652BE006D863F /* PathPattern.swift */; };
 		2F6437372006577D006D863F /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437362006577D006D863F /* Reducer.swift */; };
-		2F64373A2006693C006D863F /* CoreActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437392006693C006D863F /* CoreActions.swift */; };
+		2F64373A2006693C006D863F /* InitStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437392006693C006D863F /* InitStateAction.swift */; };
 		2F64373C20076CBB006D863F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373B20076CBB006D863F /* Action.swift */; };
 		2F64373E20078787006D863F /* CoreReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373D20078787006D863F /* CoreReducers.swift */; };
 		2F6437492007B913006D863F /* CoreStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437482007B913006D863F /* CoreStateSlice.swift */; };
@@ -61,6 +61,12 @@
 		2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */; };
 		2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05FF20164AC000D1B4D6 /* ResetViewController.swift */; };
 		2F9A060220164AEA00D1B4D6 /* Reset.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A060120164AEA00D1B4D6 /* Reset.storyboard */; };
+		2FAE84AE20236968008F31EA /* InitialAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84AD20236968008F31EA /* InitialAction.swift */; };
+		2FAE84B0202369CA008F31EA /* ActivateAdaptationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84AF202369CA008F31EA /* ActivateAdaptationAction.swift */; };
+		2FAE84B220236A1E008F31EA /* DismissLastScreenFamilyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84B120236A1E008F31EA /* DismissLastScreenFamilyAction.swift */; };
+		2FAE84B420236A3A008F31EA /* UpdatePathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84B320236A3A008F31EA /* UpdatePathAction.swift */; };
+		2FAE84B620236A57008F31EA /* UpdateIsAdaptedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84B520236A57008F31EA /* UpdateIsAdaptedAction.swift */; };
+		2FAE84B820236ADB008F31EA /* PresentResetScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84B720236ADB008F31EA /* PresentResetScreenAction.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
@@ -120,7 +126,7 @@
 		2F64373020062F7F006D863F /* StoreDepending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDepending.swift; sourceTree = "<group>"; };
 		2F643732200652BE006D863F /* PathPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathPattern.swift; sourceTree = "<group>"; };
 		2F6437362006577D006D863F /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
-		2F6437392006693C006D863F /* CoreActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreActions.swift; sourceTree = "<group>"; };
+		2F6437392006693C006D863F /* InitStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitStateAction.swift; sourceTree = "<group>"; };
 		2F64373B20076CBB006D863F /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		2F64373D20078787006D863F /* CoreReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreReducers.swift; sourceTree = "<group>"; };
 		2F6437482007B913006D863F /* CoreStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreStateSlice.swift; sourceTree = "<group>"; };
@@ -137,6 +143,12 @@
 		2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSettingsViewController.swift; sourceTree = "<group>"; };
 		2F9A05FF20164AC000D1B4D6 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		2F9A060120164AEA00D1B4D6 /* Reset.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reset.storyboard; sourceTree = "<group>"; };
+		2FAE84AD20236968008F31EA /* InitialAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAction.swift; sourceTree = "<group>"; };
+		2FAE84AF202369CA008F31EA /* ActivateAdaptationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateAdaptationAction.swift; sourceTree = "<group>"; };
+		2FAE84B120236A1E008F31EA /* DismissLastScreenFamilyAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissLastScreenFamilyAction.swift; sourceTree = "<group>"; };
+		2FAE84B320236A3A008F31EA /* UpdatePathAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePathAction.swift; sourceTree = "<group>"; };
+		2FAE84B520236A57008F31EA /* UpdateIsAdaptedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateIsAdaptedAction.swift; sourceTree = "<group>"; };
+		2FAE84B720236ADB008F31EA /* PresentResetScreenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentResetScreenAction.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
@@ -323,8 +335,8 @@
 		2F55E9011FD5A01C00BC52F0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE84AC202368DE008F31EA /* Actions */,
 				2F4E0711200BFFCA00F928FF /* Screens */,
-				2F6437392006693C006D863F /* CoreActions.swift */,
 				2F64373D20078787006D863F /* CoreReducers.swift */,
 				2F6437482007B913006D863F /* CoreStateSlice.swift */,
 			);
@@ -376,6 +388,20 @@
 				2F9A060120164AEA00D1B4D6 /* Reset.storyboard */,
 			);
 			path = Reset;
+			sourceTree = "<group>";
+		};
+		2FAE84AC202368DE008F31EA /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				2F6437392006693C006D863F /* InitStateAction.swift */,
+				2FAE84AF202369CA008F31EA /* ActivateAdaptationAction.swift */,
+				2FAE84B120236A1E008F31EA /* DismissLastScreenFamilyAction.swift */,
+				2FAE84B320236A3A008F31EA /* UpdatePathAction.swift */,
+				2FAE84B520236A57008F31EA /* UpdateIsAdaptedAction.swift */,
+				2FAE84AD20236968008F31EA /* InitialAction.swift */,
+				2FAE84B720236ADB008F31EA /* PresentResetScreenAction.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 		3E2933641101283F0CA746EE /* Pods */ = {
@@ -578,20 +604,25 @@
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
 				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */,
+				2FAE84B220236A1E008F31EA /* DismissLastScreenFamilyAction.swift in Sources */,
 				2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */,
 				2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */,
+				2FAE84B420236A3A008F31EA /* UpdatePathAction.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2F9A05F32016171500D1B4D6 /* MenuActions.swift in Sources */,
 				2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */,
 				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
 				2F64374B2007B981006D863F /* StateSlice.swift in Sources */,
+				2FAE84B0202369CA008F31EA /* ActivateAdaptationAction.swift in Sources */,
 				2F64373E20078787006D863F /* CoreReducers.swift in Sources */,
 				2F9A05EF20160BBF00D1B4D6 /* MenuHomeViewController.swift in Sources */,
 				2F64373120062F7F006D863F /* StoreDepending.swift in Sources */,
+				2FAE84B620236A57008F31EA /* UpdateIsAdaptedAction.swift in Sources */,
 				2F4E0713200CE85700F928FF /* Presentable.swift in Sources */,
 				2F643733200652BE006D863F /* PathPattern.swift in Sources */,
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F6437492007B913006D863F /* CoreStateSlice.swift in Sources */,
+				2FAE84AE20236968008F31EA /* InitialAction.swift in Sources */,
 				2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */,
 				2F9A05E92015D8D100D1B4D6 /* MenuViewController.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
@@ -600,8 +631,9 @@
 				2F55E8F41FD59CBD00BC52F0 /* Presenter.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
 				2F64373C20076CBB006D863F /* Action.swift in Sources */,
-				2F64373A2006693C006D863F /* CoreActions.swift in Sources */,
+				2F64373A2006693C006D863F /* InitStateAction.swift in Sources */,
 				2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */,
+				2FAE84B820236ADB008F31EA /* PresentResetScreenAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,11 +789,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FA87YP34E2;
+				DEVELOPMENT_TEAM = TSHPG2KMPN;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios5";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -776,11 +808,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FA87YP34E2;
+				DEVELOPMENT_TEAM = TSHPG2KMPN;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios5";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appspot.jepd-future.ios7";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

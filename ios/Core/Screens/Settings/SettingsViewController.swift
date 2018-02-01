@@ -10,6 +10,6 @@ class SettingsViewController: UIViewController, Presentable {
     // MARK: IB
     
     @IBAction func tapReset(_ sender: Any) {
-        store.dispatch(ResetAction())
+        store.dispatch(PresentResetScreenAction())
     }
 }

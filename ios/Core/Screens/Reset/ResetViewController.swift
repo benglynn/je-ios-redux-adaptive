@@ -6,6 +6,6 @@ class ResetViewController: UIViewController, Presentable {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        store.dispatch(initStateAction())
+        store.dispatch(InitStateAction())
     }
 }
