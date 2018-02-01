@@ -4,7 +4,7 @@ func dismissLastScreenFamilyReducer(currentSlice: CoreStateSlice, dispatchedActi
     guard currentSlice.screenFamilyStack.count > 1 else {
         return currentSlice
     }
-    return currentSlice.cloneWithOverrides(
+    return currentSlice.cloneWith(
         screenFamilyStack: Array(currentSlice.screenFamilyStack.dropLast())
     )
 }

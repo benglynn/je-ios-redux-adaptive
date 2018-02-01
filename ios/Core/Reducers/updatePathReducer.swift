@@ -20,7 +20,7 @@ func updatePathReducer(currentSlice: CoreStateSlice, dispatchedAction: Actionabl
             return (path: "", stack: matchingStack(forPath: "", inRoutes: currentSlice.routes)!)
         }
     }()
-    return currentSlice.cloneWithOverrides(
+    return currentSlice.cloneWith(
         path: pathAndStack.path,
         screensInSession: currentSlice.screensInSession + 1,
         screenFamilyStack: pathAndStack.stack

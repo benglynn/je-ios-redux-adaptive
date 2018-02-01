@@ -4,7 +4,7 @@ func presentMenuReducer(currentSlice: CoreStateSlice, dispatchedAction: Actionab
     guard currentSlice.screenFamilyStack.last?.screen != Screen.Menu else {
         return currentSlice
     }
-    return currentSlice.cloneWithOverrides(
+    return currentSlice.cloneWith(
         screenFamilyStack: currentSlice.screenFamilyStack + [ScreenFamily(screen: .Menu, children: nil)]
     )
 }
@@ -43,5 +43,5 @@ func activateMenuAdaptationReducer(currentSlice: CoreStateSlice, dispatchedActio
         )
     ]
     
-    return currentSlice.cloneWithOverrides(reducers: adaptedReducers, routes: adaptedRoutes)
+    return currentSlice.cloneWith(reducers: adaptedReducers, routes: adaptedRoutes)
 }

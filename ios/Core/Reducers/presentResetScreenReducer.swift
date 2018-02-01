@@ -4,7 +4,7 @@ func presentResetScreenReducer(currentSlice: CoreStateSlice, dispatechedAction: 
     guard currentSlice.screenFamilyStack.last?.screen != .Reset else {
         return currentSlice
     }
-    return currentSlice.cloneWithOverrides(
+    return currentSlice.cloneWith(
         screenFamilyStack: currentSlice.screenFamilyStack + [ScreenFamily(screen: .Reset, children: nil)]
     )
 }
