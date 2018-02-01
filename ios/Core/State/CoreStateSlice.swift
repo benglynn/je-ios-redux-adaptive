@@ -1,6 +1,6 @@
 import Foundation
 
-struct CoreStateSlice: StateSlice /* TODO: Codable */ {
+struct CoreStateSlice: Reducible /* TODO: Codable */ {
     let isAdapted: Bool
     let path: String
     let screensInSession: Int

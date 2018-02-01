@@ -1,6 +1,6 @@
 import Foundation
 
-typealias Reducer<S: StateSlice> = (_ stateSlice: S, _ action: Actionable) -> S
+typealias Reducer<S: Reducible> = (_ stateSlice: S, _ action: Actionable) -> S
 
 
 

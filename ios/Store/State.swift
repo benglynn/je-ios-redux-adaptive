@@ -2,22 +2,16 @@ import Foundation
 
 struct State {
     let core: CoreStateSlice
-    // Adapters add slices here
+    // Adapters add slices below
 }
 
 extension State {
     init?(current: State, action: Actionable) {
-//        print("Reduce state with \(action.description)")
-        if action.type == Action.initState {
-            self.init(core: initialCoreStateSlice)
-        } else {
-            let core = current.core.reduce(with: action)
-            self.init(core: core)
-        }
+        if action.type != Action.initState {
+            self.init(
+                core: current.core.reduce(with: action)
+            )
+        } else { self.init(core: initialCoreStateSlice) }
     }
 }
-
-let initialState = State(
-    core: initialCoreStateSlice
-)
 
