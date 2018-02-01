@@ -253,17 +253,10 @@
 		2F4E0715200E29EF00F928FF /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE84CD20237795008F31EA /* Screens */,
 				2FAE84CC20237747008F31EA /* Actions */,
 				2FAE84C920237631008F31EA /* Reducers */,
-				2F9A05E620125A7700D1B4D6 /* Menu.storyboard */,
-				2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */,
-				2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */,
-				2F9A05EE20160BBF00D1B4D6 /* MenuHomeViewController.swift */,
 				2F9A05F0201612C700D1B4D6 /* MenuAssets.xcassets */,
-				2F9A05F620163FDE00D1B4D6 /* MenuOrders.storyboard */,
-				2F9A05FA201645ED00D1B4D6 /* MenuSettings.storyboard */,
-				2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */,
-				2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -458,6 +451,53 @@
 				2F9A05F22016171500D1B4D6 /* PresentMenuAction.swift */,
 			);
 			path = Actions;
+			sourceTree = "<group>";
+		};
+		2FAE84CD20237795008F31EA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE84D020237813008F31EA /* MenuHome */,
+				2FAE84D120237813008F31EA /* MenuOrders */,
+				2FAE84CF20237813008F31EA /* MenuSettings */,
+				2FAE84CE202377A8008F31EA /* Menu */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2FAE84CE202377A8008F31EA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2F9A05E620125A7700D1B4D6 /* Menu.storyboard */,
+				2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		2FAE84CF20237813008F31EA /* MenuSettings */ = {
+			isa = PBXGroup;
+			children = (
+				2F9A05FA201645ED00D1B4D6 /* MenuSettings.storyboard */,
+				2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */,
+			);
+			path = MenuSettings;
+			sourceTree = "<group>";
+		};
+		2FAE84D020237813008F31EA /* MenuHome */ = {
+			isa = PBXGroup;
+			children = (
+				2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */,
+				2F9A05EE20160BBF00D1B4D6 /* MenuHomeViewController.swift */,
+			);
+			path = MenuHome;
+			sourceTree = "<group>";
+		};
+		2FAE84D120237813008F31EA /* MenuOrders */ = {
+			isa = PBXGroup;
+			children = (
+				2F9A05F620163FDE00D1B4D6 /* MenuOrders.storyboard */,
+				2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */,
+			);
+			path = MenuOrders;
 			sourceTree = "<group>";
 		};
 		3E2933641101283F0CA746EE /* Pods */ = {
