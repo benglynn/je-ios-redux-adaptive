@@ -17,7 +17,7 @@
 		2F4E070E200BF61700F928FF /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070D200BF61700F928FF /* TabsViewController.swift */; };
 		2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070F200BF98900F928FF /* SettingsViewController.swift */; };
 		2F4E0713200CE85700F928FF /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E0712200CE85700F928FF /* Presentable.swift */; };
-		2F4E0719200E2BAF00F928FF /* MenuReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E0718200E2BAF00F928FF /* MenuReducers.swift */; };
+		2F4E0719200E2BAF00F928FF /* activateMenuAdaptationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E0718200E2BAF00F928FF /* activateMenuAdaptationReducer.swift */; };
 		2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */; };
 		2F54A3A61FDED11F006DA319 /* HindVadodara-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */; };
 		2F54A3A71FDED11F006DA319 /* HindVadodara-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */; };
@@ -74,6 +74,7 @@
 		2FAE84C4202371BE008F31EA /* initialCoreStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84C3202371BE008F31EA /* initialCoreStateSlice.swift */; };
 		2FAE84C620237443008F31EA /* Actionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84C520237443008F31EA /* Actionable.swift */; };
 		2FAE84C8202374A8008F31EA /* initialState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84C7202374A8008F31EA /* initialState.swift */; };
+		2FAE84CB20237668008F31EA /* presentMenuReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84CA20237668008F31EA /* presentMenuReducer.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
@@ -101,7 +102,7 @@
 		2F4E070D200BF61700F928FF /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
 		2F4E070F200BF98900F928FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2F4E0712200CE85700F928FF /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
-		2F4E0718200E2BAF00F928FF /* MenuReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuReducers.swift; sourceTree = "<group>"; };
+		2F4E0718200E2BAF00F928FF /* activateMenuAdaptationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activateMenuAdaptationReducer.swift; sourceTree = "<group>"; };
 		2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Bold.ttf"; sourceTree = "<group>"; };
 		2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Light.ttf"; sourceTree = "<group>"; };
 		2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Medium.ttf"; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		2FAE84C3202371BE008F31EA /* initialCoreStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialCoreStateSlice.swift; sourceTree = "<group>"; };
 		2FAE84C520237443008F31EA /* Actionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actionable.swift; sourceTree = "<group>"; };
 		2FAE84C7202374A8008F31EA /* initialState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialState.swift; sourceTree = "<group>"; };
+		2FAE84CA20237668008F31EA /* presentMenuReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentMenuReducer.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
@@ -251,7 +253,7 @@
 		2F4E0715200E29EF00F928FF /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				2F4E0718200E2BAF00F928FF /* MenuReducers.swift */,
+				2FAE84C920237631008F31EA /* Reducers */,
 				2F9A05F22016171500D1B4D6 /* MenuActions.swift */,
 				2F9A05E620125A7700D1B4D6 /* Menu.storyboard */,
 				2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */,
@@ -439,6 +441,15 @@
 				2FAE84C3202371BE008F31EA /* initialCoreStateSlice.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		2FAE84C920237631008F31EA /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				2F4E0718200E2BAF00F928FF /* activateMenuAdaptationReducer.swift */,
+				2FAE84CA20237668008F31EA /* presentMenuReducer.swift */,
+			);
+			path = Reducers;
 			sourceTree = "<group>";
 		};
 		3E2933641101283F0CA746EE /* Pods */ = {
@@ -642,6 +653,7 @@
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
 				2FAE84C120236EEA008F31EA /* updatePathReducer.swift in Sources */,
 				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,
+				2FAE84CB20237668008F31EA /* presentMenuReducer.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */,
 				2FAE84B220236A1E008F31EA /* DismissLastScreenFamilyAction.swift in Sources */,
 				2FAE84BF20236ECA008F31EA /* updateIsAdaptedReducer.swift in Sources */,
@@ -671,7 +683,7 @@
 				2F9A05E92015D8D100D1B4D6 /* MenuViewController.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
 				2F6437372006577D006D863F /* Reducer.swift in Sources */,
-				2F4E0719200E2BAF00F928FF /* MenuReducers.swift in Sources */,
+				2F4E0719200E2BAF00F928FF /* activateMenuAdaptationReducer.swift in Sources */,
 				2F55E8F41FD59CBD00BC52F0 /* Presenter.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
 				2F64373C20076CBB006D863F /* Action.swift in Sources */,

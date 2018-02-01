@@ -1,25 +1,15 @@
 import Foundation
 
-func presentMenuReducer(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
-    guard currentSlice.screenFamilyStack.last?.screen != Screen.Menu else {
-        return currentSlice
-    }
-    return currentSlice.cloneWith(
-        screenFamilyStack: currentSlice.screenFamilyStack + [ScreenFamily(screen: .Menu, children: nil)]
-    )
-}
-
 func activateMenuAdaptationReducer(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
-    
     var adaptedReducers = currentSlice.reducers
     adaptedReducers[.presentMenu] = .presentMenuReducer
-    
-    let adaptedRoutes: [Route] = [(
-        pathPattern: .HomePath,
-        screens: [
-            ScreenFamily(screen: .Restaurants, children: [.MenuHome]),
-            ScreenFamily(screen: .MenuHome, children: nil),
-            ]
+    let adaptedRoutes: [Route] = [
+        (
+            pathPattern: .HomePath,
+            screens: [
+                ScreenFamily(screen: .Restaurants, children: [.MenuHome]),
+                ScreenFamily(screen: .MenuHome, children: nil),
+                ]
         ),(
             pathPattern: .AreaPath,
             screens: [
@@ -42,6 +32,5 @@ func activateMenuAdaptationReducer(currentSlice: CoreStateSlice, dispatchedActio
                 ]
         )
     ]
-    
     return currentSlice.cloneWith(reducers: adaptedReducers, routes: adaptedRoutes)
 }
