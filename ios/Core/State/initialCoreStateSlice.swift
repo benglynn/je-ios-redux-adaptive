@@ -11,6 +11,13 @@ let initialCoreStateSlice = CoreStateSlice(
         .dismissLastAction: .dismissLastScreenFamilyReducer,
         .activateMenuAdaptationAction:     .activateMenuAdaptationReducer
     ],
+    effects: [
+        .initState: .removePresented,
+        .updatePathAction: .presentEffect,
+        .presentMenu: .presentEffect,
+        .dismissLastAction: .presentEffect,
+        .resetAction: .presentEffect,
+    ],
     screenFamilyStack: [],
     routes: [(
         pathPattern: .HomePath,

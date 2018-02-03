@@ -3,5 +3,5 @@ import Foundation
 protocol Reducible {
     associatedtype SliceReducer
     var reducers: [Action: SliceReducer] { get }
-    func reduce(with action: Actionable) -> Self
+    func reduce(_ action: Actionable) -> Self
 }

@@ -21,25 +21,17 @@ class Store {
         action$
             .subscribeOn(globalShchedular)
             .withLatestFrom(state$) { action, state in return (action, state)}
-            .subscribe(onNext: { (action, state) in
-                if let nextState = State.init(current: state, action: action) {
-                    self.state$.onNext(nextState)
-                    
-                    // TODO: temporary until effects are implemented!!!!!!!!!!
-                    if  action.type == Action.updatePathAction ||
-                        action.type == Action.presentMenu ||
-                        action.type == Action.dismissLastAction ||
-                        action.type == Action.resetAction {
-                        if let rootView = UIApplication.shared.keyWindow?.rootViewController as? RootViewController {
-                            Presenter.present(nextState, on: rootView, injecting: self)
-                        }
-                    } else if action.type == Action.initState {
-                        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: false, completion: nil)
+            .subscribe(onNext: { action, state in
+                let latestState: State = {
+                    if let updatedState = State.init(current: state, action: action, store: self) {
+                        self.state$.onNext(updatedState)
+                        return updatedState
                     }
-                    // !!!!!!!!!!!!
+                    return state
+                }()
+                latestState.callSideEffects(for: action, store: self)
                 }
-                
-            }).disposed(by: bag)
+            ).disposed(by: bag)
     }
 }
 

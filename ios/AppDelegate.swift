@@ -6,11 +6,11 @@ import RxCocoa
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     private let bag = DisposeBag()
+    private let adaptationService = AdaptationService()
+    private let store = Store(initialState)
 
     func readyToPresent(on rootView: RootViewController) {
         let globalShchedular = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
-        let adaptationService = AdaptationService()
-        let store = Store(initialState)
         adaptationService.asObservable() // `fake: true` on train journeys
             .subscribeOn(globalShchedular)
             .subscribe(onNext: { serviceResponse in
@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     .map { Action(rawValue: $0.type) }
                     .filter { $0 != nil }
                     .map { ActivateAdaptationAction(type: $0!) } + [UpdateIsAdaptedAction(isAdapted: true)]
-                actions.forEach { store.dispatch($0) }
+                actions.forEach { self.store.dispatch($0) }
             }).disposed(by: self.bag)
         
         store.state$
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { _ in
                 rootView.prepareToPresent {
-                    store.dispatch(UpdatePathAction(path: "")) // TODO: universal link or default to home
+                    self.store.dispatch(UpdatePathAction(path: "")) // TODO: universal link or default to home
                 }
             }).disposed(by: bag)
             

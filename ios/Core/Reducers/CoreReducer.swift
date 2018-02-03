@@ -1,6 +1,6 @@
 import Foundation
 
-enum CoreReducer: String {
+enum CoreReducer: String, Codable {
     case updateIsAdaptedReducer
     case presentResetScreenReducer
     case updatePathReducer
@@ -11,7 +11,7 @@ enum CoreReducer: String {
 }
 
 extension CoreReducer {
-    var reduce: Reducer<CoreStateSlice> {
+    var call: ReducerFunc<CoreStateSlice> {
         switch self {
         case .updateIsAdaptedReducer: return ios.updateIsAdaptedReducer
         case .presentResetScreenReducer: return ios.presentResetScreenReducer
