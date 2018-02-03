@@ -1,10 +1,11 @@
 import UIKit
 import RxSwift
 
-class RootViewController: UIViewController {
+class RootViewController: UIViewController, PresentationRoot {
     
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var progress: UIImageView!
+    var presentationDelegate: PresentationDelegate!
     
     private let bag = DisposeBag()
     
@@ -17,7 +18,7 @@ class RootViewController: UIViewController {
         super.viewDidAppear(animated)
         fade(view: logo, toAlpha: 1.0)
         fade(view: progress, toAlpha: 0.5)
-        (UIApplication.shared.delegate as! AppDelegate).readyToPresent(on: self)
+        self.presentationDelegate.readyToPresent(on: self)
     }
     
     func prepareToPresent(_ callback: @escaping ()->Void) {

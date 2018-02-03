@@ -79,6 +79,8 @@
 		2FAE84C620237443008F31EA /* Actionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84C520237443008F31EA /* Actionable.swift */; };
 		2FAE84C8202374A8008F31EA /* initialState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84C7202374A8008F31EA /* initialState.swift */; };
 		2FAE84CB20237668008F31EA /* presentMenuReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84CA20237668008F31EA /* presentMenuReducer.swift */; };
+		2FBC4B73202589C300C7F4D8 /* PresentationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC4B72202589C300C7F4D8 /* PresentationRoot.swift */; };
+		2FBC4B7520258B4B00C7F4D8 /* PresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC4B7420258B4B00C7F4D8 /* PresentationDelegate.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
@@ -173,6 +175,8 @@
 		2FAE84C520237443008F31EA /* Actionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actionable.swift; sourceTree = "<group>"; };
 		2FAE84C7202374A8008F31EA /* initialState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialState.swift; sourceTree = "<group>"; };
 		2FAE84CA20237668008F31EA /* presentMenuReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentMenuReducer.swift; sourceTree = "<group>"; };
+		2FBC4B72202589C300C7F4D8 /* PresentationRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationRoot.swift; sourceTree = "<group>"; };
+		2FBC4B7420258B4B00C7F4D8 /* PresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationDelegate.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
@@ -379,6 +383,8 @@
 				2F55E8F31FD59CBD00BC52F0 /* Presenter.swift */,
 				2F643732200652BE006D863F /* PathPattern.swift */,
 				2F55E89C1FD55C2A00BC52F0 /* RootViewController.swift */,
+				2FBC4B72202589C300C7F4D8 /* PresentationRoot.swift */,
+				2FBC4B7420258B4B00C7F4D8 /* PresentationDelegate.swift */,
 				2F55E89E1FD55C2A00BC52F0 /* RootView.storyboard */,
 				2F55E8A31FD55C2A00BC52F0 /* LaunchScreen.storyboard */,
 			);
@@ -716,9 +722,11 @@
 			files = (
 				2F72B5B820248BA1000F298B /* removePresented.swift in Sources */,
 				2FAE84C4202371BE008F31EA /* initialCoreStateSlice.swift in Sources */,
+				2FBC4B73202589C300C7F4D8 /* PresentationRoot.swift in Sources */,
 				2F55E89D1FD55C2A00BC52F0 /* RootViewController.swift in Sources */,
 				2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */,
 				2F4E070E200BF61700F928FF /* TabsViewController.swift in Sources */,
+				2FBC4B7520258B4B00C7F4D8 /* PresentationDelegate.swift in Sources */,
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
 				2FAE84C120236EEA008F31EA /* updatePathReducer.swift in Sources */,
 				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,
