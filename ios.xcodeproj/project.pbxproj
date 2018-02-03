@@ -51,7 +51,7 @@
 		2F72B5B62024897E000F298B /* presentEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B52024897E000F298B /* presentEffect.swift */; };
 		2F72B5B820248BA1000F298B /* removePresented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B720248BA1000F298B /* removePresented.swift */; };
 		2F72B5BA20248CE1000F298B /* EffectFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B920248CE1000F298B /* EffectFunc.swift */; };
-		2F72B5BC2024CBB1000F298B /* CoreEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5BB2024CBB1000F298B /* CoreEffect.swift */; };
+		2F72B5BC2024CBB1000F298B /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5BB2024CBB1000F298B /* Effect.swift */; };
 		2F9A05E720125A7700D1B4D6 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05E620125A7700D1B4D6 /* Menu.storyboard */; };
 		2F9A05E92015D8D100D1B4D6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */; };
 		2F9A05ED20160AF100D1B4D6 /* MenuHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */; };
@@ -146,7 +146,7 @@
 		2F72B5B52024897E000F298B /* presentEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentEffect.swift; sourceTree = "<group>"; };
 		2F72B5B720248BA1000F298B /* removePresented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removePresented.swift; sourceTree = "<group>"; };
 		2F72B5B920248CE1000F298B /* EffectFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectFunc.swift; sourceTree = "<group>"; };
-		2F72B5BB2024CBB1000F298B /* CoreEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreEffect.swift; sourceTree = "<group>"; };
+		2F72B5BB2024CBB1000F298B /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
 		2F9A05E620125A7700D1B4D6 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuHome.storyboard; sourceTree = "<group>"; };
@@ -408,7 +408,7 @@
 		2F72B5B4202488BD000F298B /* Effects */ = {
 			isa = PBXGroup;
 			children = (
-				2F72B5BB2024CBB1000F298B /* CoreEffect.swift */,
+				2F72B5BB2024CBB1000F298B /* Effect.swift */,
 				2F72B5B52024897E000F298B /* presentEffect.swift */,
 				2F72B5B720248BA1000F298B /* removePresented.swift */,
 			);
@@ -736,7 +736,7 @@
 				2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */,
 				2FAE84B420236A3A008F31EA /* UpdatePathAction.swift in Sources */,
 				2FAE84C8202374A8008F31EA /* initialState.swift in Sources */,
-				2F72B5BC2024CBB1000F298B /* CoreEffect.swift in Sources */,
+				2F72B5BC2024CBB1000F298B /* Effect.swift in Sources */,
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2F9A05F32016171500D1B4D6 /* PresentMenuAction.swift in Sources */,
 				2FAE84C620237443008F31EA /* Actionable.swift in Sources */,

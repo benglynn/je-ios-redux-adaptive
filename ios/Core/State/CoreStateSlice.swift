@@ -5,7 +5,7 @@ struct CoreStateSlice: Reducible /* TODO: Codable */ {
     let path: String
     let screensInSession: Int
     let reducers: [Action: CoreReducer]
-    let effects: [Action: CoreEffect]
+    let effects: [Action: Effect]
     let screenFamilyStack: [ScreenFamily]
     let routes: [Route]
 }
@@ -33,7 +33,7 @@ extension CoreStateSlice {
         path: String? = nil,
         screensInSession: Int? = nil,
         reducers: [Action: CoreReducer]? = nil,
-        effects: [Action: CoreEffect]? = nil,
+        effects: [Action: Effect]? = nil,
         screenFamilyStack: [ScreenFamily]? = nil,
         routes: [Route]? = nil
         ) -> CoreStateSlice {

@@ -1,11 +1,11 @@
 import Foundation
 
-enum CoreEffect: String, Codable {
+enum Effect: String, Codable {
     case presentEffect
     case removePresented
 }
 
-extension CoreEffect {
+extension Effect {
     var call: EffectFunc {
         switch self {
         case .presentEffect: return ios.presentEffect
