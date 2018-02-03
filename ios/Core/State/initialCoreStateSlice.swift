@@ -13,10 +13,10 @@ let initialCoreStateSlice = CoreStateSlice(
     ],
     effects: [
         .initState: .removePresented,
-        .updatePathAction: .presentEffect,
-        .presentMenu: .presentEffect,
-        .dismissLastAction: .presentEffect,
-        .resetAction: .presentEffect,
+        .updatePathAction: .presentScreensEffect,
+        .presentMenu: .presentScreensEffect,
+        .dismissLastAction: .presentScreensEffect,
+        .resetAction: .presentScreensEffect,
     ],
     screenFamilyStack: [],
     routes: [(

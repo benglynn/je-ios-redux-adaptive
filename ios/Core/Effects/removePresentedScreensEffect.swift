@@ -1,5 +1,5 @@
 import UIKit
 
-func removePresented(store: Store, currentState: State) {
+func removePresentedScreensEffect(store: Store, currentState: State) {
     UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: false, completion: nil)
 }

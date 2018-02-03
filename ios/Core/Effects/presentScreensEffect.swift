@@ -1,6 +1,6 @@
 import UIKit
 
-func presentEffect(store: Store, currentState: State) {
+func presentScreensEffect(store: Store, currentState: State) {
     if let rootView = UIApplication.shared.keyWindow?.rootViewController {
         present(currentState.core.screenFamilyStack, on: rootView, isChild: false, injecting: store)
     }

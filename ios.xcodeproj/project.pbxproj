@@ -48,8 +48,8 @@
 		2F64373E20078787006D863F /* CoreReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373D20078787006D863F /* CoreReducer.swift */; };
 		2F6437492007B913006D863F /* CoreStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6437482007B913006D863F /* CoreStateSlice.swift */; };
 		2F64374B2007B981006D863F /* Reducible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64374A2007B981006D863F /* Reducible.swift */; };
-		2F72B5B62024897E000F298B /* presentEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B52024897E000F298B /* presentEffect.swift */; };
-		2F72B5B820248BA1000F298B /* removePresented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B720248BA1000F298B /* removePresented.swift */; };
+		2F72B5B62024897E000F298B /* presentScreensEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B52024897E000F298B /* presentScreensEffect.swift */; };
+		2F72B5B820248BA1000F298B /* removePresentedScreensEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B720248BA1000F298B /* removePresentedScreensEffect.swift */; };
 		2F72B5BA20248CE1000F298B /* EffectFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B920248CE1000F298B /* EffectFunc.swift */; };
 		2F72B5BC2024CBB1000F298B /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5BB2024CBB1000F298B /* Effect.swift */; };
 		2F9A05E720125A7700D1B4D6 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05E620125A7700D1B4D6 /* Menu.storyboard */; };
@@ -143,8 +143,8 @@
 		2F64373D20078787006D863F /* CoreReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreReducer.swift; sourceTree = "<group>"; };
 		2F6437482007B913006D863F /* CoreStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreStateSlice.swift; sourceTree = "<group>"; };
 		2F64374A2007B981006D863F /* Reducible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Reducible.swift; path = ios/Store/Reducible.swift; sourceTree = SOURCE_ROOT; };
-		2F72B5B52024897E000F298B /* presentEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentEffect.swift; sourceTree = "<group>"; };
-		2F72B5B720248BA1000F298B /* removePresented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removePresented.swift; sourceTree = "<group>"; };
+		2F72B5B52024897E000F298B /* presentScreensEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentScreensEffect.swift; sourceTree = "<group>"; };
+		2F72B5B720248BA1000F298B /* removePresentedScreensEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removePresentedScreensEffect.swift; sourceTree = "<group>"; };
 		2F72B5B920248CE1000F298B /* EffectFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectFunc.swift; sourceTree = "<group>"; };
 		2F72B5BB2024CBB1000F298B /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
 		2F9A05E620125A7700D1B4D6 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -409,8 +409,8 @@
 			isa = PBXGroup;
 			children = (
 				2F72B5BB2024CBB1000F298B /* Effect.swift */,
-				2F72B5B52024897E000F298B /* presentEffect.swift */,
-				2F72B5B720248BA1000F298B /* removePresented.swift */,
+				2F72B5B52024897E000F298B /* presentScreensEffect.swift */,
+				2F72B5B720248BA1000F298B /* removePresentedScreensEffect.swift */,
 			);
 			path = Effects;
 			sourceTree = "<group>";
@@ -717,7 +717,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F72B5B820248BA1000F298B /* removePresented.swift in Sources */,
+				2F72B5B820248BA1000F298B /* removePresentedScreensEffect.swift in Sources */,
 				2FAE84C4202371BE008F31EA /* initialCoreStateSlice.swift in Sources */,
 				2FBC4B73202589C300C7F4D8 /* PresentationRoot.swift in Sources */,
 				2F55E89D1FD55C2A00BC52F0 /* RootViewController.swift in Sources */,
@@ -728,7 +728,7 @@
 				2FAE84C120236EEA008F31EA /* updatePathReducer.swift in Sources */,
 				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,
 				2FAE84CB20237668008F31EA /* presentMenuReducer.swift in Sources */,
-				2F72B5B62024897E000F298B /* presentEffect.swift in Sources */,
+				2F72B5B62024897E000F298B /* presentScreensEffect.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */,
 				2FAE84B220236A1E008F31EA /* DismissLastScreenFamilyAction.swift in Sources */,
 				2FAE84BF20236ECA008F31EA /* updateIsAdaptedReducer.swift in Sources */,
