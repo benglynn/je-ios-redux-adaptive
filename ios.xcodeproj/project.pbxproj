@@ -38,7 +38,6 @@
 		2F55E8B01FD55C2A00BC52F0 /* iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8AF1FD55C2A00BC52F0 /* iosTests.swift */; };
 		2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8EF1FD58A7F00BC52F0 /* State.swift */; };
 		2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F11FD5925F00BC52F0 /* Store.swift */; };
-		2F55E8F41FD59CBD00BC52F0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E8F31FD59CBD00BC52F0 /* Presenter.swift */; };
 		2F55E9041FD5A0A000BC52F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F55E9031FD5A0A000BC52F0 /* Home.storyboard */; };
 		2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F55E9051FD5A46E00BC52F0 /* Screen.swift */; };
 		2F64373120062F7F006D863F /* StoreDepending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64373020062F7F006D863F /* StoreDepending.swift */; };
@@ -134,7 +133,6 @@
 		2F55E8DC1FD57ACC00BC52F0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		2F55E8EF1FD58A7F00BC52F0 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		2F55E8F11FD5925F00BC52F0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		2F55E8F31FD59CBD00BC52F0 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		2F55E9031FD5A0A000BC52F0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2F55E9051FD5A46E00BC52F0 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		2F64373020062F7F006D863F /* StoreDepending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDepending.swift; sourceTree = "<group>"; };
@@ -380,7 +378,6 @@
 			children = (
 				2F55E9051FD5A46E00BC52F0 /* Screen.swift */,
 				2F4E0712200CE85700F928FF /* Presentable.swift */,
-				2F55E8F31FD59CBD00BC52F0 /* Presenter.swift */,
 				2F643732200652BE006D863F /* PathPattern.swift */,
 				2F55E89C1FD55C2A00BC52F0 /* RootViewController.swift */,
 				2FBC4B72202589C300C7F4D8 /* PresentationRoot.swift */,
@@ -763,7 +760,6 @@
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
 				2F6437372006577D006D863F /* ReducerFunc.swift in Sources */,
 				2F4E0719200E2BAF00F928FF /* activateMenuAdaptationReducer.swift in Sources */,
-				2F55E8F41FD59CBD00BC52F0 /* Presenter.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
 				2F72B5BA20248CE1000F298B /* EffectFunc.swift in Sources */,
 				2F64373C20076CBB006D863F /* Action.swift in Sources */,
