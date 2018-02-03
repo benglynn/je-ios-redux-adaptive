@@ -5,7 +5,7 @@ class RootViewController: UIViewController, PresentationRoot {
     
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var progress: UIImageView!
-    var presentationDelegate: PresentationDelegate!
+    var initialPresentationDelegate: InitialPresentationDelegate!
     
     private let bag = DisposeBag()
     
@@ -18,7 +18,7 @@ class RootViewController: UIViewController, PresentationRoot {
         super.viewDidAppear(animated)
         fade(view: logo, toAlpha: 1.0)
         fade(view: progress, toAlpha: 0.5)
-        self.presentationDelegate.readyToPresent(on: self)
+        self.initialPresentationDelegate.readyToPresent(on: self)
     }
     
     func prepareToPresent(_ callback: @escaping ()->Void) {

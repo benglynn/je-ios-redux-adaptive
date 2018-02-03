@@ -1,6 +1,6 @@
 import Foundation
 
-protocol PresentationDelegate {
+protocol InitialPresentationDelegate {
     func readyToPresent(on presentationRoot: PresentationRoot) -> Void
 }
 
