@@ -17,13 +17,8 @@ class MenuHomeViewController: UIViewController, Presentable {
     
     // MARK: - Interface Builder
     
-    @IBOutlet weak var rays: RaysView!
-    @IBOutlet weak var contents: UIStackView!
     @IBOutlet weak var hamburger: UIButton!
-    
-    @IBAction func tapSearch(_ sender: Any) {
-        store.dispatch(UpdatePathAction(path: "bs14dj"))
-    }
+    @IBOutlet weak var containerView: UIView!
     
     @IBAction func tapHamburger(_ sender: Any) {
         store.dispatch(PresentMenuAction())
@@ -33,25 +28,25 @@ class MenuHomeViewController: UIViewController, Presentable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        store.state$.map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
-            .subscribe(onNext: { _ in
-                guard self.hasAnimated == false else { return }
-                self.rays.isFirstViewOfSession = true
-                self.contents.alpha = 0
-                self.hamburger.alpha = 0
-            }).disposed(by: bag)
+        hamburger.alpha = 1
+        let homeView = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController() as! HomeViewController
+        homeView.setStore(store: store)
+        addChildViewController(homeView)
+        homeView.view.frame = self.containerView.frame
+        containerView.addSubview(homeView.view)
+        homeView.didMove(toParentViewController: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        let mainQueue = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.main)
         super.viewDidAppear(animated)
-        store.state$.map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
+        guard self.hasAnimated == false else { return }
+        hamburger.alpha = 0
+        store.state$
+            .delay(0.1, scheduler: mainQueue) // safe area moves down otherwise. TODO: why?
+            .map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
             .subscribe(onNext: { _ in
-                guard self.hasAnimated == false else { return }
-                UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseOut, animations: {[weak self] in
-                    self?.view.layoutIfNeeded() }
-                )
                 UIView.animate(withDuration: 0.5, delay: 1.1, options: .curveEaseOut, animations: {[weak self] in
-                    self?.contents.alpha = 1.0
                     self?.hamburger.alpha = 1.0
                     self?.view.layoutIfNeeded()
                 })
