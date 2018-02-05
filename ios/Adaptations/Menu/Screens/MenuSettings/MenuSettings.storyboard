@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HindVadodara-Medium.ttf">
-            <string>HindVadodara-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Menu Settings View Controller-->
         <scene sceneID="niP-nj-TNf">
@@ -23,24 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0WB-Lu-Xs0">
-                                <rect key="frame" x="162" y="293" width="50" height="81"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omt-nP-X1W">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
-                                        <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
-                                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMU-k3-4mX">
-                                        <rect key="frame" x="0.0" y="51" width="50" height="30"/>
-                                        <state key="normal" title="Reset"/>
-                                        <connections>
-                                            <action selector="tapReset:" destination="940-e8-5te" eventType="touchUpInside" id="kM6-29-Mbz"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7P-rq-cGE" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-XA-Iz8">
                                 <rect key="frame" x="20" y="25" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
@@ -51,17 +32,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0WB-Lu-Xs0" firstAttribute="centerY" secondItem="oeK-Fg-R8G" secondAttribute="centerY" id="5WV-H1-Dr5"/>
+                            <constraint firstAttribute="bottom" secondItem="u7P-rq-cGE" secondAttribute="bottom" id="5Qh-Yd-mQo"/>
                             <constraint firstItem="ofa-XA-Iz8" firstAttribute="top" secondItem="Of8-8r-hiz" secondAttribute="top" constant="5" id="72H-Im-ExD"/>
-                            <constraint firstItem="0WB-Lu-Xs0" firstAttribute="centerX" secondItem="oeK-Fg-R8G" secondAttribute="centerX" id="JdS-ao-z9S"/>
+                            <constraint firstItem="u7P-rq-cGE" firstAttribute="leading" secondItem="oeK-Fg-R8G" secondAttribute="leading" id="MQd-7Y-n9J"/>
                             <constraint firstItem="ofa-XA-Iz8" firstAttribute="leading" secondItem="Of8-8r-hiz" secondAttribute="leading" constant="20" id="Owh-Yv-UbZ"/>
+                            <constraint firstAttribute="trailing" secondItem="u7P-rq-cGE" secondAttribute="trailing" id="rn4-uE-XSf"/>
+                            <constraint firstItem="u7P-rq-cGE" firstAttribute="top" secondItem="oeK-Fg-R8G" secondAttribute="top" id="u9t-HW-1SB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Of8-8r-hiz"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="u7P-rq-cGE" id="rwP-C2-8qj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYp-7C-EgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39" y="152"/>
+            <point key="canvasLocation" x="37.600000000000001" y="151.57421289355324"/>
         </scene>
     </scenes>
 </document>
