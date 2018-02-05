@@ -51,7 +51,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jp3-qK-Anm" firstAttribute="centerY" secondItem="Wcc-8Q-jcl" secondAttribute="centerY" id="HhH-uG-vpv"/>
                             <constraint firstItem="jp3-qK-Anm" firstAttribute="centerX" secondItem="Wcc-8Q-jcl" secondAttribute="centerX" id="utg-Ho-WYw"/>

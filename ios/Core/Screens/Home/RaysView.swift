@@ -33,7 +33,7 @@ import UIKit
             layer.removeFromSuperlayer()
         })
         
-        let restingTranslate = CATransform3DMakeTranslation(-rect.midX + 70, rect.midY - 100, 0.0)
+        let restingTranslate = CATransform3DMakeTranslation(-rect.midX + 70, rect.midY - 130, 0.0)
         let restingTranslateRotate = CATransform3DRotate(restingTranslate, .pi * (5 / 180), 0.0, 0.0, 1.0)
         layer.transform = restingTranslateRotate
         layer.backgroundColor = UIColor.white.cgColor

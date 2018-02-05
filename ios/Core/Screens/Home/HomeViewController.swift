@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, Presentable {
         super.viewWillAppear(animated)
         store.state$.map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
             .subscribe(onNext: { _ in
-                guard self.hasAnimated == false else { return }
+//                guard self.hasAnimated == false else { return }
                 self.rays.isFirstViewOfSession = true
                 self.contents.alpha = 0
             }).disposed(by: bag)
@@ -31,7 +31,10 @@ class HomeViewController: UIViewController, Presentable {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        store.state$.map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
+        let mainQueue = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.main)
+        store.state$
+            .delay(0.1, scheduler: mainQueue) // safe area moves down otherwise. TODO: why?
+            .map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
             .subscribe(onNext: { _ in
                 guard self.hasAnimated == false else { return }
                 UIView.animate(withDuration: 0.5, delay: 0.6, options: .curveEaseOut, animations: {[weak self] in

@@ -32,7 +32,8 @@ class MenuHomeViewController: UIViewController, Presentable {
         let homeView = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController() as! HomeViewController
         homeView.setStore(store: store)
         addChildViewController(homeView)
-        homeView.view.frame = self.containerView.frame
+        homeView.view.frame = containerView.frame
+        homeView.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         containerView.addSubview(homeView.view)
         homeView.didMove(toParentViewController: self)
     }

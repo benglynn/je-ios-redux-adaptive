@@ -9,14 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HindVadodara-SemiBold.ttf">
-            <string>HindVadodara-SemiBold</string>
-        </array>
-        <array key="Ubuntu-Medium.ttf">
-            <string>Ubuntu-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Orders-->
         <scene sceneID="lVJ-Ye-MSE">
@@ -26,30 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bD4-4o-1gP">
-                                <rect key="frame" x="47.5" y="296" width="280" height="75"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ke-UM-amq">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="21"/>
-                                        <fontDescription key="fontDescription" name="HindVadodara-SemiBold" family="Hind Vadodara" pointSize="14"/>
-                                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLD-6Z-o3H">
-                                        <rect key="frame" x="0.0" y="31" width="280" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="hEU-qs-hvY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
-                                        <state key="normal" title="Log in" backgroundImage="button">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="SxN-CN-INg"/>
-                                </constraints>
-                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYH-D7-tIb" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ6-Ty-pH2">
                                 <rect key="frame" x="20" y="25" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
@@ -60,20 +31,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bD4-4o-1gP" firstAttribute="centerY" secondItem="BOB-3I-18U" secondAttribute="centerY" id="0gF-8v-T0C"/>
+                            <constraint firstAttribute="bottom" secondItem="hYH-D7-tIb" secondAttribute="bottom" id="9LP-e9-3VR"/>
+                            <constraint firstItem="hYH-D7-tIb" firstAttribute="leading" secondItem="BOB-3I-18U" secondAttribute="leading" id="D4r-k4-8np"/>
                             <constraint firstItem="YQ6-Ty-pH2" firstAttribute="leading" secondItem="UZI-FK-6o9" secondAttribute="leading" constant="20" id="GPt-UG-FTQ"/>
-                            <constraint firstItem="bD4-4o-1gP" firstAttribute="centerX" secondItem="BOB-3I-18U" secondAttribute="centerX" id="cPw-p0-kab"/>
+                            <constraint firstItem="hYH-D7-tIb" firstAttribute="top" secondItem="BOB-3I-18U" secondAttribute="top" id="Gjk-wR-Eqz"/>
+                            <constraint firstAttribute="trailing" secondItem="hYH-D7-tIb" secondAttribute="trailing" id="PS6-mX-PbB"/>
                             <constraint firstItem="YQ6-Ty-pH2" firstAttribute="top" secondItem="UZI-FK-6o9" secondAttribute="top" constant="5" id="gX9-Sc-mGJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UZI-FK-6o9"/>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="hYH-D7-tIb" id="hBX-b2-NUK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThJ-kh-xgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-220" y="100"/>
+            <point key="canvasLocation" x="-220" y="99.400299850074973"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="button" width="11" height="11"/>
-    </resources>
 </document>
