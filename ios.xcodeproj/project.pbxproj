@@ -64,6 +64,7 @@
 		2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */; };
 		2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05FF20164AC000D1B4D6 /* ResetViewController.swift */; };
 		2F9A060220164AEA00D1B4D6 /* Reset.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A060120164AEA00D1B4D6 /* Reset.storyboard */; };
+		2FA4A431203DB1100087F46D /* AdaptationServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4A430203DB1100087F46D /* AdaptationServiceResponse.swift */; };
 		2FAE84AE20236968008F31EA /* InitialAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84AD20236968008F31EA /* InitialAction.swift */; };
 		2FAE84B0202369CA008F31EA /* ActivateAdaptationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84AF202369CA008F31EA /* ActivateAdaptationAction.swift */; };
 		2FAE84B220236A1E008F31EA /* DismissLastScreenFamilyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84B120236A1E008F31EA /* DismissLastScreenFamilyAction.swift */; };
@@ -160,6 +161,7 @@
 		2F9A05FC2016463800D1B4D6 /* MenuSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSettingsViewController.swift; sourceTree = "<group>"; };
 		2F9A05FF20164AC000D1B4D6 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		2F9A060120164AEA00D1B4D6 /* Reset.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reset.storyboard; sourceTree = "<group>"; };
+		2FA4A430203DB1100087F46D /* AdaptationServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationServiceResponse.swift; sourceTree = "<group>"; };
 		2FAE84AD20236968008F31EA /* InitialAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAction.swift; sourceTree = "<group>"; };
 		2FAE84AF202369CA008F31EA /* ActivateAdaptationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateAdaptationAction.swift; sourceTree = "<group>"; };
 		2FAE84B120236A1E008F31EA /* DismissLastScreenFamilyAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissLastScreenFamilyAction.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 				2F72B5B920248CE1000F298B /* EffectFunc.swift */,
 				2F64374A2007B981006D863F /* Reducible.swift */,
 				2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */,
+				2FA4A430203DB1100087F46D /* AdaptationServiceResponse.swift */,
 				2F64373020062F7F006D863F /* StoreDepending.swift */,
 			);
 			path = Store;
@@ -759,6 +762,7 @@
 				2F6437492007B913006D863F /* CoreStateSlice.swift in Sources */,
 				2FAE84AE20236968008F31EA /* InitialAction.swift in Sources */,
 				2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */,
+				2FA4A431203DB1100087F46D /* AdaptationServiceResponse.swift in Sources */,
 				2FAE84BB20236E89008F31EA /* dismissLastScreenFamilyReducer.swift in Sources */,
 				2F9A05E92015D8D100D1B4D6 /* MenuViewController.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,

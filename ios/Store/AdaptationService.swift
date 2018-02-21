@@ -9,10 +9,10 @@ struct AdaptationService {
     
     func asObservable(fake: Bool = false) -> Observable<AdaptationServiceResponse> {
         if fake == true {
-            let fakeActions: [AdaptationServiceAction] = [
+            let fakeActions: [AdaptationServiceResponse.Action] = [
                 // Add fake actions below
                 "activateMenuAdaptationAction"
-            ].map { AdaptationServiceAction(type: $0, active: true, id: "x") }
+            ].map { AdaptationServiceResponse.Action(type: $0, active: true, id: "x") }
             return Observable.from([AdaptationServiceResponse(actions: fakeActions)])
         }
         return Observable.from([url])
@@ -36,14 +36,4 @@ struct AdaptationService {
             }
             .share(replay: 1, scope: .whileConnected)
         }
-}
-
-struct AdaptationServiceAction: Codable {
-    let type: String
-    let active: Bool
-    let id: String
-}
-
-struct AdaptationServiceResponse: Codable {
-    let actions: [AdaptationServiceAction]
 }
