@@ -2,12 +2,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class AdaptationService {
+struct AdaptationService {
     
     private let globalScheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
     private let url = "https://us-central1-state-service.cloudfunctions.net/actions"
     
-    public func asObservable(fake: Bool = false) -> Observable<AdaptationServiceResponse> {
+    func asObservable(fake: Bool = false) -> Observable<AdaptationServiceResponse> {
         if fake == true {
             let fakeActions: [AdaptationServiceAction] = [
                 // Add fake actions below
