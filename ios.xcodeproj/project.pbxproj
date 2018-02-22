@@ -85,6 +85,8 @@
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
+		2FEF7701203F1ACD00BFE3CE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF7700203F1ACD00BFE3CE /* Requestable.swift */; };
+		2FEF7703203F1AF600BFE3CE /* Getable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF7702203F1AF600BFE3CE /* Getable.swift */; };
 		2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBEA811FD83A37006D340C /* RaysView.swift */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +184,8 @@
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
+		2FEF7700203F1ACD00BFE3CE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		2FEF7702203F1AF600BFE3CE /* Getable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getable.swift; sourceTree = "<group>"; };
 		2FFBEA811FD83A37006D340C /* RaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaysView.swift; sourceTree = "<group>"; };
 		90CABB8CBD92D76DFC9F6611 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
 		92CAA143045949EFB1DCEB2D /* Pods-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -329,6 +333,7 @@
 				2F55E9011FD5A01C00BC52F0 /* Core */,
 				2F643735200655ED006D863F /* Store */,
 				2F6437342006555E006D863F /* Presentation */,
+				2FEF76FF203F1A3200BFE3CE /* Request */,
 				2F55E89A1FD55C2A00BC52F0 /* AppDelegate.swift */,
 				2F55E8A61FD55C2A00BC52F0 /* Info.plist */,
 				2F55E8A11FD55C2A00BC52F0 /* Assets.xcassets */,
@@ -527,6 +532,15 @@
 				2F9A05F82016402400D1B4D6 /* MenuOrdersViewController.swift */,
 			);
 			path = MenuOrders;
+			sourceTree = "<group>";
+		};
+		2FEF76FF203F1A3200BFE3CE /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2FEF7700203F1ACD00BFE3CE /* Requestable.swift */,
+				2FEF7702203F1AF600BFE3CE /* Getable.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		3E2933641101283F0CA746EE /* Pods */ = {
@@ -772,6 +786,8 @@
 				2F72B5BA20248CE1000F298B /* EffectFunc.swift in Sources */,
 				2F64373C20076CBB006D863F /* Action.swift in Sources */,
 				2F64373A2006693C006D863F /* InitStateAction.swift in Sources */,
+				2FEF7703203F1AF600BFE3CE /* Getable.swift in Sources */,
+				2FEF7701203F1ACD00BFE3CE /* Requestable.swift in Sources */,
 				2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */,
 				2FAE84B820236ADB008F31EA /* PresentResetScreenAction.swift in Sources */,
 			);

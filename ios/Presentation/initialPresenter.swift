@@ -10,7 +10,7 @@ struct InitialPresenter: InitialPresentationDelegate {
     
     func readyToPresent(on presentationRoot: PresentationRoot) {
         let globalShchedular = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
-        adaptationService.asObservable() // `fake: true` on train journeys
+        adaptationService.get()
             .subscribeOn(globalShchedular)
             .subscribe(onNext: { serviceResponse in
                 let actions: [Actionable] = serviceResponse.actions

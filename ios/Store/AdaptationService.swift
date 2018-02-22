@@ -2,38 +2,16 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct AdaptationService {
+struct AdaptationService: Getable {
+    let url = "https://state-service.appspot.com/assets/actions.json"
+    let minLatency: Float = 0.0
+    let defaultResponse = AdaptationServiceResponse(actions: [])
     
-    private let globalScheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
-    private let url = "https://us-central1-state-service.cloudfunctions.net/actions"
-    
-    func asObservable(fake: Bool = false) -> Observable<AdaptationServiceResponse> {
-        if fake == true {
-            let fakeActions: [AdaptationServiceResponse.Action] = [
-                // Add fake actions below
-                "activateMenuAdaptationAction"
-            ].map { AdaptationServiceResponse.Action(type: $0, active: true, id: "x") }
-            return Observable.from([AdaptationServiceResponse(actions: fakeActions)])
+    func get() -> Observable<AdaptationServiceResponse> {
+        return self.getResponse().map() { response, data -> AdaptationServiceResponse in
+            let decoder = JSONDecoder()
+            let serviceResponse = try! decoder.decode(AdaptationServiceResponse.self, from: data)
+            return serviceResponse
         }
-        return Observable.from([url])
-            // .delay(3.5, scheduler: globalScheduler)
-            .map { urlString -> URL in
-                return URL(string: urlString)!
-            }
-            .map { url -> URLRequest in
-                return URLRequest(url: url)
-            }
-            .flatMap { (request) -> Observable<(response: HTTPURLResponse, data: Data)> in
-                return URLSession.shared.rx.response(request: request)
-            }
-            .map { response, data -> AdaptationServiceResponse in
-                // TODO handle error responses
-                // TODO: 1 retry, but timeout after 3 seconds
-                let decoder = JSONDecoder()
-                // TODO handle parse failure
-                let serviceResponse = try! decoder.decode(AdaptationServiceResponse.self, from: data)
-                return serviceResponse
-            }
-            .share(replay: 1, scope: .whileConnected)
-        }
+    }
 }
