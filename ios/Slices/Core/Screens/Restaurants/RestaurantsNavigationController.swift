@@ -1,6 +1,6 @@
 import UIKit
 
-class RestaurantsViewController: UINavigationController, Presentable {
+class RestaurantsNavigationController: UINavigationController, Presentable {
     
     static let storyboardName = "Restaurants"
     var store: Store!

@@ -1,6 +1,6 @@
 import UIKit
 
-class TabsViewController: UITabBarController, UITabBarControllerDelegate, Presentable {
+class TabsTabBarController: UITabBarController, UITabBarControllerDelegate, Presentable {
     
     var store: Store!
     static let storyboardName = "Tabs"
@@ -25,7 +25,7 @@ class TabsViewController: UITabBarController, UITabBarControllerDelegate, Presen
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         switch viewController {
-        case _ as RestaurantsViewController:
+        case _ as RestaurantsNavigationController:
             self.store.dispatch(UpdatePathAction(path: ""))
         case _ as OrdersViewController:
             self.store.dispatch(UpdatePathAction(path: "orders"))

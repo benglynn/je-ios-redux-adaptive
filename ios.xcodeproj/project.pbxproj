@@ -14,7 +14,7 @@
 		2F1C95381FFFBFD200684F4B /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C95371FFFBFD200684F4B /* Orders.storyboard */; };
 		2F1C953B1FFFC34400684F4B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C953A1FFFC34400684F4B /* Settings.storyboard */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
-		2F4E070E200BF61700F928FF /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070D200BF61700F928FF /* TabsViewController.swift */; };
+		2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070D200BF61700F928FF /* TabsTabBarController.swift */; };
 		2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070F200BF98900F928FF /* SettingsViewController.swift */; };
 		2F4E0713200CE85700F928FF /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E0712200CE85700F928FF /* Presentable.swift */; };
 		2F4E0719200E2BAF00F928FF /* activateMenuAdaptationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E0718200E2BAF00F928FF /* activateMenuAdaptationReducer.swift */; };
@@ -84,7 +84,7 @@
 		2FBC4B7720260C2E00C7F4D8 /* initialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBC4B7620260C2E00C7F4D8 /* initialPresenter.swift */; };
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
-		2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */; };
+		2FD738B820090EE500F08F57 /* RestaurantsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsNavigationController.swift */; };
 		2FEF7701203F1ACD00BFE3CE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF7700203F1ACD00BFE3CE /* Requestable.swift */; };
 		2FEF7703203F1AF600BFE3CE /* Getable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF7702203F1AF600BFE3CE /* Getable.swift */; };
 		2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBEA811FD83A37006D340C /* RaysView.swift */; };
@@ -108,7 +108,7 @@
 		2F1C95371FFFBFD200684F4B /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
 		2F1C953A1FFFC34400684F4B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
-		2F4E070D200BF61700F928FF /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
+		2F4E070D200BF61700F928FF /* TabsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsTabBarController.swift; sourceTree = "<group>"; };
 		2F4E070F200BF98900F928FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2F4E0712200CE85700F928FF /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		2F4E0718200E2BAF00F928FF /* activateMenuAdaptationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activateMenuAdaptationReducer.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 		2FBC4B7620260C2E00C7F4D8 /* initialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialPresenter.swift; sourceTree = "<group>"; };
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
-		2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
+		2FD738B720090EE500F08F57 /* RestaurantsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsNavigationController.swift; sourceTree = "<group>"; };
 		2FEF7700203F1ACD00BFE3CE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		2FEF7702203F1AF600BFE3CE /* Getable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getable.swift; sourceTree = "<group>"; };
 		2FFBEA811FD83A37006D340C /* RaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaysView.swift; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */,
-				2FD738B720090EE500F08F57 /* RestaurantsViewController.swift */,
+				2FD738B720090EE500F08F57 /* RestaurantsNavigationController.swift */,
 			);
 			path = Restaurants;
 			sourceTree = "<group>";
@@ -250,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				2F9A05FE20164AAC00D1B4D6 /* Reset */,
-				2F105E8F2003B5710093F2D8 /* Area */,
 				2F105E8C2003AFA50093F2D8 /* Restaurants */,
 				2F1C95391FFFC32800684F4B /* Settings */,
 				2F1C95361FFFBF9A00684F4B /* Orders */,
@@ -301,7 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				2F559A471FFBE8E20024F7B1 /* Tabs.storyboard */,
-				2F4E070D200BF61700F928FF /* TabsViewController.swift */,
+				2F4E070D200BF61700F928FF /* TabsTabBarController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -329,8 +328,8 @@
 		2F55E8991FD55C2A00BC52F0 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				2FEF77042040139D00BFE3CE /* Slices */,
 				2F4E0714200E29BD00F928FF /* Adaptations */,
-				2F55E9011FD5A01C00BC52F0 /* Core */,
 				2F643735200655ED006D863F /* Store */,
 				2F6437342006555E006D863F /* Presentation */,
 				2FEF76FF203F1A3200BFE3CE /* Request */,
@@ -543,6 +542,31 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		2FEF77042040139D00BFE3CE /* Slices */ = {
+			isa = PBXGroup;
+			children = (
+				2F55E9011FD5A01C00BC52F0 /* Core */,
+				2FEF7705204013F500BFE3CE /* Search */,
+			);
+			path = Slices;
+			sourceTree = "<group>";
+		};
+		2FEF7705204013F500BFE3CE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2FEF77062040140D00BFE3CE /* Screens */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2FEF77062040140D00BFE3CE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2F105E8F2003B5710093F2D8 /* Area */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		3E2933641101283F0CA746EE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,7 +766,7 @@
 				2FBC4B73202589C300C7F4D8 /* PresentationRoot.swift in Sources */,
 				2F55E89D1FD55C2A00BC52F0 /* RootViewController.swift in Sources */,
 				2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */,
-				2F4E070E200BF61700F928FF /* TabsViewController.swift in Sources */,
+				2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */,
 				2FBC4B7520258B4B00C7F4D8 /* InitialPresentationDelegate.swift in Sources */,
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
 				2FAE84C120236EEA008F31EA /* updatePathReducer.swift in Sources */,
@@ -775,7 +799,7 @@
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F6437492007B913006D863F /* CoreStateSlice.swift in Sources */,
 				2FAE84AE20236968008F31EA /* InitialAction.swift in Sources */,
-				2FD738B820090EE500F08F57 /* RestaurantsViewController.swift in Sources */,
+				2FD738B820090EE500F08F57 /* RestaurantsNavigationController.swift in Sources */,
 				2FA4A431203DB1100087F46D /* AdaptationServiceResponse.swift in Sources */,
 				2FAE84BB20236E89008F31EA /* dismissLastScreenFamilyReducer.swift in Sources */,
 				2F9A05E92015D8D100D1B4D6 /* MenuViewController.swift in Sources */,
