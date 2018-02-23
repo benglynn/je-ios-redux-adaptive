@@ -18,7 +18,9 @@ class RootViewController: UIViewController, PresentationRoot {
         super.viewDidAppear(animated)
         fade(view: logo, toAlpha: 1.0)
         fade(view: progress, toAlpha: 0.5)
-        self.initialPresentationDelegate.readyToPresent(on: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.initialPresentationDelegate.readyToPresent(on: self)
+        }
     }
     
     func prepareToPresent(_ callback: @escaping ()->Void) {

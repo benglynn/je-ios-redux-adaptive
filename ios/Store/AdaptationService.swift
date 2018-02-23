@@ -4,7 +4,6 @@ import RxCocoa
 
 struct AdaptationService: Getable {
     let url = "https://state-service.appspot.com/assets/actions.json"
-    let minLatency: Float = 0.0
     let defaultResponse = AdaptationServiceResponse(actions: [])
     
     func get() -> Observable<AdaptationServiceResponse> {

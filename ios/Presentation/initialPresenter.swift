@@ -9,9 +9,7 @@ struct InitialPresenter: InitialPresentationDelegate {
     private let bag = DisposeBag()
     
     func readyToPresent(on presentationRoot: PresentationRoot) {
-        let globalShchedular = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
         adaptationService.get()
-            .subscribeOn(globalShchedular)
             .subscribe(onNext: { serviceResponse in
                 let actions: [Actionable] = serviceResponse.actions
                     .filter { $0.active == true }
