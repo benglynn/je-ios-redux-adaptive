@@ -85,8 +85,10 @@
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsNavigationController.swift */; };
+		2FE8866420402B9D00E65ABE /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8866320402B9D00E65ABE /* SearchService.swift */; };
 		2FEF7701203F1ACD00BFE3CE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF7700203F1ACD00BFE3CE /* Requestable.swift */; };
 		2FEF7703203F1AF600BFE3CE /* Getable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF7702203F1AF600BFE3CE /* Getable.swift */; };
+		2FEF7708204024D000BFE3CE /* SearchServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF7707204024D000BFE3CE /* SearchServiceResponse.swift */; };
 		2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBEA811FD83A37006D340C /* RaysView.swift */; };
 /* End PBXBuildFile section */
 
@@ -184,8 +186,10 @@
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsNavigationController.swift; sourceTree = "<group>"; };
+		2FE8866320402B9D00E65ABE /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		2FEF7700203F1ACD00BFE3CE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		2FEF7702203F1AF600BFE3CE /* Getable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getable.swift; sourceTree = "<group>"; };
+		2FEF7707204024D000BFE3CE /* SearchServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceResponse.swift; sourceTree = "<group>"; };
 		2FFBEA811FD83A37006D340C /* RaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaysView.swift; sourceTree = "<group>"; };
 		90CABB8CBD92D76DFC9F6611 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
 		92CAA143045949EFB1DCEB2D /* Pods-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios/Pods-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -555,6 +559,8 @@
 			isa = PBXGroup;
 			children = (
 				2FEF77062040140D00BFE3CE /* Screens */,
+				2FEF7707204024D000BFE3CE /* SearchServiceResponse.swift */,
+				2FE8866320402B9D00E65ABE /* SearchService.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -769,6 +775,7 @@
 				2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */,
 				2FBC4B7520258B4B00C7F4D8 /* InitialPresentationDelegate.swift in Sources */,
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
+				2FEF7708204024D000BFE3CE /* SearchServiceResponse.swift in Sources */,
 				2FAE84C120236EEA008F31EA /* updatePathReducer.swift in Sources */,
 				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,
 				2FAE84CB20237668008F31EA /* presentMenuReducer.swift in Sources */,
@@ -807,6 +814,7 @@
 				2F6437372006577D006D863F /* ReducerFunc.swift in Sources */,
 				2F4E0719200E2BAF00F928FF /* activateMenuAdaptationReducer.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
+				2FE8866420402B9D00E65ABE /* SearchService.swift in Sources */,
 				2F72B5BA20248CE1000F298B /* EffectFunc.swift in Sources */,
 				2F64373C20076CBB006D863F /* Action.swift in Sources */,
 				2F64373A2006693C006D863F /* InitStateAction.swift in Sources */,
