@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0C9098E9859316ED97B8F26B /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C818E78A2285A67717DF621 /* Pods_ios.framework */; };
 		2F043F7220444B7100B5E557 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F7120444B7100B5E557 /* Restaurant.swift */; };
+		2F043F752044528F00B5E557 /* AreaStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F742044528F00B5E557 /* AreaStateSlice.swift */; };
+		2F043F782044534800B5E557 /* AreaReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F772044534800B5E557 /* AreaReducer.swift */; };
+		2F043F7A2044563000B5E557 /* initialAreaStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F792044563000B5E557 /* initialAreaStateSlice.swift */; };
 		2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */; };
 		2F105E912003B5800093F2D8 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* Area.storyboard */; };
 		2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F105E9220052B960093F2D8 /* OrdersViewController.swift */; };
@@ -106,6 +109,9 @@
 /* Begin PBXFileReference section */
 		2C818E78A2285A67717DF621 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F043F7120444B7100B5E557 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		2F043F742044528F00B5E557 /* AreaStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaStateSlice.swift; sourceTree = "<group>"; };
+		2F043F772044534800B5E557 /* AreaReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaReducer.swift; sourceTree = "<group>"; };
+		2F043F792044563000B5E557 /* initialAreaStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialAreaStateSlice.swift; sourceTree = "<group>"; };
 		2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurants.storyboard; sourceTree = "<group>"; };
 		2F105E902003B5800093F2D8 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2F105E9220052B960093F2D8 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +222,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F043F732044528100B5E557 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				2F043F742044528F00B5E557 /* AreaStateSlice.swift */,
+				2F043F792044563000B5E557 /* initialAreaStateSlice.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		2F043F762044533300B5E557 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				2F043F772044534800B5E557 /* AreaReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
 		2F105E8C2003AFA50093F2D8 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +583,8 @@
 		2FEF7705204013F500BFE3CE /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				2F043F762044533300B5E557 /* Reducers */,
+				2F043F732044528100B5E557 /* State */,
 				2FEF77062040140D00BFE3CE /* Screens */,
 				2FEF7707204024D000BFE3CE /* SearchServiceResponse.swift */,
 				2F043F7120444B7100B5E557 /* Restaurant.swift */,
@@ -771,13 +796,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F72B5B820248BA1000F298B /* removePresentedScreensEffect.swift in Sources */,
+				2F043F782044534800B5E557 /* AreaReducer.swift in Sources */,
 				2FAE84C4202371BE008F31EA /* initialCoreStateSlice.swift in Sources */,
+				2F043F752044528F00B5E557 /* AreaStateSlice.swift in Sources */,
 				2FBC4B73202589C300C7F4D8 /* PresentationRoot.swift in Sources */,
 				2F55E89D1FD55C2A00BC52F0 /* RootViewController.swift in Sources */,
 				2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */,
 				2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */,
 				2FBC4B7520258B4B00C7F4D8 /* InitialPresentationDelegate.swift in Sources */,
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
+				2F043F7A2044563000B5E557 /* initialAreaStateSlice.swift in Sources */,
 				2FEF7708204024D000BFE3CE /* SearchServiceResponse.swift in Sources */,
 				2FAE84C120236EEA008F31EA /* updatePathReducer.swift in Sources */,
 				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,

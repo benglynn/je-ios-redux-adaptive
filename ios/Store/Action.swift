@@ -1,6 +1,6 @@
 import Foundation
 
-enum Action: String {
+enum Action: String, Codable {
     case initialAction
     case updatePathAction
     case updateIsAdaptedAction

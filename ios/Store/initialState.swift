@@ -1,5 +1,6 @@
 import Foundation
 
 let initialState = State(
-    core: initialCoreStateSlice
+    core: initialCoreStateSlice,
+    area: initialAreaStateSlice
 )
