@@ -1,11 +1,11 @@
 import UIKit
 
-protocol Presentable: StoreDepending {
+protocol Presentable: StoreDepending where Self: UIViewController {
     static var storyboardName: String { get }
     static func create(injecting: Store) -> UIViewController & Presentable
 }
 
-extension Presentable where Self: UIViewController {
+extension Presentable {
     static func create(injecting store: Store) -> UIViewController & Presentable {
         let viewController = UIStoryboard(name: self.storyboardName, bundle: nil)
             .instantiateInitialViewController()!
