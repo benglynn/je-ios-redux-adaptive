@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C9098E9859316ED97B8F26B /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C818E78A2285A67717DF621 /* Pods_ios.framework */; };
+		2F043F7220444B7100B5E557 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F7120444B7100B5E557 /* Restaurant.swift */; };
 		2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */; };
 		2F105E912003B5800093F2D8 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* Area.storyboard */; };
 		2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F105E9220052B960093F2D8 /* OrdersViewController.swift */; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		2C818E78A2285A67717DF621 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F043F7120444B7100B5E557 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurants.storyboard; sourceTree = "<group>"; };
 		2F105E902003B5800093F2D8 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2F105E9220052B960093F2D8 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 			children = (
 				2FEF77062040140D00BFE3CE /* Screens */,
 				2FEF7707204024D000BFE3CE /* SearchServiceResponse.swift */,
+				2F043F7120444B7100B5E557 /* Restaurant.swift */,
 				2FE8866320402B9D00E65ABE /* SearchService.swift */,
 			);
 			path = Search;
@@ -819,6 +822,7 @@
 				2F64373C20076CBB006D863F /* Action.swift in Sources */,
 				2F64373A2006693C006D863F /* InitStateAction.swift in Sources */,
 				2FEF7703203F1AF600BFE3CE /* Getable.swift in Sources */,
+				2F043F7220444B7100B5E557 /* Restaurant.swift in Sources */,
 				2FEF7701203F1ACD00BFE3CE /* Requestable.swift in Sources */,
 				2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */,
 				2FAE84B820236ADB008F31EA /* PresentResetScreenAction.swift in Sources */,
