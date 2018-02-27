@@ -1,29 +1,32 @@
 import Foundation
 
-func matchingStack(forPath path: String, inRoutes routes: [Route]) -> [ScreenFamily]? {
+func matchingRoute(forPath path: String, inRoutes routes: [Route]) -> Route? {
     let match = routes.first {
         path.range(of: $0.pathPattern.rawValue, options: .regularExpression) != nil
     }
-    if let matchingScreens = match?.screens { return matchingScreens }
-    print("No match for \(path)")
+    if let matchingRoute = match {
+        return matchingRoute
+    }
+    print("No matching route for \(path)")
     return nil
 }
 
 func updatePathReducer(currentSlice: CoreStateSlice, dispatchedAction: Actionable) -> CoreStateSlice {
     let updatePathAction = dispatchedAction as! UpdatePathAction
     
-    let pathAndStack: (path: String, stack: [ScreenFamily]) = {
-        if let stack = matchingStack(forPath: updatePathAction.path, inRoutes: currentSlice.routes) {
-            return (path: updatePathAction.path, stack: stack)
+    let pathAndRoute: (path: String, route: Route) = {
+        if let route = matchingRoute(forPath: updatePathAction.path, inRoutes: currentSlice.routes) {
+            return (path: updatePathAction.path, route: route)
         } else {
             print("Defaulting to empty path")
-            return (path: "", stack: matchingStack(forPath: "", inRoutes: currentSlice.routes)!)
+            return (path: "", route: matchingRoute(forPath: "", inRoutes: currentSlice.routes)!)
         }
     }()
     return currentSlice.cloneWith(
-        path: pathAndStack.path,
+        path: pathAndRoute.path,
         screensInSession: currentSlice.screensInSession + 1,
-        screenFamilyStack: pathAndStack.stack
+        screenFamilyStack: pathAndRoute.route.screens,
+        route: .overridden(value: pathAndRoute.route)
     )
 }
 

@@ -7,4 +7,8 @@ enum PathPattern: String {
     case AreaPath = "^[a-z]{1,2}[0-9][0-9a-z]?[0-9][a-z]{2}$" // postcode
 }
 
-typealias Route = (pathPattern: PathPattern, screens: [ScreenFamily])
+struct Route {
+    let pathPattern: PathPattern
+    let screens: [ScreenFamily]
+    let effect: Effect?
+}

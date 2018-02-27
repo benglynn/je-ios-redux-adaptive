@@ -3,6 +3,7 @@ import Foundation
 enum Effect: String, Codable {
     case presentScreensEffect
     case removePresented
+    case searchEffect
 }
 
 extension Effect {
@@ -10,6 +11,7 @@ extension Effect {
         switch self {
         case .presentScreensEffect: return ios.presentScreensEffect
         case .removePresented: return ios.removePresentedScreensEffect
+        case .searchEffect: return ios.searchEffect
         }
     }
 }

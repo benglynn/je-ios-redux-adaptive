@@ -19,32 +19,37 @@ let initialCoreStateSlice = CoreStateSlice(
         .resetAction: .presentScreensEffect,
     ],
     screenFamilyStack: [],
-    routes: [(
+    route: nil,
+    routes: [Route(
         pathPattern: .HomePath,
         screens: [
             ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
             ScreenFamily(screen: .Restaurants, children: [.Home]),
             ScreenFamily(screen: .Home, children: nil),
-            ]
-        ),(
+            ],
+        effect: nil
+        ), Route(
             pathPattern: .AreaPath,
             screens: [
                 ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
                 ScreenFamily(screen: .Restaurants, children: [.Home, .Area]),
                 ScreenFamily(screen: .Area, children: nil),
-                ]
-        ),(
+                ],
+            effect: .searchEffect
+        ), Route(
             pathPattern: .OrdersPath,
             screens: [
                 ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
                 ScreenFamily(screen: .Orders, children: nil),
-                ]
-        ),(
+                ],
+            effect: nil
+        ), Route(
             pathPattern: .SettingsPath,
             screens: [
                 ScreenFamily(screen: .Tabs, children: [.Restaurants, .Orders, .Settings]),
                 ScreenFamily(screen: .Settings, children: nil),
-                ]
+                ],
+            effect: nil
         )
     ]
 )

@@ -1,8 +1,11 @@
 import UIKit
 
 func presentScreensEffect(store: Store, currentState: State) {
-    if let rootView = UIApplication.shared.keyWindow?.rootViewController {
-        present(currentState.core.screenFamilyStack, on: rootView, isChild: false, injecting: store)
+    if let rootView = UIApplication.shared.keyWindow?.rootViewController { // TODO: root from injector
+        if let effect = currentState.core.route?.effect {
+            effect.call(store, currentState)
+        }
+        present(currentState.core.route!.screens, on: rootView, isChild: false, injecting: store)
     }
 }
 

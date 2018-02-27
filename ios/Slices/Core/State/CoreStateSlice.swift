@@ -7,6 +7,7 @@ struct CoreStateSlice: Reducible /* TODO: Codable */ {
     let reducers: [Action: CoreReducer]
     let effects: [Action: Effect]
     let screenFamilyStack: [ScreenFamily]
+    let route: Route?
     let routes: [Route]
 }
 
@@ -35,8 +36,10 @@ extension CoreStateSlice {
         reducers: [Action: CoreReducer]? = nil,
         effects: [Action: Effect]? = nil,
         screenFamilyStack: [ScreenFamily]? = nil,
+        route: OverridenOptional<Route>? = nil,
         routes: [Route]? = nil
         ) -> CoreStateSlice {
+        
         return CoreStateSlice(
             isAdapted: isAdapted ?? self.isAdapted,
             path: path ?? self.path,
@@ -44,6 +47,7 @@ extension CoreStateSlice {
             reducers: reducers ?? self.reducers,
             effects: effects ?? self.effects,
             screenFamilyStack: screenFamilyStack ?? self.screenFamilyStack,
+            route: nextValue(from: route, or: self.route),
             routes: routes ?? self.routes
         )
     }
