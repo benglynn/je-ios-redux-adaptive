@@ -12,7 +12,7 @@ let initialCoreStateSlice = CoreStateSlice(
         .activateMenuAdaptationAction:     .activateMenuAdaptationReducer
     ],
     effects: [
-        .initState: .removePresented,
+        .initStateAction: .removePresented,
         .updatePathAction: .presentScreensEffect,
         .presentMenu: .presentScreensEffect,
         .dismissLastAction: .presentScreensEffect,

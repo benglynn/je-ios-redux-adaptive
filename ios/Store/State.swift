@@ -2,16 +2,16 @@ import Foundation
 
 struct State {
     let core: CoreStateSlice
-    let area: AreaStateSlice
+    let area: SearchStateSlice
     // Adapters add slices below
 }
 
 extension State {
     init?(current: State, action: Actionable, store: Store) { // TODO: nil if nothing changed
-        if action.type == Action.initState {
+        if action.type == Action.initStateAction {
             self.init(
                 core: initialCoreStateSlice,
-                area: initialAreaStateSlice
+                area: initialSearchStateSlice
             )
         } else {
             self.init(

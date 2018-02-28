@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, Presentable {
     @IBOutlet weak var contents: UIStackView!
     
     @IBAction func tapSearch(_ sender: Any) {
+        self.store.dispatch(UpdateRestaurantsAction(restuarnts: []))
         self.store.dispatch(UpdatePathAction(path: "bs14dj"))
     }
     
@@ -23,7 +24,6 @@ class HomeViewController: UIViewController, Presentable {
         super.viewWillAppear(animated)
         store.state$.map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
             .subscribe(onNext: { _ in
-//                guard self.hasAnimated == false else { return }
                 self.rays.isFirstViewOfSession = true
                 self.contents.alpha = 0
             }).disposed(by: bag)
@@ -33,7 +33,7 @@ class HomeViewController: UIViewController, Presentable {
         super.viewDidAppear(animated)
         let mainQueue = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.main)
         store.state$
-            .delay(0.1, scheduler: mainQueue) // safe area moves down otherwise. TODO: why?
+            .delay(0.1, scheduler: mainQueue) // otherwise the safe area moves down. TODO: why?
             .map { $0.core.screensInSession }.filter { $0 == 1 }.take(1)
             .subscribe(onNext: { _ in
                 guard self.hasAnimated == false else { return }

@@ -9,11 +9,21 @@
 /* Begin PBXBuildFile section */
 		0C9098E9859316ED97B8F26B /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C818E78A2285A67717DF621 /* Pods_ios.framework */; };
 		2F043F7220444B7100B5E557 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F7120444B7100B5E557 /* Restaurant.swift */; };
-		2F043F752044528F00B5E557 /* AreaStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F742044528F00B5E557 /* AreaStateSlice.swift */; };
-		2F043F782044534800B5E557 /* AreaReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F772044534800B5E557 /* AreaReducer.swift */; };
-		2F043F7A2044563000B5E557 /* initialAreaStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F792044563000B5E557 /* initialAreaStateSlice.swift */; };
+		2F043F752044528F00B5E557 /* SearchStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F742044528F00B5E557 /* SearchStateSlice.swift */; };
+		2F043F782044534800B5E557 /* SearchReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F772044534800B5E557 /* SearchReducer.swift */; };
+		2F043F7A2044563000B5E557 /* initialSearchStateSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F792044563000B5E557 /* initialSearchStateSlice.swift */; };
 		2F043F7C204569E400B5E557 /* searchEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F7B204569E400B5E557 /* searchEffect.swift */; };
 		2F043F7E2045BD2000B5E557 /* OverriddenOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F7D2045BD2000B5E557 /* OverriddenOptional.swift */; };
+		2F043F802046C14500B5E557 /* SearchStateSlice+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F7F2046C14500B5E557 /* SearchStateSlice+reduce.swift */; };
+		2F043F822046C18000B5E557 /* CoreStateSlice+reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F812046C18000B5E557 /* CoreStateSlice+reduce.swift */; };
+		2F043F842046C20200B5E557 /* CoreStateSlice+callSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F832046C20200B5E557 /* CoreStateSlice+callSideEffects.swift */; };
+		2F043F862046C21E00B5E557 /* CoreStateSlice+cloneWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F852046C21E00B5E557 /* CoreStateSlice+cloneWith.swift */; };
+		2F043F882046C32E00B5E557 /* SearchStateSlice+cloneWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F872046C32E00B5E557 /* SearchStateSlice+cloneWith.swift */; };
+		2F043F8A2046C60000B5E557 /* updatePostcodeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F892046C60000B5E557 /* updatePostcodeReducer.swift */; };
+		2F043F8C2046C61900B5E557 /* updateRestaurantsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F8B2046C61900B5E557 /* updateRestaurantsReducer.swift */; };
+		2F043F8F2046C74200B5E557 /* UpdatePostcodeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F8E2046C74200B5E557 /* UpdatePostcodeAction.swift */; };
+		2F043F912046C79700B5E557 /* UpdateRestaurantsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F902046C79700B5E557 /* UpdateRestaurantsAction.swift */; };
+		2F043F942046F63B00B5E557 /* Restaurant+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F932046F63A00B5E557 /* Restaurant+Equatable.swift */; };
 		2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */; };
 		2F105E912003B5800093F2D8 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* Area.storyboard */; };
 		2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F105E9220052B960093F2D8 /* OrdersViewController.swift */; };
@@ -111,11 +121,21 @@
 /* Begin PBXFileReference section */
 		2C818E78A2285A67717DF621 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F043F7120444B7100B5E557 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		2F043F742044528F00B5E557 /* AreaStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaStateSlice.swift; sourceTree = "<group>"; };
-		2F043F772044534800B5E557 /* AreaReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaReducer.swift; sourceTree = "<group>"; };
-		2F043F792044563000B5E557 /* initialAreaStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialAreaStateSlice.swift; sourceTree = "<group>"; };
+		2F043F742044528F00B5E557 /* SearchStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStateSlice.swift; sourceTree = "<group>"; };
+		2F043F772044534800B5E557 /* SearchReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReducer.swift; sourceTree = "<group>"; };
+		2F043F792044563000B5E557 /* initialSearchStateSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialSearchStateSlice.swift; sourceTree = "<group>"; };
 		2F043F7B204569E400B5E557 /* searchEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchEffect.swift; sourceTree = "<group>"; };
 		2F043F7D2045BD2000B5E557 /* OverriddenOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverriddenOptional.swift; sourceTree = "<group>"; };
+		2F043F7F2046C14500B5E557 /* SearchStateSlice+reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchStateSlice+reduce.swift"; sourceTree = "<group>"; };
+		2F043F812046C18000B5E557 /* CoreStateSlice+reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreStateSlice+reduce.swift"; sourceTree = "<group>"; };
+		2F043F832046C20200B5E557 /* CoreStateSlice+callSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreStateSlice+callSideEffects.swift"; sourceTree = "<group>"; };
+		2F043F852046C21E00B5E557 /* CoreStateSlice+cloneWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreStateSlice+cloneWith.swift"; sourceTree = "<group>"; };
+		2F043F872046C32E00B5E557 /* SearchStateSlice+cloneWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchStateSlice+cloneWith.swift"; sourceTree = "<group>"; };
+		2F043F892046C60000B5E557 /* updatePostcodeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updatePostcodeReducer.swift; sourceTree = "<group>"; };
+		2F043F8B2046C61900B5E557 /* updateRestaurantsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateRestaurantsReducer.swift; sourceTree = "<group>"; };
+		2F043F8E2046C74200B5E557 /* UpdatePostcodeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePostcodeAction.swift; sourceTree = "<group>"; };
+		2F043F902046C79700B5E557 /* UpdateRestaurantsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRestaurantsAction.swift; sourceTree = "<group>"; };
+		2F043F932046F63A00B5E557 /* Restaurant+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant+Equatable.swift"; sourceTree = "<group>"; };
 		2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurants.storyboard; sourceTree = "<group>"; };
 		2F105E902003B5800093F2D8 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2F105E9220052B960093F2D8 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -229,8 +249,10 @@
 		2F043F732044528100B5E557 /* State */ = {
 			isa = PBXGroup;
 			children = (
-				2F043F742044528F00B5E557 /* AreaStateSlice.swift */,
-				2F043F792044563000B5E557 /* initialAreaStateSlice.swift */,
+				2F043F742044528F00B5E557 /* SearchStateSlice.swift */,
+				2F043F7F2046C14500B5E557 /* SearchStateSlice+reduce.swift */,
+				2F043F872046C32E00B5E557 /* SearchStateSlice+cloneWith.swift */,
+				2F043F792044563000B5E557 /* initialSearchStateSlice.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -238,9 +260,28 @@
 		2F043F762044533300B5E557 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
-				2F043F772044534800B5E557 /* AreaReducer.swift */,
+				2F043F772044534800B5E557 /* SearchReducer.swift */,
+				2F043F892046C60000B5E557 /* updatePostcodeReducer.swift */,
+				2F043F8B2046C61900B5E557 /* updateRestaurantsReducer.swift */,
 			);
 			path = Reducers;
+			sourceTree = "<group>";
+		};
+		2F043F8D2046C64500B5E557 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				2F043F8E2046C74200B5E557 /* UpdatePostcodeAction.swift */,
+				2F043F902046C79700B5E557 /* UpdateRestaurantsAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		2F043F922046C83400B5E557 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				2F043F7B204569E400B5E557 /* searchEffect.swift */,
+			);
+			path = Effects;
 			sourceTree = "<group>";
 		};
 		2F105E8C2003AFA50093F2D8 /* Restaurants */ = {
@@ -455,7 +496,6 @@
 				2F72B5BB2024CBB1000F298B /* Effect.swift */,
 				2F72B5B52024897E000F298B /* presentScreensEffect.swift */,
 				2F72B5B720248BA1000F298B /* removePresentedScreensEffect.swift */,
-				2F043F7B204569E400B5E557 /* searchEffect.swift */,
 			);
 			path = Effects;
 			sourceTree = "<group>";
@@ -499,6 +539,9 @@
 			isa = PBXGroup;
 			children = (
 				2F6437482007B913006D863F /* CoreStateSlice.swift */,
+				2F043F832046C20200B5E557 /* CoreStateSlice+callSideEffects.swift */,
+				2F043F852046C21E00B5E557 /* CoreStateSlice+cloneWith.swift */,
+				2F043F812046C18000B5E557 /* CoreStateSlice+reduce.swift */,
 				2FAE84C3202371BE008F31EA /* initialCoreStateSlice.swift */,
 			);
 			path = State;
@@ -589,11 +632,14 @@
 		2FEF7705204013F500BFE3CE /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				2F043F922046C83400B5E557 /* Effects */,
+				2F043F8D2046C64500B5E557 /* Actions */,
 				2F043F762044533300B5E557 /* Reducers */,
 				2F043F732044528100B5E557 /* State */,
 				2FEF77062040140D00BFE3CE /* Screens */,
 				2FEF7707204024D000BFE3CE /* SearchServiceResponse.swift */,
 				2F043F7120444B7100B5E557 /* Restaurant.swift */,
+				2F043F932046F63A00B5E557 /* Restaurant+Equatable.swift */,
 				2FE8866320402B9D00E65ABE /* SearchService.swift */,
 			);
 			path = Search;
@@ -802,24 +848,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F72B5B820248BA1000F298B /* removePresentedScreensEffect.swift in Sources */,
-				2F043F782044534800B5E557 /* AreaReducer.swift in Sources */,
+				2F043F782044534800B5E557 /* SearchReducer.swift in Sources */,
+				2F043F882046C32E00B5E557 /* SearchStateSlice+cloneWith.swift in Sources */,
 				2FAE84C4202371BE008F31EA /* initialCoreStateSlice.swift in Sources */,
-				2F043F752044528F00B5E557 /* AreaStateSlice.swift in Sources */,
+				2F043F752044528F00B5E557 /* SearchStateSlice.swift in Sources */,
 				2FBC4B73202589C300C7F4D8 /* PresentationRoot.swift in Sources */,
+				2F043F862046C21E00B5E557 /* CoreStateSlice+cloneWith.swift in Sources */,
 				2F55E89D1FD55C2A00BC52F0 /* RootViewController.swift in Sources */,
 				2F55E89B1FD55C2A00BC52F0 /* AppDelegate.swift in Sources */,
 				2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */,
 				2F043F7C204569E400B5E557 /* searchEffect.swift in Sources */,
 				2FBC4B7520258B4B00C7F4D8 /* InitialPresentationDelegate.swift in Sources */,
 				2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */,
-				2F043F7A2044563000B5E557 /* initialAreaStateSlice.swift in Sources */,
+				2F043F822046C18000B5E557 /* CoreStateSlice+reduce.swift in Sources */,
+				2F043F7A2044563000B5E557 /* initialSearchStateSlice.swift in Sources */,
 				2FEF7708204024D000BFE3CE /* SearchServiceResponse.swift in Sources */,
 				2FAE84C120236EEA008F31EA /* updatePathReducer.swift in Sources */,
 				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,
 				2FAE84CB20237668008F31EA /* presentMenuReducer.swift in Sources */,
 				2F72B5B62024897E000F298B /* presentScreensEffect.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */,
+				2F043F942046F63B00B5E557 /* Restaurant+Equatable.swift in Sources */,
 				2FAE84B220236A1E008F31EA /* DismissLastScreenFamilyAction.swift in Sources */,
+				2F043F802046C14500B5E557 /* SearchStateSlice+reduce.swift in Sources */,
+				2F043F842046C20200B5E557 /* CoreStateSlice+callSideEffects.swift in Sources */,
 				2FAE84BF20236ECA008F31EA /* updateIsAdaptedReducer.swift in Sources */,
 				2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */,
 				2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */,
@@ -843,15 +895,19 @@
 				2FAE84BD20236EA6008F31EA /* presentResetScreenReducer.swift in Sources */,
 				2FFBEA821FD83A37006D340C /* RaysView.swift in Sources */,
 				2F6437492007B913006D863F /* CoreStateSlice.swift in Sources */,
+				2F043F912046C79700B5E557 /* UpdateRestaurantsAction.swift in Sources */,
 				2FAE84AE20236968008F31EA /* InitialAction.swift in Sources */,
 				2FD738B820090EE500F08F57 /* RestaurantsNavigationController.swift in Sources */,
 				2FA4A431203DB1100087F46D /* AdaptationServiceResponse.swift in Sources */,
+				2F043F8C2046C61900B5E557 /* updateRestaurantsReducer.swift in Sources */,
+				2F043F8F2046C74200B5E557 /* UpdatePostcodeAction.swift in Sources */,
 				2FAE84BB20236E89008F31EA /* dismissLastScreenFamilyReducer.swift in Sources */,
 				2F9A05E92015D8D100D1B4D6 /* MenuViewController.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,
 				2F6437372006577D006D863F /* ReducerFunc.swift in Sources */,
 				2F4E0719200E2BAF00F928FF /* activateMenuAdaptationReducer.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
+				2F043F8A2046C60000B5E557 /* updatePostcodeReducer.swift in Sources */,
 				2FE8866420402B9D00E65ABE /* SearchService.swift in Sources */,
 				2F72B5BA20248CE1000F298B /* EffectFunc.swift in Sources */,
 				2F64373C20076CBB006D863F /* Action.swift in Sources */,

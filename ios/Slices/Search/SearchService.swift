@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 
 struct SearchService: Getable {
-    typealias ResponseType = SearchServiceResponse
+    typealias ResponseType = [Restaurant]
     let baseUrl = "https://public.je-apis.com/restaurants/v3"
     let queryItems = [
         URLQueryItem(name: "c", value: ""),
@@ -27,11 +27,17 @@ struct SearchService: Getable {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     }
     
-    func get() -> Observable<SearchServiceResponse> {
-        return self.getResponse().map() { response, data -> SearchServiceResponse in
-            let decoder = JSONDecoder()
-            let serviceResponse = try! decoder.decode(SearchServiceResponse.self, from: data)
-            return serviceResponse
+    func get() -> Observable<[Restaurant]> {
+        return self.getResponse()
+            .map() { response, data -> [Restaurant] in
+                let decoder = JSONDecoder()
+                let serviceResponse = try! decoder.decode(SearchServiceResponse.self, from: data)
+                let restaurants: [Restaurant] = serviceResponse.OpenRestaurants.map { serviceRestaurant in
+                    Restaurant.init(serviceRestaurant, isOpen: true)
+                } + serviceResponse.ClosedRestaurants.map { serviceRestaurant in
+                    Restaurant.init(serviceRestaurant, isOpen: false)
+                }
+            return restaurants
         }
     }
 }

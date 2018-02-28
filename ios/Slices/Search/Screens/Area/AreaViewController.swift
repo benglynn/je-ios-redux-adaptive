@@ -13,11 +13,13 @@ class AreaViewController: UIViewController, Presentable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: this logic should be in an effect associated with route change
-        let searchService = SearchService(q: "bs34sh")
-        searchService.get().subscribe(onNext: { response in
-             print("Response has \(response.MetaData.ResultCount) reults")
-        }).disposed(by: bag)
+        self.store
+            .selectRestaurants()
+            .subscribe(onNext: { restaurants in
+                print("Recived \(restaurants == nil ? 0 : restaurants!.count) rstaurants")
+            })
+            .disposed(by: bag)
+
     }
     
 }

@@ -1,6 +1,7 @@
 import Foundation
 
 struct Restaurant: Codable {
+    
     let cuisines: String
     let deliveryCost: Decimal
     let deliveryStartTime: String
@@ -16,7 +17,7 @@ struct Restaurant: Codable {
     let ratings: Int32
     let title: String
     
-    init(serviceRestaurant: SearchServiceResponse.Restaurant, isOpen: Bool) {
+    init(_ serviceRestaurant: SearchServiceResponse.Restaurant, isOpen: Bool) {
         self.cuisines = serviceRestaurant.Cuisines.map { cuisine in cuisine.Name }.joined(separator: ", ")
         self.deliveryCost = serviceRestaurant.DeliveryCost
         self.deliveryStartTime = serviceRestaurant.DeliveryStartTime
