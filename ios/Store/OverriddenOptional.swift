@@ -1,16 +1,16 @@
 import Foundation
 
-enum OverridenOptional<T> {
-    case overridden(value: T)
-    case nullified
+enum Optional<T> {
+    case noValue
+    case value(value: T)
 }
 
-func nextValue<T>(from overridenOptional: OverridenOptional<T>?, or oldValue: T?) -> T? {
-    if overridenOptional == nil {
+func value<T>(from optionalOptional: Optional<T>?, or oldValue: T?) -> T? {
+    if optionalOptional == nil {
         return oldValue
     }
-    switch overridenOptional! {
-    case .nullified: return nil
-    case .overridden(let value): return value
+    switch optionalOptional! {
+    case .noValue: return nil
+    case .value(let value): return value
     }
 }

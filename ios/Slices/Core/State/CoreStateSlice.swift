@@ -36,7 +36,7 @@ extension CoreStateSlice {
         reducers: [Action: CoreReducer]? = nil,
         effects: [Action: Effect]? = nil,
         screenFamilyStack: [ScreenFamily]? = nil,
-        route: OverridenOptional<Route>? = nil,
+        route: Optional<Route>? = nil,
         routes: [Route]? = nil
         ) -> CoreStateSlice {
         
@@ -47,7 +47,7 @@ extension CoreStateSlice {
             reducers: reducers ?? self.reducers,
             effects: effects ?? self.effects,
             screenFamilyStack: screenFamilyStack ?? self.screenFamilyStack,
-            route: nextValue(from: route, or: self.route),
+            route: value(from: route, or: self.route),
             routes: routes ?? self.routes
         )
     }

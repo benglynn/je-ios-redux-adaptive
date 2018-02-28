@@ -26,7 +26,7 @@ func updatePathReducer(currentSlice: CoreStateSlice, dispatchedAction: Actionabl
         path: pathAndRoute.path,
         screensInSession: currentSlice.screensInSession + 1,
         screenFamilyStack: pathAndRoute.route.screens,
-        route: .overridden(value: pathAndRoute.route)
+        route: .value(value: pathAndRoute.route)
     )
 }
 
