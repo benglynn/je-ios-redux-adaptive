@@ -13,7 +13,7 @@ let initialCoreStateSlice = CoreStateSlice(
     ],
     effects: [
         .initStateAction: .removePresented,
-        .updatePathAction: .presentScreensEffect,
+        .updatePathAction: .presentRouteEffect,
         .presentMenu: .presentScreensEffect,
         .dismissLastAction: .presentScreensEffect,
         .resetAction: .presentScreensEffect,

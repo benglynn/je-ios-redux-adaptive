@@ -25,6 +25,8 @@
 		2F043F912046C79700B5E557 /* UpdateRestaurantsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F902046C79700B5E557 /* UpdateRestaurantsAction.swift */; };
 		2F043F942046F63B00B5E557 /* Restaurant+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F932046F63A00B5E557 /* Restaurant+Equatable.swift */; };
 		2F043F982048022800B5E557 /* Store+selectRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F972048022800B5E557 /* Store+selectRestaurants.swift */; };
+		2F043F9A2048140100B5E557 /* presentRouteEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F992048140100B5E557 /* presentRouteEffect.swift */; };
+		2F043F9C2048144900B5E557 /* present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F9B2048144900B5E557 /* present.swift */; };
 		2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */; };
 		2F105E912003B5800093F2D8 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* Area.storyboard */; };
 		2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F105E9220052B960093F2D8 /* OrdersViewController.swift */; };
@@ -138,6 +140,8 @@
 		2F043F902046C79700B5E557 /* UpdateRestaurantsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRestaurantsAction.swift; sourceTree = "<group>"; };
 		2F043F932046F63A00B5E557 /* Restaurant+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant+Equatable.swift"; sourceTree = "<group>"; };
 		2F043F972048022800B5E557 /* Store+selectRestaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+selectRestaurants.swift"; sourceTree = "<group>"; };
+		2F043F992048140100B5E557 /* presentRouteEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentRouteEffect.swift; sourceTree = "<group>"; };
+		2F043F9B2048144900B5E557 /* present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = present.swift; sourceTree = "<group>"; };
 		2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurants.storyboard; sourceTree = "<group>"; };
 		2F105E902003B5800093F2D8 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2F105E9220052B960093F2D8 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -470,6 +474,7 @@
 				2FBC4B7620260C2E00C7F4D8 /* initialPresenter.swift */,
 				2F55E89E1FD55C2A00BC52F0 /* RootView.storyboard */,
 				2F55E8A31FD55C2A00BC52F0 /* LaunchScreen.storyboard */,
+				2F043F9B2048144900B5E557 /* present.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 			children = (
 				2F72B5BB2024CBB1000F298B /* Effect.swift */,
 				2F72B5B52024897E000F298B /* presentScreensEffect.swift */,
+				2F043F992048140100B5E557 /* presentRouteEffect.swift */,
 				2F72B5B720248BA1000F298B /* removePresentedScreensEffect.swift */,
 			);
 			path = Effects;
@@ -894,6 +900,7 @@
 				2F9A05EF20160BBF00D1B4D6 /* MenuHomeViewController.swift in Sources */,
 				2F64373120062F7F006D863F /* StoreDepending.swift in Sources */,
 				2FAE84B620236A57008F31EA /* UpdateIsAdaptedAction.swift in Sources */,
+				2F043F9A2048140100B5E557 /* presentRouteEffect.swift in Sources */,
 				2F4E0713200CE85700F928FF /* Presentable.swift in Sources */,
 				2F643733200652BE006D863F /* PathPattern.swift in Sources */,
 				2FAE84BD20236EA6008F31EA /* presentResetScreenReducer.swift in Sources */,
@@ -912,6 +919,7 @@
 				2F4E0719200E2BAF00F928FF /* activateMenuAdaptationReducer.swift in Sources */,
 				2F55E8F21FD5925F00BC52F0 /* Store.swift in Sources */,
 				2F043F8A2046C60000B5E557 /* updatePostcodeReducer.swift in Sources */,
+				2F043F9C2048144900B5E557 /* present.swift in Sources */,
 				2FE8866420402B9D00E65ABE /* SearchService.swift in Sources */,
 				2F72B5BA20248CE1000F298B /* EffectFunc.swift in Sources */,
 				2F64373C20076CBB006D863F /* Action.swift in Sources */,

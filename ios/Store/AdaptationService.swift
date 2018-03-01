@@ -2,8 +2,8 @@ import Foundation
 import RxSwift
 
 struct AdaptationService: Getable {
-    let baseUrl = "https://state-service.appspot.com/assets/actions.json"
-    // let baseUrl = "https://us-central1-state-service.cloudfunctions.net/actions"
+    // let baseUrl = "https://state-service.appspot.com/assets/actions.json"
+    let baseUrl = "https://us-central1-state-service.cloudfunctions.net/actions"
     let queryItems: [URLQueryItem] = []
     let defaultResponse = AdaptationServiceResponse(actions: [])
     typealias ResponseType = AdaptationServiceResponse

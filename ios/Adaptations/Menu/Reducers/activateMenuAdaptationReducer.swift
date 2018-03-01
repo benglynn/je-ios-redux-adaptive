@@ -18,7 +18,7 @@ func activateMenuAdaptationReducer(currentSlice: CoreStateSlice, dispatchedActio
                 ScreenFamily(screen: .Restaurants, children: [.MenuHome, .Area]),
                 ScreenFamily(screen: .Area, children: nil),
                 ],
-            effect: nil
+            effect: .searchEffect
         ),
         Route(
             pathPattern: .OrdersPath,

@@ -1,6 +1,7 @@
 import Foundation
 
 enum Effect: String, Codable {
+    case presentRouteEffect
     case presentScreensEffect
     case removePresented
     case searchEffect
@@ -9,6 +10,7 @@ enum Effect: String, Codable {
 extension Effect {
     var call: EffectFunc {
         switch self {
+        case .presentRouteEffect: return ios.presentRouteEffect
         case .presentScreensEffect: return ios.presentScreensEffect
         case .removePresented: return ios.removePresentedScreensEffect
         case .searchEffect: return ios.searchEffect
