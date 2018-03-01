@@ -2,7 +2,7 @@ import Foundation
 
 struct State {
     let core: CoreStateSlice
-    let area: SearchStateSlice
+    let search: SearchStateSlice
     // Adapters add slices below
 }
 
@@ -11,12 +11,12 @@ extension State {
         if action.type == Action.initStateAction {
             self.init(
                 core: initialCoreStateSlice,
-                area: initialSearchStateSlice
+                search: initialSearchStateSlice
             )
         } else {
             self.init(
                 core: current.core.reduce(action),
-                area: current.area.reduce(action)
+                search: current.search.reduce(action)
             )
         }
     }

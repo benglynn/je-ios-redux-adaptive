@@ -1,8 +1,8 @@
 import Foundation
 
 enum Optional<T> {
-    case noValue
-    case value(value: T)
+    case none
+    case some(value: T)
 }
 
 func value<T>(from optionalOptional: Optional<T>?, or oldValue: T?) -> T? {
@@ -10,7 +10,7 @@ func value<T>(from optionalOptional: Optional<T>?, or oldValue: T?) -> T? {
         return oldValue
     }
     switch optionalOptional! {
-    case .noValue: return nil
-    case .value(let value): return value
+    case .none: return nil
+    case .some(let value): return value
     }
 }

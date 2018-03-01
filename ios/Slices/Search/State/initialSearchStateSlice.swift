@@ -2,7 +2,7 @@ import Foundation
 
 let initialSearchStateSlice = SearchStateSlice(
     postcode: nil,
-    restaurants: [],
+    restaurants: nil,
     reducers: [
         .updatePostcodeAction: .updatePostcodeReducer,
         .updateRestaurantsAction: .updateRestaurantsReducer

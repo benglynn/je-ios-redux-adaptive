@@ -24,6 +24,7 @@
 		2F043F8F2046C74200B5E557 /* UpdatePostcodeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F8E2046C74200B5E557 /* UpdatePostcodeAction.swift */; };
 		2F043F912046C79700B5E557 /* UpdateRestaurantsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F902046C79700B5E557 /* UpdateRestaurantsAction.swift */; };
 		2F043F942046F63B00B5E557 /* Restaurant+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F932046F63A00B5E557 /* Restaurant+Equatable.swift */; };
+		2F043F982048022800B5E557 /* Store+selectRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F972048022800B5E557 /* Store+selectRestaurants.swift */; };
 		2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */; };
 		2F105E912003B5800093F2D8 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* Area.storyboard */; };
 		2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F105E9220052B960093F2D8 /* OrdersViewController.swift */; };
@@ -136,6 +137,7 @@
 		2F043F8E2046C74200B5E557 /* UpdatePostcodeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePostcodeAction.swift; sourceTree = "<group>"; };
 		2F043F902046C79700B5E557 /* UpdateRestaurantsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRestaurantsAction.swift; sourceTree = "<group>"; };
 		2F043F932046F63A00B5E557 /* Restaurant+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant+Equatable.swift"; sourceTree = "<group>"; };
+		2F043F972048022800B5E557 /* Store+selectRestaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+selectRestaurants.swift"; sourceTree = "<group>"; };
 		2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurants.storyboard; sourceTree = "<group>"; };
 		2F105E902003B5800093F2D8 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2F105E9220052B960093F2D8 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				2F043F742044528F00B5E557 /* SearchStateSlice.swift */,
+				2F043F972048022800B5E557 /* Store+selectRestaurants.swift */,
 				2F043F7F2046C14500B5E557 /* SearchStateSlice+reduce.swift */,
 				2F043F872046C32E00B5E557 /* SearchStateSlice+cloneWith.swift */,
 				2F043F792044563000B5E557 /* initialSearchStateSlice.swift */,
@@ -883,6 +886,7 @@
 				2FAE84C620237443008F31EA /* Actionable.swift in Sources */,
 				2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */,
 				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
+				2F043F982048022800B5E557 /* Store+selectRestaurants.swift in Sources */,
 				2FBC4B7720260C2E00C7F4D8 /* initialPresenter.swift in Sources */,
 				2F64374B2007B981006D863F /* Reducible.swift in Sources */,
 				2FAE84B0202369CA008F31EA /* ActivateAdaptationAction.swift in Sources */,
