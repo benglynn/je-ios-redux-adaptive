@@ -27,6 +27,8 @@
 		2F043F982048022800B5E557 /* Store+selectRestaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F972048022800B5E557 /* Store+selectRestaurants.swift */; };
 		2F043F9A2048140100B5E557 /* presentRouteEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F992048140100B5E557 /* presentRouteEffect.swift */; };
 		2F043F9C2048144900B5E557 /* present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F9B2048144900B5E557 /* present.swift */; };
+		2F043F9F204852DD00B5E557 /* ResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F043F9D204852DD00B5E557 /* ResultCollectionViewCell.swift */; };
+		2F043FA0204852DD00B5E557 /* ResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F043F9E204852DD00B5E557 /* ResultCollectionViewCell.xib */; };
 		2F105E8E2003AFBC0093F2D8 /* Restaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */; };
 		2F105E912003B5800093F2D8 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F105E902003B5800093F2D8 /* Area.storyboard */; };
 		2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F105E9220052B960093F2D8 /* OrdersViewController.swift */; };
@@ -142,6 +144,8 @@
 		2F043F972048022800B5E557 /* Store+selectRestaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+selectRestaurants.swift"; sourceTree = "<group>"; };
 		2F043F992048140100B5E557 /* presentRouteEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentRouteEffect.swift; sourceTree = "<group>"; };
 		2F043F9B2048144900B5E557 /* present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = present.swift; sourceTree = "<group>"; };
+		2F043F9D204852DD00B5E557 /* ResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F043F9E204852DD00B5E557 /* ResultCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultCollectionViewCell.xib; sourceTree = "<group>"; };
 		2F105E8D2003AFBC0093F2D8 /* Restaurants.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurants.storyboard; sourceTree = "<group>"; };
 		2F105E902003B5800093F2D8 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2F105E9220052B960093F2D8 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 			children = (
 				2F105E902003B5800093F2D8 /* Area.storyboard */,
 				2FD738B520090D7C00F08F57 /* AreaViewController.swift */,
+				2F043F9D204852DD00B5E557 /* ResultCollectionViewCell.swift */,
+				2F043F9E204852DD00B5E557 /* ResultCollectionViewCell.xib */,
 			);
 			path = Area;
 			sourceTree = "<group>";
@@ -761,6 +767,7 @@
 				2F54A3AE1FDED11F006DA319 /* Ubuntu-MediumItalic.ttf in Resources */,
 				2F54A3A81FDED11F006DA319 /* HindVadodara-Regular.ttf in Resources */,
 				2F54A3A61FDED11F006DA319 /* HindVadodara-Light.ttf in Resources */,
+				2F043FA0204852DD00B5E557 /* ResultCollectionViewCell.xib in Resources */,
 				2F9A05ED20160AF100D1B4D6 /* MenuHome.storyboard in Resources */,
 				2F1C95381FFFBFD200684F4B /* Orders.storyboard in Resources */,
 				2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */,
@@ -890,6 +897,7 @@
 				2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */,
 				2F9A05F32016171500D1B4D6 /* PresentMenuAction.swift in Sources */,
 				2FAE84C620237443008F31EA /* Actionable.swift in Sources */,
+				2F043F9F204852DD00B5E557 /* ResultCollectionViewCell.swift in Sources */,
 				2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */,
 				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
 				2F043F982048022800B5E557 /* Store+selectRestaurants.swift in Sources */,
