@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,17 +20,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="267" height="106"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kD4-DZ-XFH">
-                        <rect key="frame" x="116.5" y="42.5" width="34" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kD4-DZ-XFH">
+                        <rect key="frame" x="16" y="16" width="235" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="kD4-DZ-XFH" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="160-BZ-0Yf"/>
-                <constraint firstItem="kD4-DZ-XFH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="6Gu-9G-YCK"/>
+                <constraint firstItem="kD4-DZ-XFH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="DrV-uY-Y87"/>
+                <constraint firstAttribute="trailingMargin" secondItem="kD4-DZ-XFH" secondAttribute="trailing" id="gxK-oS-I1a"/>
+                <constraint firstItem="kD4-DZ-XFH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" id="tay-WY-31g"/>
             </constraints>
             <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
