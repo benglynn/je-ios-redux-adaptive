@@ -35,6 +35,8 @@
 		2F1C95381FFFBFD200684F4B /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C95371FFFBFD200684F4B /* Orders.storyboard */; };
 		2F1C953B1FFFC34400684F4B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C953A1FFFC34400684F4B /* Settings.storyboard */; };
 		2F25ADD5204E9F7900609819 /* UIView+rotateForever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD4204E9F7900609819 /* UIView+rotateForever.swift */; };
+		2F25ADD7204EE47700609819 /* String+toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD6204EE47700609819 /* String+toDate.swift */; };
+		2F25ADD9204EE4A400609819 /* String+toTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD8204EE4A400609819 /* String+toTimeString.swift */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
 		2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070D200BF61700F928FF /* TabsTabBarController.swift */; };
 		2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070F200BF98900F928FF /* SettingsViewController.swift */; };
@@ -153,6 +155,8 @@
 		2F1C95371FFFBFD200684F4B /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
 		2F1C953A1FFFC34400684F4B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		2F25ADD4204E9F7900609819 /* UIView+rotateForever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+rotateForever.swift"; sourceTree = "<group>"; };
+		2F25ADD6204EE47700609819 /* String+toDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toDate.swift"; sourceTree = "<group>"; };
+		2F25ADD8204EE4A400609819 /* String+toTimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toTimeString.swift"; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
 		2F4E070D200BF61700F928FF /* TabsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsTabBarController.swift; sourceTree = "<group>"; };
 		2F4E070F200BF98900F928FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -484,6 +488,8 @@
 				2F55E8A31FD55C2A00BC52F0 /* LaunchScreen.storyboard */,
 				2F043F9B2048144900B5E557 /* present.swift */,
 				2F25ADD4204E9F7900609819 /* UIView+rotateForever.swift */,
+				2F25ADD6204EE47700609819 /* String+toDate.swift */,
+				2F25ADD8204EE4A400609819 /* String+toTimeString.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -911,6 +917,7 @@
 				2F64373E20078787006D863F /* CoreReducer.swift in Sources */,
 				2F9A05EF20160BBF00D1B4D6 /* MenuHomeViewController.swift in Sources */,
 				2F64373120062F7F006D863F /* StoreDepending.swift in Sources */,
+				2F25ADD9204EE4A400609819 /* String+toTimeString.swift in Sources */,
 				2FAE84B620236A57008F31EA /* UpdateIsAdaptedAction.swift in Sources */,
 				2F043F9A2048140100B5E557 /* presentRouteEffect.swift in Sources */,
 				2F4E0713200CE85700F928FF /* Presentable.swift in Sources */,
@@ -924,6 +931,7 @@
 				2FA4A431203DB1100087F46D /* AdaptationServiceResponse.swift in Sources */,
 				2F043F8C2046C61900B5E557 /* updateRestaurantsReducer.swift in Sources */,
 				2F043F8F2046C74200B5E557 /* UpdatePostcodeAction.swift in Sources */,
+				2F25ADD7204EE47700609819 /* String+toDate.swift in Sources */,
 				2FAE84BB20236E89008F31EA /* dismissLastScreenFamilyReducer.swift in Sources */,
 				2F9A05E92015D8D100D1B4D6 /* MenuViewController.swift in Sources */,
 				2F55E8F01FD58A7F00BC52F0 /* State.swift in Sources */,

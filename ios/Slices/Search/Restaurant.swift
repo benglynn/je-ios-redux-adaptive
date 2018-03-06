@@ -4,7 +4,7 @@ struct Restaurant: Codable {
     
     let cuisines: String
     let deliveryCost: Decimal
-    let deliveryStartTime: String
+    let deliveryStartTime: String?
     let drivingDistance: Double
     let isCollectNow: Bool
     let isDeliveryNow: Bool
@@ -20,7 +20,7 @@ struct Restaurant: Codable {
     init(_ serviceRestaurant: SearchServiceResponse.Restaurant, isOpen: Bool) {
         self.cuisines = serviceRestaurant.Cuisines.map { cuisine in cuisine.Name }.joined(separator: ", ")
         self.deliveryCost = serviceRestaurant.DeliveryCost
-        self.deliveryStartTime = serviceRestaurant.DeliveryStartTime
+        self.deliveryStartTime = serviceRestaurant.DeliveryStartTime.toDate()?.toTimeString()
         self.drivingDistance = serviceRestaurant.DriveDistance
         self.isCollectNow = serviceRestaurant.IsCollection
         self.isDeliveryNow = serviceRestaurant.IsDelivery
@@ -33,5 +33,4 @@ struct Restaurant: Codable {
         self.ratings = serviceRestaurant.RatingDetails.Count
         self.title = serviceRestaurant.Name
     }
-    
 }
