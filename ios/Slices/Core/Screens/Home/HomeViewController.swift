@@ -16,7 +16,7 @@ class HomeViewController: UIViewController, Presentable {
     @IBOutlet weak var contents: UIStackView!
     
     @IBAction func tapSearch(_ sender: Any) {
-        self.store.dispatch(UpdateRestaurantsAction(restuarnts: []))
+        self.store.dispatch(UpdateRestaurantsAction(restuarnts: nil))
         self.store.dispatch(UpdatePathAction(path: "bs14dj"))
     }
     

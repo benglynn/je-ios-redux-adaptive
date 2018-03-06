@@ -34,6 +34,7 @@
 		2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F105E9220052B960093F2D8 /* OrdersViewController.swift */; };
 		2F1C95381FFFBFD200684F4B /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C95371FFFBFD200684F4B /* Orders.storyboard */; };
 		2F1C953B1FFFC34400684F4B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C953A1FFFC34400684F4B /* Settings.storyboard */; };
+		2F25ADD5204E9F7900609819 /* UIView+rotateForever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD4204E9F7900609819 /* UIView+rotateForever.swift */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
 		2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070D200BF61700F928FF /* TabsTabBarController.swift */; };
 		2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070F200BF98900F928FF /* SettingsViewController.swift */; };
@@ -151,6 +152,7 @@
 		2F105E9220052B960093F2D8 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		2F1C95371FFFBFD200684F4B /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
 		2F1C953A1FFFC34400684F4B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		2F25ADD4204E9F7900609819 /* UIView+rotateForever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+rotateForever.swift"; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
 		2F4E070D200BF61700F928FF /* TabsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsTabBarController.swift; sourceTree = "<group>"; };
 		2F4E070F200BF98900F928FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 				2F55E89E1FD55C2A00BC52F0 /* RootView.storyboard */,
 				2F55E8A31FD55C2A00BC52F0 /* LaunchScreen.storyboard */,
 				2F043F9B2048144900B5E557 /* present.swift */,
+				2F25ADD4204E9F7900609819 /* UIView+rotateForever.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				2FAE84B220236A1E008F31EA /* DismissLastScreenFamilyAction.swift in Sources */,
 				2F043F802046C14500B5E557 /* SearchStateSlice+reduce.swift in Sources */,
 				2F043F842046C20200B5E557 /* CoreStateSlice+callSideEffects.swift in Sources */,
+				2F25ADD5204E9F7900609819 /* UIView+rotateForever.swift in Sources */,
 				2FAE84BF20236ECA008F31EA /* updateIsAdaptedReducer.swift in Sources */,
 				2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */,
 				2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */,

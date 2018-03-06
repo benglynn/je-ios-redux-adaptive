@@ -11,7 +11,7 @@ class RootViewController: UIViewController, PresentationRoot {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rotateForever(view: progress)
+        progress.rotateForever()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,15 +37,4 @@ class RootViewController: UIViewController, PresentationRoot {
             completion?()
         })
     }
-    
-    private func rotateForever(view: UIView, duration: Double = 0.4) {
-        UIView.animate(withDuration: duration, delay: 0, options: .curveLinear, animations: {
-            view.transform = view.transform.rotated(by: CGFloat(Double.pi))
-        }, completion: { [weak self] completed in
-            self?.rotateForever(view: view, duration: duration)
-        })
-    }
-
-
 }
-

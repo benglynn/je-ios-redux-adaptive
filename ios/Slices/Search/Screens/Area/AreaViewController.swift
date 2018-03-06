@@ -12,6 +12,7 @@ class AreaViewController: UIViewController, Presentable {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var progress: UIView!
     
     @IBAction func tapHome(_ sender: Any) {
         store.dispatch(UpdatePathAction(path: ""))
@@ -19,9 +20,16 @@ class AreaViewController: UIViewController, Presentable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        progress.rotateForever()
         let nib = UINib(nibName: "ResultCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "resultCell")
         _ = collectionView.rx.setDelegate(self)
+        
+        self.store.selectRestaurants()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { restaurants in
+                self.progress.isHidden = restaurants != nil
+            }).disposed(by: bag)
         
         self.store
             .selectRestaurants()
