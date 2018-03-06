@@ -7,7 +7,7 @@ class AreaViewController: UIViewController, Presentable {
     static let storyboardName = "Area"
     internal var store: Store!
     let bag = DisposeBag()
-    let minCellWidth = CGFloat(380)
+    let minCellWidth = CGFloat(300)
     let cellHeight = CGFloat(200)
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -35,7 +35,7 @@ class AreaViewController: UIViewController, Presentable {
 
 extension AreaViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let frameWidth = self.view.frame.width
+        let frameWidth = self.view.safeAreaLayoutGuide.layoutFrame.width // self.view.frame.width
         let width = frameWidth / round(frameWidth / minCellWidth)
         return CGSize(width: width, height: cellHeight)
     }
