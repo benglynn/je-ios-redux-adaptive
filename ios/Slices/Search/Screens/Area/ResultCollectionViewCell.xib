@@ -172,7 +172,7 @@
                                                 <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kD5-MS-Ihz">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kD5-MS-Ihz" userLabel="Offer">
                                                 <rect key="frame" x="27" y="31" width="110" height="25"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obw-jT-4kC" userLabel="Space">
@@ -182,19 +182,27 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysX-NN-Mce" userLabel="Banner">
                                                         <rect key="frame" x="50" y="0.0" width="60" height="25"/>
                                                         <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tag" translatesAutoresizingMaskIntoConstraints="NO" id="chW-iA-zrB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="25" id="dQj-xa-hVb"/>
+                                                                </constraints>
+                                                            </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" text="2 for 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9p-v8-4tp">
-                                                                <rect key="frame" x="10" y="0.0" width="35" height="21"/>
+                                                                <rect key="frame" x="10" y="2" width="35" height="21"/>
                                                                 <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.83921568627450982" green="0.22745098039215686" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="b9p-v8-4tp" secondAttribute="trailing" constant="15" id="1Wt-zi-lSB"/>
-                                                            <constraint firstAttribute="height" constant="25" id="Lt5-wy-oqh"/>
+                                                            <constraint firstAttribute="trailing" secondItem="chW-iA-zrB" secondAttribute="trailing" id="6RE-r7-KVh"/>
+                                                            <constraint firstItem="chW-iA-zrB" firstAttribute="top" secondItem="ysX-NN-Mce" secondAttribute="top" id="V2I-CE-h0Y"/>
+                                                            <constraint firstAttribute="height" secondItem="chW-iA-zrB" secondAttribute="height" id="gXK-Mg-gpp"/>
                                                             <constraint firstItem="b9p-v8-4tp" firstAttribute="leading" secondItem="ysX-NN-Mce" secondAttribute="leading" constant="10" id="hLp-RJ-O8m"/>
-                                                            <constraint firstItem="b9p-v8-4tp" firstAttribute="top" secondItem="ysX-NN-Mce" secondAttribute="top" id="tC1-RR-hXv"/>
+                                                            <constraint firstItem="b9p-v8-4tp" firstAttribute="top" secondItem="ysX-NN-Mce" secondAttribute="top" constant="2" id="tC1-RR-hXv"/>
+                                                            <constraint firstItem="chW-iA-zrB" firstAttribute="leading" secondItem="ysX-NN-Mce" secondAttribute="leading" id="vVo-Cx-Otw"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -229,6 +237,8 @@
                 <outlet property="deliveryCost" destination="BwJ-Ev-5BI" id="1pj-8h-sXt"/>
                 <outlet property="deliveryTime" destination="WiG-fp-MVh" id="6aY-7Y-3Gs"/>
                 <outlet property="distance" destination="Qya-47-F8l" id="cXg-Nn-hkc"/>
+                <outlet property="offer" destination="kD5-MS-Ihz" id="MhU-nn-78O"/>
+                <outlet property="offerText" destination="b9p-v8-4tp" id="m8v-S0-Dzn"/>
                 <outlet property="preOrder" destination="jIh-Nr-jmO" id="v6q-WU-Yu3"/>
                 <outlet property="title" destination="hjb-Oa-2nK" id="ejg-3b-oF2"/>
             </connections>
@@ -239,5 +249,6 @@
         <image name="pin" width="11" height="14"/>
         <image name="placeholder" width="52" height="52"/>
         <image name="stars-background" width="96" height="12"/>
+        <image name="tag" width="17" height="25"/>
     </resources>
 </document>
