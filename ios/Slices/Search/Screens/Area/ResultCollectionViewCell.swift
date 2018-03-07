@@ -27,7 +27,6 @@ class ResultCollectionViewCell: UICollectionViewCell {
         deliveryTime.text = "Delivering from \(restaurant.deliveryStartTime ?? "")"
         deliveryCost.text = restaurant.deliveryCost == 0 ? "Delivery: Free" : "Delivery £\(restaurant.deliveryCost)"
         offerText.text = "\(restaurant.percentOff)% off"
-        print(restaurant.logUrl)
         logo.downloaded(fromLocation: restaurant.logUrl)
     }
 

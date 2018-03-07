@@ -38,6 +38,7 @@
 		2F25ADD7204EE47700609819 /* String+toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD6204EE47700609819 /* String+toDate.swift */; };
 		2F25ADD9204EE4A400609819 /* String+toTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD8204EE4A400609819 /* String+toTimeString.swift */; };
 		2F25ADDD204FAA9100609819 /* UIImageView+download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADDC204FAA9100609819 /* UIImageView+download.swift */; };
+		2F25ADDF204FAFC000609819 /* LogoUiImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
 		2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070D200BF61700F928FF /* TabsTabBarController.swift */; };
 		2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070F200BF98900F928FF /* SettingsViewController.swift */; };
@@ -159,6 +160,7 @@
 		2F25ADD6204EE47700609819 /* String+toDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toDate.swift"; sourceTree = "<group>"; };
 		2F25ADD8204EE4A400609819 /* String+toTimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toTimeString.swift"; sourceTree = "<group>"; };
 		2F25ADDC204FAA9100609819 /* UIImageView+download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+download.swift"; sourceTree = "<group>"; };
+		2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoUiImageView.swift; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
 		2F4E070D200BF61700F928FF /* TabsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsTabBarController.swift; sourceTree = "<group>"; };
 		2F4E070F200BF98900F928FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				2FD738B520090D7C00F08F57 /* AreaViewController.swift */,
 				2F043F9D204852DD00B5E557 /* ResultCollectionViewCell.swift */,
 				2F043F9E204852DD00B5E557 /* ResultCollectionViewCell.xib */,
+				2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */,
 			);
 			path = Area;
 			sourceTree = "<group>";
@@ -953,6 +956,7 @@
 				2FEF7701203F1ACD00BFE3CE /* Requestable.swift in Sources */,
 				2F043F7E2045BD2000B5E557 /* OverriddenOptional.swift in Sources */,
 				2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */,
+				2F25ADDF204FAFC000609819 /* LogoUiImageView.swift in Sources */,
 				2FAE84B820236ADB008F31EA /* PresentResetScreenAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
