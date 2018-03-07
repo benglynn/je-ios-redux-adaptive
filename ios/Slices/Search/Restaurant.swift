@@ -26,7 +26,7 @@ struct Restaurant: Codable {
         self.isDeliveryNow = serviceRestaurant.IsDelivery
         self.isOpen = isOpen
         self.isSponsored = serviceRestaurant.IsSponsored
-        self.logUrl = serviceRestaurant.LogoUrl
+        self.logUrl = serviceRestaurant.LogoUrl.replacingOccurrences(of: "http://", with: "https://")
         self.openingTime = serviceRestaurant.OpeningTime
         self.percentOff = serviceRestaurant.OfferPercent
         self.rating = serviceRestaurant.RatingDetails.StarRating

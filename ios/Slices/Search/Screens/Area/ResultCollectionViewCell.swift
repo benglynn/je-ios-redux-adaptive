@@ -11,6 +11,8 @@ class ResultCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var preOrder: UILabel!
     @IBOutlet weak var offer: UIStackView!
     @IBOutlet weak var offerText: UILabel!
+    @IBOutlet weak var sponsored: UILabel!
+    @IBOutlet weak var logo: UIImageView!
     
     func update(_ restaurant: Restaurant) {
         title.text = restaurant.title
@@ -19,12 +21,14 @@ class ResultCollectionViewCell: UICollectionViewCell {
         collectNow.isHidden = !(restaurant.isCollectNow && !restaurant.isDeliveryNow)
         deliveryCost.isHidden = !restaurant.isDeliveryNow
         deliveryTime.isHidden = !(!restaurant.isCollectNow && !restaurant.isDeliveryNow && restaurant.deliveryStartTime != nil)
-        preOrder.isHidden = restaurant.isOpen
-        deliveryTime.text = "Delivering from \(restaurant.deliveryStartTime ?? "")"
-        deliveryCost.text = "Delivery £\(restaurant.deliveryCost)"
         offer.isHidden = restaurant.percentOff == 0
+        preOrder.isHidden = restaurant.isOpen
+        sponsored.isHidden = !restaurant.isSponsored
+        deliveryTime.text = "Delivering from \(restaurant.deliveryStartTime ?? "")"
+        deliveryCost.text = restaurant.deliveryCost == 0 ? "Delivery: Free" : "Delivery £\(restaurant.deliveryCost)"
         offerText.text = "\(restaurant.percentOff)% off"
-        
+        print(restaurant.logUrl)
+        logo.downloaded(fromLocation: restaurant.logUrl)
     }
 
 }

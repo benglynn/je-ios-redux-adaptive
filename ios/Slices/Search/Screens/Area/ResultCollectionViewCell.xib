@@ -188,8 +188,8 @@
                                                                     <constraint firstAttribute="height" constant="25" id="dQj-xa-hVb"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" text="2 for 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9p-v8-4tp">
-                                                                <rect key="frame" x="10" y="2" width="35" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="2 for 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9p-v8-4tp">
+                                                                <rect key="frame" x="10" y="1" width="35" height="21"/>
                                                                 <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -201,7 +201,7 @@
                                                             <constraint firstItem="chW-iA-zrB" firstAttribute="top" secondItem="ysX-NN-Mce" secondAttribute="top" id="V2I-CE-h0Y"/>
                                                             <constraint firstAttribute="height" secondItem="chW-iA-zrB" secondAttribute="height" id="gXK-Mg-gpp"/>
                                                             <constraint firstItem="b9p-v8-4tp" firstAttribute="leading" secondItem="ysX-NN-Mce" secondAttribute="leading" constant="10" id="hLp-RJ-O8m"/>
-                                                            <constraint firstItem="b9p-v8-4tp" firstAttribute="top" secondItem="ysX-NN-Mce" secondAttribute="top" constant="2" id="tC1-RR-hXv"/>
+                                                            <constraint firstItem="b9p-v8-4tp" firstAttribute="top" secondItem="ysX-NN-Mce" secondAttribute="top" constant="1" id="tC1-RR-hXv"/>
                                                             <constraint firstItem="chW-iA-zrB" firstAttribute="leading" secondItem="ysX-NN-Mce" secondAttribute="leading" id="vVo-Cx-Otw"/>
                                                         </constraints>
                                                     </view>
@@ -237,9 +237,11 @@
                 <outlet property="deliveryCost" destination="BwJ-Ev-5BI" id="1pj-8h-sXt"/>
                 <outlet property="deliveryTime" destination="WiG-fp-MVh" id="6aY-7Y-3Gs"/>
                 <outlet property="distance" destination="Qya-47-F8l" id="cXg-Nn-hkc"/>
+                <outlet property="logo" destination="esK-aQ-kOy" id="fhH-WD-NGg"/>
                 <outlet property="offer" destination="kD5-MS-Ihz" id="MhU-nn-78O"/>
                 <outlet property="offerText" destination="b9p-v8-4tp" id="m8v-S0-Dzn"/>
                 <outlet property="preOrder" destination="jIh-Nr-jmO" id="v6q-WU-Yu3"/>
+                <outlet property="sponsored" destination="CUS-BD-dQd" id="1Uv-X4-X7t"/>
                 <outlet property="title" destination="hjb-Oa-2nK" id="ejg-3b-oF2"/>
             </connections>
             <point key="canvasLocation" x="281.5" y="121.5"/>

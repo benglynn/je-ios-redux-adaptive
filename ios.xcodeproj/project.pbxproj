@@ -37,6 +37,7 @@
 		2F25ADD5204E9F7900609819 /* UIView+rotateForever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD4204E9F7900609819 /* UIView+rotateForever.swift */; };
 		2F25ADD7204EE47700609819 /* String+toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD6204EE47700609819 /* String+toDate.swift */; };
 		2F25ADD9204EE4A400609819 /* String+toTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD8204EE4A400609819 /* String+toTimeString.swift */; };
+		2F25ADDD204FAA9100609819 /* UIImageView+download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADDC204FAA9100609819 /* UIImageView+download.swift */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
 		2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070D200BF61700F928FF /* TabsTabBarController.swift */; };
 		2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070F200BF98900F928FF /* SettingsViewController.swift */; };
@@ -157,6 +158,7 @@
 		2F25ADD4204E9F7900609819 /* UIView+rotateForever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+rotateForever.swift"; sourceTree = "<group>"; };
 		2F25ADD6204EE47700609819 /* String+toDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toDate.swift"; sourceTree = "<group>"; };
 		2F25ADD8204EE4A400609819 /* String+toTimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toTimeString.swift"; sourceTree = "<group>"; };
+		2F25ADDC204FAA9100609819 /* UIImageView+download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+download.swift"; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
 		2F4E070D200BF61700F928FF /* TabsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsTabBarController.swift; sourceTree = "<group>"; };
 		2F4E070F200BF98900F928FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 				2F25ADD4204E9F7900609819 /* UIView+rotateForever.swift */,
 				2F25ADD6204EE47700609819 /* String+toDate.swift */,
 				2F25ADD8204EE4A400609819 /* String+toTimeString.swift */,
+				2F25ADDC204FAA9100609819 /* UIImageView+download.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -909,6 +912,7 @@
 				2FAE84C620237443008F31EA /* Actionable.swift in Sources */,
 				2F043F9F204852DD00B5E557 /* ResultCollectionViewCell.swift in Sources */,
 				2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */,
+				2F25ADDD204FAA9100609819 /* UIImageView+download.swift in Sources */,
 				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
 				2F043F982048022800B5E557 /* Store+selectRestaurants.swift in Sources */,
 				2FBC4B7720260C2E00C7F4D8 /* initialPresenter.swift in Sources */,
