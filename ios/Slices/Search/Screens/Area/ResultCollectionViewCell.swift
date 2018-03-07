@@ -13,6 +13,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var offerText: UILabel!
     @IBOutlet weak var sponsored: UILabel!
     @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var ratings: UILabel!
     
     func update(_ restaurant: Restaurant) {
         title.text = restaurant.title
@@ -28,6 +29,17 @@ class ResultCollectionViewCell: UICollectionViewCell {
         deliveryCost.text = restaurant.deliveryCost == 0 ? "Delivery: Free" : "Delivery £\(restaurant.deliveryCost)"
         offerText.text = "\(restaurant.percentOff)% off"
         logo.downloaded(fromLocation: restaurant.logUrl)
+        ratings.attributedText = newAttributedText(from: restaurant.ratings, matching: ratings)
+    }
+    
+    func newAttributedText(from ratings: Int32, matching label: UILabel) -> NSAttributedString {
+         let commaAttributes = label.attributedText?.attributes(at: 0, effectiveRange: nil)
+        let numberAttributes = label.attributedText?.attributes(at: 1, effectiveRange: nil)
+        let digitsCount = String(ratings).count
+        let newRatings = NSMutableAttributedString(string: "(\(ratings))", attributes: numberAttributes)
+        newRatings.setAttributes(commaAttributes, range: NSRange(location: 0, length: 1))
+        newRatings.setAttributes(commaAttributes, range: NSRange(location: digitsCount+1, length: 1))
+        return newRatings        
     }
 
 }

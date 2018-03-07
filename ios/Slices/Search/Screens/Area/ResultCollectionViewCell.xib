@@ -67,7 +67,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="n4m-hj-zIO" userLabel="Details">
-                                        <rect key="frame" x="68" y="0.0" width="300" height="113"/>
+                                        <rect key="frame" x="68" y="0.0" width="300" height="122"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="HHX-qb-DK9">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="18"/>
@@ -89,18 +89,18 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-hd-feS" userLabel="Rating">
-                                                <rect key="frame" x="0.0" y="23" width="300" height="12"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-hd-feS" userLabel="Rating">
+                                                <rect key="frame" x="0.0" y="23" width="300" height="21"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars-background" translatesAutoresizingMaskIntoConstraints="NO" id="Wb1-vC-b2Q">
-                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="12"/>
+                                                        <rect key="frame" x="0.0" y="4.5" width="96" height="12"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="12" id="5t1-Xw-pkk"/>
                                                             <constraint firstAttribute="width" constant="96" id="znI-f4-8v1"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p66-BH-R2S">
-                                                        <rect key="frame" x="106" y="0.0" width="194" height="12"/>
+                                                        <rect key="frame" x="106" y="0.0" width="183" height="21"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="(">
                                                                 <attributes>
@@ -124,16 +124,24 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9H2-Aw-MIi" userLabel="Space">
+                                                        <rect key="frame" x="299" y="0.5" width="1" height="20"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="LED-su-Cef"/>
+                                                            <constraint firstAttribute="width" constant="1" id="x0K-hc-crR"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgers, Shushi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lv-e6-hH0">
-                                                <rect key="frame" x="0.0" y="40" width="300" height="21"/>
+                                                <rect key="frame" x="0.0" y="49" width="300" height="21"/>
                                                 <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kNi-ac-1O9" userLabel="Fulfillment">
-                                                <rect key="frame" x="0.0" y="66" width="300" height="21"/>
+                                                <rect key="frame" x="0.0" y="75" width="300" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collect now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsL-4J-orC">
                                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="21"/>
@@ -156,7 +164,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-order now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIh-Nr-jmO">
-                                                <rect key="frame" x="0.0" y="92" width="300" height="21"/>
+                                                <rect key="frame" x="0.0" y="101" width="300" height="21"/>
                                                 <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                                 <color key="textColor" red="0.15294117647058825" green="0.44313725490196076" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -241,6 +249,7 @@
                 <outlet property="offer" destination="kD5-MS-Ihz" id="MhU-nn-78O"/>
                 <outlet property="offerText" destination="b9p-v8-4tp" id="m8v-S0-Dzn"/>
                 <outlet property="preOrder" destination="jIh-Nr-jmO" id="v6q-WU-Yu3"/>
+                <outlet property="ratings" destination="p66-BH-R2S" id="GOO-LP-SAG"/>
                 <outlet property="sponsored" destination="CUS-BD-dQd" id="1Uv-X4-X7t"/>
                 <outlet property="title" destination="hjb-Oa-2nK" id="ejg-3b-oF2"/>
             </connections>
