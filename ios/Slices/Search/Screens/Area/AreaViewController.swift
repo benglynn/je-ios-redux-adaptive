@@ -39,6 +39,12 @@ class AreaViewController: UIViewController, Presentable {
             }
             .disposed(by: bag)
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        print("Invalidating layout")
+        flowLayout.invalidateLayout()
+    }
 }
 
 extension AreaViewController: UICollectionViewDelegateFlowLayout {
