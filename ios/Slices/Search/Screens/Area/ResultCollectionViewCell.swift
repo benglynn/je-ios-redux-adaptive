@@ -14,6 +14,8 @@ class ResultCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var sponsored: UILabel!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var ratings: UILabel!
+    @IBOutlet weak var stars: RatingsView!
+    @IBOutlet weak var contents: UIView!
     
     func update(_ restaurant: Restaurant) {
         title.text = restaurant.title
@@ -30,6 +32,8 @@ class ResultCollectionViewCell: UICollectionViewCell {
         offerText.text = "\(restaurant.percentOff)% off"
         logo.downloaded(fromLocation: restaurant.logUrl)
         ratings.attributedText = newAttributedText(from: restaurant.ratings, matching: ratings)
+        stars.render(rating: restaurant.rating)
+        setNeedsLayout()
     }
     
     func newAttributedText(from ratings: Int32, matching label: UILabel) -> NSAttributedString {

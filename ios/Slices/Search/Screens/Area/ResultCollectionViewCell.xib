@@ -30,7 +30,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="553" height="261"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLH-mj-GB8" userLabel="ContentView">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLH-mj-GB8" userLabel="Contents">
                         <rect key="frame" x="0.0" y="0.0" width="553" height="261"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RxG-wz-KeX">
@@ -92,15 +92,16 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-hd-feS" userLabel="Rating">
                                                 <rect key="frame" x="0.0" y="23" width="300" height="21"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars-background" translatesAutoresizingMaskIntoConstraints="NO" id="Wb1-vC-b2Q">
-                                                        <rect key="frame" x="0.0" y="4.5" width="96" height="12"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNv-lc-HpP" userLabel="RatingsView" customClass="RatingsView" customModule="ios" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="2.5" width="96" height="16"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="12" id="5t1-Xw-pkk"/>
-                                                            <constraint firstAttribute="width" constant="96" id="znI-f4-8v1"/>
+                                                            <constraint firstAttribute="height" constant="16" id="BAC-cX-GGN"/>
+                                                            <constraint firstAttribute="width" constant="96" id="iAT-oa-hqI"/>
                                                         </constraints>
-                                                    </imageView>
+                                                    </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p66-BH-R2S">
-                                                        <rect key="frame" x="106" y="0.0" width="183" height="21"/>
+                                                        <rect key="frame" x="106" y="0.0" width="194" height="21"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="(">
                                                                 <attributes>
@@ -124,14 +125,6 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9H2-Aw-MIi" userLabel="Space">
-                                                        <rect key="frame" x="299" y="0.5" width="1" height="20"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="LED-su-Cef"/>
-                                                            <constraint firstAttribute="width" constant="1" id="x0K-hc-crR"/>
-                                                        </constraints>
-                                                    </view>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgers, Shushi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lv-e6-hH0">
@@ -181,23 +174,23 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kD5-MS-Ihz" userLabel="Offer">
-                                                <rect key="frame" x="27" y="31" width="110" height="25"/>
+                                                <rect key="frame" x="21.5" y="31" width="115.5" height="25"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obw-jT-4kC" userLabel="Space">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="25"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysX-NN-Mce" userLabel="Banner">
-                                                        <rect key="frame" x="50" y="0.0" width="60" height="25"/>
+                                                        <rect key="frame" x="50" y="0.0" width="65.5" height="25"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tag" translatesAutoresizingMaskIntoConstraints="NO" id="chW-iA-zrB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="dQj-xa-hVb"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="2 for 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9p-v8-4tp">
-                                                                <rect key="frame" x="10" y="1" width="35" height="21"/>
+                                                                <rect key="frame" x="10" y="1" width="40.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -241,6 +234,7 @@
             <size key="customSize" width="553" height="261"/>
             <connections>
                 <outlet property="collectNow" destination="NsL-4J-orC" id="CyG-x5-x0U"/>
+                <outlet property="contents" destination="ZLH-mj-GB8" id="vk4-ZQ-a7Q"/>
                 <outlet property="cuisines" destination="2lv-e6-hH0" id="aVK-ml-gFk"/>
                 <outlet property="deliveryCost" destination="BwJ-Ev-5BI" id="1pj-8h-sXt"/>
                 <outlet property="deliveryTime" destination="WiG-fp-MVh" id="6aY-7Y-3Gs"/>
@@ -251,6 +245,7 @@
                 <outlet property="preOrder" destination="jIh-Nr-jmO" id="v6q-WU-Yu3"/>
                 <outlet property="ratings" destination="p66-BH-R2S" id="GOO-LP-SAG"/>
                 <outlet property="sponsored" destination="CUS-BD-dQd" id="1Uv-X4-X7t"/>
+                <outlet property="stars" destination="zNv-lc-HpP" id="Rz3-D5-xqW"/>
                 <outlet property="title" destination="hjb-Oa-2nK" id="ejg-3b-oF2"/>
             </connections>
             <point key="canvasLocation" x="281.5" y="121.5"/>
@@ -259,7 +254,6 @@
     <resources>
         <image name="pin" width="11" height="14"/>
         <image name="placeholder" width="52" height="52"/>
-        <image name="stars-background" width="96" height="12"/>
         <image name="tag" width="17" height="25"/>
     </resources>
 </document>

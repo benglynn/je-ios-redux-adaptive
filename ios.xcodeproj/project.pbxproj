@@ -39,6 +39,9 @@
 		2F25ADD9204EE4A400609819 /* String+toTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADD8204EE4A400609819 /* String+toTimeString.swift */; };
 		2F25ADDD204FAA9100609819 /* UIImageView+download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADDC204FAA9100609819 /* UIImageView+download.swift */; };
 		2F25ADDF204FAFC000609819 /* LogoUiImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */; };
+		2F25ADE1204FF0AE00609819 /* NibOwning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADE0204FF0AE00609819 /* NibOwning.swift */; };
+		2F25ADE3204FF11400609819 /* RatingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F25ADE2204FF11400609819 /* RatingsView.xib */; };
+		2F25ADE5204FF13900609819 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F25ADE4204FF13900609819 /* RatingsView.swift */; };
 		2F4B1D571FFE2E44003CDF47 /* AdaptationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */; };
 		2F4E070E200BF61700F928FF /* TabsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070D200BF61700F928FF /* TabsTabBarController.swift */; };
 		2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070F200BF98900F928FF /* SettingsViewController.swift */; };
@@ -161,6 +164,9 @@
 		2F25ADD8204EE4A400609819 /* String+toTimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+toTimeString.swift"; sourceTree = "<group>"; };
 		2F25ADDC204FAA9100609819 /* UIImageView+download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+download.swift"; sourceTree = "<group>"; };
 		2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoUiImageView.swift; sourceTree = "<group>"; };
+		2F25ADE0204FF0AE00609819 /* NibOwning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwning.swift; sourceTree = "<group>"; };
+		2F25ADE2204FF11400609819 /* RatingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingsView.xib; sourceTree = "<group>"; };
+		2F25ADE4204FF13900609819 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		2F4B1D561FFE2E44003CDF47 /* AdaptationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationService.swift; sourceTree = "<group>"; };
 		2F4E070D200BF61700F928FF /* TabsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsTabBarController.swift; sourceTree = "<group>"; };
 		2F4E070F200BF98900F928FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +328,8 @@
 				2F043F9D204852DD00B5E557 /* ResultCollectionViewCell.swift */,
 				2F043F9E204852DD00B5E557 /* ResultCollectionViewCell.xib */,
 				2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */,
+				2F25ADE2204FF11400609819 /* RatingsView.xib */,
+				2F25ADE4204FF13900609819 /* RatingsView.swift */,
 			);
 			path = Area;
 			sourceTree = "<group>";
@@ -484,6 +492,7 @@
 			children = (
 				2F55E9051FD5A46E00BC52F0 /* Screen.swift */,
 				2F4E0712200CE85700F928FF /* Presentable.swift */,
+				2F25ADE0204FF0AE00609819 /* NibOwning.swift */,
 				2F643732200652BE006D863F /* PathPattern.swift */,
 				2F55E89C1FD55C2A00BC52F0 /* RootViewController.swift */,
 				2FBC4B72202589C300C7F4D8 /* PresentationRoot.swift */,
@@ -805,6 +814,7 @@
 				2F55E8A01FD55C2A00BC52F0 /* RootView.storyboard in Resources */,
 				2F9A05E720125A7700D1B4D6 /* Menu.storyboard in Resources */,
 				2F559A481FFBE8E20024F7B1 /* Tabs.storyboard in Resources */,
+				2F25ADE3204FF11400609819 /* RatingsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -921,10 +931,12 @@
 				2FBC4B7720260C2E00C7F4D8 /* initialPresenter.swift in Sources */,
 				2F64374B2007B981006D863F /* Reducible.swift in Sources */,
 				2FAE84B0202369CA008F31EA /* ActivateAdaptationAction.swift in Sources */,
+				2F25ADE5204FF13900609819 /* RatingsView.swift in Sources */,
 				2F64373E20078787006D863F /* CoreReducer.swift in Sources */,
 				2F9A05EF20160BBF00D1B4D6 /* MenuHomeViewController.swift in Sources */,
 				2F64373120062F7F006D863F /* StoreDepending.swift in Sources */,
 				2F25ADD9204EE4A400609819 /* String+toTimeString.swift in Sources */,
+				2F25ADE1204FF0AE00609819 /* NibOwning.swift in Sources */,
 				2FAE84B620236A57008F31EA /* UpdateIsAdaptedAction.swift in Sources */,
 				2F043F9A2048140100B5E557 /* presentRouteEffect.swift in Sources */,
 				2F4E0713200CE85700F928FF /* Presentable.swift in Sources */,
