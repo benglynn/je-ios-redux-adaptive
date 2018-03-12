@@ -9,7 +9,6 @@ class ResultCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var deliveryCost: UILabel!
     @IBOutlet weak var deliveryTime: UILabel!
     @IBOutlet weak var preOrder: UILabel!
-    @IBOutlet weak var offer: UIStackView!
     @IBOutlet weak var offerText: UILabel!
     @IBOutlet weak var sponsored: UILabel!
     @IBOutlet weak var logo: UIImageView!
@@ -21,7 +20,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
         collectNow.isHidden = !(restaurant.isCollectNow && !restaurant.isDeliveryNow)
         deliveryCost.isHidden = !restaurant.isDeliveryNow
         deliveryTime.isHidden = !(!restaurant.isCollectNow && !restaurant.isDeliveryNow && restaurant.deliveryStartTime != nil)
-        offer.isHidden = !(restaurant.percentOff > 0)
+        // offer.isHidden = !(restaurant.percentOff > 0)
         preOrder.isHidden = restaurant.isOpen
         sponsored.isHidden = !restaurant.isSponsored
         title.text = restaurant.title
@@ -41,7 +40,7 @@ class ResultCollectionViewCell: UICollectionViewCell {
         collectNow.isHidden = true
         deliveryCost.isHidden = true
         deliveryTime.isHidden = true
-        offer.isHidden = true
+        // offer.isHidden = true
         preOrder.isHidden = true
         sponsored.isHidden = true
     }

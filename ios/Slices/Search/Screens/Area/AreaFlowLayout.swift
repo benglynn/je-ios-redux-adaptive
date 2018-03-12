@@ -3,6 +3,7 @@ import UIKit
 class AreaFlowLayout: UICollectionViewFlowLayout {
     
     var cellWidthCache = [CGFloat: CGFloat]()
+    var lastSafeWidth: CGFloat = 0
     
     func cellWidth(within safeWidth: CGFloat) -> CGFloat {
         let cached = cellWidthCache[safeWidth]
@@ -17,10 +18,15 @@ class AreaFlowLayout: UICollectionViewFlowLayout {
     }
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        let safeWidth: CGFloat = min(collectionView!.bounds.width, collectionView!.safeAreaLayoutGuide.layoutFrame.width)
+        if safeWidth != lastSafeWidth {
+            invalidateLayout()
+            lastSafeWidth = safeWidth
+        }
         let attributes = super.layoutAttributesForItem(at: indexPath)?.copy() as? UICollectionViewLayoutAttributes
         guard collectionView != nil else { return attributes }
-        let safeWidth = min(collectionView!.bounds.width, collectionView!.safeAreaLayoutGuide.layoutFrame.width)
-        attributes?.bounds.size.width = cellWidth(within: safeWidth)
+        let cellWidth = self.cellWidth(within: safeWidth)
+        attributes?.bounds.size.width = cellWidth
         return attributes
     }
     
