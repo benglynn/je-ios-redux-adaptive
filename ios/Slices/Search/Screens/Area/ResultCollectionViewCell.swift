@@ -18,15 +18,15 @@ class ResultCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var contents: UIView!
     
     func update(_ restaurant: Restaurant) {
-        title.text = restaurant.title
-        cuisines.text = restaurant.cuisines
-        distance.text = "\(restaurant.drivingDistance) mi"
         collectNow.isHidden = !(restaurant.isCollectNow && !restaurant.isDeliveryNow)
         deliveryCost.isHidden = !restaurant.isDeliveryNow
         deliveryTime.isHidden = !(!restaurant.isCollectNow && !restaurant.isDeliveryNow && restaurant.deliveryStartTime != nil)
-        offer.isHidden = restaurant.percentOff == 0
+        offer.isHidden = !(restaurant.percentOff > 0)
         preOrder.isHidden = restaurant.isOpen
         sponsored.isHidden = !restaurant.isSponsored
+        title.text = restaurant.title
+        cuisines.text = restaurant.cuisines
+        distance.text = "\(restaurant.drivingDistance) mi"
         deliveryTime.text = "Delivering from \(restaurant.deliveryStartTime ?? "")"
         deliveryCost.text = restaurant.deliveryCost == 0 ? "Delivery: Free" : "Delivery £\(restaurant.deliveryCost)"
         offerText.text = "\(restaurant.percentOff)% off"
@@ -34,6 +34,16 @@ class ResultCollectionViewCell: UICollectionViewCell {
         ratings.attributedText = newAttributedText(from: restaurant.ratings, matching: ratings)
         stars.render(rating: restaurant.rating)
         setNeedsLayout()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        collectNow.isHidden = true
+        deliveryCost.isHidden = true
+        deliveryTime.isHidden = true
+        offer.isHidden = true
+        preOrder.isHidden = true
+        sponsored.isHidden = true
     }
     
     func newAttributedText(from ratings: Int32, matching label: UILabel) -> NSAttributedString {
