@@ -7,9 +7,10 @@ class AreaViewController: UIViewController, Presentable {
     static let storyboardName = "Area"
     internal var store: Store!
     let bag = DisposeBag()
-    let minCellWidth = CGFloat(300)
-    let cellHeight = CGFloat(200)
     
+    let minCellWidth = CGFloat(300)
+    let cellHeight = CGFloat(150)
+//
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var progress: UIView!
@@ -42,15 +43,18 @@ class AreaViewController: UIViewController, Presentable {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        print("Invalidating layout")
         flowLayout.invalidateLayout()
     }
 }
 
 extension AreaViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let frameWidth = self.view.safeAreaLayoutGuide.layoutFrame.width // self.view.frame.width
-        let width = frameWidth / round(frameWidth / minCellWidth)
-        return CGSize(width: width, height: cellHeight)
+        let numCellsInRow = floor(
+            (view.safeAreaLayoutGuide.layoutFrame.width - flowLayout.sectionInset.left + flowLayout.minimumInteritemSpacing)
+                / (minCellWidth + flowLayout.minimumInteritemSpacing)
+        )
+        let interCellSpace = (numCellsInRow - 1) * flowLayout.minimumInteritemSpacing
+        let cellWidth = floor((view.safeAreaLayoutGuide.layoutFrame.width - flowLayout.sectionInset.left - interCellSpace - flowLayout.sectionInset.right) / numCellsInRow)
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 }
