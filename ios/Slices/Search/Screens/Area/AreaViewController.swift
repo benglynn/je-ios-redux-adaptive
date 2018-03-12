@@ -10,6 +10,7 @@ class AreaViewController: UIViewController, Presentable {
     
     let minCellWidth = CGFloat(300)
     let cellHeight = CGFloat(150)
+    let nib = UINib(nibName: "ResultCollectionViewCell", bundle: nil)
 //
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
@@ -21,17 +22,22 @@ class AreaViewController: UIViewController, Presentable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        progress.rotateForever()
-        let nib = UINib(nibName: "ResultCollectionViewCell", bundle: nil)
+        setupProgress()
+        setupCollectionView()
+    }
+    
+    private func setupProgress() {
+    progress.rotateForever()
+    self.store.selectRestaurants()
+    .observeOn(MainScheduler.instance)
+    .subscribe(onNext: { restaurants in
+    self.progress.isHidden = restaurants != nil
+    }).disposed(by: bag)
+    }
+    
+    private func setupCollectionView() {
         collectionView.register(nib, forCellWithReuseIdentifier: "resultCell")
         _ = collectionView.rx.setDelegate(self)
-        
-        self.store.selectRestaurants()
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { restaurants in
-                self.progress.isHidden = restaurants != nil
-            }).disposed(by: bag)
-        
         self.store
             .selectRestaurants()
             .map { restaurants in restaurants ?? [] }
