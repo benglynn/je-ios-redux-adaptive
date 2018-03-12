@@ -46,14 +46,9 @@ class ResultCollectionViewCell: UICollectionViewCell {
         sponsored.isHidden = true
     }
     
-    func preferredHeight(for restaurant: Restaurant, at width: CGFloat) -> CGFloat {
-        update(restaurant)
-        let farTooTall: CGFloat = 1000
-        frame.size = CGSize(width: width, height: farTooTall)
-        setNeedsLayout()
-        layoutIfNeeded()
-        let justTallEnough = self.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
-        return justTallEnough
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        layoutAttributes.bounds.size.height = systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        return layoutAttributes
     }
     
     private func newAttributedText(from ratings: Int32, matching label: UILabel) -> NSAttributedString {

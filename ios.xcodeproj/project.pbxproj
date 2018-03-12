@@ -47,6 +47,7 @@
 		2F4E0710200BF98900F928FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E070F200BF98900F928FF /* SettingsViewController.swift */; };
 		2F4E0713200CE85700F928FF /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E0712200CE85700F928FF /* Presentable.swift */; };
 		2F4E0719200E2BAF00F928FF /* activateMenuAdaptationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4E0718200E2BAF00F928FF /* activateMenuAdaptationReducer.swift */; };
+		2F5379302056AEA200EA3427 /* AreaFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53792F2056AEA200EA3427 /* AreaFlowLayout.swift */; };
 		2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */; };
 		2F54A3A61FDED11F006DA319 /* HindVadodara-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */; };
 		2F54A3A71FDED11F006DA319 /* HindVadodara-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */; };
@@ -172,6 +173,7 @@
 		2F4E070F200BF98900F928FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2F4E0712200CE85700F928FF /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		2F4E0718200E2BAF00F928FF /* activateMenuAdaptationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activateMenuAdaptationReducer.swift; sourceTree = "<group>"; };
+		2F53792F2056AEA200EA3427 /* AreaFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaFlowLayout.swift; sourceTree = "<group>"; };
 		2F54A39A1FDED11F006DA319 /* HindVadodara-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Bold.ttf"; sourceTree = "<group>"; };
 		2F54A39B1FDED11F006DA319 /* HindVadodara-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Light.ttf"; sourceTree = "<group>"; };
 		2F54A39C1FDED11F006DA319 /* HindVadodara-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HindVadodara-Medium.ttf"; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				2F105E902003B5800093F2D8 /* Area.storyboard */,
+				2F53792F2056AEA200EA3427 /* AreaFlowLayout.swift */,
 				2FD738B520090D7C00F08F57 /* AreaViewController.swift */,
 				2F043F9D204852DD00B5E557 /* ResultCollectionViewCell.swift */,
 				2F043F9E204852DD00B5E557 /* ResultCollectionViewCell.xib */,
@@ -925,6 +928,7 @@
 				2FAE84C620237443008F31EA /* Actionable.swift in Sources */,
 				2F043F9F204852DD00B5E557 /* ResultCollectionViewCell.swift in Sources */,
 				2F9A05F92016402400D1B4D6 /* MenuOrdersViewController.swift in Sources */,
+				2F5379302056AEA200EA3427 /* AreaFlowLayout.swift in Sources */,
 				2F25ADDD204FAA9100609819 /* UIImageView+download.swift in Sources */,
 				2F105E9320052B960093F2D8 /* OrdersViewController.swift in Sources */,
 				2F043F982048022800B5E557 /* Store+selectRestaurants.swift in Sources */,
