@@ -46,7 +46,17 @@ class ResultCollectionViewCell: UICollectionViewCell {
         sponsored.isHidden = true
     }
     
-    func newAttributedText(from ratings: Int32, matching label: UILabel) -> NSAttributedString {
+    func preferredHeight(for restaurant: Restaurant, at width: CGFloat) -> CGFloat {
+        update(restaurant)
+        let farTooTall: CGFloat = 1000
+        frame.size = CGSize(width: width, height: farTooTall)
+        setNeedsLayout()
+        layoutIfNeeded()
+        let justTallEnough = self.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        return justTallEnough
+    }
+    
+    private func newAttributedText(from ratings: Int32, matching label: UILabel) -> NSAttributedString {
          let commaAttributes = label.attributedText?.attributes(at: 0, effectiveRange: nil)
         let numberAttributes = label.attributedText?.attributes(at: 1, effectiveRange: nil)
         let digitsCount = String(ratings).count
