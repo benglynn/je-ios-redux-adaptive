@@ -32,7 +32,6 @@ class ResultCollectionViewCell: UICollectionViewCell {
         logo.downloaded(fromLocation: restaurant.logUrl)
         ratings.attributedText = newAttributedText(from: restaurant.ratings, matching: ratings)
         stars.render(rating: restaurant.rating)
-        setNeedsLayout()
     }
     
     override func prepareForReuse() {
