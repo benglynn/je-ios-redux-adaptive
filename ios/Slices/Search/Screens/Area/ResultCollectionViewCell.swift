@@ -1,4 +1,5 @@
 import UIKit
+import RxDataSources
 
 class ResultCollectionViewCell: UICollectionViewCell {
 
@@ -57,6 +58,11 @@ class ResultCollectionViewCell: UICollectionViewCell {
         newRatings.setAttributes(commaAttributes, range: NSRange(location: 0, length: 1))
         newRatings.setAttributes(commaAttributes, range: NSRange(location: digitsCount+1, length: 1))
         return newRatings        
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = 2.0
     }
 
 }

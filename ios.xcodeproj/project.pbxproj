@@ -82,6 +82,8 @@
 		2F72B5B820248BA1000F298B /* removePresentedScreensEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B720248BA1000F298B /* removePresentedScreensEffect.swift */; };
 		2F72B5BA20248CE1000F298B /* EffectFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5B920248CE1000F298B /* EffectFunc.swift */; };
 		2F72B5BC2024CBB1000F298B /* Effect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72B5BB2024CBB1000F298B /* Effect.swift */; };
+		2F85FA2420592CAE00A30748 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85FA2220592CAE00A30748 /* HeaderCollectionReusableView.swift */; };
+		2F85FA2520592CAE00A30748 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F85FA2320592CAE00A30748 /* HeaderCollectionReusableView.xib */; };
 		2F9A05E720125A7700D1B4D6 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05E620125A7700D1B4D6 /* Menu.storyboard */; };
 		2F9A05E92015D8D100D1B4D6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */; };
 		2F9A05ED20160AF100D1B4D6 /* MenuHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */; };
@@ -95,6 +97,8 @@
 		2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A05FF20164AC000D1B4D6 /* ResetViewController.swift */; };
 		2F9A060220164AEA00D1B4D6 /* Reset.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A060120164AEA00D1B4D6 /* Reset.storyboard */; };
 		2FA4A431203DB1100087F46D /* AdaptationServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA4A430203DB1100087F46D /* AdaptationServiceResponse.swift */; };
+		2FA7F55E2059C8F4009E2458 /* AreaSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7F55D2059C8F4009E2458 /* AreaSection.swift */; };
+		2FA7F5602059CAB3009E2458 /* AreaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7F55F2059CAB3009E2458 /* AreaData.swift */; };
 		2FAE84AE20236968008F31EA /* InitialAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84AD20236968008F31EA /* InitialAction.swift */; };
 		2FAE84B0202369CA008F31EA /* ActivateAdaptationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84AF202369CA008F31EA /* ActivateAdaptationAction.swift */; };
 		2FAE84B220236A1E008F31EA /* DismissLastScreenFamilyAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE84B120236A1E008F31EA /* DismissLastScreenFamilyAction.swift */; };
@@ -213,6 +217,8 @@
 		2F72B5B720248BA1000F298B /* removePresentedScreensEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removePresentedScreensEffect.swift; sourceTree = "<group>"; };
 		2F72B5B920248CE1000F298B /* EffectFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectFunc.swift; sourceTree = "<group>"; };
 		2F72B5BB2024CBB1000F298B /* Effect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effect.swift; sourceTree = "<group>"; };
+		2F85FA2220592CAE00A30748 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		2F85FA2320592CAE00A30748 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		2F9A05E620125A7700D1B4D6 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		2F9A05E82015D8D100D1B4D6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2F9A05EC20160AF100D1B4D6 /* MenuHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuHome.storyboard; sourceTree = "<group>"; };
@@ -226,6 +232,8 @@
 		2F9A05FF20164AC000D1B4D6 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		2F9A060120164AEA00D1B4D6 /* Reset.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reset.storyboard; sourceTree = "<group>"; };
 		2FA4A430203DB1100087F46D /* AdaptationServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptationServiceResponse.swift; sourceTree = "<group>"; };
+		2FA7F55D2059C8F4009E2458 /* AreaSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSection.swift; sourceTree = "<group>"; };
+		2FA7F55F2059CAB3009E2458 /* AreaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaData.swift; sourceTree = "<group>"; };
 		2FAE84AD20236968008F31EA /* InitialAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAction.swift; sourceTree = "<group>"; };
 		2FAE84AF202369CA008F31EA /* ActivateAdaptationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateAdaptationAction.swift; sourceTree = "<group>"; };
 		2FAE84B120236A1E008F31EA /* DismissLastScreenFamilyAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissLastScreenFamilyAction.swift; sourceTree = "<group>"; };
@@ -329,7 +337,11 @@
 				2F53792F2056AEA200EA3427 /* AreaFlowLayout.swift */,
 				2FD738B520090D7C00F08F57 /* AreaViewController.swift */,
 				2F043F9D204852DD00B5E557 /* ResultCollectionViewCell.swift */,
+				2FA7F55D2059C8F4009E2458 /* AreaSection.swift */,
+				2FA7F55F2059CAB3009E2458 /* AreaData.swift */,
 				2F043F9E204852DD00B5E557 /* ResultCollectionViewCell.xib */,
+				2F85FA2220592CAE00A30748 /* HeaderCollectionReusableView.swift */,
+				2F85FA2320592CAE00A30748 /* HeaderCollectionReusableView.xib */,
 				2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */,
 				2F25ADE2204FF11400609819 /* RatingsView.xib */,
 				2F25ADE4204FF13900609819 /* RatingsView.swift */,
@@ -797,6 +809,7 @@
 				2F043FA0204852DD00B5E557 /* ResultCollectionViewCell.xib in Resources */,
 				2F9A05ED20160AF100D1B4D6 /* MenuHome.storyboard in Resources */,
 				2F1C95381FFFBFD200684F4B /* Orders.storyboard in Resources */,
+				2F85FA2520592CAE00A30748 /* HeaderCollectionReusableView.xib in Resources */,
 				2F54A3A51FDED11F006DA319 /* HindVadodara-Bold.ttf in Resources */,
 				2F54A3AA1FDED11F006DA319 /* Ubuntu-Italic.ttf in Resources */,
 				2F9A05F720163FDE00D1B4D6 /* MenuOrders.storyboard in Resources */,
@@ -856,12 +869,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ios/Pods-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -909,6 +926,7 @@
 				2FEF7708204024D000BFE3CE /* SearchServiceResponse.swift in Sources */,
 				2FAE84C120236EEA008F31EA /* updatePathReducer.swift in Sources */,
 				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,
+				2FA7F5602059CAB3009E2458 /* AreaData.swift in Sources */,
 				2FAE84CB20237668008F31EA /* presentMenuReducer.swift in Sources */,
 				2F72B5B62024897E000F298B /* presentScreensEffect.swift in Sources */,
 				2F55E9061FD5A46E00BC52F0 /* Screen.swift in Sources */,
@@ -919,6 +937,7 @@
 				2F25ADD5204E9F7900609819 /* UIView+rotateForever.swift in Sources */,
 				2FAE84BF20236ECA008F31EA /* updateIsAdaptedReducer.swift in Sources */,
 				2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */,
+				2F85FA2420592CAE00A30748 /* HeaderCollectionReusableView.swift in Sources */,
 				2F9A05FD2016463800D1B4D6 /* MenuSettingsViewController.swift in Sources */,
 				2FAE84B420236A3A008F31EA /* UpdatePathAction.swift in Sources */,
 				2FAE84C8202374A8008F31EA /* initialState.swift in Sources */,
@@ -934,6 +953,7 @@
 				2F043F982048022800B5E557 /* Store+selectRestaurants.swift in Sources */,
 				2FBC4B7720260C2E00C7F4D8 /* initialPresenter.swift in Sources */,
 				2F64374B2007B981006D863F /* Reducible.swift in Sources */,
+				2FA7F55E2059C8F4009E2458 /* AreaSection.swift in Sources */,
 				2FAE84B0202369CA008F31EA /* ActivateAdaptationAction.swift in Sources */,
 				2F25ADE5204FF13900609819 /* RatingsView.swift in Sources */,
 				2F64373E20078787006D863F /* CoreReducer.swift in Sources */,

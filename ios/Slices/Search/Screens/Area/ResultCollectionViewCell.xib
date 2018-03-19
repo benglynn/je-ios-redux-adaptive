@@ -69,19 +69,19 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="n4m-hj-zIO" userLabel="Details">
-                                        <rect key="frame" x="68" y="0.0" width="404" height="122"/>
+                                        <rect key="frame" x="68" y="0.0" width="404" height="105"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="138" translatesAutoresizingMaskIntoConstraints="NO" id="hjb-Oa-2nK">
-                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="19"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-hd-feS" userLabel="Rating">
-                                                <rect key="frame" x="0.0" y="23" width="133" height="21"/>
+                                                <rect key="frame" x="0.0" y="24" width="137" height="16.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNv-lc-HpP" userLabel="RatingsView" customClass="RatingsView" customModule="ios" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="2.5" width="96" height="16"/>
+                                                        <rect key="frame" x="0.0" y="0.5" width="96" height="16"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="16" id="BAC-cX-GGN"/>
@@ -89,7 +89,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p66-BH-R2S">
-                                                        <rect key="frame" x="106" y="0.0" width="27" height="21"/>
+                                                        <rect key="frame" x="106" y="0.0" width="31" height="16.5"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="(">
                                                                 <attributes>
@@ -116,28 +116,28 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgers, Shushi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lv-e6-hH0">
-                                                <rect key="frame" x="0.0" y="49" width="93" height="21"/>
+                                                <rect key="frame" x="0.0" y="45.5" width="99.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kNi-ac-1O9" userLabel="Fulfillment">
-                                                <rect key="frame" x="0.0" y="75" width="281.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="67" width="297.5" height="16.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" text="Collect now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsL-4J-orC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="21"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74.5" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery £3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwJ-Ev-5BI">
-                                                        <rect key="frame" x="81.5" y="0.0" width="65.5" height="21"/>
+                                                        <rect key="frame" x="84.5" y="0.0" width="69.5" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Delivering from 16:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiG-fp-MVh">
-                                                        <rect key="frame" x="157" y="0.0" width="124.5" height="21"/>
+                                                        <rect key="frame" x="164" y="0.0" width="133.5" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-order now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIh-Nr-jmO">
-                                                <rect key="frame" x="0.0" y="101" width="88" height="21"/>
+                                                <rect key="frame" x="0.0" y="88.5" width="90" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                                 <color key="textColor" red="0.15294117647058825" green="0.44313725490196076" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -153,16 +153,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rwg-De-WyW" userLabel="Extra">
-                                        <rect key="frame" x="488" y="0.0" width="66" height="56"/>
+                                        <rect key="frame" x="488" y="0.0" width="66" height="51.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Sponsored" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUS-BD-dQd">
-                                                <rect key="frame" x="2.5" y="0.0" width="63.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="66" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                                                 <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysX-NN-Mce" userLabel="Banner">
-                                                <rect key="frame" x="0.5" y="31" width="65.5" height="25"/>
+                                                <rect key="frame" x="0.5" y="26.5" width="65.5" height="25"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tag" translatesAutoresizingMaskIntoConstraints="NO" id="chW-iA-zrB">
                                                         <rect key="frame" x="0.0" y="0.0" width="65.5" height="25"/>
@@ -171,7 +171,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="2 for 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9p-v8-4tp">
-                                                        <rect key="frame" x="10" y="1" width="40.5" height="21"/>
+                                                        <rect key="frame" x="10" y="1" width="40.5" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
