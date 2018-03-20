@@ -31,11 +31,11 @@ class AreaViewController: UIViewController, Presentable {
     
     private func setupCollectionView() {
         _ = collectionView.rx.setDelegate(self)
-        flowLayout.estimatedItemSize = flowLayout.itemSize
+        flowLayout.estimatedItemSize = flowLayout.itemSize // TODO: calculate size for dynamic type with sizing nib and long title
         flowLayout.sectionHeadersPinToVisibleBounds = true
         
-        let headerNib = UINib(nibName: "HeaderCollectionReusableView", bundle: nil)
-        let cellNib = UINib(nibName: "ResultCollectionViewCell", bundle: nil)
+        let headerNib = UINib(nibName: "HeaderCollectionReusableView", bundle: nil) // TODO: from state
+        let cellNib = UINib(nibName: "ResultCollectionViewCell", bundle: nil) // TODO: from state
         collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "header")
         collectionView.register(cellNib, forCellWithReuseIdentifier: "cell")
         

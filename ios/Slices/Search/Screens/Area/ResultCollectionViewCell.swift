@@ -46,8 +46,14 @@ class ResultCollectionViewCell: UICollectionViewCell {
     }
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        layoutAttributes.bounds.size.height = systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
-        return layoutAttributes
+        let newAttributes = layoutAttributes.copy() as! UICollectionViewLayoutAttributes
+        if let columns = AreaFlowLayout.columns, columns == 1 {
+            newAttributes.bounds.size.height = systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        }
+        if let cellWidth = AreaFlowLayout.cellWidth {
+            newAttributes.bounds.size.width = cellWidth
+        }
+         return newAttributes
     }
     
     private func newAttributedText(from ratings: Int32, matching label: UILabel) -> NSAttributedString {
@@ -62,6 +68,8 @@ class ResultCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+//        layer.borderColor = UIColor(red: 202/255, green: 202/255, blue: 202/255, alpha: 1.0).cgColor
+//        layer.borderWidth = 1.0
         layer.cornerRadius = 2.0
     }
 

@@ -24,6 +24,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGc-fA-4mX" userLabel="Top border">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="VU3-2C-qPc"/>
+                    </constraints>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="b80-lD-6hu">
                     <rect key="frame" x="16" y="8" width="296" height="34"/>
                     <subviews>
@@ -47,11 +54,10 @@
                         </label>
                         <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="cC1-lf-pEW">
                             <rect key="frame" x="192" y="0.0" width="104" height="34"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCE-GB-v7z">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCE-GB-v7z" userLabel="Bottom border">
                     <rect key="frame" x="0.0" y="49" width="320" height="1"/>
                     <color key="backgroundColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -59,17 +65,30 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="b80-lD-6hu" secondAttribute="trailing" constant="8" id="3tE-gt-nBy"/>
+                <constraint firstAttribute="trailing" secondItem="bGc-fA-4mX" secondAttribute="trailing" id="4DB-Vo-dCz"/>
                 <constraint firstItem="aCE-GB-v7z" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="4Fv-fJ-T3w"/>
                 <constraint firstAttribute="bottom" secondItem="aCE-GB-v7z" secondAttribute="bottom" id="CyC-aA-BZc"/>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="b80-lD-6hu" secondAttribute="bottom" constant="8" id="FYZ-2k-VBd"/>
                 <constraint firstItem="b80-lD-6hu" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="N3v-Wy-JNL"/>
                 <constraint firstItem="b80-lD-6hu" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" constant="8" id="Sjp-W6-WF7"/>
+                <constraint firstItem="bGc-fA-4mX" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="UMl-bj-Acf"/>
+                <constraint firstItem="bGc-fA-4mX" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Vvt-ex-QWf"/>
                 <constraint firstAttribute="trailing" secondItem="aCE-GB-v7z" secondAttribute="trailing" id="lTo-YB-eoL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="bGc-fA-4mX"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="4DB-Vo-dCz"/>
+                    <exclude reference="UMl-bj-Acf"/>
+                    <exclude reference="Vvt-ex-QWf"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="number" destination="kZK-pH-rd7" id="Z8z-cc-BQh"/>
                 <outlet property="postcode" destination="PdV-te-5ei" id="rbZ-4Q-Ue9"/>
