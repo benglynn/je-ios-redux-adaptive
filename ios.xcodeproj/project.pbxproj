@@ -286,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				2F043F742044528F00B5E557 /* SearchStateSlice.swift */,
+				2F043F7120444B7100B5E557 /* Restaurant.swift */,
+				2F043F932046F63A00B5E557 /* Restaurant+Equatable.swift */,
 				2F043F972048022800B5E557 /* Store+selectRestaurants.swift */,
 				2F043F7F2046C14500B5E557 /* SearchStateSlice+reduce.swift */,
 				2F043F872046C32E00B5E557 /* SearchStateSlice+cloneWith.swift */,
@@ -334,17 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				2F105E902003B5800093F2D8 /* Area.storyboard */,
-				2F53792F2056AEA200EA3427 /* AreaFlowLayout.swift */,
 				2FD738B520090D7C00F08F57 /* AreaViewController.swift */,
-				2F043F9D204852DD00B5E557 /* ResultCollectionViewCell.swift */,
+				2F53792F2056AEA200EA3427 /* AreaFlowLayout.swift */,
 				2FA7F55D2059C8F4009E2458 /* AreaSection.swift */,
 				2FA7F55F2059CAB3009E2458 /* AreaData.swift */,
-				2F043F9E204852DD00B5E557 /* ResultCollectionViewCell.xib */,
-				2F85FA2220592CAE00A30748 /* HeaderCollectionReusableView.swift */,
-				2F85FA2320592CAE00A30748 /* HeaderCollectionReusableView.xib */,
-				2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */,
-				2F25ADE2204FF11400609819 /* RatingsView.xib */,
-				2F25ADE4204FF13900609819 /* RatingsView.swift */,
 			);
 			path = Area;
 			sourceTree = "<group>";
@@ -665,6 +660,53 @@
 			path = MenuOrders;
 			sourceTree = "<group>";
 		};
+		2FDCE2CC206145F50014754B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */,
+				2FDCE2CF206146A70014754B /* Result */,
+				2FDCE2CE2061466A0014754B /* Ratings */,
+				2FDCE2CD2061464D0014754B /* Header */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2FDCE2CD2061464D0014754B /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				2F85FA2220592CAE00A30748 /* HeaderCollectionReusableView.swift */,
+				2F85FA2320592CAE00A30748 /* HeaderCollectionReusableView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		2FDCE2CE2061466A0014754B /* Ratings */ = {
+			isa = PBXGroup;
+			children = (
+				2F25ADE2204FF11400609819 /* RatingsView.xib */,
+				2F25ADE4204FF13900609819 /* RatingsView.swift */,
+			);
+			path = Ratings;
+			sourceTree = "<group>";
+		};
+		2FDCE2CF206146A70014754B /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				2F043F9D204852DD00B5E557 /* ResultCollectionViewCell.swift */,
+				2F043F9E204852DD00B5E557 /* ResultCollectionViewCell.xib */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		2FDCE2D0206148D30014754B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2FEF7707204024D000BFE3CE /* SearchServiceResponse.swift */,
+				2FE8866320402B9D00E65ABE /* SearchService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		2FEF76FF203F1A3200BFE3CE /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,11 +732,9 @@
 				2F043F8D2046C64500B5E557 /* Actions */,
 				2F043F762044533300B5E557 /* Reducers */,
 				2F043F732044528100B5E557 /* State */,
+				2FDCE2D0206148D30014754B /* Service */,
 				2FEF77062040140D00BFE3CE /* Screens */,
-				2FEF7707204024D000BFE3CE /* SearchServiceResponse.swift */,
-				2F043F7120444B7100B5E557 /* Restaurant.swift */,
-				2F043F932046F63A00B5E557 /* Restaurant+Equatable.swift */,
-				2FE8866320402B9D00E65ABE /* SearchService.swift */,
+				2FDCE2CC206145F50014754B /* Views */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -1149,7 +1189,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZKPN288GRK;
+				DEVELOPMENT_TEAM = TSHPG2KMPN;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -1169,7 +1209,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZKPN288GRK;
+				DEVELOPMENT_TEAM = TSHPG2KMPN;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
