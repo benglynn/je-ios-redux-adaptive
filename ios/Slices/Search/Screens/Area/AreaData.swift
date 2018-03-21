@@ -4,8 +4,10 @@ import RxDataSources
 typealias AreaDataSource = RxCollectionViewSectionedReloadDataSource<AreaSection>
 
 let configureCell: AreaDataSource.ConfigureCell = { (dataSource, collectionView, indexPath, restaurant) -> UICollectionViewCell in
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-    (cell as! ResultCollectionViewCell).update(restaurant)
+    let layout = collectionView.collectionViewLayout as! AreaFlowLayout
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ResultCollectionViewCell
+    cell.layout = layout
+    cell.update(restaurant)
     return cell
 }
 

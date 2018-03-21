@@ -119,6 +119,8 @@
 		2FD095851FDAC15D0023DF02 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD095841FDAC15D0023DF02 /* HomeViewController.swift */; };
 		2FD738B620090D7C00F08F57 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B520090D7C00F08F57 /* AreaViewController.swift */; };
 		2FD738B820090EE500F08F57 /* RestaurantsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD738B720090EE500F08F57 /* RestaurantsNavigationController.swift */; };
+		2FDCE2D320614C180014754B /* RestaurantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FDCE2D220614C180014754B /* RestaurantView.xib */; };
+		2FDCE2D520614EB30014754B /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDCE2D420614EB30014754B /* RestaurantView.swift */; };
 		2FE8866420402B9D00E65ABE /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8866320402B9D00E65ABE /* SearchService.swift */; };
 		2FEF7701203F1ACD00BFE3CE /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF7700203F1ACD00BFE3CE /* Requestable.swift */; };
 		2FEF7703203F1AF600BFE3CE /* Getable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF7702203F1AF600BFE3CE /* Getable.swift */; };
@@ -254,6 +256,8 @@
 		2FD095841FDAC15D0023DF02 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2FD738B520090D7C00F08F57 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
 		2FD738B720090EE500F08F57 /* RestaurantsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsNavigationController.swift; sourceTree = "<group>"; };
+		2FDCE2D220614C180014754B /* RestaurantView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantView.xib; sourceTree = "<group>"; };
+		2FDCE2D420614EB30014754B /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		2FE8866320402B9D00E65ABE /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		2FEF7700203F1ACD00BFE3CE /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		2FEF7702203F1AF600BFE3CE /* Getable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Getable.swift; sourceTree = "<group>"; };
@@ -663,6 +667,7 @@
 		2FDCE2CC206145F50014754B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2FDCE2D120614BEE0014754B /* Restaurant */,
 				2F25ADDE204FAFC000609819 /* LogoUiImageView.swift */,
 				2FDCE2CF206146A70014754B /* Result */,
 				2FDCE2CE2061466A0014754B /* Ratings */,
@@ -705,6 +710,15 @@
 				2FE8866320402B9D00E65ABE /* SearchService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2FDCE2D120614BEE0014754B /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				2FDCE2D220614C180014754B /* RestaurantView.xib */,
+				2FDCE2D420614EB30014754B /* RestaurantView.swift */,
+			);
+			path = Restaurant;
 			sourceTree = "<group>";
 		};
 		2FEF76FF203F1A3200BFE3CE /* Request */ = {
@@ -842,6 +856,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FDCE2D320614C180014754B /* RestaurantView.xib in Resources */,
 				2F54A3AF1FDED11F006DA319 /* Ubuntu.ttf in Resources */,
 				2F54A3AE1FDED11F006DA319 /* Ubuntu-MediumItalic.ttf in Resources */,
 				2F54A3A81FDED11F006DA319 /* HindVadodara-Regular.ttf in Resources */,
@@ -965,6 +980,7 @@
 				2F043F7A2044563000B5E557 /* initialSearchStateSlice.swift in Sources */,
 				2FEF7708204024D000BFE3CE /* SearchServiceResponse.swift in Sources */,
 				2FAE84C120236EEA008F31EA /* updatePathReducer.swift in Sources */,
+				2FDCE2D520614EB30014754B /* RestaurantView.swift in Sources */,
 				2F9A060020164AC000D1B4D6 /* ResetViewController.swift in Sources */,
 				2FA7F5602059CAB3009E2458 /* AreaData.swift in Sources */,
 				2FAE84CB20237668008F31EA /* presentMenuReducer.swift in Sources */,
