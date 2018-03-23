@@ -8,6 +8,12 @@ import UIKit
         title.text = restaurant.title
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = 8.0
+        clipsToBounds = true
+    }
+    
     // MARK: NibOwning
     
     override init(frame: CGRect) {

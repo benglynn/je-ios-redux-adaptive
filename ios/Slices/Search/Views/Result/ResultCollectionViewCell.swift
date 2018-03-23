@@ -24,13 +24,9 @@ class ResultCollectionViewCell: UICollectionViewCell {
     }
     
     override func awakeFromNib() {
-        layer.shouldRasterize = true
+        isOpaque = true
         layer.rasterizationScale = UIScreen.main.scale
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        layer.cornerRadius = 8.0
+        layer.shouldRasterize = true
     }
 
 }
