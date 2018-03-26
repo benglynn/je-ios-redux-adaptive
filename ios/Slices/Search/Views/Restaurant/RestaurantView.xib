@@ -24,6 +24,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestaurantView" customModule="ios" customModuleProvider="target">
             <connections>
+                <outlet property="cuisines" destination="vGX-jr-vf8" id="Fm7-gB-JPe"/>
                 <outlet property="logo" destination="IDR-Rd-LoQ" id="p6w-no-RR5"/>
                 <outlet property="ratingsCount" destination="2Ig-02-yNV" id="Q2v-iZ-55o"/>
                 <outlet property="ratingsView" destination="YhS-nS-wb1" id="g3J-1Y-8SC"/>
