@@ -10,6 +10,11 @@ import UIKit
         starsWidth.constant = CGFloat(rating) * starWidth
     }
     
+    override func awakeFromNib() {
+        layer.rasterizationScale = UIScreen.main.scale
+        layer.shouldRasterize = true
+    }
+    
     // MARK: NibOwning
     
     override init(frame: CGRect) {

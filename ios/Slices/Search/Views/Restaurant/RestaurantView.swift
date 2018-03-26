@@ -3,9 +3,15 @@ import UIKit
 @IBDesignable class RestaurantView: UIView, NibOwning {
     
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var ratingsView: RatingsView!
     
     func render(restaurant: Restaurant) {
         title.text = restaurant.title
+        logo.download(fromLocation: restaurant.logUrl)
+        ratingsView.render(rating: restaurant.rating)
+        print("\(restaurant.title): \(restaurant.rating)")
+        
     }
     
     override func layoutSubviews() {

@@ -3,7 +3,7 @@ import UIKit
 let downloadedImages = NSCache<NSString, UIImage>()
 
 extension UIImageView {
-    func downloaded(fromLocation: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    func download(fromLocation: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         guard let url = URL(string: fromLocation) else { return }
         let key = fromLocation as NSString
         if let cached = downloadedImages.object(forKey: key) {
