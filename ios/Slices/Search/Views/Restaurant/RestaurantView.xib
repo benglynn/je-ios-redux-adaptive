@@ -46,13 +46,13 @@
                             <rect key="frame" x="68" y="0.0" width="172" height="85"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beboz Italian Street food" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie5-Oe-FYR">
-                                    <rect key="frame" x="0.0" y="0.0" width="172" height="36"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="172" height="37.5"/>
                                     <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Slq-0a-s56">
-                                    <rect key="frame" x="0.0" y="44" width="172" height="41"/>
+                                    <rect key="frame" x="0.0" y="45.5" width="172" height="39.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhS-nS-wb1" customClass="RatingsView" customModule="ios" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="92" height="12"/>
@@ -63,7 +63,7 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgers, *London Loves*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGX-jr-vf8">
-                                            <rect key="frame" x="0.0" y="20" width="150.5" height="21"/>
+                                            <rect key="frame" x="0.0" y="20" width="155.5" height="19.5"/>
                                             <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                             <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1234)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-02-yNV">
-                                    <rect key="frame" x="100" y="39" width="34.5" height="21"/>
+                                    <rect key="frame" x="100" y="45" width="38.5" height="16.5"/>
                                     <fontDescription key="fontDescription" name="HindVadodara-Regular" family="Hind Vadodara" pointSize="14"/>
                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>

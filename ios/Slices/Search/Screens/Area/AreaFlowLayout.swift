@@ -17,6 +17,40 @@ class AreaFlowLayout: UICollectionViewFlowLayout {
             cellWidth = floor( (safeWidth - sectionInset.left - interCellSpace - sectionInset.right) / CGFloat(columns!) )
             invalidateLayout()
         }
-        return super.layoutAttributesForElements(in: rect)
+        if let attributes = super.layoutAttributesForElements(in: rect) {
+            return columns! > 1 ? matchRowCellHeights(in: attributes) : attributes
+        }
+        return nil
     }
+    
+    func matchRowCellHeights(in attributes: [UICollectionViewLayoutAttributes]) -> [UICollectionViewLayoutAttributes] {
+        var newAttributes = [UICollectionViewLayoutAttributes]()
+        var rowMidY: CGFloat? = nil
+        var row = [UICollectionViewLayoutAttributes]()
+        for element in attributes {
+            if element.representedElementCategory == .cell {
+                if rowMidY == nil { rowMidY = element.frame.midY }
+                if element.frame.midY > rowMidY! {
+                    if row.count > 1 {
+                        var rowHeight = row[0].frame.size.height
+                        for rowElement in row[1...] { rowHeight = max(rowElement.size.height, rowHeight) }
+                        for rowElement in row {
+                            if rowElement.size.height != rowHeight {
+                                let increase = rowHeight - rowElement.size.height
+                                rowElement.size.height = rowHeight
+                                rowElement.frame.offsetBy(dx: 0, dy: -increase/2)
+                            }
+                        }
+                    }
+                    newAttributes.append(contentsOf: row)
+                    row.removeAll()
+                    rowMidY = element.frame.midY
+                }
+                row.append(element.copy() as! UICollectionViewLayoutAttributes)
+            } else { newAttributes.append(element) }
+        }
+        return newAttributes
+    }
+    
+    
 }
