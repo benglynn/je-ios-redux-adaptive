@@ -6,15 +6,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HindVadodara-Light.ttf">
+            <string>HindVadodara-Light</string>
+        </array>
         <array key="HindVadodara-Medium.ttf">
             <string>HindVadodara-Medium</string>
-        </array>
-        <array key="HindVadodara-Regular.ttf">
-            <string>HindVadodara-Regular</string>
         </array>
         <array key="Ubuntu-Medium.ttf">
             <string>Ubuntu-Medium</string>
@@ -24,6 +25,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestaurantView" customModule="ios" customModuleProvider="target">
             <connections>
                 <outlet property="logo" destination="IDR-Rd-LoQ" id="p6w-no-RR5"/>
+                <outlet property="ratingsCount" destination="2Ig-02-yNV" id="Q2v-iZ-55o"/>
                 <outlet property="ratingsView" destination="YhS-nS-wb1" id="g3J-1Y-8SC"/>
                 <outlet property="title" destination="ie5-Oe-FYR" id="6Xb-V5-Wi1"/>
             </connections>
@@ -82,9 +84,9 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1234)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-02-yNV">
-                                    <rect key="frame" x="100" y="39" width="34.5" height="21"/>
-                                    <fontDescription key="fontDescription" name="HindVadodara-Regular" family="Hind Vadodara" pointSize="14"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-02-yNV">
+                                    <rect key="frame" x="100" y="39" width="26" height="21"/>
+                                    <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -112,11 +114,27 @@
                         </view>
                     </subviews>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pE-Vg-lJe">
+                    <rect key="frame" x="179" y="55" width="4.5" height="21"/>
+                    <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
+                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=")" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjo-c6-ZBn">
+                    <rect key="frame" x="210.5" y="55" width="4.5" height="21"/>
+                    <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
+                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tjj-Oe-h3k" secondAttribute="trailing" constant="16" id="78a-vh-v4a"/>
+                <constraint firstItem="6pE-Vg-lJe" firstAttribute="firstBaseline" secondItem="2Ig-02-yNV" secondAttribute="firstBaseline" id="VHI-8c-wHI"/>
+                <constraint firstItem="Kjo-c6-ZBn" firstAttribute="trailing" secondItem="2Ig-02-yNV" secondAttribute="trailing" constant="5" id="X7d-fm-ujB"/>
+                <constraint firstItem="6pE-Vg-lJe" firstAttribute="leading" secondItem="2Ig-02-yNV" secondAttribute="leading" constant="-5" id="gwm-vP-hZu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tjj-Oe-h3k" secondAttribute="bottom" constant="16" id="j5C-EF-q0r"/>
+                <constraint firstItem="Kjo-c6-ZBn" firstAttribute="firstBaseline" secondItem="2Ig-02-yNV" secondAttribute="firstBaseline" id="k9T-up-8XA"/>
                 <constraint firstItem="tjj-Oe-h3k" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="nt6-69-l1a"/>
                 <constraint firstItem="tjj-Oe-h3k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="zsA-H1-Vsw"/>
             </constraints>

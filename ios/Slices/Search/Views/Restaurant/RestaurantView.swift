@@ -5,12 +5,13 @@ import UIKit
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var ratingsView: RatingsView!
+    @IBOutlet weak var ratingsCount: UILabel!
     
     func render(restaurant: Restaurant) {
         title.text = restaurant.title
         logo.download(fromLocation: restaurant.logUrl)
         ratingsView.render(rating: restaurant.rating)
-        print("\(restaurant.title): \(restaurant.rating)")
+        ratingsCount.text = String(restaurant.ratings)
         
     }
     
