@@ -16,6 +16,7 @@ struct Restaurant: Codable {
     let rating: Double
     let ratings: Int32
     let title: String
+    let isNew: Bool
     
     init(_ serviceRestaurant: SearchServiceResponse.Restaurant, isOpen: Bool) {
         self.cuisines = serviceRestaurant.Cuisines.map { cuisine in cuisine.Name }.joined(separator: ", ")
@@ -32,5 +33,6 @@ struct Restaurant: Codable {
         self.rating = serviceRestaurant.RatingDetails.StarRating
         self.ratings = serviceRestaurant.RatingDetails.Count
         self.title = serviceRestaurant.Name
+        self.isNew = serviceRestaurant.IsNew
     }
 }

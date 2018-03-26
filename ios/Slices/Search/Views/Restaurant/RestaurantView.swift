@@ -7,6 +7,7 @@ import UIKit
     @IBOutlet weak var ratingsView: RatingsView!
     @IBOutlet weak var ratingsCount: UILabel!
     @IBOutlet weak var cuisines: UILabel!
+    @IBOutlet weak var new: UILabel!
     
     func render(restaurant: Restaurant) {
         title.text = restaurant.title
@@ -14,6 +15,7 @@ import UIKit
         ratingsView.render(rating: restaurant.rating)
         ratingsCount.text = String(restaurant.ratings)
         cuisines.text = restaurant.cuisines
+        new.isHidden = !restaurant.isNew
         
     }
     

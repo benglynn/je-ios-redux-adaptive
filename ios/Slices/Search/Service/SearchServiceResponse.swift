@@ -25,6 +25,7 @@ struct SearchServiceResponse: Codable {
         let OfferPercent: Decimal
         let OpeningTime: String
         let RatingDetails: RatingDetailsStruct
+        let IsNew: Bool
         
     }
     
