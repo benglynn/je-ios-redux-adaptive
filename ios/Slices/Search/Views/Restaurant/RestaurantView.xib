@@ -29,16 +29,17 @@
                 <outlet property="new" destination="3jd-kr-n0b" id="bK0-ob-WdQ"/>
                 <outlet property="ratingsCount" destination="2Ig-02-yNV" id="Q2v-iZ-55o"/>
                 <outlet property="ratingsView" destination="YhS-nS-wb1" id="g3J-1Y-8SC"/>
+                <outlet property="sponsored" destination="tiS-JS-qcm" id="GgX-Uf-X2m"/>
                 <outlet property="title" destination="ie5-Oe-FYR" id="6Xb-V5-Wi1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="177"/>
+            <rect key="frame" x="0.0" y="0.0" width="340" height="177"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tjj-Oe-h3k">
-                    <rect key="frame" x="16" y="16" width="288" height="145"/>
+                    <rect key="frame" x="16" y="16" width="308" height="145"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4d-kg-Vra" userLabel="left">
                             <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
@@ -59,16 +60,16 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xvx-p1-fV8" userLabel="Middle">
-                            <rect key="frame" x="68" y="0.0" width="144" height="94"/>
+                            <rect key="frame" x="68" y="0.0" width="160.5" height="94"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beboz Italian Street food" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie5-Oe-FYR">
-                                    <rect key="frame" x="0.0" y="0.0" width="144" height="36"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="160.5" height="36"/>
                                     <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Slq-0a-s56">
-                                    <rect key="frame" x="0.0" y="44" width="144" height="50"/>
+                                    <rect key="frame" x="0.0" y="44" width="160.5" height="50"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Bt-Vk-M7e">
                                             <rect key="frame" x="0.0" y="0.0" width="128.5" height="21"/>
@@ -90,7 +91,7 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgers, *London Loves*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGX-jr-vf8">
-                                            <rect key="frame" x="0.0" y="29" width="144" height="21"/>
+                                            <rect key="frame" x="0.0" y="29" width="150.5" height="21"/>
                                             <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                             <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -110,11 +111,25 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTx-ew-y3G" userLabel="right">
-                            <rect key="frame" x="228" y="0.0" width="60" height="10"/>
-                            <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="244.5" y="0.0" width="63.5" height="50"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OvZ-DS-RVc">
+                                    <rect key="frame" x="0.0" y="0.0" width="63.5" height="50"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Sponsored" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiS-JS-qcm">
+                                            <rect key="frame" x="0.0" y="0.0" width="63.5" height="50"/>
+                                            <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
+                                            <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="10" id="1bt-XR-sf0"/>
-                                <constraint firstAttribute="width" constant="60" id="tsi-30-V9E"/>
+                                <constraint firstItem="OvZ-DS-RVc" firstAttribute="top" secondItem="kTx-ew-y3G" secondAttribute="top" id="HC4-Yb-DM9"/>
+                                <constraint firstItem="OvZ-DS-RVc" firstAttribute="leading" secondItem="kTx-ew-y3G" secondAttribute="leading" id="S6D-A0-7wT"/>
+                                <constraint firstAttribute="bottom" secondItem="OvZ-DS-RVc" secondAttribute="bottom" id="W5k-U7-T0i"/>
+                                <constraint firstAttribute="trailing" secondItem="OvZ-DS-RVc" secondAttribute="trailing" id="fD8-Fm-UQA"/>
                             </constraints>
                         </view>
                     </subviews>

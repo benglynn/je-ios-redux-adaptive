@@ -8,6 +8,7 @@ import UIKit
     @IBOutlet weak var ratingsCount: UILabel!
     @IBOutlet weak var cuisines: UILabel!
     @IBOutlet weak var new: UILabel!
+    @IBOutlet weak var sponsored: UILabel!
     
     func render(restaurant: Restaurant) {
         title.text = restaurant.title
@@ -16,6 +17,7 @@ import UIKit
         ratingsCount.text = String(restaurant.ratings)
         cuisines.text = restaurant.cuisines
         new.isHidden = !restaurant.isNew
+        sponsored.isHidden = !restaurant.isSponsored
         
     }
     
