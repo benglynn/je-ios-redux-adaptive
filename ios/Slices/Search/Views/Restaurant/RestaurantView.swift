@@ -11,7 +11,7 @@ import UIKit
     @IBOutlet weak var sponsored: UILabel!
     @IBOutlet weak var deal: UIView!
     @IBOutlet weak var dealLabel: UILabel!
-    
+    @IBOutlet weak var distance: UILabel!
     
     func render(restaurant: Restaurant) {
         title.text = restaurant.title
@@ -22,7 +22,8 @@ import UIKit
         new.isHidden = !restaurant.isNew
         sponsored.isHidden = !restaurant.isSponsored
         deal.isHidden = !(restaurant.percentOff > 0)
-        dealLabel.text = "\(restaurant.percentOff)% off "
+        dealLabel.text = "\(restaurant.percentOff)% off"
+        distance.text = "\(restaurant.drivingDistance) mi"
         
     }
     

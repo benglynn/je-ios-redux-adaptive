@@ -27,6 +27,7 @@
                 <outlet property="cuisines" destination="vGX-jr-vf8" id="Fm7-gB-JPe"/>
                 <outlet property="deal" destination="akG-zd-SsF" id="jfl-wz-u6g"/>
                 <outlet property="dealLabel" destination="TI9-3N-9gc" id="Zkh-y2-Svv"/>
+                <outlet property="distance" destination="6VD-a8-u9q" id="X9s-Vh-T17"/>
                 <outlet property="logo" destination="IDR-Rd-LoQ" id="p6w-no-RR5"/>
                 <outlet property="new" destination="3jd-kr-n0b" id="bK0-ob-WdQ"/>
                 <outlet property="ratingsCount" destination="2Ig-02-yNV" id="Q2v-iZ-55o"/>
@@ -44,7 +45,7 @@
                     <rect key="frame" x="16" y="16" width="330" height="149"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4d-kg-Vra" userLabel="left">
-                            <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+                            <rect key="frame" x="0.0" y="0.0" width="52" height="77"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="IDR-Rd-LoQ" customClass="LogoUiImageView" customModule="ios" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
@@ -53,12 +54,29 @@
                                         <constraint firstAttribute="width" constant="52" id="k13-6s-O05"/>
                                     </constraints>
                                 </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="MNU-c9-l5G" userLabel="Pin">
+                                    <rect key="frame" x="0.0" y="60" width="11" height="14"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="14" id="Llb-Ry-IGK"/>
+                                        <constraint firstAttribute="width" constant="11" id="hop-oJ-E4G"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VD-a8-u9q">
+                                    <rect key="frame" x="15" y="56" width="29.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
+                                    <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="MNU-c9-l5G" firstAttribute="leading" secondItem="IDR-Rd-LoQ" secondAttribute="leading" id="8fC-ZO-tf7"/>
                                 <constraint firstItem="IDR-Rd-LoQ" firstAttribute="leading" secondItem="I4d-kg-Vra" secondAttribute="leading" id="JUM-0p-qAu"/>
+                                <constraint firstItem="6VD-a8-u9q" firstAttribute="firstBaseline" secondItem="MNU-c9-l5G" secondAttribute="bottom" constant="-2" id="MM0-fd-n8d"/>
                                 <constraint firstAttribute="width" constant="52" id="Ple-CG-ZnL"/>
+                                <constraint firstItem="MNU-c9-l5G" firstAttribute="top" secondItem="IDR-Rd-LoQ" secondAttribute="bottom" constant="8" id="SvT-FA-L9t"/>
+                                <constraint firstAttribute="bottom" secondItem="6VD-a8-u9q" secondAttribute="bottom" id="amp-0p-Hg5"/>
                                 <constraint firstItem="IDR-Rd-LoQ" firstAttribute="top" secondItem="I4d-kg-Vra" secondAttribute="top" id="hlE-Dm-UEf"/>
-                                <constraint firstAttribute="height" constant="52" id="ljj-66-SmF"/>
+                                <constraint firstItem="6VD-a8-u9q" firstAttribute="leading" secondItem="MNU-c9-l5G" secondAttribute="trailing" constant="4" id="xJH-eo-xHF"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xvx-p1-fV8" userLabel="Middle">
@@ -218,6 +236,7 @@
         </label>
     </objects>
     <resources>
+        <image name="pin" width="11" height="14"/>
         <image name="placeholder" width="52" height="52"/>
         <image name="tag-end" width="8" height="25"/>
     </resources>
