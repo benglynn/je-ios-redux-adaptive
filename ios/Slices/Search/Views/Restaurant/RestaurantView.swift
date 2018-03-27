@@ -2,6 +2,12 @@ import UIKit
 
 @IBDesignable class RestaurantView: UIView, NibOwning {
     
+    let openBackgroundColour = UIColor.white
+    let closedBackgroundColour = UIColor.init(red: 234/255, green: 234/255, blue: 234/255, alpha: 1)
+    let closedBorderColour = UIColor.init(red: 202/255, green: 202/255, blue: 202/255, alpha: 1)
+    
+    
+    @IBOutlet var baseView: UIView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var ratingsView: RatingsView!
@@ -24,7 +30,14 @@ import UIKit
         deal.isHidden = !(restaurant.percentOff > 0)
         dealLabel.text = "\(restaurant.percentOff)% off"
         distance.text = "\(restaurant.drivingDistance) mi"
-        
+        if restaurant.isOpen {
+            baseView.backgroundColor = openBackgroundColour
+            layer.borderWidth = 0
+        } else {
+            baseView.backgroundColor = closedBackgroundColour
+            layer.borderWidth = 1
+            layer.borderColor = closedBorderColour.cgColor
+        }
     }
     
     override func layoutSubviews() {
