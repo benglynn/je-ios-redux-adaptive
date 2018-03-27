@@ -9,6 +9,9 @@ import UIKit
     @IBOutlet weak var cuisines: UILabel!
     @IBOutlet weak var new: UILabel!
     @IBOutlet weak var sponsored: UILabel!
+    @IBOutlet weak var deal: UIView!
+    @IBOutlet weak var dealLabel: UILabel!
+    
     
     func render(restaurant: Restaurant) {
         title.text = restaurant.title
@@ -18,6 +21,8 @@ import UIKit
         cuisines.text = restaurant.cuisines
         new.isHidden = !restaurant.isNew
         sponsored.isHidden = !restaurant.isSponsored
+        deal.isHidden = !(restaurant.percentOff > 0)
+        dealLabel.text = "\(restaurant.percentOff)% off "
         
     }
     
