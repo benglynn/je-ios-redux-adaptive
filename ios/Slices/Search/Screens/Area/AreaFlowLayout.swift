@@ -25,12 +25,13 @@ class AreaFlowLayout: UICollectionViewFlowLayout {
     
     func matchRowCellHeights(in attributes: [UICollectionViewLayoutAttributes]) -> [UICollectionViewLayoutAttributes] {
         var newAttributes = [UICollectionViewLayoutAttributes]()
-        var rowMidY: CGFloat? = nil
         var row = [UICollectionViewLayoutAttributes]()
+        var rowMidY: CGFloat? = nil
         for element in attributes {
             if element.representedElementCategory == .cell {
                 if rowMidY == nil { rowMidY = element.frame.midY }
-                if element.frame.midY > rowMidY! {
+                let isFirstOfNewRow = element.frame.midY > rowMidY!
+                if isFirstOfNewRow {
                     if row.count > 1 {
                         var rowHeight = row[0].frame.size.height
                         for rowElement in row[1...] { rowHeight = max(rowElement.size.height, rowHeight) }
