@@ -31,6 +31,7 @@
                 <outlet property="distance" destination="6VD-a8-u9q" id="X9s-Vh-T17"/>
                 <outlet property="logo" destination="IDR-Rd-LoQ" id="p6w-no-RR5"/>
                 <outlet property="new" destination="3jd-kr-n0b" id="bK0-ob-WdQ"/>
+                <outlet property="preOrder" destination="w0i-9O-Efi" id="Lm3-kx-PjJ"/>
                 <outlet property="ratingsCount" destination="2Ig-02-yNV" id="Q2v-iZ-55o"/>
                 <outlet property="ratingsView" destination="YhS-nS-wb1" id="g3J-1Y-8SC"/>
                 <outlet property="sponsored" destination="tiS-JS-qcm" id="GgX-Uf-X2m"/>
@@ -81,7 +82,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xvx-p1-fV8" userLabel="Middle">
-                            <rect key="frame" x="68" y="0.0" width="176" height="94"/>
+                            <rect key="frame" x="68" y="0.0" width="176" height="123"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beboz Italian Street food" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie5-Oe-FYR">
                                     <rect key="frame" x="0.0" y="0.0" width="176" height="36"/>
@@ -90,7 +91,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Slq-0a-s56">
-                                    <rect key="frame" x="0.0" y="44" width="176" height="50"/>
+                                    <rect key="frame" x="0.0" y="44" width="176" height="79"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Bt-Vk-M7e">
                                             <rect key="frame" x="0.0" y="0.0" width="128.5" height="21"/>
@@ -114,6 +115,12 @@
                                             <rect key="frame" x="0.0" y="29" width="150.5" height="21"/>
                                             <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                             <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-order now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0i-9O-Efi">
+                                            <rect key="frame" x="0.0" y="58" width="88" height="21"/>
+                                            <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
+                                            <color key="textColor" red="0.15294117647058825" green="0.44313725490196076" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

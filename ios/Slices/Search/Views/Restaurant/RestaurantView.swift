@@ -18,6 +18,7 @@ import UIKit
     @IBOutlet weak var deal: UIView!
     @IBOutlet weak var dealLabel: UILabel!
     @IBOutlet weak var distance: UILabel!
+    @IBOutlet weak var preOrder: UILabel!
     
     func render(restaurant: Restaurant) {
         title.text = restaurant.title
@@ -33,10 +34,12 @@ import UIKit
         if restaurant.isOpen {
             baseView.backgroundColor = openBackgroundColour
             layer.borderWidth = 0
+            preOrder.isHidden = true
         } else {
             baseView.backgroundColor = closedBackgroundColour
             layer.borderWidth = 1
             layer.borderColor = closedBorderColour.cgColor
+            preOrder.isHidden = false
         }
     }
     
