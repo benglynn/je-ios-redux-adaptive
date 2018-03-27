@@ -6,6 +6,7 @@ class AreaFlowLayout: UICollectionViewFlowLayout {
     var cellWidth: CGFloat? = nil
     var columns: Int? = nil
     var lastSafeWidth: CGFloat = 0
+    let maxCellWidth: CGFloat = 400
     
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
@@ -14,7 +15,8 @@ class AreaFlowLayout: UICollectionViewFlowLayout {
             lastSafeWidth = safeWidth
             columns = Int(max(1, floor( (safeWidth - sectionInset.left + minimumInteritemSpacing) / (itemSize.width + minimumInteritemSpacing) )))
             let interCellSpace = CGFloat(columns! - 1) * minimumInteritemSpacing
-            cellWidth = floor( (safeWidth - sectionInset.left - interCellSpace - sectionInset.right) / CGFloat(columns!) )
+            let safeCellWidth = floor( (safeWidth - sectionInset.left - interCellSpace - sectionInset.right) / CGFloat(columns!) )
+            cellWidth = min(maxCellWidth, safeCellWidth)
             invalidateLayout()
         }
         if let attributes = super.layoutAttributesForElements(in: rect) {

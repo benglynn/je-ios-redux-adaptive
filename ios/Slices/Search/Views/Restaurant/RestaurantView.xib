@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -29,9 +29,13 @@
                 <outlet property="deal" destination="akG-zd-SsF" id="jfl-wz-u6g"/>
                 <outlet property="dealLabel" destination="TI9-3N-9gc" id="Zkh-y2-Svv"/>
                 <outlet property="distance" destination="6VD-a8-u9q" id="X9s-Vh-T17"/>
+                <outlet property="fulfilmentLabel1" destination="et3-B3-MVr" id="gZd-US-8Hf"/>
+                <outlet property="fulfilmentStack" destination="Jre-Nu-Ldq" id="SJc-cI-Dha"/>
+                <outlet property="fulfilmentlabel2" destination="0As-GS-zt7" id="F7a-gZ-iZd"/>
                 <outlet property="logo" destination="IDR-Rd-LoQ" id="p6w-no-RR5"/>
                 <outlet property="new" destination="3jd-kr-n0b" id="bK0-ob-WdQ"/>
                 <outlet property="preOrder" destination="w0i-9O-Efi" id="Lm3-kx-PjJ"/>
+                <outlet property="ratingStack" destination="5Bt-Vk-M7e" id="scI-sV-Lkc"/>
                 <outlet property="ratingsCount" destination="2Ig-02-yNV" id="Q2v-iZ-55o"/>
                 <outlet property="ratingsView" destination="YhS-nS-wb1" id="g3J-1Y-8SC"/>
                 <outlet property="sponsored" destination="tiS-JS-qcm" id="GgX-Uf-X2m"/>
@@ -40,11 +44,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="362" height="181"/>
+            <rect key="frame" x="0.0" y="0.0" width="451" height="242"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tjj-Oe-h3k">
-                    <rect key="frame" x="16" y="16" width="330" height="149"/>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tjj-Oe-h3k" userLabel="Columns">
+                    <rect key="frame" x="16" y="16" width="419" height="105"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4d-kg-Vra" userLabel="left">
                             <rect key="frame" x="0.0" y="0.0" width="52" height="77"/>
@@ -82,21 +86,21 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xvx-p1-fV8" userLabel="Middle">
-                            <rect key="frame" x="68" y="0.0" width="176" height="123"/>
+                            <rect key="frame" x="68" y="0.0" width="265" height="105"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beboz Italian Street food" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie5-Oe-FYR">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="36"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="265" height="18"/>
                                     <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Slq-0a-s56">
-                                    <rect key="frame" x="0.0" y="44" width="176" height="79"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Slq-0a-s56" userLabel="Middle stack">
+                                    <rect key="frame" x="0.0" y="26" width="265" height="79"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Bt-Vk-M7e">
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Bt-Vk-M7e" userLabel="Rating stack (switching)">
                                             <rect key="frame" x="0.0" y="0.0" width="128.5" height="21"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jd-kr-n0b">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jd-kr-n0b">
                                                     <rect key="frame" x="0.0" y="0.0" width="28.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                                                     <color key="textColor" red="0.015686274509803921" green="0.50980392156862742" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,7 +141,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTx-ew-y3G" userLabel="right">
-                            <rect key="frame" x="260" y="0.0" width="70" height="54"/>
+                            <rect key="frame" x="349" y="0.0" width="70" height="54"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OvZ-DS-RVc">
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="54"/>
@@ -195,20 +199,37 @@
                         </view>
                     </subviews>
                 </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-Nu-Ldq" userLabel="Fulfilment stack (switching)">
+                    <rect key="frame" x="84" y="129" width="222" height="21"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collect now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et3-B3-MVr">
+                            <rect key="frame" x="0.0" y="0.0" width="71.5" height="21"/>
+                            <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
+                            <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivering from 5:00 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0As-GS-zt7">
+                            <rect key="frame" x="79.5" y="0.0" width="142.5" height="21"/>
+                            <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
+                            <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pE-Vg-lJe">
-                    <rect key="frame" x="216" y="60" width="4.5" height="21"/>
+                    <rect key="frame" x="216" y="42" width="4.5" height="21"/>
                     <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                     <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-02-yNV">
-                    <rect key="frame" x="220" y="60" width="18.5" height="21"/>
+                    <rect key="frame" x="220" y="42" width="18.5" height="21"/>
                     <fontDescription key="fontDescription" name="HindVadodara-Medium" family="Hind Vadodara" pointSize="14"/>
                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=")" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjo-c6-ZBn">
-                    <rect key="frame" x="238.5" y="60" width="4.5" height="21"/>
+                    <rect key="frame" x="238.5" y="42" width="4.5" height="21"/>
                     <fontDescription key="fontDescription" name="HindVadodara-Light" family="Hind Vadodara" pointSize="14"/>
                     <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -217,13 +238,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tjj-Oe-h3k" secondAttribute="trailing" constant="16" id="78a-vh-v4a"/>
+                <constraint firstItem="Jre-Nu-Ldq" firstAttribute="top" secondItem="tjj-Oe-h3k" secondAttribute="bottom" constant="8" id="AUL-Gf-Kpd"/>
                 <constraint firstItem="6pE-Vg-lJe" firstAttribute="trailing" secondItem="YhS-nS-wb1" secondAttribute="trailing" constant="8" id="BP6-lf-AhX"/>
                 <constraint firstItem="Kjo-c6-ZBn" firstAttribute="firstBaseline" secondItem="2Ig-02-yNV" secondAttribute="firstBaseline" id="Oye-jy-xBM"/>
                 <constraint firstItem="2Ig-02-yNV" firstAttribute="leading" secondItem="6pE-Vg-lJe" secondAttribute="trailing" id="So6-6R-Z4d"/>
+                <constraint firstItem="6pE-Vg-lJe" firstAttribute="baseline" secondItem="YhS-nS-wb1" secondAttribute="baseline" id="Y2n-0O-PaX"/>
                 <constraint firstItem="2Ig-02-yNV" firstAttribute="firstBaseline" secondItem="6pE-Vg-lJe" secondAttribute="firstBaseline" id="fbe-dR-tfe"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tjj-Oe-h3k" secondAttribute="bottom" constant="16" id="j5C-EF-q0r"/>
-                <constraint firstItem="6pE-Vg-lJe" firstAttribute="firstBaseline" secondItem="3jd-kr-n0b" secondAttribute="firstBaseline" id="kvz-NW-NT3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Jre-Nu-Ldq" secondAttribute="bottom" constant="16" id="iry-Ql-RtU"/>
                 <constraint firstItem="tjj-Oe-h3k" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="nt6-69-l1a"/>
+                <constraint firstItem="Jre-Nu-Ldq" firstAttribute="leading" secondItem="Xvx-p1-fV8" secondAttribute="leading" id="rRQ-Ht-A3q"/>
                 <constraint firstItem="Kjo-c6-ZBn" firstAttribute="leading" secondItem="2Ig-02-yNV" secondAttribute="trailing" id="wmQ-i5-h7n"/>
                 <constraint firstItem="tjj-Oe-h3k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="zsA-H1-Vsw"/>
             </constraints>
@@ -231,7 +254,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-39" y="123.5"/>
+            <point key="canvasLocation" x="34.5" y="154"/>
         </view>
         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgers, *London Loves*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v8b-L9-HAc">
             <rect key="frame" x="0.0" y="0.0" width="150.5" height="21"/>

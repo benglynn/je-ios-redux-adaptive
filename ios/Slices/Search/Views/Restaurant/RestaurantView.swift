@@ -19,6 +19,10 @@ import UIKit
     @IBOutlet weak var dealLabel: UILabel!
     @IBOutlet weak var distance: UILabel!
     @IBOutlet weak var preOrder: UILabel!
+    @IBOutlet weak var ratingStack: UIStackView!
+    @IBOutlet weak var fulfilmentStack: UIStackView!
+    @IBOutlet weak var fulfilmentLabel1: UILabel!
+    @IBOutlet weak var fulfilmentlabel2: UILabel!
     
     func render(restaurant: Restaurant) {
         title.text = restaurant.title
@@ -35,16 +39,30 @@ import UIKit
             baseView.backgroundColor = openBackgroundColour
             layer.borderWidth = 0
             preOrder.isHidden = true
+            fulfilmentLabel1.isHidden = false
+            fulfilmentlabel2.isHidden = false
         } else {
             baseView.backgroundColor = closedBackgroundColour
             layer.borderWidth = 1
             layer.borderColor = closedBorderColour.cgColor
             preOrder.isHidden = false
+            fulfilmentLabel1.isHidden = true
+            fulfilmentlabel2.isHidden = true
         }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        let isThinLayout = baseView.frame.width < 320
+        if isThinLayout {
+            ratingStack.axis = .vertical
+            ratingStack.alignment = .leading
+            fulfilmentStack.axis = .vertical
+        } else {
+            ratingStack.axis = .horizontal
+            ratingStack.alignment = .center
+            fulfilmentStack.axis = .horizontal
+        }
         layer.cornerRadius = 8.0
         clipsToBounds = true
     }
